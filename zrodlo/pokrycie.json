@@ -1,0 +1,49 @@
+{
+  "comment": "Wejście pomiaru pokrycia (G0/G1/G2): definicje komponentów z propertami present/bound. Zasiane profile: przycisk = tokenized (wszystko związane), karta = partial, baner = untokenized, przycisk-legacy = odcięty heurystyką nazwy (G1), ikona = tokenized z poddrzewem zagnieżdżonej instancji wyłączonym z liczenia.",
+  "fileHasVariables": true,
+  "definitions": [
+    {
+      "ref": "przycisk", "name": "Przycisk",
+      "nodes": [
+        { "props": {
+          "fill": { "present": true, "bound": true },
+          "cornerRadius": { "present": true, "bound": true },
+          "paddingLeft": { "present": true, "bound": true },
+          "paddingRight": { "present": true, "bound": true }
+        } }
+      ]
+    },
+    {
+      "ref": "karta", "name": "Karta",
+      "nodes": [
+        { "props": {
+          "fill": { "present": true, "bound": true },
+          "stroke": { "present": true, "bound": false },
+          "cornerRadius": { "present": true, "bound": false }
+        } }
+      ]
+    },
+    {
+      "ref": "baner", "name": "Baner",
+      "nodes": [
+        { "props": {
+          "fill": { "present": true, "bound": false },
+          "opacity": { "present": true, "bound": false }
+        } }
+      ]
+    },
+    {
+      "ref": "przycisk-legacy", "name": "Przycisk_LEGACY",
+      "nodes": [
+        { "props": { "fill": { "present": true, "bound": true } } }
+      ]
+    },
+    {
+      "ref": "ikona", "name": "Ikona",
+      "nodes": [
+        { "props": { "fill": { "present": true, "bound": true } } },
+        { "nestedInstance": true, "props": { "fill": { "present": true, "bound": false } } }
+      ]
+    }
+  ]
+}

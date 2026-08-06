@@ -1,0 +1,25 @@
+{
+  "comment": "Treść witryny zasiewu: sekcja nawigacji + trzy strony (dwie publiczne, jedna zablokowana).",
+  "sekcja": "Dokumentacja",
+  "strony": [
+    {
+      "uid": "aa11bb22",
+      "name": "Wprowadzenie",
+      "introduction": "Czym jest ten system i jak z niego korzystać.",
+      "text": "Jeden rdzeń semantyczny, trzy marki różniące się wyłącznie wartościami prymitywów. Ta strona pochodzi z danych zasiewowych."
+    },
+    {
+      "uid": "cc33dd44",
+      "name": "Zasady marki",
+      "introduction": "Reguły użycia tokenów i komponentów w produktach.",
+      "text": "Kolory, typografia i odstępy pochodzą z tokenów; wartości surowe w kodzie produktu są rozjazdem do wykrycia."
+    },
+    {
+      "uid": "ee55ff66",
+      "name": "Notatki wewnętrzne",
+      "locked": true,
+      "introduction": "Strona zablokowana — widoczna wyłącznie po zalogowaniu.",
+      "text": "Treść dla zespołu: ustalenia robocze, których nie publikujemy publicznie."
+    }
+  ]
+}

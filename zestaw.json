@@ -1,0 +1,41 @@
+{
+  "nazwa": "Zestaw demonstracyjny — jeden rdzeń, trzy marki",
+  "wersja": "1.0",
+  "namespace": "com.example",
+  "system": {
+    "name": "System demonstracyjny",
+    "docSlug": "system-demonstracyjny",
+    "shareId": "demo000001",
+    "description": "Jeden rdzeń, trzy marki — dane zasiewowe instalacji."
+  },
+  "drift": {
+    "semanticCollection": "Semantyka",
+    "modeRanking": [
+      "Jasny",
+      "Ciemny"
+    ],
+    "codeOnlyPrefixes": [
+      "rdzen.wewnetrzne"
+    ],
+    "placeholderModes": [
+      "Okolicznosciowy"
+    ],
+    "placeholderValues": [
+      "\"#000000\""
+    ]
+  },
+  "pliki": {
+    "kanon": "kanon/tokeny.dtcg.json",
+    "tryby": "kanon/tryby.json",
+    "marki": "kanon/marki.json",
+    "strony": "kanon/strony.json",
+    "zrzutZrodla": "zrodlo/zrzut-alfa.json",
+    "pokrycie": "zrodlo/pokrycie.json"
+  },
+  "zastosowania": [
+    "zasiew platformy (app seed <katalog-zestawu>)",
+    "publiczne repozytorium demonstracyjne",
+    "źródło publicznego serwera MCP (wyłącznie nienaruszony zasiew)",
+    "szablon piaskownicy efemerycznej"
+  ]
+}

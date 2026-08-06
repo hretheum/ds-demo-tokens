@@ -1,0 +1,80 @@
+{
+  "comment": "Zasiane rozjazdy (kryterium odbioru §7.5): zrzut źródła projektowego celowo rozjechany z kanonem zasiewu — każdy WYKRYWALNY PRZEZ API typ rozjazdu ma tu wyzwalacz. Użycie: POST /api/v1/design-systems/{id}/drift/scan z {variables} z tego pliku. missing-in-code wymaga artefaktu buildu (konfiguracja poza API) — dowiedziony testem silnika.",
+  "expected": {
+    "value-mismatch": "rdzen.color.podstawowy — wartość źródła #1d4ed9 vs kanon #1d4ed8 (Alfa)",
+    "type-mismatch": "rdzen.rozmiar.odstep — źródło COLOR vs kanon wymiar",
+    "alias-broken": "rdzen.semantic.tlo — alias do nieistniejącej zmiennej",
+    "mode-incomplete": "rdzen.color.tekst — Ciemny pusty (REAL) i Okolicznosciowy placeholder #000000 (ASSUMPTION)",
+    "deprecated-still-used": "rdzen.color.przestarzaly — kanon deprecated, źródło wciąż używa",
+    "metadata-drift": "rdzen.color.tekst — opis źródła różny od kanonu",
+    "missing-in-figma": "rdzen.color.zrodlowy — provenance=figma w kanonie, brak w źródle",
+    "missing-in-canonical (REAL)": "rdzen.color.nowy",
+    "missing-in-canonical (ARCHITECTURAL)": "rdzen.wewnetrzne.uklad — prefiks code-only",
+    "hardcoded-anti-pattern": "rdzen.semantic.akcja — kolekcja semantyczna z wartością surową",
+    "naming-mismatch": "rdzen.color.obwudka (kropki, niezmapowana) ↔ kanon rdzen.color.obwodka",
+    "layer-mismatch": "rdzen.komponent.przycisk-tlo — deklaracja component, wyprowadzenie semantic (z kanonu, bez udziału źródła)"
+  },
+  "variables": [
+    {
+      "name": "rdzen/color/podstawowy",
+      "collection": "Prymitywy",
+      "type": "COLOR",
+      "valuesByMode": { "Jasny": "#1d4ed9", "Ciemny": "#3b82f6" }
+    },
+    {
+      "name": "rdzen/color/tekst",
+      "collection": "Prymitywy",
+      "type": "COLOR",
+      "valuesByMode": { "Jasny": "#1e2229", "Ciemny": null, "Okolicznosciowy": "#000000" },
+      "description": "Tekst główny (opis rozjechany ze specyfikacją kanonu)"
+    },
+    {
+      "name": "rdzen/color/tlo",
+      "collection": "Prymitywy",
+      "type": "COLOR",
+      "valuesByMode": { "Jasny": "#ffffff", "Ciemny": "#111827" }
+    },
+    {
+      "name": "rdzen/color/przestarzaly",
+      "collection": "Prymitywy",
+      "type": "COLOR",
+      "valuesByMode": { "Jasny": "#6b7280" }
+    },
+    {
+      "name": "rdzen/rozmiar/odstep",
+      "collection": "Prymitywy",
+      "type": "COLOR",
+      "valuesByMode": { "Jasny": "#000001" }
+    },
+    {
+      "name": "rdzen/semantic/tlo",
+      "collection": "Semantyka",
+      "type": "COLOR",
+      "valuesByMode": { "Jasny": { "aliasOf": "rdzen/color/nieistnieje" } }
+    },
+    {
+      "name": "rdzen/semantic/akcja",
+      "collection": "Semantyka",
+      "type": "COLOR",
+      "valuesByMode": { "Jasny": "#1d4ed8" }
+    },
+    {
+      "name": "rdzen/color/nowy",
+      "collection": "Prymitywy",
+      "type": "COLOR",
+      "valuesByMode": { "Jasny": "#f59e0b" }
+    },
+    {
+      "name": "rdzen/wewnetrzne/uklad",
+      "collection": "Prymitywy",
+      "type": "COLOR",
+      "valuesByMode": { "Jasny": "#0000ff" }
+    },
+    {
+      "name": "rdzen.color.obwudka",
+      "collection": "Prymitywy",
+      "type": "COLOR",
+      "valuesByMode": { "Jasny": "#d1d5db" }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "comment": "Konfiguracja bramki rozjazdu (CLI drift-gate). Ścieżki względem tego pliku. Bramka: kod wyjścia 1, gdy istnieje znalezisko kategorii REAL o severity P2 lub wyższej; 0 gdy czysto; 2 przy błędzie zdrowia danych (pusty kanon/zrzut, zero zmapowanych).",
+  "kanon": {
+    "plik": "../kanon/tokeny.dtcg.json",
+    "format": "dtcg",
+    "namespace": "com.example"
+  },
+  "zrodlo": "../zrodlo/zrzut-alfa.json",
+  "drift": {
+    "designSystemId": "zestaw-demonstracyjny",
+    "slugMap": [
+      {
+        "pattern": "/",
+        "flags": "g",
+        "template": "."
+      }
+    ],
+    "modeRanking": [
+      "Jasny",
+      "Ciemny"
+    ],
+    "semanticCollection": "Semantyka",
+    "codeOnlyPrefixes": [
+      "rdzen.wewnetrzne"
+    ],
+    "placeholderModes": [
+      "Okolicznosciowy"
+    ],
+    "placeholderValues": [
+      "\"#000000\""
+    ],
+    "severityRules": [
+      {
+        "match": {
+          "driftType": "missing-in-figma"
+        },
+        "severity": "P1"
+      },
+      {
+        "match": {
+          "driftType": "layer-mismatch"
+        },
+        "severity": "P1"
+      },
+      {
+        "match": {},
+        "severity": "P2"
+      }
+    ]
+  },
+  "failOn": {
+    "category": "REAL",
+    "minSeverity": "P2"
+  }
+}

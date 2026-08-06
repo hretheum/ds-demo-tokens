@@ -1,0 +1,8 @@
+{
+  "comment": "Wartości trybów innych niż referencyjny (Jasny żyje w kanon/tokeny.dtcg.json jako wartość bazowa tokenu). Struktura: nazwa trybu → ścieżka → wartość.",
+  "Ciemny": {
+    "rdzen.color.podstawowy": "#3b82f6",
+    "rdzen.color.tekst": "#e5e7eb",
+    "rdzen.color.tlo": "#111827"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "$description": "Kanon zestawu demonstracyjnego — jeden rdzeń, trzy marki. Wartości trybu Jasny (referencyjnego); tryb Ciemny w kanon/tryby.json. Metadane w $extensions pod przestrzenią com.example (parametr instalacji, nie wartość zaszyta).",
+  "rdzen": {
+    "color": {
+      "$type": "color",
+      "podstawowy": {
+        "$value": "#1d4ed8",
+        "$description": "Kolor podstawowy marki",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "tekst": {
+        "$value": "#1e2229",
+        "$description": "Kolor tekstu podstawowego",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "tlo": {
+        "$value": "#ffffff",
+        "$description": "Tło powierzchni",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "obwodka": {
+        "$value": "#d1d5db",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "przestarzaly": {
+        "$value": "#6b7280",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "deprecated",
+          "com.example.layer": "primitive",
+          "com.example.replaced-by": "rdzen.color.podstawowy",
+          "com.example.deprecated-since": "2026-08-01"
+        }
+      },
+      "zrodlowy": {
+        "$value": "#eff6ff",
+        "$extensions": {
+          "com.example.provenance": "figma",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      }
+    },
+    "rozmiar": {
+      "odstep": {
+        "$type": "dimension",
+        "$value": {
+          "value": 8,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      }
+    },
+    "semantic": {
+      "$type": "color",
+      "akcja": {
+        "$value": "{rdzen.color.podstawowy}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "tekst": {
+        "$value": "{rdzen.color.tekst}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "tlo": {
+        "$value": "{rdzen.color.tlo}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      }
+    },
+    "komponent": {
+      "przycisk-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.color.podstawowy}",
+        "$description": "Celowy rozjazd warstwy: deklaracja component, wyprowadzenie semantic (alias wprost do prymitywu)",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      }
+    }
+  }
+}

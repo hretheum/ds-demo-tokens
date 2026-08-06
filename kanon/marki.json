@@ -1,0 +1,17 @@
+{
+  "comment": "Trzy marki na JEDNYM rdzeniu — nazwy neutralne (biała etykieta). Profile pod trzy miary marki: Alfa = rdzeń (marka bazowa); Beta = wierna (dziedziczy wszystko: pokrycie 100, wierność 100, dodatki 0); Gamma = odstępstwo motywem na wartości wspólnej (wierność < 100 → znalezisko REAL) + dwa tokeny własne (dodatki → kolejka promocji).",
+  "marki": [
+    { "name": "Marka Alfa", "marketCode": "pl", "rola": "rdzen" },
+    { "name": "Marka Beta", "marketCode": "de", "rola": "wierna" },
+    {
+      "name": "Marka Gamma",
+      "marketCode": "ae",
+      "rola": "odstepstwa-i-dodatki",
+      "themeOverrides": { "rdzen.color.podstawowy": "#9d174d" },
+      "ownTokens": [
+        { "path": "gamma.wlasne.akcent", "type": "color", "value": "#f59e0b", "layer": "primitive", "description": "Dodatek własny marki — kandydat do promocji, nie błąd" },
+        { "path": "gamma.wlasne.wyroznik", "type": "color", "value": "#7c2d12", "layer": "primitive" }
+      ]
+    }
+  ]
+}
