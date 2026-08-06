@@ -133,6 +133,28 @@
       }
     }
   ],
+  "typeHints": [
+    {
+      "pattern": "(^|\\.)krycie\\.",
+      "type": "opacity"
+    },
+    {
+      "pattern": "(^|\\.)warstwa\\.",
+      "type": "zIndex"
+    },
+    {
+      "pattern": "grubosc-",
+      "type": "fontWeight"
+    },
+    {
+      "pattern": "wysokosc-",
+      "type": "lineHeight"
+    },
+    {
+      "pattern": "(^|\\.)czas\\.",
+      "type": "duration"
+    }
+  ],
   "slugMapyMarek": {
     "Marka Beta": [
       {

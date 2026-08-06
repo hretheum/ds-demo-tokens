@@ -1583,7 +1583,10 @@
     "czas": {
       "blysk": {
         "$type": "duration",
-        "$value": 80,
+        "$value": {
+          "value": 80,
+          "unit": "ms"
+        },
         "$extensions": {
           "com.example.provenance": "unknown",
           "com.example.status": "active"
@@ -1591,7 +1594,10 @@
       },
       "szybki": {
         "$type": "duration",
-        "$value": 140,
+        "$value": {
+          "value": 140,
+          "unit": "ms"
+        },
         "$extensions": {
           "com.example.provenance": "unknown",
           "com.example.status": "active"
@@ -1599,7 +1605,10 @@
       },
       "wolny": {
         "$type": "duration",
-        "$value": 360,
+        "$value": {
+          "value": 360,
+          "unit": "ms"
+        },
         "$extensions": {
           "com.example.provenance": "unknown",
           "com.example.status": "active"
@@ -1607,7 +1616,10 @@
       },
       "zwykly": {
         "$type": "duration",
-        "$value": 220,
+        "$value": {
+          "value": 220,
+          "unit": "ms"
+        },
         "$extensions": {
           "com.example.provenance": "unknown",
           "com.example.status": "active"

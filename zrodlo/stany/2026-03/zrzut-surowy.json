@@ -1493,7 +1493,10 @@
           "variableCollectionId": "kol-prymitywy",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "tryb-jasny": 80
+            "tryb-jasny": {
+              "value": 80,
+              "unit": "ms"
+            }
           }
         },
         "zm-rdzen-czas-szybki": {
@@ -1502,7 +1505,10 @@
           "variableCollectionId": "kol-prymitywy",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "tryb-jasny": 140
+            "tryb-jasny": {
+              "value": 140,
+              "unit": "ms"
+            }
           }
         },
         "zm-rdzen-czas-zwykly": {
@@ -1511,7 +1517,10 @@
           "variableCollectionId": "kol-prymitywy",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "tryb-jasny": 220
+            "tryb-jasny": {
+              "value": 220,
+              "unit": "ms"
+            }
           }
         },
         "zm-rdzen-czas-wolny": {
@@ -1520,7 +1529,10 @@
           "variableCollectionId": "kol-prymitywy",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "tryb-jasny": 360
+            "tryb-jasny": {
+              "value": 360,
+              "unit": "ms"
+            }
           }
         },
         "zm-rdzen-krycie-przezroczyste": {
@@ -1621,7 +1633,8 @@
           "valuesByMode": {
             "tryb-jasny": "#edf1fd",
             "tryb-ciemny": "#0c1f55"
-          }
+          },
+          "description": "Token przyjęty z pliku projektowego (pochodzenie: źródło projektowe)"
         },
         "zm-rdzen-zrodlowe-mgla": {
           "id": "zm-rdzen-zrodlowe-mgla",
@@ -1631,7 +1644,8 @@
           "valuesByMode": {
             "tryb-jasny": "#e3e4e8",
             "tryb-ciemny": "#3e424c"
-          }
+          },
+          "description": "Token przyjęty z pliku projektowego (pochodzenie: źródło projektowe)"
         },
         "zm-rdzen-zrodlowe-poranek": {
           "id": "zm-rdzen-zrodlowe-poranek",
@@ -1641,7 +1655,8 @@
           "valuesByMode": {
             "tryb-jasny": "#fef8ec",
             "tryb-ciemny": "#5b4206"
-          }
+          },
+          "description": "Token przyjęty z pliku projektowego (pochodzenie: źródło projektowe)"
         },
         "zm-rdzen-zrodlowe-zorza": {
           "id": "zm-rdzen-zrodlowe-zorza",
@@ -1651,7 +1666,8 @@
           "valuesByMode": {
             "tryb-jasny": "#f6d5e6",
             "tryb-ciemny": "#711945"
-          }
+          },
+          "description": "Token przyjęty z pliku projektowego (pochodzenie: źródło projektowe)"
         },
         "zm-rdzen-semantic-tekst-podstawowy": {
           "id": "zm-rdzen-semantic-tekst-podstawowy",

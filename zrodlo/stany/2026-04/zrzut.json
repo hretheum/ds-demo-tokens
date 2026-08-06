@@ -1305,7 +1305,10 @@
       "collection": "Prymitywy",
       "type": "FLOAT",
       "valuesByMode": {
-        "Jasny": 80
+        "Jasny": {
+          "value": 80,
+          "unit": "ms"
+        }
       }
     },
     {
@@ -1313,7 +1316,10 @@
       "collection": "Prymitywy",
       "type": "FLOAT",
       "valuesByMode": {
-        "Jasny": 140
+        "Jasny": {
+          "value": 140,
+          "unit": "ms"
+        }
       }
     },
     {
@@ -1321,7 +1327,10 @@
       "collection": "Prymitywy",
       "type": "FLOAT",
       "valuesByMode": {
-        "Jasny": 220
+        "Jasny": {
+          "value": 220,
+          "unit": "ms"
+        }
       }
     },
     {
@@ -1329,7 +1338,10 @@
       "collection": "Prymitywy",
       "type": "FLOAT",
       "valuesByMode": {
-        "Jasny": 360
+        "Jasny": {
+          "value": 360,
+          "unit": "ms"
+        }
       }
     },
     {
@@ -1419,7 +1431,8 @@
       "valuesByMode": {
         "Jasny": "#edf1fd",
         "Ciemny": "#0c1f55"
-      }
+      },
+      "description": "Token przyjęty z pliku projektowego (pochodzenie: źródło projektowe)"
     },
     {
       "name": "rdzen/zrodlowe/mgla",
@@ -1428,7 +1441,8 @@
       "valuesByMode": {
         "Jasny": "#e3e4e8",
         "Ciemny": "#3e424c"
-      }
+      },
+      "description": "Token przyjęty z pliku projektowego (pochodzenie: źródło projektowe)"
     },
     {
       "name": "rdzen/zrodlowe/poranek",
@@ -1437,7 +1451,8 @@
       "valuesByMode": {
         "Jasny": "#fef8ec",
         "Ciemny": "#5b4206"
-      }
+      },
+      "description": "Token przyjęty z pliku projektowego (pochodzenie: źródło projektowe)"
     },
     {
       "name": "rdzen/zrodlowe/zorza",
@@ -1446,7 +1461,8 @@
       "valuesByMode": {
         "Jasny": "#f6d5e6",
         "Ciemny": "#711945"
-      }
+      },
+      "description": "Token przyjęty z pliku projektowego (pochodzenie: źródło projektowe)"
     },
     {
       "name": "rdzen/semantic/tekst-podstawowy",

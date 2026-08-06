@@ -141,7 +141,8 @@ dodaj({ path: 'rdzen.typografia.rodzina-o-stalej-szerokosci', type: 'fontFamily'
 
 // --- prymitywy: czas, krycie, warstwa (14) -----------------------------------
 for (const [n, v] of [['blysk', 80], ['szybki', 140], ['zwykly', 220], ['wolny', 360]]) {
-  dodaj({ path: `rdzen.czas.${n}`, type: 'duration', value: v, layer: 'primitive' })
+  // kanoniczna forma duration to obiekt {value, unit} — zgodna z normalizatorem importu
+  dodaj({ path: `rdzen.czas.${n}`, type: 'duration', value: { value: v, unit: 'ms' }, layer: 'primitive' })
 }
 for (const [n, v] of [['przezroczyste', 0], ['ledwie', 0.12], ['polowa', 0.5], ['mocne', 0.84], ['pelne', 1]]) {
   dodaj({ path: `rdzen.krycie.${n}`, type: 'opacity', value: v, layer: 'primitive' })
@@ -406,7 +407,10 @@ function zbudujZrodlo(miesiac) {
       valuesByMode.Jasny = t.value
     }
     if (t.dark !== undefined) valuesByMode.Ciemny = t.dark
-    vars.set(name, wariant(name, kolekcjaDla(t), typZrodla(t), valuesByMode))
+    // tokeny o pochodzeniu figma niosą opis zgodny z kanonem — import przez bramkę
+    // scalania ma dać pełne `unchanged` (opis wchodzi do porównania poza ochroną code)
+    const opis = t.provenance === 'figma' ? t.desc : undefined
+    vars.set(name, wariant(name, kolekcjaDla(t), typZrodla(t), valuesByMode, opis))
   }
   for (const z of ZABURZENIA.filter((z) => z.od <= miesiac)) z.zastosuj(vars)
   return [...vars.values()]
@@ -664,26 +668,26 @@ const INWENTARZ = {
 // ---------------------------------------------------------------------------
 
 const PARY_KONTRASTU = [
-  { key: 'tekst-podstawowy-na-stronie', text: 'rdzen.semantic.tekst-podstawowy', background: 'rdzen.semantic.tlo-strona', size: 'normal', oczekiwane: 'PASS' },
-  { key: 'tekst-podstawowy-na-powierzchni', text: 'rdzen.semantic.tekst-podstawowy', background: 'rdzen.semantic.tlo-powierzchnia', size: 'normal', oczekiwane: 'PASS' },
-  { key: 'tekst-drugorzedny-na-stronie', text: 'rdzen.semantic.tekst-drugorzedny', background: 'rdzen.semantic.tlo-strona', size: 'normal', oczekiwane: 'PASS' },
-  { key: 'tekst-odwrocony-na-akcji', text: 'rdzen.semantic.tekst-odwrocony', background: 'rdzen.semantic.akcja-podstawowa', size: 'normal', oczekiwane: 'PASS' },
-  { key: 'link-na-stronie', text: 'rdzen.semantic.tekst-link', background: 'rdzen.semantic.tlo-strona', size: 'normal', oczekiwane: 'PASS' },
-  { key: 'blad-tresc-na-tle', text: 'rdzen.semantic.stan-blad-tresc', background: 'rdzen.semantic.stan-blad-tlo', size: 'normal', oczekiwane: 'PASS' },
-  { key: 'sukces-tresc-na-tle', text: 'rdzen.semantic.stan-sukces-tresc', background: 'rdzen.semantic.stan-sukces-tlo', size: 'normal', oczekiwane: 'PASS' },
-  { key: 'ostrzezenie-tresc-na-tle', text: 'rdzen.semantic.stan-ostrzezenie-tresc', background: 'rdzen.semantic.stan-ostrzezenie-tlo', size: 'normal', oczekiwane: 'PASS' },
-  { key: 'informacja-tresc-na-tle', text: 'rdzen.semantic.stan-informacja-tresc', background: 'rdzen.semantic.stan-informacja-tlo', size: 'normal', oczekiwane: 'PASS' },
-  { key: 'tekst-negatywny-na-stronie', text: 'rdzen.semantic.tekst-negatywny', background: 'rdzen.semantic.tlo-strona', size: 'normal', oczekiwane: 'PASS' },
-  { key: 'obwodka-skupienia-na-stronie', text: 'rdzen.semantic.obwodka-skupienie', background: 'rdzen.semantic.tlo-strona', size: 'non_text', oczekiwane: 'PASS' },
+  { pairKey: 'tekst-podstawowy-na-stronie', textColorPath: 'rdzen.semantic.tekst-podstawowy', bgColorPath: 'rdzen.semantic.tlo-strona', textSize: 'normal', oczekiwane: 'PASS' },
+  { pairKey: 'tekst-podstawowy-na-powierzchni', textColorPath: 'rdzen.semantic.tekst-podstawowy', bgColorPath: 'rdzen.semantic.tlo-powierzchnia', textSize: 'normal', oczekiwane: 'PASS' },
+  { pairKey: 'tekst-drugorzedny-na-stronie', textColorPath: 'rdzen.semantic.tekst-drugorzedny', bgColorPath: 'rdzen.semantic.tlo-strona', textSize: 'normal', oczekiwane: 'PASS' },
+  { pairKey: 'tekst-odwrocony-na-akcji', textColorPath: 'rdzen.semantic.tekst-odwrocony', bgColorPath: 'rdzen.semantic.akcja-podstawowa', textSize: 'normal', oczekiwane: 'PASS' },
+  { pairKey: 'link-na-stronie', textColorPath: 'rdzen.semantic.tekst-link', bgColorPath: 'rdzen.semantic.tlo-strona', textSize: 'normal', oczekiwane: 'PASS' },
+  { pairKey: 'blad-tresc-na-tle', textColorPath: 'rdzen.semantic.stan-blad-tresc', bgColorPath: 'rdzen.semantic.stan-blad-tlo', textSize: 'normal', oczekiwane: 'PASS' },
+  { pairKey: 'sukces-tresc-na-tle', textColorPath: 'rdzen.semantic.stan-sukces-tresc', bgColorPath: 'rdzen.semantic.stan-sukces-tlo', textSize: 'normal', oczekiwane: 'PASS' },
+  { pairKey: 'ostrzezenie-tresc-na-tle', textColorPath: 'rdzen.semantic.stan-ostrzezenie-tresc', bgColorPath: 'rdzen.semantic.stan-ostrzezenie-tlo', textSize: 'normal', oczekiwane: 'PASS' },
+  { pairKey: 'informacja-tresc-na-tle', textColorPath: 'rdzen.semantic.stan-informacja-tresc', bgColorPath: 'rdzen.semantic.stan-informacja-tlo', textSize: 'normal', oczekiwane: 'PASS' },
+  { pairKey: 'tekst-negatywny-na-stronie', textColorPath: 'rdzen.semantic.tekst-negatywny', bgColorPath: 'rdzen.semantic.tlo-strona', textSize: 'normal', oczekiwane: 'PASS' },
+  { pairKey: 'obwodka-skupienia-na-stronie', textColorPath: 'rdzen.semantic.obwodka-skupienie', bgColorPath: 'rdzen.semantic.tlo-strona', textSize: 'non_text', oczekiwane: 'PASS' },
   // celowo zasiana para poniżej progu — bramka MA się zatrzymać
-  { key: 'tekst-wylaczony-na-wyciszonym', text: 'rdzen.semantic.tekst-wylaczony', background: 'rdzen.semantic.tlo-wyciszone', size: 'normal', oczekiwane: 'FAIL' },
+  { pairKey: 'tekst-wylaczony-na-wyciszonym', textColorPath: 'rdzen.semantic.tekst-wylaczony', bgColorPath: 'rdzen.semantic.tlo-wyciszone', textSize: 'normal', oczekiwane: 'FAIL' },
 ]
 
 // kontrola projektowa: wyliczone współczynniki muszą dawać zaprojektowany wynik
 for (const para of PARY_KONTRASTU) {
-  const [tekst, tlo] = [rozwiaz(para.text), rozwiaz(para.background)]
+  const [tekst, tlo] = [rozwiaz(para.textColorPath), rozwiaz(para.bgColorPath)]
   const wspolczynnik = kontrast(tekst, tlo)
-  const prog = para.size === 'non_text' ? 3 : 4.5
+  const prog = para.textSize === 'non_text' ? 3 : 4.5
   const wynik = wspolczynnik >= prog ? 'PASS' : 'FAIL'
   if (wynik !== para.oczekiwane) {
     throw new Error(`Para ${para.key}: wyliczony kontrast ${wspolczynnik.toFixed(2)}:1 daje ${wynik}, projekt zakłada ${para.oczekiwane}`)
@@ -949,6 +953,15 @@ function emitujManifest() {
       },
       ...(i === 0 ? { zrzutSurowy: `zrodlo/stany/${okres}/zrzut-surowy.json` } : {}),
     })),
+    // jawne wskazówki typów dla importu FLOAT (heurystyka nazw zna tylko konwencje
+    // angielskie; zbiór nazwany po polsku deklaruje swoje konwencje — biała etykieta)
+    typeHints: [
+      { pattern: '(^|\\.)krycie\\.', type: 'opacity' },
+      { pattern: '(^|\\.)warstwa\\.', type: 'zIndex' },
+      { pattern: 'grubosc-', type: 'fontWeight' },
+      { pattern: 'wysokosc-', type: 'lineHeight' },
+      { pattern: '(^|\\.)czas\\.', type: 'duration' },
+    ],
     // dopasowanie marka↔rdzeń po JAWNYM słowniku nazw (slug-map per marka)
     slugMapyMarek: {
       'Marka Beta': [{ pattern: '^marka-beta\\.', template: 'rdzen.' }],

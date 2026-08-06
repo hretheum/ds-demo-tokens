@@ -9,76 +9,76 @@
   "tokensFile": "../kanon/tokeny.dtcg.json",
   "pairs": [
     {
-      "key": "tekst-podstawowy-na-stronie",
-      "text": "rdzen.semantic.tekst-podstawowy",
-      "background": "rdzen.semantic.tlo-strona",
-      "size": "normal"
+      "pairKey": "tekst-podstawowy-na-stronie",
+      "textColorPath": "rdzen.semantic.tekst-podstawowy",
+      "bgColorPath": "rdzen.semantic.tlo-strona",
+      "textSize": "normal"
     },
     {
-      "key": "tekst-podstawowy-na-powierzchni",
-      "text": "rdzen.semantic.tekst-podstawowy",
-      "background": "rdzen.semantic.tlo-powierzchnia",
-      "size": "normal"
+      "pairKey": "tekst-podstawowy-na-powierzchni",
+      "textColorPath": "rdzen.semantic.tekst-podstawowy",
+      "bgColorPath": "rdzen.semantic.tlo-powierzchnia",
+      "textSize": "normal"
     },
     {
-      "key": "tekst-drugorzedny-na-stronie",
-      "text": "rdzen.semantic.tekst-drugorzedny",
-      "background": "rdzen.semantic.tlo-strona",
-      "size": "normal"
+      "pairKey": "tekst-drugorzedny-na-stronie",
+      "textColorPath": "rdzen.semantic.tekst-drugorzedny",
+      "bgColorPath": "rdzen.semantic.tlo-strona",
+      "textSize": "normal"
     },
     {
-      "key": "tekst-odwrocony-na-akcji",
-      "text": "rdzen.semantic.tekst-odwrocony",
-      "background": "rdzen.semantic.akcja-podstawowa",
-      "size": "normal"
+      "pairKey": "tekst-odwrocony-na-akcji",
+      "textColorPath": "rdzen.semantic.tekst-odwrocony",
+      "bgColorPath": "rdzen.semantic.akcja-podstawowa",
+      "textSize": "normal"
     },
     {
-      "key": "link-na-stronie",
-      "text": "rdzen.semantic.tekst-link",
-      "background": "rdzen.semantic.tlo-strona",
-      "size": "normal"
+      "pairKey": "link-na-stronie",
+      "textColorPath": "rdzen.semantic.tekst-link",
+      "bgColorPath": "rdzen.semantic.tlo-strona",
+      "textSize": "normal"
     },
     {
-      "key": "blad-tresc-na-tle",
-      "text": "rdzen.semantic.stan-blad-tresc",
-      "background": "rdzen.semantic.stan-blad-tlo",
-      "size": "normal"
+      "pairKey": "blad-tresc-na-tle",
+      "textColorPath": "rdzen.semantic.stan-blad-tresc",
+      "bgColorPath": "rdzen.semantic.stan-blad-tlo",
+      "textSize": "normal"
     },
     {
-      "key": "sukces-tresc-na-tle",
-      "text": "rdzen.semantic.stan-sukces-tresc",
-      "background": "rdzen.semantic.stan-sukces-tlo",
-      "size": "normal"
+      "pairKey": "sukces-tresc-na-tle",
+      "textColorPath": "rdzen.semantic.stan-sukces-tresc",
+      "bgColorPath": "rdzen.semantic.stan-sukces-tlo",
+      "textSize": "normal"
     },
     {
-      "key": "ostrzezenie-tresc-na-tle",
-      "text": "rdzen.semantic.stan-ostrzezenie-tresc",
-      "background": "rdzen.semantic.stan-ostrzezenie-tlo",
-      "size": "normal"
+      "pairKey": "ostrzezenie-tresc-na-tle",
+      "textColorPath": "rdzen.semantic.stan-ostrzezenie-tresc",
+      "bgColorPath": "rdzen.semantic.stan-ostrzezenie-tlo",
+      "textSize": "normal"
     },
     {
-      "key": "informacja-tresc-na-tle",
-      "text": "rdzen.semantic.stan-informacja-tresc",
-      "background": "rdzen.semantic.stan-informacja-tlo",
-      "size": "normal"
+      "pairKey": "informacja-tresc-na-tle",
+      "textColorPath": "rdzen.semantic.stan-informacja-tresc",
+      "bgColorPath": "rdzen.semantic.stan-informacja-tlo",
+      "textSize": "normal"
     },
     {
-      "key": "tekst-negatywny-na-stronie",
-      "text": "rdzen.semantic.tekst-negatywny",
-      "background": "rdzen.semantic.tlo-strona",
-      "size": "normal"
+      "pairKey": "tekst-negatywny-na-stronie",
+      "textColorPath": "rdzen.semantic.tekst-negatywny",
+      "bgColorPath": "rdzen.semantic.tlo-strona",
+      "textSize": "normal"
     },
     {
-      "key": "obwodka-skupienia-na-stronie",
-      "text": "rdzen.semantic.obwodka-skupienie",
-      "background": "rdzen.semantic.tlo-strona",
-      "size": "non_text"
+      "pairKey": "obwodka-skupienia-na-stronie",
+      "textColorPath": "rdzen.semantic.obwodka-skupienie",
+      "bgColorPath": "rdzen.semantic.tlo-strona",
+      "textSize": "non_text"
     },
     {
-      "key": "tekst-wylaczony-na-wyciszonym",
-      "text": "rdzen.semantic.tekst-wylaczony",
-      "background": "rdzen.semantic.tlo-wyciszone",
-      "size": "normal"
+      "pairKey": "tekst-wylaczony-na-wyciszonym",
+      "textColorPath": "rdzen.semantic.tekst-wylaczony",
+      "bgColorPath": "rdzen.semantic.tlo-wyciszone",
+      "textSize": "normal"
     }
   ]
 }
