@@ -1,0 +1,21 @@
+opis-rozjazdow.md
+  s_1f427c66c881a9::t_7e59d562e5d760 8-22,24-27
+zrodlo/zrzut-alfa.json
+  s_1f427c66c881a9::t_6b5158fcbd0f5f 2-98,104-107,113-117,124-127,133-135,141-143,149-153,159-161,167-169,175-177,183-185,188
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "a5c9a4d9bf5523e8cd951229040a82cbbc03cb2d",
+  "prompts": {},
+  "sessions": {
+    "s_1f427c66c881a9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc5d8e3f-d636-44fe-a4a5-d856f9e0e11a",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Eryk Orłowski <eryk@talentcanvas.tech>"
+    }
+  }
+}
