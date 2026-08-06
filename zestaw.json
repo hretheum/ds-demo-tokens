@@ -1,19 +1,27 @@
 {
-  "nazwa": "Zestaw demonstracyjny — jeden rdzeń, trzy marki",
-  "wersja": "1.0",
+  "nazwa": "Zestaw demonstracyjny — jeden rdzeń, trzy marki, sześć miesięcy pomiaru",
+  "wersja": "2.0",
   "namespace": "com.example",
   "system": {
     "name": "System demonstracyjny",
     "docSlug": "system-demonstracyjny",
     "shareId": "demo000001",
-    "description": "Jeden rdzeń, trzy marki — dane zasiewowe instalacji."
+    "description": "Jeden rdzeń, trzy marki, sześć miesięcy pomiaru — dane zasiewowe instancji."
   },
   "drift": {
-    "semanticCollection": "Semantyka",
+    "designSystemId": "zestaw-demonstracyjny",
+    "slugMap": [
+      {
+        "pattern": "/",
+        "flags": "g",
+        "template": "."
+      }
+    ],
     "modeRanking": [
       "Jasny",
       "Ciemny"
     ],
+    "semanticCollection": "Semantyka",
     "codeOnlyPrefixes": [
       "rdzen.wewnetrzne"
     ],
@@ -22,6 +30,37 @@
     ],
     "placeholderValues": [
       "\"#000000\""
+    ],
+    "severityRules": [
+      {
+        "match": {
+          "driftType": "value-mismatch",
+          "pathPrefix": "rdzen.semantic."
+        },
+        "severity": "P0"
+      },
+      {
+        "match": {
+          "driftType": "missing-in-figma"
+        },
+        "severity": "P1"
+      },
+      {
+        "match": {
+          "driftType": "layer-mismatch"
+        },
+        "severity": "P1"
+      },
+      {
+        "match": {
+          "driftType": "deprecated-still-used"
+        },
+        "severity": "P3"
+      },
+      {
+        "match": {},
+        "severity": "P2"
+      }
     ]
   },
   "pliki": {
@@ -29,11 +68,91 @@
     "tryby": "kanon/tryby.json",
     "marki": "kanon/marki.json",
     "strony": "kanon/strony.json",
+    "rdzenObowiazkowy": "kanon/rdzen-obowiazkowy.json",
     "zrzutZrodla": "zrodlo/zrzut-alfa.json",
-    "pokrycie": "zrodlo/pokrycie.json"
+    "pokrycie": "zrodlo/pokrycie.json",
+    "komponenty": "zrodlo/komponenty.json",
+    "oczekiwaniaKomponentow": "zrodlo/oczekiwania-komponentow.json",
+    "kontrast": "bramki/kontrast.json",
+    "dostawca": "dostawcy/wykonawca.json"
+  },
+  "stany": [
+    {
+      "okres": "2026-03",
+      "zrzut": "zrodlo/stany/2026-03/zrzut.json",
+      "pokrycie": "zrodlo/stany/2026-03/pokrycie.json",
+      "marki": {
+        "Marka Beta": "marki/beta/2026-03.dtcg.json",
+        "Marka Gamma": "marki/gamma/2026-03.dtcg.json"
+      },
+      "zrzutSurowy": "zrodlo/stany/2026-03/zrzut-surowy.json"
+    },
+    {
+      "okres": "2026-04",
+      "zrzut": "zrodlo/stany/2026-04/zrzut.json",
+      "pokrycie": "zrodlo/stany/2026-04/pokrycie.json",
+      "marki": {
+        "Marka Beta": "marki/beta/2026-04.dtcg.json",
+        "Marka Gamma": "marki/gamma/2026-04.dtcg.json"
+      }
+    },
+    {
+      "okres": "2026-05",
+      "zrzut": "zrodlo/stany/2026-05/zrzut.json",
+      "pokrycie": "zrodlo/stany/2026-05/pokrycie.json",
+      "marki": {
+        "Marka Beta": "marki/beta/2026-05.dtcg.json",
+        "Marka Gamma": "marki/gamma/2026-05.dtcg.json"
+      }
+    },
+    {
+      "okres": "2026-06",
+      "zrzut": "zrodlo/stany/2026-06/zrzut.json",
+      "pokrycie": "zrodlo/stany/2026-06/pokrycie.json",
+      "marki": {
+        "Marka Beta": "marki/beta/2026-06.dtcg.json",
+        "Marka Gamma": "marki/gamma/2026-06.dtcg.json"
+      }
+    },
+    {
+      "okres": "2026-07",
+      "zrzut": "zrodlo/stany/2026-07/zrzut.json",
+      "pokrycie": "zrodlo/stany/2026-07/pokrycie.json",
+      "marki": {
+        "Marka Beta": "marki/beta/2026-07.dtcg.json",
+        "Marka Gamma": "marki/gamma/2026-07.dtcg.json"
+      }
+    },
+    {
+      "okres": "2026-08",
+      "zrzut": "zrodlo/stany/2026-08/zrzut.json",
+      "pokrycie": "zrodlo/stany/2026-08/pokrycie.json",
+      "marki": {
+        "Marka Beta": "marki/beta/2026-08.dtcg.json",
+        "Marka Gamma": "marki/gamma/2026-08.dtcg.json"
+      }
+    }
+  ],
+  "slugMapyMarek": {
+    "Marka Beta": [
+      {
+        "pattern": "^marka-beta\\.",
+        "template": "rdzen."
+      }
+    ],
+    "Marka Gamma": [
+      {
+        "pattern": "^marka-gamma\\.",
+        "template": "rdzen."
+      }
+    ]
+  },
+  "kolekcjeMarek": {
+    "Marka Beta": "marka-beta",
+    "Marka Gamma": "marka-gamma"
   },
   "zastosowania": [
-    "zasiew platformy (app seed <katalog-zestawu>)",
+    "zasiew platformy z warstwą dowodową (app seed <katalog-zestawu>)",
     "publiczne repozytorium demonstracyjne",
     "źródło publicznego serwera MCP (wyłącznie nienaruszony zasiew)",
     "szablon piaskownicy efemerycznej"

@@ -1,0 +1,72 @@
+{
+  "comment": "Dostawca zewnętrzny odpowiedzialny za dostawę do Marki Gamma (miesiąc 2026-06). Karta wyników liczona silnikiem platformy (scorecard adopcyjny 0–100) na pomiarach zebranych z instancji.",
+  "dostawca": {
+    "name": "Wykonawca zewnętrzny",
+    "marki": [
+      "Marka Gamma"
+    ]
+  },
+  "kontrakty": [
+    {
+      "komponent": "przycisk",
+      "wersja": "1.0.0",
+      "props": [
+        {
+          "name": "odmiana",
+          "type": "enum",
+          "enum": [
+            "podstawowa",
+            "drugorzedna",
+            "destrukcyjna"
+          ],
+          "required": true
+        },
+        {
+          "name": "rozmiar",
+          "type": "enum",
+          "enum": [
+            "maly",
+            "sredni",
+            "duzy"
+          ],
+          "default": "sredni"
+        },
+        {
+          "name": "wylaczony",
+          "type": "boolean",
+          "default": false
+        }
+      ],
+      "tokenConsumption": [
+        "rdzen.komponent.przycisk-tlo",
+        "rdzen.komponent.przycisk-tresc",
+        "rdzen.semantic.promien-interakcja"
+      ]
+    },
+    {
+      "komponent": "karta",
+      "wersja": "1.0.0",
+      "props": [
+        {
+          "name": "uklad",
+          "type": "enum",
+          "enum": [
+            "pionowy",
+            "poziomy"
+          ],
+          "default": "pionowy"
+        },
+        {
+          "name": "obwodka",
+          "type": "boolean",
+          "default": true
+        }
+      ],
+      "tokenConsumption": [
+        "rdzen.komponent.karta-tlo",
+        "rdzen.komponent.karta-obwodka",
+        "rdzen.semantic.promien-powierzchnia"
+      ]
+    }
+  ]
+}

@@ -1,7 +1,11 @@
 {
   "comment": "Konfiguracja bramki pokrycia (CLI coverage-gate). Bramka: kod wyjścia 1, gdy odsetek związanych propert (occurrence) spadnie poniżej progu; 0 gdy próg dotrzymany; 2 przy błędnym wejściu.",
   "wejscie": "../zrodlo/pokrycie.json",
-  "legacyNamePatterns": ["LEGACY"],
-  "collectedAt": "2026-08-06",
-  "failBelow": { "occurrencePercent": 50 }
+  "legacyNamePatterns": [
+    "LEGACY"
+  ],
+  "collectedAt": "2026-08-31",
+  "failBelow": {
+    "occurrencePercent": 50
+  }
 }

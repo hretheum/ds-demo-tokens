@@ -1,5 +1,5 @@
 {
-  "comment": "Wejście pomiaru pokrycia — stan 2026-08. Klasyfikację liczy silnik platformy (G0/G1/G2, agregacja STRICT per definicja).",
+  "comment": "Wejście pomiaru pokrycia — stan 2026-06. Klasyfikację liczy silnik platformy (G0/G1/G2, agregacja STRICT per definicja).",
   "fileHasVariables": true,
   "definitions": [
     {
@@ -158,7 +158,7 @@
             },
             "cornerRadius": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -216,7 +216,7 @@
             },
             "cornerRadius": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -281,7 +281,7 @@
             },
             "paddingTop": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -317,7 +317,7 @@
             },
             "stroke": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -401,11 +401,11 @@
             },
             "paddingTop": {
               "present": true,
-              "bound": true
+              "bound": false
             },
             "paddingBottom": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -423,7 +423,7 @@
             },
             "stroke": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -459,7 +459,7 @@
             },
             "stroke": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -495,11 +495,11 @@
           "props": {
             "fill": {
               "present": true,
-              "bound": true
+              "bound": false
             },
             "cornerRadius": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -513,7 +513,7 @@
           "props": {
             "fill": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -531,7 +531,7 @@
             },
             "stroke": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -545,7 +545,7 @@
           "props": {
             "fill": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -559,11 +559,11 @@
           "props": {
             "fill": {
               "present": true,
-              "bound": true
+              "bound": false
             },
             "cornerRadius": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -577,11 +577,11 @@
           "props": {
             "fill": {
               "present": true,
-              "bound": true
+              "bound": false
             },
             "cornerRadius": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -595,11 +595,11 @@
           "props": {
             "fill": {
               "present": true,
-              "bound": true
+              "bound": false
             },
             "cornerRadius": {
               "present": true,
-              "bound": true
+              "bound": false
             }
           }
         }
@@ -613,7 +613,7 @@
           "props": {
             "fill": {
               "present": true,
-              "bound": true
+              "bound": false
             },
             "cornerRadius": {
               "present": true,
@@ -631,7 +631,7 @@
           "props": {
             "fill": {
               "present": true,
-              "bound": true
+              "bound": false
             },
             "opacity": {
               "present": true,

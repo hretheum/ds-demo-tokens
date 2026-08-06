@@ -1,5 +1,5 @@
 {
-  "comment": "Treść witryny zasiewu: sekcja nawigacji + trzy strony (dwie publiczne, jedna zablokowana).",
+  "comment": "Treść witryny zasiewu: sekcja nawigacji + strony (trzy publiczne, jedna zablokowana).",
   "sekcja": "Dokumentacja",
   "strony": [
     {
@@ -13,6 +13,12 @@
       "name": "Zasady marki",
       "introduction": "Reguły użycia tokenów i komponentów w produktach.",
       "text": "Kolory, typografia i odstępy pochodzą z tokenów; wartości surowe w kodzie produktu są rozjazdem do wykrycia."
+    },
+    {
+      "uid": "gg77hh88",
+      "name": "Pomiar zamiast opinii",
+      "introduction": "Skąd biorą się liczby na ekranie przeglądu.",
+      "text": "Pokrycie, wierność i dodatki własne liczy kalkulator miar na kolekcjach lustrzanych marek. Rozjazd wykrywa skan zrzutu źródła wobec kanonu. Sześć kolejnych pomiarów układa się w historię: jedna marka rośnie, jedna stoi, jedna spada po dostawie z zewnątrz."
     },
     {
       "uid": "ee55ff66",

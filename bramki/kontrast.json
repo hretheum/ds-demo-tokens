@@ -1,0 +1,84 @@
+{
+  "comment": "Pary kontrastu WCAG (bramka jakości): tekst na tle, per tryb Jasny. Jedna para celowo poniżej progu AA — bramka MA się zatrzymać (kod wyjścia 1). Pary zasiewane też do bazy (contrast_pair) i uruchamiane silnikiem platformy.",
+  "level": "AA",
+  "blockPipeline": true,
+  "modes": [
+    "Jasny"
+  ],
+  "namespace": "com.example",
+  "tokensFile": "../kanon/tokeny.dtcg.json",
+  "pairs": [
+    {
+      "key": "tekst-podstawowy-na-stronie",
+      "text": "rdzen.semantic.tekst-podstawowy",
+      "background": "rdzen.semantic.tlo-strona",
+      "size": "normal"
+    },
+    {
+      "key": "tekst-podstawowy-na-powierzchni",
+      "text": "rdzen.semantic.tekst-podstawowy",
+      "background": "rdzen.semantic.tlo-powierzchnia",
+      "size": "normal"
+    },
+    {
+      "key": "tekst-drugorzedny-na-stronie",
+      "text": "rdzen.semantic.tekst-drugorzedny",
+      "background": "rdzen.semantic.tlo-strona",
+      "size": "normal"
+    },
+    {
+      "key": "tekst-odwrocony-na-akcji",
+      "text": "rdzen.semantic.tekst-odwrocony",
+      "background": "rdzen.semantic.akcja-podstawowa",
+      "size": "normal"
+    },
+    {
+      "key": "link-na-stronie",
+      "text": "rdzen.semantic.tekst-link",
+      "background": "rdzen.semantic.tlo-strona",
+      "size": "normal"
+    },
+    {
+      "key": "blad-tresc-na-tle",
+      "text": "rdzen.semantic.stan-blad-tresc",
+      "background": "rdzen.semantic.stan-blad-tlo",
+      "size": "normal"
+    },
+    {
+      "key": "sukces-tresc-na-tle",
+      "text": "rdzen.semantic.stan-sukces-tresc",
+      "background": "rdzen.semantic.stan-sukces-tlo",
+      "size": "normal"
+    },
+    {
+      "key": "ostrzezenie-tresc-na-tle",
+      "text": "rdzen.semantic.stan-ostrzezenie-tresc",
+      "background": "rdzen.semantic.stan-ostrzezenie-tlo",
+      "size": "normal"
+    },
+    {
+      "key": "informacja-tresc-na-tle",
+      "text": "rdzen.semantic.stan-informacja-tresc",
+      "background": "rdzen.semantic.stan-informacja-tlo",
+      "size": "normal"
+    },
+    {
+      "key": "tekst-negatywny-na-stronie",
+      "text": "rdzen.semantic.tekst-negatywny",
+      "background": "rdzen.semantic.tlo-strona",
+      "size": "normal"
+    },
+    {
+      "key": "obwodka-skupienia-na-stronie",
+      "text": "rdzen.semantic.obwodka-skupienie",
+      "background": "rdzen.semantic.tlo-strona",
+      "size": "non_text"
+    },
+    {
+      "key": "tekst-wylaczony-na-wyciszonym",
+      "text": "rdzen.semantic.tekst-wylaczony",
+      "background": "rdzen.semantic.tlo-wyciszone",
+      "size": "normal"
+    }
+  ]
+}

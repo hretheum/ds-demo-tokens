@@ -1,0 +1,260 @@
+{
+  "comment": "Inwentarz skanera komponentów rejestr-vs-stan: rodziny z wariantami + instancje. Zasiane rozjazdy komponentowe opisane w README.",
+  "inventory": {
+    "families": [
+      {
+        "slug": "przycisk",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "podstawowa",
+            "axes": {
+              "odmiana": "podstawowa"
+            }
+          },
+          {
+            "name": "drugorzedna",
+            "axes": {
+              "odmiana": "drugorzedna"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "pole-tekstowe",
+        "platforms": [
+          "www",
+          "aplikacja"
+        ],
+        "variants": [
+          {
+            "name": "zwykly",
+            "axes": {
+              "stan": "zwykly"
+            }
+          },
+          {
+            "name": "blad",
+            "axes": {
+              "stan": "blad"
+            }
+          },
+          {
+            "name": "eksperymentalny",
+            "axes": {
+              "stan": "eksperymentalny"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "karta",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "pionowy",
+            "axes": {
+              "uklad": "pionowy"
+            }
+          },
+          {
+            "name": "poziomy",
+            "axes": {
+              "uklad": "poziomy"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "znacznik",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "neutralny",
+            "axes": {
+              "ton": "neutralny"
+            }
+          },
+          {
+            "name": "sukces",
+            "axes": {
+              "ton": "sukces"
+            }
+          },
+          {
+            "name": "blad",
+            "axes": {
+              "ton": "blad"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "okno-dialogowe",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "srednie",
+            "axes": {
+              "rozmiar": "srednie"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "powiadomienie",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "informacja",
+            "axes": {
+              "ton": "informacja"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "przelacznik",
+        "platforms": [
+          "www",
+          "aplikacja"
+        ],
+        "variants": [
+          {
+            "name": "wlaczony",
+            "axes": {
+              "stan": "wlaczony"
+            }
+          },
+          {
+            "name": "wylaczony",
+            "axes": {
+              "stan": "wylaczony"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "zakladki",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "poziomy",
+            "axes": {
+              "uklad": "poziomy"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "tabela",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "zwykla",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "stronicowanie",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "zwykle",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "eksperyment-zespolu",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "a",
+            "axes": {}
+          }
+        ]
+      }
+    ],
+    "instances": [
+      {
+        "id": "inst-001",
+        "familySlug": "przycisk",
+        "masterExists": true,
+        "libraryRef": "bib-rdzen",
+        "topLevel": true
+      },
+      {
+        "id": "inst-002",
+        "familySlug": "przycisk",
+        "masterExists": true,
+        "libraryRef": "bib-rdzen",
+        "topLevel": true
+      },
+      {
+        "id": "inst-003",
+        "familySlug": "karta",
+        "masterExists": true,
+        "libraryRef": "bib-rdzen",
+        "topLevel": true
+      },
+      {
+        "id": "inst-004",
+        "familySlug": "znacznik",
+        "masterExists": false,
+        "libraryRef": null,
+        "topLevel": true
+      },
+      {
+        "id": "inst-005",
+        "familySlug": "przycisk",
+        "masterExists": true,
+        "libraryRef": "bib-obca",
+        "topLevel": true
+      },
+      {
+        "id": "inst-006",
+        "familySlug": "eksperyment-zespolu",
+        "masterExists": true,
+        "libraryRef": "bib-rdzen",
+        "topLevel": true
+      },
+      {
+        "id": "inst-007",
+        "familySlug": "pole-tekstowe",
+        "masterExists": true,
+        "libraryRef": "bib-rdzen",
+        "topLevel": true
+      },
+      {
+        "id": "inst-008",
+        "familySlug": "tabela",
+        "masterExists": true,
+        "libraryRef": "bib-rdzen",
+        "topLevel": false
+      }
+    ]
+  },
+  "registeredLibraries": [
+    "bib-rdzen"
+  ]
+}

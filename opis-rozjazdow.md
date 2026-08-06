@@ -1,57 +1,76 @@
-# Opis zasianych rozjazdów — co, gdzie i czego oczekiwać
+# Zasiane rozjazdy — opis i oś czasu
 
-Zrzut `zrodlo/zrzut-alfa.json` jest CELOWO rozjechany z kanonem `kanon/tokeny.dtcg.json`.
-Każdy typ rozjazdu wykrywalny przez skan wartości ma tu dokładnie jeden wyzwalacz.
-Bramka `bramki/rozjazd.json` zatrzymuje przebieg (kod wyjścia 1), bo znaleziska kategorii
-REAL o severity ≥ P2 istnieją — **to jest oczekiwany wynik demonstracji**.
+Zrzut źródła projektowego jest celowo rozjechany z kanonem zestawu. Rozjazd narasta
+przez sześć miesięcy (`zrodlo/stany/2026-03` … `2026-08`); stan ostatniego miesiąca to
+`zrodlo/zrzut-alfa.json`, na którym działa bramka `drift-gate`. Wynik na stanie
+bieżącym: **44 znaleziska** (36 REAL · 4 ARCHITECTURAL · 4 ASSUMPTION;
+1 P0 · 6 P1 · 34 P2 · 3 P3). Pełna lista z numeracją w polu `expected` pliku
+`zrodlo/zrzut-alfa.json` — poniżej opis znaczeniowy.
 
-| # | Typ rozjazdu | Zasianie | Oczekiwane znalezisko |
-|---|---|---|---|
-| 1 | `value-mismatch` | źródło `rdzen/color/podstawowy` = `#1d4ed9`, kanon `#1d4ed8` | P2 REAL |
-| 2 | `type-mismatch` | źródło `rdzen/rozmiar/odstep` typu COLOR, kanon dimension | P2 REAL |
-| 3 | `alias-broken` | źródło `rdzen/semantic/tlo` aliasuje nieistniejącą zmienną | P2 REAL |
-| 4 | `mode-incomplete` (REAL) | `rdzen/color/tekst` — tryb Ciemny pusty | P2 REAL, powód `empty-mode` |
-| 5 | `mode-incomplete` (ASSUMPTION) | `rdzen/color/tekst` — tryb Okolicznosciowy z zaślepką `#000000` | P2 ASSUMPTION, powód `placeholder-value` |
-| 6 | `deprecated-still-used` | kanon `rdzen.color.przestarzaly` ma status deprecated, źródło wciąż go niesie | P2 REAL, wskazówka „Zastąp przez rdzen.color.podstawowy" |
-| 7 | `metadata-drift` | opis źródła `rdzen/color/tekst` różny od `$description` kanonu | P2 REAL, `description-mismatch` |
-| 8 | `missing-in-figma` | kanon `rdzen.color.zrodlowy` ma provenance=figma, w źródle go nie ma | **P1** REAL |
-| 9 | `missing-in-canonical` (REAL) | źródło `rdzen/color/nowy` — brak w kanonie | P2 REAL |
-| 10 | `missing-in-canonical` (ARCHITECTURAL) | źródło `rdzen/wewnetrzne/uklad` — prefiks modelowany tylko w kodzie | P2 ARCHITECTURAL |
-| 11 | `hardcoded-anti-pattern` | `rdzen/semantic/akcja` w kolekcji Semantyka z wartością surową zamiast aliasu | P2 REAL |
-| 12 | `naming-mismatch` | źródło `rdzen.color.obwudka` (literówka, kropki) ↔ kanon `rdzen.color.obwodka` | P2 REAL |
-| 13 | `layer-mismatch` | kanon `rdzen.komponent.przycisk-tlo`: deklaracja component, alias wprost do prymitywu (wyprowadzenie semantic) — rozjazd liczony z samego kanonu | **P1** REAL, `component-skips-role` |
+Przebieg miesięczny (bramka na kolejnych stanach): **6 → 10 → 17 → 27 → 39 → 44**.
 
-Razem: **13 znalezisk = 11 REAL · 1 ARCHITECTURAL · 1 ASSUMPTION** — dokładnie 13
-ponumerowanych wierszy tabeli wyżej; ta sama lista, wpis po wpisie, w polu `expected`
-pliku `zrodlo/zrzut-alfa.json` (licząc słowa w tym dokumencie, trafisz też na nazwy
-kategorii w opisach — wiążąca jest numeracja). Typ `missing-in-code`
-wymaga artefaktu buildu (konfiguracja `buildArtifactPaths`) i nie jest zasiany w zrzucie —
-to jawna granica zestawu, nie przeoczenie.
+## Miesiąc 2026-03 — dług istniejący od startu (6)
 
-Uwagi techniczne:
+- **layer-mismatch ×3 (P1)** — trzy tokeny komponentowe (`przycisk-tlo`,
+  `pole-obwodka`, `znacznik-tlo`) deklarują warstwę komponentową, ale aliasują wprost
+  prymityw, omijając warstwę roli (`component-skips-role`). To rozjazd wewnętrzny
+  kanonu — widoczny w każdym skanie, niezależnie od źródła.
+- **deprecated-still-used ×3 (P3)** — źródło od początku używa trzech wycofanych
+  tokenów (`sygnalowy-stary`, `akcent-stary`, `odstep-stary`); każdy ma następcę
+  wskazanego w `replaced-by`.
 
-- Wartości zaślepek (`placeholderValues`) podaje się w formie znormalizowanej porównania
-  (`"\"#000000\""` dla tekstu) — tak definiuje je silnik skanu.
-- Metadane kanonu żyją w `$extensions` jako PŁASKIE klucze pod przestrzenią instalacji
-  (`com.example.provenance`), zgodnie z jedną warstwą metadanych platformy.
+## Miesiąc 2026-04 — pierwsze przemalowania (+4)
 
-## Pokrycie (bramki/pokrycie.json)
+- **value-mismatch ×3 (P2)** — projektant przemalował `blekit-500` i `zielen-600`
+  oraz zmienił `odstep-300` na 26 px (kanon: 24 px) bez zmiany kanonu.
+- **metadata-drift ×1 (P2)** — opis `blekit-900` w źródle rozjechany z kanonem.
 
-`zrodlo/pokrycie.json` zasiewa pięć definicji komponentów: `przycisk` (tokenized),
-`karta` (partial), `baner` (untokenized), `przycisk-legacy` (odcięty heurystyką nazwy
-LEGACY — brama G1), `ikona` (tokenized; poddrzewo zagnieżdżonej instancji wyłączone
-z liczenia). Oczekiwany raport: brama G1, 2 tokenized · 1 partial · 2 untokenized,
-occurrence 6/10 (60%), bramka z progiem 50% DOTRZYMANA — kod wyjścia 0.
+## Miesiąc 2026-05 — tryb ciemny zaniedbany, znikają tokeny źródłowe (+7)
 
-## Profile marek pod trzy miary
+- **mode-incomplete ×4 (P2, REAL)** — dwa tokeny z pustym trybem Ciemnym
+  (`empty-mode`), dwa z zaślepką `#000000` (`placeholder-value`).
+- **missing-in-figma ×2 (P1)** — `zrodlowe.poswiata` i `zrodlowe.mgla` (pochodzenie:
+  źródło projektowe) zniknęły ze źródła.
+- **naming-mismatch ×1 (P2)** — literówka `rodzina-podstawowej` (kropki zamiast
+  ukośników uniemożliwiają mapowanie; heurystyka odległości edycyjnej wskazuje kanon).
 
-- **Marka Alfa** — rdzeń (marka bazowa, punkt odniesienia miar).
-- **Marka Beta** — wierna: dziedziczy cały rdzeń bez nadpisań → pokrycie 100, wierność 100,
-  dodatki 0.
-- **Marka Gamma** — nadpisanie motywem `rdzen.color.podstawowy` → **odstępstwo** (wierność
-  < 100, znalezisko REAL w kolejce decyzji) oraz dwa tokeny własne `gamma.wlasne.*` →
-  **dodatki** (kolejka promocji, kandydat a nie błąd).
+## Miesiąc 2026-06 — dostawa z zewnątrz (+10)
 
-Trzy miary mają dzięki temu co rozróżniać; routing trzech rodzajów rozjazdu (luka →
-backlog migracji, odstępstwo → znalezisko, dodatek → promocja) widać w platformie po
-zasiewie tego samego zbioru.
+- **value-mismatch ×4** — w tym **P0**: semantyczny kolor głównej akcji
+  (`semantic.akcja-podstawowa`) zaszyty na sztywno INNĄ wartością niż kanon.
+  Reguła severity podnosi każdy rozjazd wartości na ścieżce `rdzen.semantic.` do P0.
+- **hardcoded-anti-pattern ×3 (P2)** — zmienne semantyczne z wartością surową zamiast
+  aliasu; dwie mają wartość równą rozwiązanej (antywzorzec bez rozjazdu wartości),
+  jedna to P0 powyżej.
+- **missing-in-canonical ×3 (P2)** — dostawa dodała `color.neon`,
+  `color.akcent-sezonowy` i semantyczne `tlo-reklamowe` bez odpowiednika w kanonie.
+
+## Miesiąc 2026-07 — typy się sypią, wewnętrzne wypływają (+12)
+
+- **type-mismatch ×2 (P2)** — promień odtworzony jako kolor, grubość pisma jako tekst.
+- **alias-broken ×2 (P2)** — aliasy do nieistniejących zmiennych (`blekit-650`,
+  skala `lazur`).
+- **value-mismatch ×2 (ARCHITECTURAL)** — progi przełamania odtworzone w źródle
+  z innymi wartościami; prefiks `rdzen.wewnetrzne` jest modelowany wyłącznie w kodzie,
+  więc kategoria to ARCHITECTURAL, nie REAL.
+- **missing-in-canonical ×2 (ARCHITECTURAL)** — zmienne wymyślone w źródle w obszarze
+  modelowanym wyłącznie w kodzie.
+- **mode-incomplete ×4 (ASSUMPTION)** — tryb `Okolicznosciowy` (lista trybów-zaślepek
+  w konfiguracji) założony i niedomknięty: założenie do rozstrzygnięcia, nie błąd.
+
+## Miesiąc 2026-08 — stan bieżący (+5)
+
+- **missing-in-figma ×1 (P1)** — trzeci token źródłowy (`zrodlowe.zorza`) zniknął.
+- **missing-in-canonical ×1 (P2)** — `odstep-850` wymyślony poza skalą kanonu.
+- **naming-mismatch ×1 (P2)** — druga literówka (`krycie.pollowa`).
+- **metadata-drift ×1 (P2)** — opis `semantic.tekst-podstawowy` rozjechany.
+- **value-mismatch ×1 (P2)** — warstwa nakładki 120 zamiast 100.
+
+## Jawne granice zestawu
+
+- Typ **missing-in-code** wymaga artefaktu buildu i nie jest zasiany.
+- Trzy kategorie mają w zestawie po co najmniej jednym reprezentancie: REAL
+  (do naprawy), ARCHITECTURAL (rozjazd modelowania, nie wartości), ASSUMPTION
+  (założenie do domknięcia) — routing każdej jest inny i to jest teza produktu.
+- Odchylenia marek od rdzenia (wierność) i dodatki własne NIE są częścią tego pliku —
+  liczy je kalkulator trzech miar na kolekcjach lustrzanych marek (`marki/`).

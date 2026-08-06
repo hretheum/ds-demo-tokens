@@ -1,0 +1,1404 @@
+{
+  "$description": "Kolekcja lustrzana marki (gamma) — stan 2026-03. Dostawa zespołu marki importowana trasą produktu (import DTCG do kolekcji marki). Plik wygenerowany.",
+  "marka-gamma": {
+    "semantic": {
+      "akcja-destrukcyjna": {
+        "$type": "color",
+        "$value": "#cc1424",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "akcja-drugorzedna": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-200}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "akcja-podstawowa": {
+        "$type": "color",
+        "$value": "{rdzen.color.blekit-700}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "akcja-podstawowa-aktywna": {
+        "$type": "color",
+        "$value": "{rdzen.color.blekit-900}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "akcja-podstawowa-najechanie": {
+        "$type": "color",
+        "$value": "{rdzen.color.blekit-800}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "akcja-wylaczona": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-200}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "obwodka-blad": {
+        "$type": "color",
+        "$value": "{rdzen.color.czerwien-600}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "obwodka-skupienie": {
+        "$type": "color",
+        "$value": "{rdzen.color.blekit-500}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "obwodka-subtelna": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-200}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "obwodka-wyrazna": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-400}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-ciasny": {
+        "$type": "space",
+        "$value": "{rdzen.rozmiar.odstep-075}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-luzny": {
+        "$type": "space",
+        "$value": "{rdzen.rozmiar.odstep-300}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-przylegly": {
+        "$type": "space",
+        "$value": "{rdzen.rozmiar.odstep-025}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-sekcja": {
+        "$type": "space",
+        "$value": "{rdzen.rozmiar.odstep-500}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-strona": {
+        "$type": "space",
+        "$value": "{rdzen.rozmiar.odstep-600}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-zwykly": {
+        "$type": "space",
+        "$value": "{rdzen.rozmiar.odstep-150}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "promien-interakcja": {
+        "$type": "radius",
+        "$value": "{rdzen.rozmiar.promien-maly}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "promien-pelny": {
+        "$type": "radius",
+        "$value": "{rdzen.rozmiar.promien-pelny}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "promien-powierzchnia": {
+        "$type": "radius",
+        "$value": "{rdzen.rozmiar.promien-sredni}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "ruch-wejscie": {
+        "$type": "duration",
+        "$value": "{rdzen.czas.szybki}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "ruch-wyjscie": {
+        "$type": "duration",
+        "$value": "{rdzen.czas.blysk}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "stan-blad-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.color.czerwien-050}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "stan-blad-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.color.czerwien-800}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "stan-informacja-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.color.morski-050}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "stan-informacja-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.color.morski-800}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "stan-ostrzezenie-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.color.bursztyn-100}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "stan-ostrzezenie-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.color.bursztyn-800}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "stan-sukces-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.color.zielen-100}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "stan-sukces-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.color.zielen-800}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "tekst-drugorzedny": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-700}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "tekst-link": {
+        "$type": "color",
+        "$value": "{rdzen.color.blekit-700}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "tekst-negatywny": {
+        "$type": "color",
+        "$value": "{rdzen.color.czerwien-700}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "tekst-odwrocony": {
+        "$type": "color",
+        "$value": "{rdzen.color.biel}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "tekst-podstawowy": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-900}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "tekst-wylaczony": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-400}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "tlo-akcent-subtelne": {
+        "$type": "color",
+        "$value": "{rdzen.color.blekit-050}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "tlo-odwrocone": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-900}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "tlo-powierzchnia": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-050}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "tlo-strona": {
+        "$type": "color",
+        "$value": "{rdzen.color.biel}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "tlo-wyciszone": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-100}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "tlo-wyniesione": {
+        "$type": "color",
+        "$value": "{rdzen.color.biel}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "typografia-naglowek-1": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-naglowek-1}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "typografia-naglowek-2": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-naglowek-2}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "typografia-naglowek-3": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-naglowek-3}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "typografia-naglowek-4": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-naglowek-4}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "typografia-podpis": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-podpis}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "typografia-przycisk": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-tresc}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "typografia-tresc": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-tresc}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "typografia-tresc-duza": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-tresc-duza}",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      }
+    },
+    "color": {
+      "biel": {
+        "$type": "color",
+        "$value": "#ffffff",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "blekit-050": {
+        "$type": "color",
+        "$value": "#edf1fd",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "blekit-100": {
+        "$type": "color",
+        "$value": "#d2dcf9",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "blekit-200": {
+        "$type": "color",
+        "$value": "#aabdf3",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "blekit-300": {
+        "$type": "color",
+        "$value": "#7d9bed",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "blekit-400": {
+        "$type": "color",
+        "$value": "#5078e7",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "blekit-500": {
+        "$type": "color",
+        "$value": "#2356e1",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "blekit-600": {
+        "$type": "color",
+        "$value": "#1a47c1",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "blekit-700": {
+        "$type": "color",
+        "$value": "#153a9d",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "blekit-800": {
+        "$type": "color",
+        "$value": "#112c79",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "blekit-900": {
+        "$type": "color",
+        "$value": "#0c1f55",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "bursztyn-050": {
+        "$type": "color",
+        "$value": "#fef8ec",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "bursztyn-100": {
+        "$type": "color",
+        "$value": "#fceecf",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "bursztyn-200": {
+        "$type": "color",
+        "$value": "#f9e0a4",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "bursztyn-300": {
+        "$type": "color",
+        "$value": "#f6cf74",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "bursztyn-400": {
+        "$type": "color",
+        "$value": "#f6a328",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "bursztyn-500": {
+        "$type": "color",
+        "$value": "#f0ae14",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "bursztyn-600": {
+        "$type": "color",
+        "$value": "#ce940d",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "bursztyn-700": {
+        "$type": "color",
+        "$value": "#a8790b",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "bursztyn-800": {
+        "$type": "color",
+        "$value": "#815d08",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "bursztyn-900": {
+        "$type": "color",
+        "$value": "#5b4206",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "czern": {
+        "$type": "color",
+        "$value": "#101216",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "czerwien-050": {
+        "$type": "color",
+        "$value": "#fcf0ed",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "czerwien-100": {
+        "$type": "color",
+        "$value": "#f8d9d3",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "czerwien-200": {
+        "$type": "color",
+        "$value": "#f1b7ac",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "czerwien-300": {
+        "$type": "color",
+        "$value": "#ea9280",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "czerwien-400": {
+        "$type": "color",
+        "$value": "#e36c54",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "czerwien-500": {
+        "$type": "color",
+        "$value": "#e72333",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "czerwien-600": {
+        "$type": "color",
+        "$value": "#cc1424",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "czerwien-700": {
+        "$type": "color",
+        "$value": "#9a2e19",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "czerwien-800": {
+        "$type": "color",
+        "$value": "#762413",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "czerwien-900": {
+        "$type": "color",
+        "$value": "#53190e",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "grafit-050": {
+        "$type": "color",
+        "$value": "#f4f4f6",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "grafit-100": {
+        "$type": "color",
+        "$value": "#e3e4e8",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "grafit-200": {
+        "$type": "color",
+        "$value": "#cacdd3",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "grafit-300": {
+        "$type": "color",
+        "$value": "#aeb2bc",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "grafit-400": {
+        "$type": "color",
+        "$value": "#9298a5",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "grafit-500": {
+        "$type": "color",
+        "$value": "#767d8f",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "grafit-600": {
+        "$type": "color",
+        "$value": "#636979",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "grafit-700": {
+        "$type": "color",
+        "$value": "#505662",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "grafit-800": {
+        "$type": "color",
+        "$value": "#3e424c",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "grafit-900": {
+        "$type": "color",
+        "$value": "#2c2f35",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "morski-050": {
+        "$type": "color",
+        "$value": "#eef9fc",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "morski-100": {
+        "$type": "color",
+        "$value": "#d4f0f7",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "morski-200": {
+        "$type": "color",
+        "$value": "#aee2ef",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "morski-300": {
+        "$type": "color",
+        "$value": "#83d3e7",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "morski-400": {
+        "$type": "color",
+        "$value": "#58c4df",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "morski-500": {
+        "$type": "color",
+        "$value": "#2db5d7",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "morski-600": {
+        "$type": "color",
+        "$value": "#239ab8",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "morski-700": {
+        "$type": "color",
+        "$value": "#1d7e96",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "morski-800": {
+        "$type": "color",
+        "$value": "#166174",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "morski-900": {
+        "$type": "color",
+        "$value": "#104451",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "oliwka-050": {
+        "$type": "color",
+        "$value": "#f6faf0",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "oliwka-100": {
+        "$type": "color",
+        "$value": "#e8f2d9",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "oliwka-200": {
+        "$type": "color",
+        "$value": "#d3e6b7",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "oliwka-300": {
+        "$type": "color",
+        "$value": "#bcd992",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "oliwka-400": {
+        "$type": "color",
+        "$value": "#a5cb6c",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "oliwka-500": {
+        "$type": "color",
+        "$value": "#8ebe46",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "oliwka-600": {
+        "$type": "color",
+        "$value": "#78a239",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "oliwka-700": {
+        "$type": "color",
+        "$value": "#62842e",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "oliwka-800": {
+        "$type": "color",
+        "$value": "#4b6624",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "oliwka-900": {
+        "$type": "color",
+        "$value": "#354819",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "purpura-050": {
+        "$type": "color",
+        "$value": "#f6effb",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "purpura-100": {
+        "$type": "color",
+        "$value": "#e9d6f5",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "purpura-200": {
+        "$type": "color",
+        "$value": "#d4b1ec",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "purpura-300": {
+        "$type": "color",
+        "$value": "#be89e1",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "purpura-400": {
+        "$type": "color",
+        "$value": "#a760d7",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "purpura-500": {
+        "$type": "color",
+        "$value": "#9137cd",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "purpura-600": {
+        "$type": "color",
+        "$value": "#7b2caf",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "purpura-700": {
+        "$type": "color",
+        "$value": "#64248f",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "purpura-800": {
+        "$type": "color",
+        "$value": "#4d1c6e",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "purpura-900": {
+        "$type": "color",
+        "$value": "#36134e",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "roz-050": {
+        "$type": "color",
+        "$value": "#fbeef5",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "roz-100": {
+        "$type": "color",
+        "$value": "#f6d5e6",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "roz-200": {
+        "$type": "color",
+        "$value": "#eeb0cf",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "roz-300": {
+        "$type": "color",
+        "$value": "#e486b5",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "roz-400": {
+        "$type": "color",
+        "$value": "#db5c9c",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "roz-500": {
+        "$type": "color",
+        "$value": "#d23282",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "roz-600": {
+        "$type": "color",
+        "$value": "#b4276e",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "roz-700": {
+        "$type": "color",
+        "$value": "#922059",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "roz-800": {
+        "$type": "color",
+        "$value": "#711945",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "roz-900": {
+        "$type": "color",
+        "$value": "#4f1130",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "zielen-050": {
+        "$type": "color",
+        "$value": "#effbf5",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "zielen-100": {
+        "$type": "color",
+        "$value": "#d7f4e6",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "zielen-200": {
+        "$type": "color",
+        "$value": "#b3ead0",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "zielen-300": {
+        "$type": "color",
+        "$value": "#8cdeb8",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "zielen-400": {
+        "$type": "color",
+        "$value": "#64d39f",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "zielen-500": {
+        "$type": "color",
+        "$value": "#3cc887",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "zielen-600": {
+        "$type": "color",
+        "$value": "#30ab72",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "zielen-700": {
+        "$type": "color",
+        "$value": "#278b5d",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "zielen-800": {
+        "$type": "color",
+        "$value": "#1e6b47",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "zielen-900": {
+        "$type": "color",
+        "$value": "#154c32",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      }
+    },
+    "rozmiar": {
+      "ikona-duzy": {
+        "$type": "size",
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "ikona-maly": {
+        "$type": "size",
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "ikona-sredni": {
+        "$type": "size",
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "ikona-wielki": {
+        "$type": "size",
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "obwodka-cienka": {
+        "$type": "borderWidth",
+        "$value": {
+          "value": 1,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "obwodka-gruba": {
+        "$type": "borderWidth",
+        "$value": {
+          "value": 4,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "obwodka-srednia": {
+        "$type": "borderWidth",
+        "$value": {
+          "value": 2,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-000": {
+        "$type": "space",
+        "$value": {
+          "value": 0,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-025": {
+        "$type": "space",
+        "$value": {
+          "value": 2,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-050": {
+        "$type": "space",
+        "$value": {
+          "value": 4,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-075": {
+        "$type": "space",
+        "$value": {
+          "value": 6,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-100": {
+        "$type": "space",
+        "$value": {
+          "value": 8,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-150": {
+        "$type": "space",
+        "$value": {
+          "value": 12,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-200": {
+        "$type": "space",
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-250": {
+        "$type": "space",
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-300": {
+        "$type": "space",
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-400": {
+        "$type": "space",
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-500": {
+        "$type": "space",
+        "$value": {
+          "value": 40,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "odstep-600": {
+        "$type": "space",
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "promien-duzy": {
+        "$type": "radius",
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "promien-maly": {
+        "$type": "radius",
+        "$value": {
+          "value": 4,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      }
+    },
+    "wlasne": {
+      "pustynny-piasek": {
+        "$type": "color",
+        "$value": "#d1c3a9",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "pustynny-zmierzch": {
+        "$type": "color",
+        "$value": "#9e532e",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "oaza": {
+        "$type": "color",
+        "$value": "#38947d",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      },
+      "szafran": {
+        "$type": "color",
+        "$value": "#f9a410",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active"
+        }
+      }
+    }
+  }
+}

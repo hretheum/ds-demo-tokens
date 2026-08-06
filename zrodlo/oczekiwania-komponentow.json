@@ -1,0 +1,190 @@
+{
+  "comment": "Rejestr oczekiwań komponentów (ComponentExpectation) — jeden rejestr dla skanera.",
+  "oczekiwania": [
+    {
+      "slug": "przycisk",
+      "required": true,
+      "requiredVariants": [
+        {
+          "odmiana": "podstawowa"
+        },
+        {
+          "odmiana": "drugorzedna"
+        },
+        {
+          "odmiana": "destrukcyjna"
+        }
+      ],
+      "platforms": [
+        "www",
+        "aplikacja"
+      ],
+      "intentionalSinglePlatform": false,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "pole-tekstowe",
+      "required": true,
+      "requiredVariants": [
+        {
+          "stan": "zwykly"
+        },
+        {
+          "stan": "blad"
+        }
+      ],
+      "platforms": [
+        "www",
+        "aplikacja"
+      ],
+      "intentionalSinglePlatform": false,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "karta",
+      "required": true,
+      "requiredVariants": [
+        {
+          "uklad": "pionowy"
+        },
+        {
+          "uklad": "poziomy"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "znacznik",
+      "required": true,
+      "requiredVariants": [
+        {
+          "ton": "neutralny"
+        },
+        {
+          "ton": "sukces"
+        },
+        {
+          "ton": "blad"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "okno-dialogowe",
+      "required": true,
+      "requiredVariants": [
+        {
+          "rozmiar": "srednie"
+        }
+      ],
+      "platforms": [
+        "www",
+        "aplikacja"
+      ],
+      "intentionalSinglePlatform": false,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "powiadomienie",
+      "required": true,
+      "requiredVariants": [
+        {
+          "ton": "informacja"
+        },
+        {
+          "ton": "blad"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "przelacznik",
+      "required": true,
+      "requiredVariants": [
+        {
+          "stan": "wlaczony"
+        },
+        {
+          "stan": "wylaczony"
+        }
+      ],
+      "platforms": [
+        "www",
+        "aplikacja"
+      ],
+      "intentionalSinglePlatform": false,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "zakladki",
+      "required": false,
+      "requiredVariants": [
+        {
+          "uklad": "poziomy"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "tabela",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "stronicowanie",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "krokownica",
+      "required": false,
+      "requiredVariants": [
+        {
+          "krok": "pierwszy"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    }
+  ]
+}

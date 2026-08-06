@@ -1,372 +1,5 @@
 {
-  "comment": "Zasiane rozjazdy: zrzut źródła projektowego celowo rozjechany z kanonem zestawu (stan 2026-08 — identyczny ze zrodlo/stany/2026-08/zrzut.json). Bramka drift-gate wykrywa DOKŁADNIE 44 znalezisk — pełna lista w polu expected, opisy w opis-rozjazdow.md. Typ missing-in-code wymaga artefaktu buildu i nie jest zasiany (jawna granica zestawu).",
-  "expected": [
-    {
-      "nr": 1,
-      "driftType": "layer-mismatch",
-      "sciezka": "rdzen.komponent.przycisk-tlo",
-      "kategoria": "REAL",
-      "severity": "P1",
-      "powod": "component-skips-role",
-      "od": "2026-03"
-    },
-    {
-      "nr": 2,
-      "driftType": "layer-mismatch",
-      "sciezka": "rdzen.komponent.pole-obwodka",
-      "kategoria": "REAL",
-      "severity": "P1",
-      "powod": "component-skips-role",
-      "od": "2026-03"
-    },
-    {
-      "nr": 3,
-      "driftType": "layer-mismatch",
-      "sciezka": "rdzen.komponent.znacznik-tlo",
-      "kategoria": "REAL",
-      "severity": "P1",
-      "powod": "component-skips-role",
-      "od": "2026-03"
-    },
-    {
-      "nr": 4,
-      "driftType": "deprecated-still-used",
-      "sciezka": "rdzen.color.sygnalowy-stary",
-      "kategoria": "REAL",
-      "severity": "P3",
-      "od": "2026-03"
-    },
-    {
-      "nr": 5,
-      "driftType": "deprecated-still-used",
-      "sciezka": "rdzen.color.akcent-stary",
-      "kategoria": "REAL",
-      "severity": "P3",
-      "od": "2026-03"
-    },
-    {
-      "nr": 6,
-      "driftType": "deprecated-still-used",
-      "sciezka": "rdzen.rozmiar.odstep-stary",
-      "kategoria": "REAL",
-      "severity": "P3",
-      "od": "2026-03"
-    },
-    {
-      "nr": 7,
-      "driftType": "value-mismatch",
-      "sciezka": "rdzen.color.blekit-500",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-04"
-    },
-    {
-      "nr": 8,
-      "driftType": "value-mismatch",
-      "sciezka": "rdzen.color.zielen-600",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-04"
-    },
-    {
-      "nr": 9,
-      "driftType": "value-mismatch",
-      "sciezka": "rdzen.rozmiar.odstep-300",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-04"
-    },
-    {
-      "nr": 10,
-      "driftType": "metadata-drift",
-      "sciezka": "rdzen.color.blekit-900",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "powod": "description-mismatch",
-      "od": "2026-04"
-    },
-    {
-      "nr": 11,
-      "driftType": "mode-incomplete",
-      "sciezka": "rdzen.color.blekit-100@Jasny↔Ciemny",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "powod": "empty-mode",
-      "od": "2026-05"
-    },
-    {
-      "nr": 12,
-      "driftType": "mode-incomplete",
-      "sciezka": "rdzen.color.morski-500@Jasny↔Ciemny",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "powod": "empty-mode",
-      "od": "2026-05"
-    },
-    {
-      "nr": 13,
-      "driftType": "mode-incomplete",
-      "sciezka": "rdzen.color.czerwien-500@Jasny↔Ciemny",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "powod": "placeholder-value",
-      "od": "2026-05"
-    },
-    {
-      "nr": 14,
-      "driftType": "mode-incomplete",
-      "sciezka": "rdzen.color.purpura-300@Jasny↔Ciemny",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "powod": "placeholder-value",
-      "od": "2026-05"
-    },
-    {
-      "nr": 15,
-      "driftType": "missing-in-figma",
-      "sciezka": "rdzen.zrodlowe.poswiata",
-      "kategoria": "REAL",
-      "severity": "P1",
-      "od": "2026-05"
-    },
-    {
-      "nr": 16,
-      "driftType": "missing-in-figma",
-      "sciezka": "rdzen.zrodlowe.mgla",
-      "kategoria": "REAL",
-      "severity": "P1",
-      "od": "2026-05"
-    },
-    {
-      "nr": 17,
-      "driftType": "naming-mismatch",
-      "sciezka": "rdzen.typografia.rodzina-podstawowa",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-05"
-    },
-    {
-      "nr": 18,
-      "driftType": "value-mismatch",
-      "sciezka": "rdzen.color.bursztyn-500",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-06"
-    },
-    {
-      "nr": 19,
-      "driftType": "value-mismatch",
-      "sciezka": "rdzen.color.roz-400",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-06"
-    },
-    {
-      "nr": 20,
-      "driftType": "value-mismatch",
-      "sciezka": "rdzen.krycie.mocne",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-06"
-    },
-    {
-      "nr": 21,
-      "driftType": "value-mismatch",
-      "sciezka": "rdzen.semantic.akcja-podstawowa",
-      "kategoria": "REAL",
-      "severity": "P0",
-      "od": "2026-06"
-    },
-    {
-      "nr": 22,
-      "driftType": "hardcoded-anti-pattern",
-      "sciezka": "rdzen.semantic.akcja-podstawowa",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-06"
-    },
-    {
-      "nr": 23,
-      "driftType": "hardcoded-anti-pattern",
-      "sciezka": "rdzen.semantic.stan-sukces-tlo",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-06"
-    },
-    {
-      "nr": 24,
-      "driftType": "hardcoded-anti-pattern",
-      "sciezka": "rdzen.semantic.obwodka-subtelna",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-06"
-    },
-    {
-      "nr": 25,
-      "driftType": "missing-in-canonical",
-      "sciezka": "rdzen.color.neon",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-06"
-    },
-    {
-      "nr": 26,
-      "driftType": "missing-in-canonical",
-      "sciezka": "rdzen.color.akcent-sezonowy",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-06"
-    },
-    {
-      "nr": 27,
-      "driftType": "missing-in-canonical",
-      "sciezka": "rdzen.semantic.tlo-reklamowe",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-06"
-    },
-    {
-      "nr": 28,
-      "driftType": "type-mismatch",
-      "sciezka": "rdzen.rozmiar.promien-sredni",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-07"
-    },
-    {
-      "nr": 29,
-      "driftType": "type-mismatch",
-      "sciezka": "rdzen.typografia.grubosc-pogrubiona",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-07"
-    },
-    {
-      "nr": 30,
-      "driftType": "alias-broken",
-      "sciezka": "rdzen.semantic.tekst-link",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-07"
-    },
-    {
-      "nr": 31,
-      "driftType": "alias-broken",
-      "sciezka": "rdzen.semantic.tlo-akcent-subtelne",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-07"
-    },
-    {
-      "nr": 32,
-      "driftType": "value-mismatch",
-      "sciezka": "rdzen.wewnetrzne.przelamanie-male",
-      "kategoria": "ARCHITECTURAL",
-      "severity": "P2",
-      "od": "2026-07"
-    },
-    {
-      "nr": 33,
-      "driftType": "value-mismatch",
-      "sciezka": "rdzen.wewnetrzne.przelamanie-srednie",
-      "kategoria": "ARCHITECTURAL",
-      "severity": "P2",
-      "od": "2026-07"
-    },
-    {
-      "nr": 34,
-      "driftType": "missing-in-canonical",
-      "sciezka": "rdzen.wewnetrzne.siatka-marginesy",
-      "kategoria": "ARCHITECTURAL",
-      "severity": "P2",
-      "od": "2026-07"
-    },
-    {
-      "nr": 35,
-      "driftType": "missing-in-canonical",
-      "sciezka": "rdzen.wewnetrzne.przelamanie-olbrzymie",
-      "kategoria": "ARCHITECTURAL",
-      "severity": "P2",
-      "od": "2026-07"
-    },
-    {
-      "nr": 36,
-      "driftType": "mode-incomplete",
-      "sciezka": "rdzen.color.blekit-500@Jasny↔Okolicznosciowy",
-      "kategoria": "ASSUMPTION",
-      "severity": "P2",
-      "powod": "empty-mode",
-      "od": "2026-07"
-    },
-    {
-      "nr": 37,
-      "driftType": "mode-incomplete",
-      "sciezka": "rdzen.color.zielen-500@Jasny↔Okolicznosciowy",
-      "kategoria": "ASSUMPTION",
-      "severity": "P2",
-      "powod": "empty-mode",
-      "od": "2026-07"
-    },
-    {
-      "nr": 38,
-      "driftType": "mode-incomplete",
-      "sciezka": "rdzen.color.bursztyn-300@Jasny↔Okolicznosciowy",
-      "kategoria": "ASSUMPTION",
-      "severity": "P2",
-      "powod": "placeholder-value",
-      "od": "2026-07"
-    },
-    {
-      "nr": 39,
-      "driftType": "mode-incomplete",
-      "sciezka": "rdzen.color.grafit-700@Jasny↔Okolicznosciowy",
-      "kategoria": "ASSUMPTION",
-      "severity": "P2",
-      "powod": "placeholder-value",
-      "od": "2026-07"
-    },
-    {
-      "nr": 40,
-      "driftType": "missing-in-figma",
-      "sciezka": "rdzen.zrodlowe.zorza",
-      "kategoria": "REAL",
-      "severity": "P1",
-      "od": "2026-08"
-    },
-    {
-      "nr": 41,
-      "driftType": "missing-in-canonical",
-      "sciezka": "rdzen.rozmiar.odstep-850",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-08"
-    },
-    {
-      "nr": 42,
-      "driftType": "naming-mismatch",
-      "sciezka": "rdzen.krycie.polowa",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-08"
-    },
-    {
-      "nr": 43,
-      "driftType": "metadata-drift",
-      "sciezka": "rdzen.semantic.tekst-podstawowy",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "powod": "description-mismatch",
-      "od": "2026-08"
-    },
-    {
-      "nr": 44,
-      "driftType": "value-mismatch",
-      "sciezka": "rdzen.warstwa.nakladka",
-      "kategoria": "REAL",
-      "severity": "P2",
-      "od": "2026-08"
-    }
-  ],
+  "comment": "Zrzut źródła projektowego — stan 2026-05 (3 z 6). Zaburzenia narastają z miesiąca na miesiąc; stan 6 == zrodlo/zrzut-alfa.json. Plik wygenerowany: scripts/generuj.mjs.",
   "variables": [
     {
       "name": "rdzen/color/blekit-050",
@@ -419,8 +52,7 @@
       "type": "COLOR",
       "valuesByMode": {
         "Jasny": "#a760d7",
-        "Ciemny": "#5078e7",
-        "Okolicznosciowy": null
+        "Ciemny": "#5078e7"
       }
     },
     {
@@ -601,8 +233,7 @@
       "type": "COLOR",
       "valuesByMode": {
         "Jasny": "#3cc887",
-        "Ciemny": "#64d39f",
-        "Okolicznosciowy": null
+        "Ciemny": "#64d39f"
       }
     },
     {
@@ -764,8 +395,7 @@
       "type": "COLOR",
       "valuesByMode": {
         "Jasny": "#f6cf74",
-        "Ciemny": "#ce940d",
-        "Okolicznosciowy": "#000000"
+        "Ciemny": "#ce940d"
       }
     },
     {
@@ -782,7 +412,7 @@
       "collection": "Prymitywy",
       "type": "COLOR",
       "valuesByMode": {
-        "Jasny": "#be89e1",
+        "Jasny": "#f0ae14",
         "Ciemny": "#f3bf44"
       }
     },
@@ -1043,7 +673,7 @@
       "collection": "Prymitywy",
       "type": "COLOR",
       "valuesByMode": {
-        "Jasny": "#d4b1ec",
+        "Jasny": "#db5c9c",
         "Ciemny": "#d23282"
       }
     },
@@ -1161,8 +791,7 @@
       "type": "COLOR",
       "valuesByMode": {
         "Jasny": "#505662",
-        "Ciemny": "#cacdd3",
-        "Okolicznosciowy": "#000000"
+        "Ciemny": "#cacdd3"
       }
     },
     {
@@ -1385,9 +1014,12 @@
     {
       "name": "rdzen/rozmiar/promien-sredni",
       "collection": "Prymitywy",
-      "type": "COLOR",
+      "type": "FLOAT",
       "valuesByMode": {
-        "Jasny": "#00ff88"
+        "Jasny": {
+          "value": 8,
+          "unit": "px"
+        }
       }
     },
     {
@@ -1639,9 +1271,9 @@
     {
       "name": "rdzen/typografia/grubosc-pogrubiona",
       "collection": "Prymitywy",
-      "type": "STRING",
+      "type": "FLOAT",
       "valuesByMode": {
-        "Jasny": "pogrubiona"
+        "Jasny": 600
       }
     },
     {
@@ -1709,11 +1341,19 @@
       }
     },
     {
+      "name": "rdzen/krycie/polowa",
+      "collection": "Prymitywy",
+      "type": "FLOAT",
+      "valuesByMode": {
+        "Jasny": 0.5
+      }
+    },
+    {
       "name": "rdzen/krycie/mocne",
       "collection": "Prymitywy",
       "type": "FLOAT",
       "valuesByMode": {
-        "Jasny": 0.9
+        "Jasny": 0.84
       }
     },
     {
@@ -1745,7 +1385,7 @@
       "collection": "Prymitywy",
       "type": "FLOAT",
       "valuesByMode": {
-        "Jasny": 120
+        "Jasny": 100
       }
     },
     {
@@ -1774,6 +1414,15 @@
       }
     },
     {
+      "name": "rdzen/zrodlowe/zorza",
+      "collection": "Prymitywy",
+      "type": "COLOR",
+      "valuesByMode": {
+        "Jasny": "#f6d5e6",
+        "Ciemny": "#711945"
+      }
+    },
+    {
       "name": "rdzen/semantic/tekst-podstawowy",
       "collection": "Semantyka",
       "type": "COLOR",
@@ -1781,8 +1430,7 @@
         "Jasny": {
           "aliasOf": "rdzen/color/grafit-900"
         }
-      },
-      "description": "Kolor tekstu — wersja robocza opisu (rozjechana)"
+      }
     },
     {
       "name": "rdzen/semantic/tekst-drugorzedny",
@@ -1820,7 +1468,7 @@
       "type": "COLOR",
       "valuesByMode": {
         "Jasny": {
-          "aliasOf": "rdzen/color/blekit-650"
+          "aliasOf": "rdzen/color/blekit-700"
         }
       }
     },
@@ -1880,7 +1528,7 @@
       "type": "COLOR",
       "valuesByMode": {
         "Jasny": {
-          "aliasOf": "rdzen/color/lazur-100"
+          "aliasOf": "rdzen/color/blekit-050"
         }
       }
     },
@@ -1899,7 +1547,9 @@
       "collection": "Semantyka",
       "type": "COLOR",
       "valuesByMode": {
-        "Jasny": "#7b2caf"
+        "Jasny": {
+          "aliasOf": "rdzen/color/blekit-700"
+        }
       }
     },
     {
@@ -1957,7 +1607,9 @@
       "collection": "Semantyka",
       "type": "COLOR",
       "valuesByMode": {
-        "Jasny": "#cacdd3"
+        "Jasny": {
+          "aliasOf": "rdzen/color/grafit-200"
+        }
       }
     },
     {
@@ -1995,7 +1647,9 @@
       "collection": "Semantyka",
       "type": "COLOR",
       "valuesByMode": {
-        "Jasny": "#d7f4e6"
+        "Jasny": {
+          "aliasOf": "rdzen/color/zielen-100"
+        }
       }
     },
     {
@@ -2664,95 +2318,6 @@
       "type": "STRING",
       "valuesByMode": {
         "Jasny": "system-ui, sans-serif"
-      }
-    },
-    {
-      "name": "rdzen/color/neon",
-      "collection": "Prymitywy",
-      "type": "COLOR",
-      "valuesByMode": {
-        "Jasny": "#1efa68"
-      }
-    },
-    {
-      "name": "rdzen/color/akcent-sezonowy",
-      "collection": "Prymitywy",
-      "type": "COLOR",
-      "valuesByMode": {
-        "Jasny": "#f66c31"
-      }
-    },
-    {
-      "name": "rdzen/semantic/tlo-reklamowe",
-      "collection": "Semantyka",
-      "type": "COLOR",
-      "valuesByMode": {
-        "Jasny": {
-          "aliasOf": "rdzen/color/bursztyn-100"
-        }
-      }
-    },
-    {
-      "name": "rdzen/wewnetrzne/przelamanie-male",
-      "collection": "Prymitywy",
-      "type": "FLOAT",
-      "valuesByMode": {
-        "Jasny": {
-          "value": 600,
-          "unit": "px"
-        }
-      }
-    },
-    {
-      "name": "rdzen/wewnetrzne/przelamanie-srednie",
-      "collection": "Prymitywy",
-      "type": "FLOAT",
-      "valuesByMode": {
-        "Jasny": {
-          "value": 900,
-          "unit": "px"
-        }
-      }
-    },
-    {
-      "name": "rdzen/wewnetrzne/siatka-marginesy",
-      "collection": "Prymitywy",
-      "type": "FLOAT",
-      "valuesByMode": {
-        "Jasny": {
-          "value": 24,
-          "unit": "px"
-        }
-      }
-    },
-    {
-      "name": "rdzen/wewnetrzne/przelamanie-olbrzymie",
-      "collection": "Prymitywy",
-      "type": "FLOAT",
-      "valuesByMode": {
-        "Jasny": {
-          "value": 1600,
-          "unit": "px"
-        }
-      }
-    },
-    {
-      "name": "rdzen/rozmiar/odstep-850",
-      "collection": "Prymitywy",
-      "type": "FLOAT",
-      "valuesByMode": {
-        "Jasny": {
-          "value": 56,
-          "unit": "px"
-        }
-      }
-    },
-    {
-      "name": "rdzen.krycie.pollowa",
-      "collection": "Prymitywy",
-      "type": "FLOAT",
-      "valuesByMode": {
-        "Jasny": 0.5
       }
     }
   ]

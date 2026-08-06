@@ -1,65 +1,912 @@
 {
-  "$description": "Kanon zestawu demonstracyjnego — jeden rdzeń, trzy marki. Wartości trybu Jasny (referencyjnego); tryb Ciemny w kanon/tryby.json. Metadane w $extensions pod przestrzenią com.example (parametr instalacji, nie wartość zaszyta).",
+  "$description": "Kanon zestawu demonstracyjnego — jeden rdzeń, trzy marki. Pełna piramida: prymitywy → semantyka → warstwa funkcjonalna → warstwa komponentowa. Wartości trybu Jasny (referencyjnego); tryb Ciemny w kanon/tryby.json. Metadane w $extensions pod przestrzenią com.example (parametr instalacji, nie wartość zaszyta). Plik wygenerowany: scripts/generuj.mjs.",
   "rdzen": {
     "color": {
-      "$type": "color",
-      "podstawowy": {
-        "$value": "#1d4ed8",
-        "$description": "Kolor podstawowy marki",
+      "blekit-050": {
+        "$type": "color",
+        "$value": "#edf1fd",
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",
           "com.example.layer": "primitive"
         }
       },
-      "tekst": {
-        "$value": "#1e2229",
-        "$description": "Kolor tekstu podstawowego",
+      "blekit-100": {
+        "$type": "color",
+        "$value": "#d2dcf9",
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",
           "com.example.layer": "primitive"
         }
       },
-      "tlo": {
+      "blekit-200": {
+        "$type": "color",
+        "$value": "#aabdf3",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "blekit-300": {
+        "$type": "color",
+        "$value": "#7d9bed",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "blekit-400": {
+        "$type": "color",
+        "$value": "#5078e7",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "blekit-500": {
+        "$type": "color",
+        "$value": "#2356e1",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "blekit-600": {
+        "$type": "color",
+        "$value": "#1a47c1",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "blekit-700": {
+        "$type": "color",
+        "$value": "#153a9d",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "blekit-800": {
+        "$type": "color",
+        "$value": "#112c79",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "blekit-900": {
+        "$type": "color",
+        "$value": "#0c1f55",
+        "$description": "Najciemniejszy krok skali błękitu — podstawa tekstu akcentowego",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "morski-050": {
+        "$type": "color",
+        "$value": "#eef9fc",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "morski-100": {
+        "$type": "color",
+        "$value": "#d4f0f7",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "morski-200": {
+        "$type": "color",
+        "$value": "#aee2ef",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "morski-300": {
+        "$type": "color",
+        "$value": "#83d3e7",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "morski-400": {
+        "$type": "color",
+        "$value": "#58c4df",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "morski-500": {
+        "$type": "color",
+        "$value": "#2db5d7",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "morski-600": {
+        "$type": "color",
+        "$value": "#239ab8",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "morski-700": {
+        "$type": "color",
+        "$value": "#1d7e96",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "morski-800": {
+        "$type": "color",
+        "$value": "#166174",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "morski-900": {
+        "$type": "color",
+        "$value": "#104451",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "zielen-050": {
+        "$type": "color",
+        "$value": "#effbf5",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "zielen-100": {
+        "$type": "color",
+        "$value": "#d7f4e6",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "zielen-200": {
+        "$type": "color",
+        "$value": "#b3ead0",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "zielen-300": {
+        "$type": "color",
+        "$value": "#8cdeb8",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "zielen-400": {
+        "$type": "color",
+        "$value": "#64d39f",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "zielen-500": {
+        "$type": "color",
+        "$value": "#3cc887",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "zielen-600": {
+        "$type": "color",
+        "$value": "#30ab72",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "zielen-700": {
+        "$type": "color",
+        "$value": "#278b5d",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "zielen-800": {
+        "$type": "color",
+        "$value": "#1e6b47",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "zielen-900": {
+        "$type": "color",
+        "$value": "#154c32",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "oliwka-050": {
+        "$type": "color",
+        "$value": "#f6faf0",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "oliwka-100": {
+        "$type": "color",
+        "$value": "#e8f2d9",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "oliwka-200": {
+        "$type": "color",
+        "$value": "#d3e6b7",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "oliwka-300": {
+        "$type": "color",
+        "$value": "#bcd992",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "oliwka-400": {
+        "$type": "color",
+        "$value": "#a5cb6c",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "oliwka-500": {
+        "$type": "color",
+        "$value": "#8ebe46",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "oliwka-600": {
+        "$type": "color",
+        "$value": "#78a239",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "oliwka-700": {
+        "$type": "color",
+        "$value": "#62842e",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "oliwka-800": {
+        "$type": "color",
+        "$value": "#4b6624",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "oliwka-900": {
+        "$type": "color",
+        "$value": "#354819",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "bursztyn-050": {
+        "$type": "color",
+        "$value": "#fef8ec",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "bursztyn-100": {
+        "$type": "color",
+        "$value": "#fceecf",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "bursztyn-200": {
+        "$type": "color",
+        "$value": "#f9e0a4",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "bursztyn-300": {
+        "$type": "color",
+        "$value": "#f6cf74",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "bursztyn-400": {
+        "$type": "color",
+        "$value": "#f3bf44",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "bursztyn-500": {
+        "$type": "color",
+        "$value": "#f0ae14",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "bursztyn-600": {
+        "$type": "color",
+        "$value": "#ce940d",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "bursztyn-700": {
+        "$type": "color",
+        "$value": "#a8790b",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "bursztyn-800": {
+        "$type": "color",
+        "$value": "#815d08",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "bursztyn-900": {
+        "$type": "color",
+        "$value": "#5b4206",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "czerwien-050": {
+        "$type": "color",
+        "$value": "#fcf0ed",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "czerwien-100": {
+        "$type": "color",
+        "$value": "#f8d9d3",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "czerwien-200": {
+        "$type": "color",
+        "$value": "#f1b7ac",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "czerwien-300": {
+        "$type": "color",
+        "$value": "#ea9280",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "czerwien-400": {
+        "$type": "color",
+        "$value": "#e36c54",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "czerwien-500": {
+        "$type": "color",
+        "$value": "#dc4628",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "czerwien-600": {
+        "$type": "color",
+        "$value": "#bd391f",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "czerwien-700": {
+        "$type": "color",
+        "$value": "#9a2e19",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "czerwien-800": {
+        "$type": "color",
+        "$value": "#762413",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "czerwien-900": {
+        "$type": "color",
+        "$value": "#53190e",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "purpura-050": {
+        "$type": "color",
+        "$value": "#f6effb",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "purpura-100": {
+        "$type": "color",
+        "$value": "#e9d6f5",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "purpura-200": {
+        "$type": "color",
+        "$value": "#d4b1ec",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "purpura-300": {
+        "$type": "color",
+        "$value": "#be89e1",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "purpura-400": {
+        "$type": "color",
+        "$value": "#a760d7",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "purpura-500": {
+        "$type": "color",
+        "$value": "#9137cd",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "purpura-600": {
+        "$type": "color",
+        "$value": "#7b2caf",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "purpura-700": {
+        "$type": "color",
+        "$value": "#64248f",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "purpura-800": {
+        "$type": "color",
+        "$value": "#4d1c6e",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "purpura-900": {
+        "$type": "color",
+        "$value": "#36134e",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "roz-050": {
+        "$type": "color",
+        "$value": "#fbeef5",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "roz-100": {
+        "$type": "color",
+        "$value": "#f6d5e6",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "roz-200": {
+        "$type": "color",
+        "$value": "#eeb0cf",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "roz-300": {
+        "$type": "color",
+        "$value": "#e486b5",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "roz-400": {
+        "$type": "color",
+        "$value": "#db5c9c",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "roz-500": {
+        "$type": "color",
+        "$value": "#d23282",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "roz-600": {
+        "$type": "color",
+        "$value": "#b4276e",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "roz-700": {
+        "$type": "color",
+        "$value": "#922059",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "roz-800": {
+        "$type": "color",
+        "$value": "#711945",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "roz-900": {
+        "$type": "color",
+        "$value": "#4f1130",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grafit-050": {
+        "$type": "color",
+        "$value": "#f4f4f6",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grafit-100": {
+        "$type": "color",
+        "$value": "#e3e4e8",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grafit-200": {
+        "$type": "color",
+        "$value": "#cacdd3",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grafit-300": {
+        "$type": "color",
+        "$value": "#aeb2bc",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grafit-400": {
+        "$type": "color",
+        "$value": "#9298a5",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grafit-500": {
+        "$type": "color",
+        "$value": "#767d8f",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grafit-600": {
+        "$type": "color",
+        "$value": "#636979",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grafit-700": {
+        "$type": "color",
+        "$value": "#505662",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grafit-800": {
+        "$type": "color",
+        "$value": "#3e424c",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grafit-900": {
+        "$type": "color",
+        "$value": "#2c2f35",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "biel": {
+        "$type": "color",
         "$value": "#ffffff",
-        "$description": "Tło powierzchni",
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",
           "com.example.layer": "primitive"
         }
       },
-      "obwodka": {
-        "$value": "#d1d5db",
+      "czern": {
+        "$type": "color",
+        "$value": "#101216",
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",
           "com.example.layer": "primitive"
         }
       },
-      "przestarzaly": {
-        "$value": "#6b7280",
+      "sygnalowy-stary": {
+        "$type": "color",
+        "$value": "#bd391f",
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "deprecated",
           "com.example.layer": "primitive",
-          "com.example.replaced-by": "rdzen.color.podstawowy",
-          "com.example.deprecated-since": "2026-08-01"
+          "com.example.replaced-by": "rdzen.color.czerwien-600",
+          "com.example.deprecated-since": "2026-01-15",
+          "com.example.deprecated-deadline": "2026-12-31"
         }
       },
-      "zrodlowy": {
-        "$value": "#eff6ff",
+      "akcent-stary": {
+        "$type": "color",
+        "$value": "#f0ae14",
         "$extensions": {
-          "com.example.provenance": "figma",
-          "com.example.status": "active",
-          "com.example.layer": "primitive"
+          "com.example.provenance": "code",
+          "com.example.status": "deprecated",
+          "com.example.layer": "primitive",
+          "com.example.replaced-by": "rdzen.color.bursztyn-500",
+          "com.example.deprecated-since": "2026-02-01",
+          "com.example.deprecated-deadline": "2026-12-31"
         }
       }
     },
     "rozmiar": {
-      "odstep": {
-        "$type": "dimension",
+      "odstep-000": {
+        "$type": "space",
+        "$value": {
+          "value": 0,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "odstep-025": {
+        "$type": "space",
+        "$value": {
+          "value": 2,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "odstep-050": {
+        "$type": "space",
+        "$value": {
+          "value": 4,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "odstep-075": {
+        "$type": "space",
+        "$value": {
+          "value": 6,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "odstep-100": {
+        "$type": "space",
         "$value": {
           "value": 8,
           "unit": "px"
@@ -69,40 +916,1481 @@
           "com.example.status": "active",
           "com.example.layer": "primitive"
         }
+      },
+      "odstep-150": {
+        "$type": "space",
+        "$value": {
+          "value": 12,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "odstep-200": {
+        "$type": "space",
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "odstep-250": {
+        "$type": "space",
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "odstep-300": {
+        "$type": "space",
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "odstep-400": {
+        "$type": "space",
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "odstep-500": {
+        "$type": "space",
+        "$value": {
+          "value": 40,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "odstep-600": {
+        "$type": "space",
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "odstep-stary": {
+        "$type": "space",
+        "$value": {
+          "value": 10,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "deprecated",
+          "com.example.layer": "primitive",
+          "com.example.replaced-by": "rdzen.rozmiar.odstep-150",
+          "com.example.deprecated-since": "2026-03-01",
+          "com.example.deprecated-deadline": "2026-12-31"
+        }
+      },
+      "promien-zaden": {
+        "$type": "radius",
+        "$value": {
+          "value": 0,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "promien-maly": {
+        "$type": "radius",
+        "$value": {
+          "value": 4,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "promien-sredni": {
+        "$type": "radius",
+        "$value": {
+          "value": 8,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "promien-duzy": {
+        "$type": "radius",
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "promien-pelny": {
+        "$type": "radius",
+        "$value": {
+          "value": 999,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "obwodka-cienka": {
+        "$type": "borderWidth",
+        "$value": {
+          "value": 1,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "obwodka-srednia": {
+        "$type": "borderWidth",
+        "$value": {
+          "value": 2,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "obwodka-gruba": {
+        "$type": "borderWidth",
+        "$value": {
+          "value": 4,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "ikona-maly": {
+        "$type": "size",
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "ikona-sredni": {
+        "$type": "size",
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "ikona-duzy": {
+        "$type": "size",
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "ikona-wielki": {
+        "$type": "size",
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      }
+    },
+    "typografia": {
+      "rozmiar-drobny": {
+        "$type": "fontSize",
+        "$value": {
+          "value": 12,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "rozmiar-podpis": {
+        "$type": "fontSize",
+        "$value": {
+          "value": 13,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "rozmiar-tresc": {
+        "$type": "fontSize",
+        "$value": {
+          "value": 15,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "rozmiar-tresc-duza": {
+        "$type": "fontSize",
+        "$value": {
+          "value": 17,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "rozmiar-naglowek-4": {
+        "$type": "fontSize",
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "rozmiar-naglowek-3": {
+        "$type": "fontSize",
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "rozmiar-naglowek-2": {
+        "$type": "fontSize",
+        "$value": {
+          "value": 30,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "rozmiar-naglowek-1": {
+        "$type": "fontSize",
+        "$value": {
+          "value": 38,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "rozmiar-tytul": {
+        "$type": "fontSize",
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        },
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "wysokosc-ciasna": {
+        "$type": "lineHeight",
+        "$value": 1.2,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "wysokosc-zwarta": {
+        "$type": "lineHeight",
+        "$value": 1.35,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "wysokosc-zwykla": {
+        "$type": "lineHeight",
+        "$value": 1.5,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "wysokosc-luzna": {
+        "$type": "lineHeight",
+        "$value": 1.7,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grubosc-zwykla": {
+        "$type": "fontWeight",
+        "$value": 400,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grubosc-srednia": {
+        "$type": "fontWeight",
+        "$value": 500,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grubosc-pogrubiona": {
+        "$type": "fontWeight",
+        "$value": 600,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "grubosc-mocna": {
+        "$type": "fontWeight",
+        "$value": 700,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "rodzina-podstawowa": {
+        "$type": "fontFamily",
+        "$value": "system-ui, sans-serif",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "rodzina-o-stalej-szerokosci": {
+        "$type": "fontFamily",
+        "$value": "ui-monospace, monospace",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      }
+    },
+    "czas": {
+      "blysk": {
+        "$type": "duration",
+        "$value": 80,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "szybki": {
+        "$type": "duration",
+        "$value": 140,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "zwykly": {
+        "$type": "duration",
+        "$value": 220,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "wolny": {
+        "$type": "duration",
+        "$value": 360,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      }
+    },
+    "krycie": {
+      "przezroczyste": {
+        "$type": "opacity",
+        "$value": 0,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "ledwie": {
+        "$type": "opacity",
+        "$value": 0.12,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "polowa": {
+        "$type": "opacity",
+        "$value": 0.5,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "mocne": {
+        "$type": "opacity",
+        "$value": 0.84,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "pelne": {
+        "$type": "opacity",
+        "$value": 1,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      }
+    },
+    "warstwa": {
+      "podloga": {
+        "$type": "zIndex",
+        "$value": 0,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "wyniesienie": {
+        "$type": "zIndex",
+        "$value": 10,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "nakladka": {
+        "$type": "zIndex",
+        "$value": 100,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "okno": {
+        "$type": "zIndex",
+        "$value": 1000,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "powiadomienie": {
+        "$type": "zIndex",
+        "$value": 1100,
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      }
+    },
+    "zrodlowe": {
+      "poswiata": {
+        "$type": "color",
+        "$value": "#edf1fd",
+        "$description": "Token przyjęty z pliku projektowego (pochodzenie: źródło projektowe)",
+        "$extensions": {
+          "com.example.provenance": "figma",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "mgla": {
+        "$type": "color",
+        "$value": "#e3e4e8",
+        "$description": "Token przyjęty z pliku projektowego (pochodzenie: źródło projektowe)",
+        "$extensions": {
+          "com.example.provenance": "figma",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "poranek": {
+        "$type": "color",
+        "$value": "#fef8ec",
+        "$description": "Token przyjęty z pliku projektowego (pochodzenie: źródło projektowe)",
+        "$extensions": {
+          "com.example.provenance": "figma",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "zorza": {
+        "$type": "color",
+        "$value": "#f6d5e6",
+        "$description": "Token przyjęty z pliku projektowego (pochodzenie: źródło projektowe)",
+        "$extensions": {
+          "com.example.provenance": "figma",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      }
+    },
+    "wewnetrzne": {
+      "siatka-kolumn": {
+        "$type": "zIndex",
+        "$value": 12,
+        "$description": "Liczba kolumn siatki — konsumowana wyłącznie przez kod układu",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "przelamanie-male": {
+        "$type": "dimension",
+        "$value": {
+          "value": 640,
+          "unit": "px"
+        },
+        "$description": "Próg przełamania układu — konsumowany wyłącznie przez kod",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "przelamanie-srednie": {
+        "$type": "dimension",
+        "$value": {
+          "value": 960,
+          "unit": "px"
+        },
+        "$description": "Próg przełamania układu — konsumowany wyłącznie przez kod",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
+      },
+      "przelamanie-duze": {
+        "$type": "dimension",
+        "$value": {
+          "value": 1280,
+          "unit": "px"
+        },
+        "$description": "Próg przełamania układu — konsumowany wyłącznie przez kod",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
       }
     },
     "semantic": {
-      "$type": "color",
-      "akcja": {
-        "$value": "{rdzen.color.podstawowy}",
+      "tekst-podstawowy": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-900}",
+        "$description": "Podstawowy kolor tekstu treści",
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",
           "com.example.layer": "semantic"
         }
       },
-      "tekst": {
-        "$value": "{rdzen.color.tekst}",
+      "tekst-drugorzedny": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-700}",
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",
           "com.example.layer": "semantic"
         }
       },
-      "tlo": {
-        "$value": "{rdzen.color.tlo}",
+      "tekst-odwrocony": {
+        "$type": "color",
+        "$value": "{rdzen.color.biel}",
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",
           "com.example.layer": "semantic"
+        }
+      },
+      "tekst-wylaczony": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-400}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "tekst-link": {
+        "$type": "color",
+        "$value": "{rdzen.color.blekit-700}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "tekst-negatywny": {
+        "$type": "color",
+        "$value": "{rdzen.color.czerwien-700}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "tlo-strona": {
+        "$type": "color",
+        "$value": "{rdzen.color.biel}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "tlo-powierzchnia": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-050}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "tlo-wyniesione": {
+        "$type": "color",
+        "$value": "{rdzen.color.biel}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "tlo-wyciszone": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-100}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "tlo-akcent-subtelne": {
+        "$type": "color",
+        "$value": "{rdzen.color.blekit-050}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "tlo-odwrocone": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-900}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "akcja-podstawowa": {
+        "$type": "color",
+        "$value": "{rdzen.color.blekit-700}",
+        "$description": "Kolor głównych przycisków i akcji",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "akcja-podstawowa-najechanie": {
+        "$type": "color",
+        "$value": "{rdzen.color.blekit-800}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "akcja-podstawowa-aktywna": {
+        "$type": "color",
+        "$value": "{rdzen.color.blekit-900}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "akcja-drugorzedna": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-200}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "akcja-destrukcyjna": {
+        "$type": "color",
+        "$value": "{rdzen.color.czerwien-600}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "akcja-wylaczona": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-200}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "obwodka-subtelna": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-200}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "obwodka-wyrazna": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-400}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "obwodka-skupienie": {
+        "$type": "color",
+        "$value": "{rdzen.color.blekit-500}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "obwodka-blad": {
+        "$type": "color",
+        "$value": "{rdzen.color.czerwien-600}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "stan-sukces-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.color.zielen-100}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "stan-sukces-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.color.zielen-800}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "stan-ostrzezenie-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.color.bursztyn-100}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "stan-ostrzezenie-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.color.bursztyn-800}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "stan-blad-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.color.czerwien-050}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "stan-blad-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.color.czerwien-800}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "stan-informacja-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.color.morski-050}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "stan-informacja-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.color.morski-800}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "odstep-przylegly": {
+        "$type": "space",
+        "$value": "{rdzen.rozmiar.odstep-025}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "odstep-ciasny": {
+        "$type": "space",
+        "$value": "{rdzen.rozmiar.odstep-075}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "odstep-zwykly": {
+        "$type": "space",
+        "$value": "{rdzen.rozmiar.odstep-150}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "odstep-luzny": {
+        "$type": "space",
+        "$value": "{rdzen.rozmiar.odstep-300}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "odstep-sekcja": {
+        "$type": "space",
+        "$value": "{rdzen.rozmiar.odstep-500}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "odstep-strona": {
+        "$type": "space",
+        "$value": "{rdzen.rozmiar.odstep-600}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "promien-interakcja": {
+        "$type": "radius",
+        "$value": "{rdzen.rozmiar.promien-maly}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "promien-powierzchnia": {
+        "$type": "radius",
+        "$value": "{rdzen.rozmiar.promien-sredni}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "promien-pelny": {
+        "$type": "radius",
+        "$value": "{rdzen.rozmiar.promien-pelny}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "typografia-naglowek-1": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-naglowek-1}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "typografia-naglowek-2": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-naglowek-2}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "typografia-naglowek-3": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-naglowek-3}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "typografia-naglowek-4": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-naglowek-4}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "typografia-tresc": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-tresc}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "typografia-tresc-duza": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-tresc-duza}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "typografia-podpis": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-podpis}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "typografia-przycisk": {
+        "$type": "fontSize",
+        "$value": "{rdzen.typografia.rozmiar-tresc}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "ruch-wejscie": {
+        "$type": "duration",
+        "$value": "{rdzen.czas.szybki}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      },
+      "ruch-wyjscie": {
+        "$type": "duration",
+        "$value": "{rdzen.czas.blysk}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "semantic"
+        }
+      }
+    },
+    "funkcjonalne": {
+      "formularz-etykieta": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.tekst-podstawowy}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "formularz-pomoc": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.tekst-drugorzedny}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "formularz-blad": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.tekst-negatywny}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "formularz-tlo-pola": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.tlo-strona}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "formularz-obwodka-pola": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.obwodka-subtelna}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "formularz-obwodka-skupienie": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.obwodka-skupienie}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "nawigacja-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.tlo-powierzchnia}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "nawigacja-pozycja-tekst": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.tekst-drugorzedny}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "nawigacja-pozycja-aktywna": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.akcja-podstawowa}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "nawigacja-separator": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.obwodka-subtelna}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "tabela-naglowek-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.tlo-wyciszone}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "tabela-wiersz-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.tlo-strona}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "tabela-wiersz-naprzemienny": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.tlo-powierzchnia}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "tabela-obwodka": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.obwodka-subtelna}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "komunikat-sukces-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.stan-sukces-tlo}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "komunikat-sukces-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.stan-sukces-tresc}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "komunikat-blad-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.stan-blad-tlo}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "komunikat-blad-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.stan-blad-tresc}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "komunikat-informacja-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.stan-informacja-tlo}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
+        }
+      },
+      "komunikat-informacja-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.semantic.stan-informacja-tresc}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "functional"
         }
       }
     },
     "komponent": {
       "przycisk-tlo": {
         "$type": "color",
-        "$value": "{rdzen.color.podstawowy}",
-        "$description": "Celowy rozjazd warstwy: deklaracja component, wyprowadzenie semantic (alias wprost do prymitywu)",
+        "$value": "{rdzen.color.blekit-600}",
+        "$description": "Celowy rozjazd warstwy: deklaracja komponentowa, alias wprost do prymitywu",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "przycisk-tlo-najechanie": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.nawigacja-pozycja-aktywna}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "przycisk-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.formularz-etykieta}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "przycisk-obwodka": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.formularz-obwodka-pola}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "przycisk-tresc-odwrocona": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.tabela-wiersz-tlo}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "przycisk-tlo-wylaczone": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.nawigacja-separator}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "pole-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.formularz-tlo-pola}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "pole-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.formularz-etykieta}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "pole-obwodka": {
+        "$type": "color",
+        "$value": "{rdzen.color.grafit-300}",
+        "$description": "Celowy rozjazd warstwy: deklaracja komponentowa, alias wprost do prymitywu",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "pole-obwodka-skupienie": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.formularz-obwodka-skupienie}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "karta-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.tabela-wiersz-tlo}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "karta-obwodka": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.tabela-obwodka}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "karta-naglowek": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.formularz-etykieta}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "karta-opis": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.formularz-pomoc}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "znacznik-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.color.bursztyn-100}",
+        "$description": "Celowy rozjazd warstwy: deklaracja komponentowa, alias wprost do prymitywu",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "znacznik-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.komunikat-informacja-tresc}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "okno-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.tabela-wiersz-tlo}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "okno-naglowek": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.formularz-etykieta}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "powiadomienie-tlo": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.komunikat-informacja-tlo}",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.status": "active",
+          "com.example.layer": "component"
+        }
+      },
+      "powiadomienie-tresc": {
+        "$type": "color",
+        "$value": "{rdzen.funkcjonalne.komunikat-informacja-tresc}",
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",

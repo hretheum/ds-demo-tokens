@@ -1,0 +1,2727 @@
+{
+  "comment": "Ten sam stan co zrzut.json, w surowym kształcie trasy przyjęcia (POST /data-sources/:id/snapshots) — wejście importu przez bramkę scalania.",
+  "kind": "variables",
+  "payload": {
+    "meta": {
+      "variableCollections": {
+        "kol-prymitywy": {
+          "id": "kol-prymitywy",
+          "name": "Prymitywy",
+          "defaultModeId": "tryb-jasny",
+          "modes": [
+            {
+              "modeId": "tryb-jasny",
+              "name": "Jasny"
+            },
+            {
+              "modeId": "tryb-ciemny",
+              "name": "Ciemny"
+            }
+          ]
+        },
+        "kol-semantyka": {
+          "id": "kol-semantyka",
+          "name": "Semantyka",
+          "defaultModeId": "tryb-jasny",
+          "modes": [
+            {
+              "modeId": "tryb-jasny",
+              "name": "Jasny"
+            },
+            {
+              "modeId": "tryb-ciemny",
+              "name": "Ciemny"
+            }
+          ]
+        },
+        "kol-kompozycja": {
+          "id": "kol-kompozycja",
+          "name": "Kompozycja",
+          "defaultModeId": "tryb-jasny",
+          "modes": [
+            {
+              "modeId": "tryb-jasny",
+              "name": "Jasny"
+            },
+            {
+              "modeId": "tryb-ciemny",
+              "name": "Ciemny"
+            }
+          ]
+        }
+      },
+      "variables": {
+        "zm-rdzen-color-blekit-050": {
+          "id": "zm-rdzen-color-blekit-050",
+          "name": "rdzen/color/blekit-050",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#edf1fd",
+            "tryb-ciemny": "#0c1f55"
+          }
+        },
+        "zm-rdzen-color-blekit-100": {
+          "id": "zm-rdzen-color-blekit-100",
+          "name": "rdzen/color/blekit-100",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#d2dcf9",
+            "tryb-ciemny": "#112c79"
+          }
+        },
+        "zm-rdzen-color-blekit-200": {
+          "id": "zm-rdzen-color-blekit-200",
+          "name": "rdzen/color/blekit-200",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#aabdf3",
+            "tryb-ciemny": "#153a9d"
+          }
+        },
+        "zm-rdzen-color-blekit-300": {
+          "id": "zm-rdzen-color-blekit-300",
+          "name": "rdzen/color/blekit-300",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#7d9bed",
+            "tryb-ciemny": "#1a47c1"
+          }
+        },
+        "zm-rdzen-color-blekit-400": {
+          "id": "zm-rdzen-color-blekit-400",
+          "name": "rdzen/color/blekit-400",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#5078e7",
+            "tryb-ciemny": "#2356e1"
+          }
+        },
+        "zm-rdzen-color-blekit-500": {
+          "id": "zm-rdzen-color-blekit-500",
+          "name": "rdzen/color/blekit-500",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#2356e1",
+            "tryb-ciemny": "#5078e7"
+          }
+        },
+        "zm-rdzen-color-blekit-600": {
+          "id": "zm-rdzen-color-blekit-600",
+          "name": "rdzen/color/blekit-600",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#1a47c1",
+            "tryb-ciemny": "#7d9bed"
+          }
+        },
+        "zm-rdzen-color-blekit-700": {
+          "id": "zm-rdzen-color-blekit-700",
+          "name": "rdzen/color/blekit-700",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#153a9d",
+            "tryb-ciemny": "#aabdf3"
+          }
+        },
+        "zm-rdzen-color-blekit-800": {
+          "id": "zm-rdzen-color-blekit-800",
+          "name": "rdzen/color/blekit-800",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#112c79",
+            "tryb-ciemny": "#d2dcf9"
+          }
+        },
+        "zm-rdzen-color-blekit-900": {
+          "id": "zm-rdzen-color-blekit-900",
+          "name": "rdzen/color/blekit-900",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#0c1f55",
+            "tryb-ciemny": "#edf1fd"
+          }
+        },
+        "zm-rdzen-color-morski-050": {
+          "id": "zm-rdzen-color-morski-050",
+          "name": "rdzen/color/morski-050",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#eef9fc",
+            "tryb-ciemny": "#104451"
+          }
+        },
+        "zm-rdzen-color-morski-100": {
+          "id": "zm-rdzen-color-morski-100",
+          "name": "rdzen/color/morski-100",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#d4f0f7",
+            "tryb-ciemny": "#166174"
+          }
+        },
+        "zm-rdzen-color-morski-200": {
+          "id": "zm-rdzen-color-morski-200",
+          "name": "rdzen/color/morski-200",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#aee2ef",
+            "tryb-ciemny": "#1d7e96"
+          }
+        },
+        "zm-rdzen-color-morski-300": {
+          "id": "zm-rdzen-color-morski-300",
+          "name": "rdzen/color/morski-300",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#83d3e7",
+            "tryb-ciemny": "#239ab8"
+          }
+        },
+        "zm-rdzen-color-morski-400": {
+          "id": "zm-rdzen-color-morski-400",
+          "name": "rdzen/color/morski-400",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#58c4df",
+            "tryb-ciemny": "#2db5d7"
+          }
+        },
+        "zm-rdzen-color-morski-500": {
+          "id": "zm-rdzen-color-morski-500",
+          "name": "rdzen/color/morski-500",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#2db5d7",
+            "tryb-ciemny": "#58c4df"
+          }
+        },
+        "zm-rdzen-color-morski-600": {
+          "id": "zm-rdzen-color-morski-600",
+          "name": "rdzen/color/morski-600",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#239ab8",
+            "tryb-ciemny": "#83d3e7"
+          }
+        },
+        "zm-rdzen-color-morski-700": {
+          "id": "zm-rdzen-color-morski-700",
+          "name": "rdzen/color/morski-700",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#1d7e96",
+            "tryb-ciemny": "#aee2ef"
+          }
+        },
+        "zm-rdzen-color-morski-800": {
+          "id": "zm-rdzen-color-morski-800",
+          "name": "rdzen/color/morski-800",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#166174",
+            "tryb-ciemny": "#d4f0f7"
+          }
+        },
+        "zm-rdzen-color-morski-900": {
+          "id": "zm-rdzen-color-morski-900",
+          "name": "rdzen/color/morski-900",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#104451",
+            "tryb-ciemny": "#eef9fc"
+          }
+        },
+        "zm-rdzen-color-zielen-050": {
+          "id": "zm-rdzen-color-zielen-050",
+          "name": "rdzen/color/zielen-050",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#effbf5",
+            "tryb-ciemny": "#154c32"
+          }
+        },
+        "zm-rdzen-color-zielen-100": {
+          "id": "zm-rdzen-color-zielen-100",
+          "name": "rdzen/color/zielen-100",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#d7f4e6",
+            "tryb-ciemny": "#1e6b47"
+          }
+        },
+        "zm-rdzen-color-zielen-200": {
+          "id": "zm-rdzen-color-zielen-200",
+          "name": "rdzen/color/zielen-200",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#b3ead0",
+            "tryb-ciemny": "#278b5d"
+          }
+        },
+        "zm-rdzen-color-zielen-300": {
+          "id": "zm-rdzen-color-zielen-300",
+          "name": "rdzen/color/zielen-300",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#8cdeb8",
+            "tryb-ciemny": "#30ab72"
+          }
+        },
+        "zm-rdzen-color-zielen-400": {
+          "id": "zm-rdzen-color-zielen-400",
+          "name": "rdzen/color/zielen-400",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#64d39f",
+            "tryb-ciemny": "#3cc887"
+          }
+        },
+        "zm-rdzen-color-zielen-500": {
+          "id": "zm-rdzen-color-zielen-500",
+          "name": "rdzen/color/zielen-500",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#3cc887",
+            "tryb-ciemny": "#64d39f"
+          }
+        },
+        "zm-rdzen-color-zielen-600": {
+          "id": "zm-rdzen-color-zielen-600",
+          "name": "rdzen/color/zielen-600",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#30ab72",
+            "tryb-ciemny": "#8cdeb8"
+          }
+        },
+        "zm-rdzen-color-zielen-700": {
+          "id": "zm-rdzen-color-zielen-700",
+          "name": "rdzen/color/zielen-700",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#278b5d",
+            "tryb-ciemny": "#b3ead0"
+          }
+        },
+        "zm-rdzen-color-zielen-800": {
+          "id": "zm-rdzen-color-zielen-800",
+          "name": "rdzen/color/zielen-800",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#1e6b47",
+            "tryb-ciemny": "#d7f4e6"
+          }
+        },
+        "zm-rdzen-color-zielen-900": {
+          "id": "zm-rdzen-color-zielen-900",
+          "name": "rdzen/color/zielen-900",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#154c32",
+            "tryb-ciemny": "#effbf5"
+          }
+        },
+        "zm-rdzen-color-oliwka-050": {
+          "id": "zm-rdzen-color-oliwka-050",
+          "name": "rdzen/color/oliwka-050",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#f6faf0",
+            "tryb-ciemny": "#354819"
+          }
+        },
+        "zm-rdzen-color-oliwka-100": {
+          "id": "zm-rdzen-color-oliwka-100",
+          "name": "rdzen/color/oliwka-100",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#e8f2d9",
+            "tryb-ciemny": "#4b6624"
+          }
+        },
+        "zm-rdzen-color-oliwka-200": {
+          "id": "zm-rdzen-color-oliwka-200",
+          "name": "rdzen/color/oliwka-200",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#d3e6b7",
+            "tryb-ciemny": "#62842e"
+          }
+        },
+        "zm-rdzen-color-oliwka-300": {
+          "id": "zm-rdzen-color-oliwka-300",
+          "name": "rdzen/color/oliwka-300",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#bcd992",
+            "tryb-ciemny": "#78a239"
+          }
+        },
+        "zm-rdzen-color-oliwka-400": {
+          "id": "zm-rdzen-color-oliwka-400",
+          "name": "rdzen/color/oliwka-400",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#a5cb6c",
+            "tryb-ciemny": "#8ebe46"
+          }
+        },
+        "zm-rdzen-color-oliwka-500": {
+          "id": "zm-rdzen-color-oliwka-500",
+          "name": "rdzen/color/oliwka-500",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#8ebe46",
+            "tryb-ciemny": "#a5cb6c"
+          }
+        },
+        "zm-rdzen-color-oliwka-600": {
+          "id": "zm-rdzen-color-oliwka-600",
+          "name": "rdzen/color/oliwka-600",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#78a239",
+            "tryb-ciemny": "#bcd992"
+          }
+        },
+        "zm-rdzen-color-oliwka-700": {
+          "id": "zm-rdzen-color-oliwka-700",
+          "name": "rdzen/color/oliwka-700",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#62842e",
+            "tryb-ciemny": "#d3e6b7"
+          }
+        },
+        "zm-rdzen-color-oliwka-800": {
+          "id": "zm-rdzen-color-oliwka-800",
+          "name": "rdzen/color/oliwka-800",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#4b6624",
+            "tryb-ciemny": "#e8f2d9"
+          }
+        },
+        "zm-rdzen-color-oliwka-900": {
+          "id": "zm-rdzen-color-oliwka-900",
+          "name": "rdzen/color/oliwka-900",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#354819",
+            "tryb-ciemny": "#f6faf0"
+          }
+        },
+        "zm-rdzen-color-bursztyn-050": {
+          "id": "zm-rdzen-color-bursztyn-050",
+          "name": "rdzen/color/bursztyn-050",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#fef8ec",
+            "tryb-ciemny": "#5b4206"
+          }
+        },
+        "zm-rdzen-color-bursztyn-100": {
+          "id": "zm-rdzen-color-bursztyn-100",
+          "name": "rdzen/color/bursztyn-100",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#fceecf",
+            "tryb-ciemny": "#815d08"
+          }
+        },
+        "zm-rdzen-color-bursztyn-200": {
+          "id": "zm-rdzen-color-bursztyn-200",
+          "name": "rdzen/color/bursztyn-200",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#f9e0a4",
+            "tryb-ciemny": "#a8790b"
+          }
+        },
+        "zm-rdzen-color-bursztyn-300": {
+          "id": "zm-rdzen-color-bursztyn-300",
+          "name": "rdzen/color/bursztyn-300",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#f6cf74",
+            "tryb-ciemny": "#ce940d"
+          }
+        },
+        "zm-rdzen-color-bursztyn-400": {
+          "id": "zm-rdzen-color-bursztyn-400",
+          "name": "rdzen/color/bursztyn-400",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#f3bf44",
+            "tryb-ciemny": "#f0ae14"
+          }
+        },
+        "zm-rdzen-color-bursztyn-500": {
+          "id": "zm-rdzen-color-bursztyn-500",
+          "name": "rdzen/color/bursztyn-500",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#f0ae14",
+            "tryb-ciemny": "#f3bf44"
+          }
+        },
+        "zm-rdzen-color-bursztyn-600": {
+          "id": "zm-rdzen-color-bursztyn-600",
+          "name": "rdzen/color/bursztyn-600",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#ce940d",
+            "tryb-ciemny": "#f6cf74"
+          }
+        },
+        "zm-rdzen-color-bursztyn-700": {
+          "id": "zm-rdzen-color-bursztyn-700",
+          "name": "rdzen/color/bursztyn-700",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#a8790b",
+            "tryb-ciemny": "#f9e0a4"
+          }
+        },
+        "zm-rdzen-color-bursztyn-800": {
+          "id": "zm-rdzen-color-bursztyn-800",
+          "name": "rdzen/color/bursztyn-800",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#815d08",
+            "tryb-ciemny": "#fceecf"
+          }
+        },
+        "zm-rdzen-color-bursztyn-900": {
+          "id": "zm-rdzen-color-bursztyn-900",
+          "name": "rdzen/color/bursztyn-900",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#5b4206",
+            "tryb-ciemny": "#fef8ec"
+          }
+        },
+        "zm-rdzen-color-czerwien-050": {
+          "id": "zm-rdzen-color-czerwien-050",
+          "name": "rdzen/color/czerwien-050",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#fcf0ed",
+            "tryb-ciemny": "#53190e"
+          }
+        },
+        "zm-rdzen-color-czerwien-100": {
+          "id": "zm-rdzen-color-czerwien-100",
+          "name": "rdzen/color/czerwien-100",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#f8d9d3",
+            "tryb-ciemny": "#762413"
+          }
+        },
+        "zm-rdzen-color-czerwien-200": {
+          "id": "zm-rdzen-color-czerwien-200",
+          "name": "rdzen/color/czerwien-200",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#f1b7ac",
+            "tryb-ciemny": "#9a2e19"
+          }
+        },
+        "zm-rdzen-color-czerwien-300": {
+          "id": "zm-rdzen-color-czerwien-300",
+          "name": "rdzen/color/czerwien-300",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#ea9280",
+            "tryb-ciemny": "#bd391f"
+          }
+        },
+        "zm-rdzen-color-czerwien-400": {
+          "id": "zm-rdzen-color-czerwien-400",
+          "name": "rdzen/color/czerwien-400",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#e36c54",
+            "tryb-ciemny": "#dc4628"
+          }
+        },
+        "zm-rdzen-color-czerwien-500": {
+          "id": "zm-rdzen-color-czerwien-500",
+          "name": "rdzen/color/czerwien-500",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#dc4628",
+            "tryb-ciemny": "#e36c54"
+          }
+        },
+        "zm-rdzen-color-czerwien-600": {
+          "id": "zm-rdzen-color-czerwien-600",
+          "name": "rdzen/color/czerwien-600",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#bd391f",
+            "tryb-ciemny": "#ea9280"
+          }
+        },
+        "zm-rdzen-color-czerwien-700": {
+          "id": "zm-rdzen-color-czerwien-700",
+          "name": "rdzen/color/czerwien-700",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#9a2e19",
+            "tryb-ciemny": "#f1b7ac"
+          }
+        },
+        "zm-rdzen-color-czerwien-800": {
+          "id": "zm-rdzen-color-czerwien-800",
+          "name": "rdzen/color/czerwien-800",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#762413",
+            "tryb-ciemny": "#f8d9d3"
+          }
+        },
+        "zm-rdzen-color-czerwien-900": {
+          "id": "zm-rdzen-color-czerwien-900",
+          "name": "rdzen/color/czerwien-900",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#53190e",
+            "tryb-ciemny": "#fcf0ed"
+          }
+        },
+        "zm-rdzen-color-purpura-050": {
+          "id": "zm-rdzen-color-purpura-050",
+          "name": "rdzen/color/purpura-050",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#f6effb",
+            "tryb-ciemny": "#36134e"
+          }
+        },
+        "zm-rdzen-color-purpura-100": {
+          "id": "zm-rdzen-color-purpura-100",
+          "name": "rdzen/color/purpura-100",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#e9d6f5",
+            "tryb-ciemny": "#4d1c6e"
+          }
+        },
+        "zm-rdzen-color-purpura-200": {
+          "id": "zm-rdzen-color-purpura-200",
+          "name": "rdzen/color/purpura-200",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#d4b1ec",
+            "tryb-ciemny": "#64248f"
+          }
+        },
+        "zm-rdzen-color-purpura-300": {
+          "id": "zm-rdzen-color-purpura-300",
+          "name": "rdzen/color/purpura-300",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#be89e1",
+            "tryb-ciemny": "#7b2caf"
+          }
+        },
+        "zm-rdzen-color-purpura-400": {
+          "id": "zm-rdzen-color-purpura-400",
+          "name": "rdzen/color/purpura-400",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#a760d7",
+            "tryb-ciemny": "#9137cd"
+          }
+        },
+        "zm-rdzen-color-purpura-500": {
+          "id": "zm-rdzen-color-purpura-500",
+          "name": "rdzen/color/purpura-500",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#9137cd",
+            "tryb-ciemny": "#a760d7"
+          }
+        },
+        "zm-rdzen-color-purpura-600": {
+          "id": "zm-rdzen-color-purpura-600",
+          "name": "rdzen/color/purpura-600",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#7b2caf",
+            "tryb-ciemny": "#be89e1"
+          }
+        },
+        "zm-rdzen-color-purpura-700": {
+          "id": "zm-rdzen-color-purpura-700",
+          "name": "rdzen/color/purpura-700",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#64248f",
+            "tryb-ciemny": "#d4b1ec"
+          }
+        },
+        "zm-rdzen-color-purpura-800": {
+          "id": "zm-rdzen-color-purpura-800",
+          "name": "rdzen/color/purpura-800",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#4d1c6e",
+            "tryb-ciemny": "#e9d6f5"
+          }
+        },
+        "zm-rdzen-color-purpura-900": {
+          "id": "zm-rdzen-color-purpura-900",
+          "name": "rdzen/color/purpura-900",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#36134e",
+            "tryb-ciemny": "#f6effb"
+          }
+        },
+        "zm-rdzen-color-roz-050": {
+          "id": "zm-rdzen-color-roz-050",
+          "name": "rdzen/color/roz-050",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#fbeef5",
+            "tryb-ciemny": "#4f1130"
+          }
+        },
+        "zm-rdzen-color-roz-100": {
+          "id": "zm-rdzen-color-roz-100",
+          "name": "rdzen/color/roz-100",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#f6d5e6",
+            "tryb-ciemny": "#711945"
+          }
+        },
+        "zm-rdzen-color-roz-200": {
+          "id": "zm-rdzen-color-roz-200",
+          "name": "rdzen/color/roz-200",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#eeb0cf",
+            "tryb-ciemny": "#922059"
+          }
+        },
+        "zm-rdzen-color-roz-300": {
+          "id": "zm-rdzen-color-roz-300",
+          "name": "rdzen/color/roz-300",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#e486b5",
+            "tryb-ciemny": "#b4276e"
+          }
+        },
+        "zm-rdzen-color-roz-400": {
+          "id": "zm-rdzen-color-roz-400",
+          "name": "rdzen/color/roz-400",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#db5c9c",
+            "tryb-ciemny": "#d23282"
+          }
+        },
+        "zm-rdzen-color-roz-500": {
+          "id": "zm-rdzen-color-roz-500",
+          "name": "rdzen/color/roz-500",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#d23282",
+            "tryb-ciemny": "#db5c9c"
+          }
+        },
+        "zm-rdzen-color-roz-600": {
+          "id": "zm-rdzen-color-roz-600",
+          "name": "rdzen/color/roz-600",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#b4276e",
+            "tryb-ciemny": "#e486b5"
+          }
+        },
+        "zm-rdzen-color-roz-700": {
+          "id": "zm-rdzen-color-roz-700",
+          "name": "rdzen/color/roz-700",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#922059",
+            "tryb-ciemny": "#eeb0cf"
+          }
+        },
+        "zm-rdzen-color-roz-800": {
+          "id": "zm-rdzen-color-roz-800",
+          "name": "rdzen/color/roz-800",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#711945",
+            "tryb-ciemny": "#f6d5e6"
+          }
+        },
+        "zm-rdzen-color-roz-900": {
+          "id": "zm-rdzen-color-roz-900",
+          "name": "rdzen/color/roz-900",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#4f1130",
+            "tryb-ciemny": "#fbeef5"
+          }
+        },
+        "zm-rdzen-color-grafit-050": {
+          "id": "zm-rdzen-color-grafit-050",
+          "name": "rdzen/color/grafit-050",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#f4f4f6",
+            "tryb-ciemny": "#2c2f35"
+          }
+        },
+        "zm-rdzen-color-grafit-100": {
+          "id": "zm-rdzen-color-grafit-100",
+          "name": "rdzen/color/grafit-100",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#e3e4e8",
+            "tryb-ciemny": "#3e424c"
+          }
+        },
+        "zm-rdzen-color-grafit-200": {
+          "id": "zm-rdzen-color-grafit-200",
+          "name": "rdzen/color/grafit-200",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#cacdd3",
+            "tryb-ciemny": "#505662"
+          }
+        },
+        "zm-rdzen-color-grafit-300": {
+          "id": "zm-rdzen-color-grafit-300",
+          "name": "rdzen/color/grafit-300",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#aeb2bc",
+            "tryb-ciemny": "#636979"
+          }
+        },
+        "zm-rdzen-color-grafit-400": {
+          "id": "zm-rdzen-color-grafit-400",
+          "name": "rdzen/color/grafit-400",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#9298a5",
+            "tryb-ciemny": "#767d8f"
+          }
+        },
+        "zm-rdzen-color-grafit-500": {
+          "id": "zm-rdzen-color-grafit-500",
+          "name": "rdzen/color/grafit-500",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#767d8f",
+            "tryb-ciemny": "#9298a5"
+          }
+        },
+        "zm-rdzen-color-grafit-600": {
+          "id": "zm-rdzen-color-grafit-600",
+          "name": "rdzen/color/grafit-600",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#636979",
+            "tryb-ciemny": "#aeb2bc"
+          }
+        },
+        "zm-rdzen-color-grafit-700": {
+          "id": "zm-rdzen-color-grafit-700",
+          "name": "rdzen/color/grafit-700",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#505662",
+            "tryb-ciemny": "#cacdd3"
+          }
+        },
+        "zm-rdzen-color-grafit-800": {
+          "id": "zm-rdzen-color-grafit-800",
+          "name": "rdzen/color/grafit-800",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#3e424c",
+            "tryb-ciemny": "#e3e4e8"
+          }
+        },
+        "zm-rdzen-color-grafit-900": {
+          "id": "zm-rdzen-color-grafit-900",
+          "name": "rdzen/color/grafit-900",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#2c2f35",
+            "tryb-ciemny": "#f4f4f6"
+          }
+        },
+        "zm-rdzen-color-biel": {
+          "id": "zm-rdzen-color-biel",
+          "name": "rdzen/color/biel",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#ffffff",
+            "tryb-ciemny": "#15171c"
+          }
+        },
+        "zm-rdzen-color-czern": {
+          "id": "zm-rdzen-color-czern",
+          "name": "rdzen/color/czern",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#101216",
+            "tryb-ciemny": "#f5f6f8"
+          }
+        },
+        "zm-rdzen-color-sygnalowy-stary": {
+          "id": "zm-rdzen-color-sygnalowy-stary",
+          "name": "rdzen/color/sygnalowy-stary",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#bd391f"
+          }
+        },
+        "zm-rdzen-color-akcent-stary": {
+          "id": "zm-rdzen-color-akcent-stary",
+          "name": "rdzen/color/akcent-stary",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#f0ae14"
+          }
+        },
+        "zm-rdzen-rozmiar-odstep-000": {
+          "id": "zm-rdzen-rozmiar-odstep-000",
+          "name": "rdzen/rozmiar/odstep-000",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 0,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-odstep-025": {
+          "id": "zm-rdzen-rozmiar-odstep-025",
+          "name": "rdzen/rozmiar/odstep-025",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 2,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-odstep-050": {
+          "id": "zm-rdzen-rozmiar-odstep-050",
+          "name": "rdzen/rozmiar/odstep-050",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 4,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-odstep-075": {
+          "id": "zm-rdzen-rozmiar-odstep-075",
+          "name": "rdzen/rozmiar/odstep-075",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 6,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-odstep-100": {
+          "id": "zm-rdzen-rozmiar-odstep-100",
+          "name": "rdzen/rozmiar/odstep-100",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 8,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-odstep-150": {
+          "id": "zm-rdzen-rozmiar-odstep-150",
+          "name": "rdzen/rozmiar/odstep-150",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 12,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-odstep-200": {
+          "id": "zm-rdzen-rozmiar-odstep-200",
+          "name": "rdzen/rozmiar/odstep-200",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 16,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-odstep-250": {
+          "id": "zm-rdzen-rozmiar-odstep-250",
+          "name": "rdzen/rozmiar/odstep-250",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 20,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-odstep-300": {
+          "id": "zm-rdzen-rozmiar-odstep-300",
+          "name": "rdzen/rozmiar/odstep-300",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 24,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-odstep-400": {
+          "id": "zm-rdzen-rozmiar-odstep-400",
+          "name": "rdzen/rozmiar/odstep-400",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 32,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-odstep-500": {
+          "id": "zm-rdzen-rozmiar-odstep-500",
+          "name": "rdzen/rozmiar/odstep-500",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 40,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-odstep-600": {
+          "id": "zm-rdzen-rozmiar-odstep-600",
+          "name": "rdzen/rozmiar/odstep-600",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 48,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-odstep-stary": {
+          "id": "zm-rdzen-rozmiar-odstep-stary",
+          "name": "rdzen/rozmiar/odstep-stary",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 10,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-promien-zaden": {
+          "id": "zm-rdzen-rozmiar-promien-zaden",
+          "name": "rdzen/rozmiar/promien-zaden",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 0,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-promien-maly": {
+          "id": "zm-rdzen-rozmiar-promien-maly",
+          "name": "rdzen/rozmiar/promien-maly",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 4,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-promien-sredni": {
+          "id": "zm-rdzen-rozmiar-promien-sredni",
+          "name": "rdzen/rozmiar/promien-sredni",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 8,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-promien-duzy": {
+          "id": "zm-rdzen-rozmiar-promien-duzy",
+          "name": "rdzen/rozmiar/promien-duzy",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 16,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-promien-pelny": {
+          "id": "zm-rdzen-rozmiar-promien-pelny",
+          "name": "rdzen/rozmiar/promien-pelny",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 999,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-obwodka-cienka": {
+          "id": "zm-rdzen-rozmiar-obwodka-cienka",
+          "name": "rdzen/rozmiar/obwodka-cienka",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 1,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-obwodka-srednia": {
+          "id": "zm-rdzen-rozmiar-obwodka-srednia",
+          "name": "rdzen/rozmiar/obwodka-srednia",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 2,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-obwodka-gruba": {
+          "id": "zm-rdzen-rozmiar-obwodka-gruba",
+          "name": "rdzen/rozmiar/obwodka-gruba",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 4,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-ikona-maly": {
+          "id": "zm-rdzen-rozmiar-ikona-maly",
+          "name": "rdzen/rozmiar/ikona-maly",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 16,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-ikona-sredni": {
+          "id": "zm-rdzen-rozmiar-ikona-sredni",
+          "name": "rdzen/rozmiar/ikona-sredni",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 20,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-ikona-duzy": {
+          "id": "zm-rdzen-rozmiar-ikona-duzy",
+          "name": "rdzen/rozmiar/ikona-duzy",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 24,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-rozmiar-ikona-wielki": {
+          "id": "zm-rdzen-rozmiar-ikona-wielki",
+          "name": "rdzen/rozmiar/ikona-wielki",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 32,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-typografia-rozmiar-drobny": {
+          "id": "zm-rdzen-typografia-rozmiar-drobny",
+          "name": "rdzen/typografia/rozmiar-drobny",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 12,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-typografia-rozmiar-podpis": {
+          "id": "zm-rdzen-typografia-rozmiar-podpis",
+          "name": "rdzen/typografia/rozmiar-podpis",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 13,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-typografia-rozmiar-tresc": {
+          "id": "zm-rdzen-typografia-rozmiar-tresc",
+          "name": "rdzen/typografia/rozmiar-tresc",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 15,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-typografia-rozmiar-tresc-duza": {
+          "id": "zm-rdzen-typografia-rozmiar-tresc-duza",
+          "name": "rdzen/typografia/rozmiar-tresc-duza",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 17,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-typografia-rozmiar-naglowek-4": {
+          "id": "zm-rdzen-typografia-rozmiar-naglowek-4",
+          "name": "rdzen/typografia/rozmiar-naglowek-4",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 20,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-typografia-rozmiar-naglowek-3": {
+          "id": "zm-rdzen-typografia-rozmiar-naglowek-3",
+          "name": "rdzen/typografia/rozmiar-naglowek-3",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 24,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-typografia-rozmiar-naglowek-2": {
+          "id": "zm-rdzen-typografia-rozmiar-naglowek-2",
+          "name": "rdzen/typografia/rozmiar-naglowek-2",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 30,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-typografia-rozmiar-naglowek-1": {
+          "id": "zm-rdzen-typografia-rozmiar-naglowek-1",
+          "name": "rdzen/typografia/rozmiar-naglowek-1",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 38,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-typografia-rozmiar-tytul": {
+          "id": "zm-rdzen-typografia-rozmiar-tytul",
+          "name": "rdzen/typografia/rozmiar-tytul",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "value": 48,
+              "unit": "px"
+            }
+          }
+        },
+        "zm-rdzen-typografia-wysokosc-ciasna": {
+          "id": "zm-rdzen-typografia-wysokosc-ciasna",
+          "name": "rdzen/typografia/wysokosc-ciasna",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 1.2
+          }
+        },
+        "zm-rdzen-typografia-wysokosc-zwarta": {
+          "id": "zm-rdzen-typografia-wysokosc-zwarta",
+          "name": "rdzen/typografia/wysokosc-zwarta",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 1.35
+          }
+        },
+        "zm-rdzen-typografia-wysokosc-zwykla": {
+          "id": "zm-rdzen-typografia-wysokosc-zwykla",
+          "name": "rdzen/typografia/wysokosc-zwykla",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 1.5
+          }
+        },
+        "zm-rdzen-typografia-wysokosc-luzna": {
+          "id": "zm-rdzen-typografia-wysokosc-luzna",
+          "name": "rdzen/typografia/wysokosc-luzna",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 1.7
+          }
+        },
+        "zm-rdzen-typografia-grubosc-zwykla": {
+          "id": "zm-rdzen-typografia-grubosc-zwykla",
+          "name": "rdzen/typografia/grubosc-zwykla",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 400
+          }
+        },
+        "zm-rdzen-typografia-grubosc-srednia": {
+          "id": "zm-rdzen-typografia-grubosc-srednia",
+          "name": "rdzen/typografia/grubosc-srednia",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 500
+          }
+        },
+        "zm-rdzen-typografia-grubosc-pogrubiona": {
+          "id": "zm-rdzen-typografia-grubosc-pogrubiona",
+          "name": "rdzen/typografia/grubosc-pogrubiona",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 600
+          }
+        },
+        "zm-rdzen-typografia-grubosc-mocna": {
+          "id": "zm-rdzen-typografia-grubosc-mocna",
+          "name": "rdzen/typografia/grubosc-mocna",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 700
+          }
+        },
+        "zm-rdzen-typografia-rodzina-podstawowa": {
+          "id": "zm-rdzen-typografia-rodzina-podstawowa",
+          "name": "rdzen/typografia/rodzina-podstawowa",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "STRING",
+          "valuesByMode": {
+            "tryb-jasny": "system-ui, sans-serif"
+          }
+        },
+        "zm-rdzen-typografia-rodzina-o-stalej-szerokosci": {
+          "id": "zm-rdzen-typografia-rodzina-o-stalej-szerokosci",
+          "name": "rdzen/typografia/rodzina-o-stalej-szerokosci",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "STRING",
+          "valuesByMode": {
+            "tryb-jasny": "ui-monospace, monospace"
+          }
+        },
+        "zm-rdzen-czas-blysk": {
+          "id": "zm-rdzen-czas-blysk",
+          "name": "rdzen/czas/blysk",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 80
+          }
+        },
+        "zm-rdzen-czas-szybki": {
+          "id": "zm-rdzen-czas-szybki",
+          "name": "rdzen/czas/szybki",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 140
+          }
+        },
+        "zm-rdzen-czas-zwykly": {
+          "id": "zm-rdzen-czas-zwykly",
+          "name": "rdzen/czas/zwykly",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 220
+          }
+        },
+        "zm-rdzen-czas-wolny": {
+          "id": "zm-rdzen-czas-wolny",
+          "name": "rdzen/czas/wolny",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 360
+          }
+        },
+        "zm-rdzen-krycie-przezroczyste": {
+          "id": "zm-rdzen-krycie-przezroczyste",
+          "name": "rdzen/krycie/przezroczyste",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 0
+          }
+        },
+        "zm-rdzen-krycie-ledwie": {
+          "id": "zm-rdzen-krycie-ledwie",
+          "name": "rdzen/krycie/ledwie",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 0.12
+          }
+        },
+        "zm-rdzen-krycie-polowa": {
+          "id": "zm-rdzen-krycie-polowa",
+          "name": "rdzen/krycie/polowa",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 0.5
+          }
+        },
+        "zm-rdzen-krycie-mocne": {
+          "id": "zm-rdzen-krycie-mocne",
+          "name": "rdzen/krycie/mocne",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 0.84
+          }
+        },
+        "zm-rdzen-krycie-pelne": {
+          "id": "zm-rdzen-krycie-pelne",
+          "name": "rdzen/krycie/pelne",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 1
+          }
+        },
+        "zm-rdzen-warstwa-podloga": {
+          "id": "zm-rdzen-warstwa-podloga",
+          "name": "rdzen/warstwa/podloga",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 0
+          }
+        },
+        "zm-rdzen-warstwa-wyniesienie": {
+          "id": "zm-rdzen-warstwa-wyniesienie",
+          "name": "rdzen/warstwa/wyniesienie",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 10
+          }
+        },
+        "zm-rdzen-warstwa-nakladka": {
+          "id": "zm-rdzen-warstwa-nakladka",
+          "name": "rdzen/warstwa/nakladka",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 100
+          }
+        },
+        "zm-rdzen-warstwa-okno": {
+          "id": "zm-rdzen-warstwa-okno",
+          "name": "rdzen/warstwa/okno",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 1000
+          }
+        },
+        "zm-rdzen-warstwa-powiadomienie": {
+          "id": "zm-rdzen-warstwa-powiadomienie",
+          "name": "rdzen/warstwa/powiadomienie",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": 1100
+          }
+        },
+        "zm-rdzen-zrodlowe-poswiata": {
+          "id": "zm-rdzen-zrodlowe-poswiata",
+          "name": "rdzen/zrodlowe/poswiata",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#edf1fd",
+            "tryb-ciemny": "#0c1f55"
+          }
+        },
+        "zm-rdzen-zrodlowe-mgla": {
+          "id": "zm-rdzen-zrodlowe-mgla",
+          "name": "rdzen/zrodlowe/mgla",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#e3e4e8",
+            "tryb-ciemny": "#3e424c"
+          }
+        },
+        "zm-rdzen-zrodlowe-poranek": {
+          "id": "zm-rdzen-zrodlowe-poranek",
+          "name": "rdzen/zrodlowe/poranek",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#fef8ec",
+            "tryb-ciemny": "#5b4206"
+          }
+        },
+        "zm-rdzen-zrodlowe-zorza": {
+          "id": "zm-rdzen-zrodlowe-zorza",
+          "name": "rdzen/zrodlowe/zorza",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#f6d5e6",
+            "tryb-ciemny": "#711945"
+          }
+        },
+        "zm-rdzen-semantic-tekst-podstawowy": {
+          "id": "zm-rdzen-semantic-tekst-podstawowy",
+          "name": "rdzen/semantic/tekst-podstawowy",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-grafit-900"
+            }
+          }
+        },
+        "zm-rdzen-semantic-tekst-drugorzedny": {
+          "id": "zm-rdzen-semantic-tekst-drugorzedny",
+          "name": "rdzen/semantic/tekst-drugorzedny",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-grafit-700"
+            }
+          }
+        },
+        "zm-rdzen-semantic-tekst-odwrocony": {
+          "id": "zm-rdzen-semantic-tekst-odwrocony",
+          "name": "rdzen/semantic/tekst-odwrocony",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-biel"
+            }
+          }
+        },
+        "zm-rdzen-semantic-tekst-wylaczony": {
+          "id": "zm-rdzen-semantic-tekst-wylaczony",
+          "name": "rdzen/semantic/tekst-wylaczony",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-grafit-400"
+            }
+          }
+        },
+        "zm-rdzen-semantic-tekst-link": {
+          "id": "zm-rdzen-semantic-tekst-link",
+          "name": "rdzen/semantic/tekst-link",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-blekit-700"
+            }
+          }
+        },
+        "zm-rdzen-semantic-tekst-negatywny": {
+          "id": "zm-rdzen-semantic-tekst-negatywny",
+          "name": "rdzen/semantic/tekst-negatywny",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-czerwien-700"
+            }
+          }
+        },
+        "zm-rdzen-semantic-tlo-strona": {
+          "id": "zm-rdzen-semantic-tlo-strona",
+          "name": "rdzen/semantic/tlo-strona",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-biel"
+            }
+          }
+        },
+        "zm-rdzen-semantic-tlo-powierzchnia": {
+          "id": "zm-rdzen-semantic-tlo-powierzchnia",
+          "name": "rdzen/semantic/tlo-powierzchnia",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-grafit-050"
+            }
+          }
+        },
+        "zm-rdzen-semantic-tlo-wyniesione": {
+          "id": "zm-rdzen-semantic-tlo-wyniesione",
+          "name": "rdzen/semantic/tlo-wyniesione",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-biel"
+            }
+          }
+        },
+        "zm-rdzen-semantic-tlo-wyciszone": {
+          "id": "zm-rdzen-semantic-tlo-wyciszone",
+          "name": "rdzen/semantic/tlo-wyciszone",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-grafit-100"
+            }
+          }
+        },
+        "zm-rdzen-semantic-tlo-akcent-subtelne": {
+          "id": "zm-rdzen-semantic-tlo-akcent-subtelne",
+          "name": "rdzen/semantic/tlo-akcent-subtelne",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-blekit-050"
+            }
+          }
+        },
+        "zm-rdzen-semantic-tlo-odwrocone": {
+          "id": "zm-rdzen-semantic-tlo-odwrocone",
+          "name": "rdzen/semantic/tlo-odwrocone",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-grafit-900"
+            }
+          }
+        },
+        "zm-rdzen-semantic-akcja-podstawowa": {
+          "id": "zm-rdzen-semantic-akcja-podstawowa",
+          "name": "rdzen/semantic/akcja-podstawowa",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-blekit-700"
+            }
+          }
+        },
+        "zm-rdzen-semantic-akcja-podstawowa-najechanie": {
+          "id": "zm-rdzen-semantic-akcja-podstawowa-najechanie",
+          "name": "rdzen/semantic/akcja-podstawowa-najechanie",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-blekit-800"
+            }
+          }
+        },
+        "zm-rdzen-semantic-akcja-podstawowa-aktywna": {
+          "id": "zm-rdzen-semantic-akcja-podstawowa-aktywna",
+          "name": "rdzen/semantic/akcja-podstawowa-aktywna",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-blekit-900"
+            }
+          }
+        },
+        "zm-rdzen-semantic-akcja-drugorzedna": {
+          "id": "zm-rdzen-semantic-akcja-drugorzedna",
+          "name": "rdzen/semantic/akcja-drugorzedna",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-grafit-200"
+            }
+          }
+        },
+        "zm-rdzen-semantic-akcja-destrukcyjna": {
+          "id": "zm-rdzen-semantic-akcja-destrukcyjna",
+          "name": "rdzen/semantic/akcja-destrukcyjna",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-czerwien-600"
+            }
+          }
+        },
+        "zm-rdzen-semantic-akcja-wylaczona": {
+          "id": "zm-rdzen-semantic-akcja-wylaczona",
+          "name": "rdzen/semantic/akcja-wylaczona",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-grafit-200"
+            }
+          }
+        },
+        "zm-rdzen-semantic-obwodka-subtelna": {
+          "id": "zm-rdzen-semantic-obwodka-subtelna",
+          "name": "rdzen/semantic/obwodka-subtelna",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-grafit-200"
+            }
+          }
+        },
+        "zm-rdzen-semantic-obwodka-wyrazna": {
+          "id": "zm-rdzen-semantic-obwodka-wyrazna",
+          "name": "rdzen/semantic/obwodka-wyrazna",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-grafit-400"
+            }
+          }
+        },
+        "zm-rdzen-semantic-obwodka-skupienie": {
+          "id": "zm-rdzen-semantic-obwodka-skupienie",
+          "name": "rdzen/semantic/obwodka-skupienie",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-blekit-500"
+            }
+          }
+        },
+        "zm-rdzen-semantic-obwodka-blad": {
+          "id": "zm-rdzen-semantic-obwodka-blad",
+          "name": "rdzen/semantic/obwodka-blad",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-czerwien-600"
+            }
+          }
+        },
+        "zm-rdzen-semantic-stan-sukces-tlo": {
+          "id": "zm-rdzen-semantic-stan-sukces-tlo",
+          "name": "rdzen/semantic/stan-sukces-tlo",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-zielen-100"
+            }
+          }
+        },
+        "zm-rdzen-semantic-stan-sukces-tresc": {
+          "id": "zm-rdzen-semantic-stan-sukces-tresc",
+          "name": "rdzen/semantic/stan-sukces-tresc",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-zielen-800"
+            }
+          }
+        },
+        "zm-rdzen-semantic-stan-ostrzezenie-tlo": {
+          "id": "zm-rdzen-semantic-stan-ostrzezenie-tlo",
+          "name": "rdzen/semantic/stan-ostrzezenie-tlo",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-bursztyn-100"
+            }
+          }
+        },
+        "zm-rdzen-semantic-stan-ostrzezenie-tresc": {
+          "id": "zm-rdzen-semantic-stan-ostrzezenie-tresc",
+          "name": "rdzen/semantic/stan-ostrzezenie-tresc",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-bursztyn-800"
+            }
+          }
+        },
+        "zm-rdzen-semantic-stan-blad-tlo": {
+          "id": "zm-rdzen-semantic-stan-blad-tlo",
+          "name": "rdzen/semantic/stan-blad-tlo",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-czerwien-050"
+            }
+          }
+        },
+        "zm-rdzen-semantic-stan-blad-tresc": {
+          "id": "zm-rdzen-semantic-stan-blad-tresc",
+          "name": "rdzen/semantic/stan-blad-tresc",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-czerwien-800"
+            }
+          }
+        },
+        "zm-rdzen-semantic-stan-informacja-tlo": {
+          "id": "zm-rdzen-semantic-stan-informacja-tlo",
+          "name": "rdzen/semantic/stan-informacja-tlo",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-morski-050"
+            }
+          }
+        },
+        "zm-rdzen-semantic-stan-informacja-tresc": {
+          "id": "zm-rdzen-semantic-stan-informacja-tresc",
+          "name": "rdzen/semantic/stan-informacja-tresc",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-morski-800"
+            }
+          }
+        },
+        "zm-rdzen-semantic-odstep-przylegly": {
+          "id": "zm-rdzen-semantic-odstep-przylegly",
+          "name": "rdzen/semantic/odstep-przylegly",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-rozmiar-odstep-025"
+            }
+          }
+        },
+        "zm-rdzen-semantic-odstep-ciasny": {
+          "id": "zm-rdzen-semantic-odstep-ciasny",
+          "name": "rdzen/semantic/odstep-ciasny",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-rozmiar-odstep-075"
+            }
+          }
+        },
+        "zm-rdzen-semantic-odstep-zwykly": {
+          "id": "zm-rdzen-semantic-odstep-zwykly",
+          "name": "rdzen/semantic/odstep-zwykly",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-rozmiar-odstep-150"
+            }
+          }
+        },
+        "zm-rdzen-semantic-odstep-luzny": {
+          "id": "zm-rdzen-semantic-odstep-luzny",
+          "name": "rdzen/semantic/odstep-luzny",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-rozmiar-odstep-300"
+            }
+          }
+        },
+        "zm-rdzen-semantic-odstep-sekcja": {
+          "id": "zm-rdzen-semantic-odstep-sekcja",
+          "name": "rdzen/semantic/odstep-sekcja",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-rozmiar-odstep-500"
+            }
+          }
+        },
+        "zm-rdzen-semantic-odstep-strona": {
+          "id": "zm-rdzen-semantic-odstep-strona",
+          "name": "rdzen/semantic/odstep-strona",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-rozmiar-odstep-600"
+            }
+          }
+        },
+        "zm-rdzen-semantic-promien-interakcja": {
+          "id": "zm-rdzen-semantic-promien-interakcja",
+          "name": "rdzen/semantic/promien-interakcja",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-rozmiar-promien-maly"
+            }
+          }
+        },
+        "zm-rdzen-semantic-promien-powierzchnia": {
+          "id": "zm-rdzen-semantic-promien-powierzchnia",
+          "name": "rdzen/semantic/promien-powierzchnia",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-rozmiar-promien-sredni"
+            }
+          }
+        },
+        "zm-rdzen-semantic-promien-pelny": {
+          "id": "zm-rdzen-semantic-promien-pelny",
+          "name": "rdzen/semantic/promien-pelny",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-rozmiar-promien-pelny"
+            }
+          }
+        },
+        "zm-rdzen-semantic-typografia-naglowek-1": {
+          "id": "zm-rdzen-semantic-typografia-naglowek-1",
+          "name": "rdzen/semantic/typografia-naglowek-1",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-typografia-rozmiar-naglowek-1"
+            }
+          }
+        },
+        "zm-rdzen-semantic-typografia-naglowek-2": {
+          "id": "zm-rdzen-semantic-typografia-naglowek-2",
+          "name": "rdzen/semantic/typografia-naglowek-2",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-typografia-rozmiar-naglowek-2"
+            }
+          }
+        },
+        "zm-rdzen-semantic-typografia-naglowek-3": {
+          "id": "zm-rdzen-semantic-typografia-naglowek-3",
+          "name": "rdzen/semantic/typografia-naglowek-3",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-typografia-rozmiar-naglowek-3"
+            }
+          }
+        },
+        "zm-rdzen-semantic-typografia-naglowek-4": {
+          "id": "zm-rdzen-semantic-typografia-naglowek-4",
+          "name": "rdzen/semantic/typografia-naglowek-4",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-typografia-rozmiar-naglowek-4"
+            }
+          }
+        },
+        "zm-rdzen-semantic-typografia-tresc": {
+          "id": "zm-rdzen-semantic-typografia-tresc",
+          "name": "rdzen/semantic/typografia-tresc",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-typografia-rozmiar-tresc"
+            }
+          }
+        },
+        "zm-rdzen-semantic-typografia-tresc-duza": {
+          "id": "zm-rdzen-semantic-typografia-tresc-duza",
+          "name": "rdzen/semantic/typografia-tresc-duza",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-typografia-rozmiar-tresc-duza"
+            }
+          }
+        },
+        "zm-rdzen-semantic-typografia-podpis": {
+          "id": "zm-rdzen-semantic-typografia-podpis",
+          "name": "rdzen/semantic/typografia-podpis",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-typografia-rozmiar-podpis"
+            }
+          }
+        },
+        "zm-rdzen-semantic-typografia-przycisk": {
+          "id": "zm-rdzen-semantic-typografia-przycisk",
+          "name": "rdzen/semantic/typografia-przycisk",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-typografia-rozmiar-tresc"
+            }
+          }
+        },
+        "zm-rdzen-semantic-ruch-wejscie": {
+          "id": "zm-rdzen-semantic-ruch-wejscie",
+          "name": "rdzen/semantic/ruch-wejscie",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-czas-szybki"
+            }
+          }
+        },
+        "zm-rdzen-semantic-ruch-wyjscie": {
+          "id": "zm-rdzen-semantic-ruch-wyjscie",
+          "name": "rdzen/semantic/ruch-wyjscie",
+          "variableCollectionId": "kol-semantyka",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-czas-blysk"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-formularz-etykieta": {
+          "id": "zm-rdzen-funkcjonalne-formularz-etykieta",
+          "name": "rdzen/funkcjonalne/formularz-etykieta",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-tekst-podstawowy"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-formularz-pomoc": {
+          "id": "zm-rdzen-funkcjonalne-formularz-pomoc",
+          "name": "rdzen/funkcjonalne/formularz-pomoc",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-tekst-drugorzedny"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-formularz-blad": {
+          "id": "zm-rdzen-funkcjonalne-formularz-blad",
+          "name": "rdzen/funkcjonalne/formularz-blad",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-tekst-negatywny"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-formularz-tlo-pola": {
+          "id": "zm-rdzen-funkcjonalne-formularz-tlo-pola",
+          "name": "rdzen/funkcjonalne/formularz-tlo-pola",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-tlo-strona"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-formularz-obwodka-pola": {
+          "id": "zm-rdzen-funkcjonalne-formularz-obwodka-pola",
+          "name": "rdzen/funkcjonalne/formularz-obwodka-pola",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-obwodka-subtelna"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-formularz-obwodka-skupienie": {
+          "id": "zm-rdzen-funkcjonalne-formularz-obwodka-skupienie",
+          "name": "rdzen/funkcjonalne/formularz-obwodka-skupienie",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-obwodka-skupienie"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-nawigacja-tlo": {
+          "id": "zm-rdzen-funkcjonalne-nawigacja-tlo",
+          "name": "rdzen/funkcjonalne/nawigacja-tlo",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-tlo-powierzchnia"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-nawigacja-pozycja-tekst": {
+          "id": "zm-rdzen-funkcjonalne-nawigacja-pozycja-tekst",
+          "name": "rdzen/funkcjonalne/nawigacja-pozycja-tekst",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-tekst-drugorzedny"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-nawigacja-pozycja-aktywna": {
+          "id": "zm-rdzen-funkcjonalne-nawigacja-pozycja-aktywna",
+          "name": "rdzen/funkcjonalne/nawigacja-pozycja-aktywna",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-akcja-podstawowa"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-nawigacja-separator": {
+          "id": "zm-rdzen-funkcjonalne-nawigacja-separator",
+          "name": "rdzen/funkcjonalne/nawigacja-separator",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-obwodka-subtelna"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-tabela-naglowek-tlo": {
+          "id": "zm-rdzen-funkcjonalne-tabela-naglowek-tlo",
+          "name": "rdzen/funkcjonalne/tabela-naglowek-tlo",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-tlo-wyciszone"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-tabela-wiersz-tlo": {
+          "id": "zm-rdzen-funkcjonalne-tabela-wiersz-tlo",
+          "name": "rdzen/funkcjonalne/tabela-wiersz-tlo",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-tlo-strona"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-tabela-wiersz-naprzemienny": {
+          "id": "zm-rdzen-funkcjonalne-tabela-wiersz-naprzemienny",
+          "name": "rdzen/funkcjonalne/tabela-wiersz-naprzemienny",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-tlo-powierzchnia"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-tabela-obwodka": {
+          "id": "zm-rdzen-funkcjonalne-tabela-obwodka",
+          "name": "rdzen/funkcjonalne/tabela-obwodka",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-obwodka-subtelna"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-komunikat-sukces-tlo": {
+          "id": "zm-rdzen-funkcjonalne-komunikat-sukces-tlo",
+          "name": "rdzen/funkcjonalne/komunikat-sukces-tlo",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-stan-sukces-tlo"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-komunikat-sukces-tresc": {
+          "id": "zm-rdzen-funkcjonalne-komunikat-sukces-tresc",
+          "name": "rdzen/funkcjonalne/komunikat-sukces-tresc",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-stan-sukces-tresc"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-komunikat-blad-tlo": {
+          "id": "zm-rdzen-funkcjonalne-komunikat-blad-tlo",
+          "name": "rdzen/funkcjonalne/komunikat-blad-tlo",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-stan-blad-tlo"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-komunikat-blad-tresc": {
+          "id": "zm-rdzen-funkcjonalne-komunikat-blad-tresc",
+          "name": "rdzen/funkcjonalne/komunikat-blad-tresc",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-stan-blad-tresc"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-komunikat-informacja-tlo": {
+          "id": "zm-rdzen-funkcjonalne-komunikat-informacja-tlo",
+          "name": "rdzen/funkcjonalne/komunikat-informacja-tlo",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-stan-informacja-tlo"
+            }
+          }
+        },
+        "zm-rdzen-funkcjonalne-komunikat-informacja-tresc": {
+          "id": "zm-rdzen-funkcjonalne-komunikat-informacja-tresc",
+          "name": "rdzen/funkcjonalne/komunikat-informacja-tresc",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-semantic-stan-informacja-tresc"
+            }
+          }
+        },
+        "zm-rdzen-komponent-przycisk-tlo": {
+          "id": "zm-rdzen-komponent-przycisk-tlo",
+          "name": "rdzen/komponent/przycisk-tlo",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-blekit-600"
+            }
+          }
+        },
+        "zm-rdzen-komponent-przycisk-tlo-najechanie": {
+          "id": "zm-rdzen-komponent-przycisk-tlo-najechanie",
+          "name": "rdzen/komponent/przycisk-tlo-najechanie",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-nawigacja-pozycja-aktywna"
+            }
+          }
+        },
+        "zm-rdzen-komponent-przycisk-tresc": {
+          "id": "zm-rdzen-komponent-przycisk-tresc",
+          "name": "rdzen/komponent/przycisk-tresc",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-formularz-etykieta"
+            }
+          }
+        },
+        "zm-rdzen-komponent-przycisk-obwodka": {
+          "id": "zm-rdzen-komponent-przycisk-obwodka",
+          "name": "rdzen/komponent/przycisk-obwodka",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-formularz-obwodka-pola"
+            }
+          }
+        },
+        "zm-rdzen-komponent-przycisk-tresc-odwrocona": {
+          "id": "zm-rdzen-komponent-przycisk-tresc-odwrocona",
+          "name": "rdzen/komponent/przycisk-tresc-odwrocona",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-tabela-wiersz-tlo"
+            }
+          }
+        },
+        "zm-rdzen-komponent-przycisk-tlo-wylaczone": {
+          "id": "zm-rdzen-komponent-przycisk-tlo-wylaczone",
+          "name": "rdzen/komponent/przycisk-tlo-wylaczone",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-nawigacja-separator"
+            }
+          }
+        },
+        "zm-rdzen-komponent-pole-tlo": {
+          "id": "zm-rdzen-komponent-pole-tlo",
+          "name": "rdzen/komponent/pole-tlo",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-formularz-tlo-pola"
+            }
+          }
+        },
+        "zm-rdzen-komponent-pole-tresc": {
+          "id": "zm-rdzen-komponent-pole-tresc",
+          "name": "rdzen/komponent/pole-tresc",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-formularz-etykieta"
+            }
+          }
+        },
+        "zm-rdzen-komponent-pole-obwodka": {
+          "id": "zm-rdzen-komponent-pole-obwodka",
+          "name": "rdzen/komponent/pole-obwodka",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-grafit-300"
+            }
+          }
+        },
+        "zm-rdzen-komponent-pole-obwodka-skupienie": {
+          "id": "zm-rdzen-komponent-pole-obwodka-skupienie",
+          "name": "rdzen/komponent/pole-obwodka-skupienie",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-formularz-obwodka-skupienie"
+            }
+          }
+        },
+        "zm-rdzen-komponent-karta-tlo": {
+          "id": "zm-rdzen-komponent-karta-tlo",
+          "name": "rdzen/komponent/karta-tlo",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-tabela-wiersz-tlo"
+            }
+          }
+        },
+        "zm-rdzen-komponent-karta-obwodka": {
+          "id": "zm-rdzen-komponent-karta-obwodka",
+          "name": "rdzen/komponent/karta-obwodka",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-tabela-obwodka"
+            }
+          }
+        },
+        "zm-rdzen-komponent-karta-naglowek": {
+          "id": "zm-rdzen-komponent-karta-naglowek",
+          "name": "rdzen/komponent/karta-naglowek",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-formularz-etykieta"
+            }
+          }
+        },
+        "zm-rdzen-komponent-karta-opis": {
+          "id": "zm-rdzen-komponent-karta-opis",
+          "name": "rdzen/komponent/karta-opis",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-formularz-pomoc"
+            }
+          }
+        },
+        "zm-rdzen-komponent-znacznik-tlo": {
+          "id": "zm-rdzen-komponent-znacznik-tlo",
+          "name": "rdzen/komponent/znacznik-tlo",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-color-bursztyn-100"
+            }
+          }
+        },
+        "zm-rdzen-komponent-znacznik-tresc": {
+          "id": "zm-rdzen-komponent-znacznik-tresc",
+          "name": "rdzen/komponent/znacznik-tresc",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-komunikat-informacja-tresc"
+            }
+          }
+        },
+        "zm-rdzen-komponent-okno-tlo": {
+          "id": "zm-rdzen-komponent-okno-tlo",
+          "name": "rdzen/komponent/okno-tlo",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-tabela-wiersz-tlo"
+            }
+          }
+        },
+        "zm-rdzen-komponent-okno-naglowek": {
+          "id": "zm-rdzen-komponent-okno-naglowek",
+          "name": "rdzen/komponent/okno-naglowek",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-formularz-etykieta"
+            }
+          }
+        },
+        "zm-rdzen-komponent-powiadomienie-tlo": {
+          "id": "zm-rdzen-komponent-powiadomienie-tlo",
+          "name": "rdzen/komponent/powiadomienie-tlo",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-komunikat-informacja-tlo"
+            }
+          }
+        },
+        "zm-rdzen-komponent-powiadomienie-tresc": {
+          "id": "zm-rdzen-komponent-powiadomienie-tresc",
+          "name": "rdzen/komponent/powiadomienie-tresc",
+          "variableCollectionId": "kol-kompozycja",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": {
+              "type": "VARIABLE_ALIAS",
+              "id": "zm-rdzen-funkcjonalne-komunikat-informacja-tresc"
+            }
+          }
+        }
+      }
+    }
+  }
+}
