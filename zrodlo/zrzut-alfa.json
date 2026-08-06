@@ -1,80 +1,188 @@
 {
-  "comment": "Zasiane rozjazdy (kryterium odbioru §7.5): zrzut źródła projektowego celowo rozjechany z kanonem zasiewu — każdy WYKRYWALNY PRZEZ API typ rozjazdu ma tu wyzwalacz. Użycie: POST /api/v1/design-systems/{id}/drift/scan z {variables} z tego pliku. missing-in-code wymaga artefaktu buildu (konfiguracja poza API) — dowiedziony testem silnika.",
-  "expected": {
-    "value-mismatch": "rdzen.color.podstawowy — wartość źródła #1d4ed9 vs kanon #1d4ed8 (Alfa)",
-    "type-mismatch": "rdzen.rozmiar.odstep — źródło COLOR vs kanon wymiar",
-    "alias-broken": "rdzen.semantic.tlo — alias do nieistniejącej zmiennej",
-    "mode-incomplete": "rdzen.color.tekst — Ciemny pusty (REAL) i Okolicznosciowy placeholder #000000 (ASSUMPTION)",
-    "deprecated-still-used": "rdzen.color.przestarzaly — kanon deprecated, źródło wciąż używa",
-    "metadata-drift": "rdzen.color.tekst — opis źródła różny od kanonu",
-    "missing-in-figma": "rdzen.color.zrodlowy — provenance=figma w kanonie, brak w źródle",
-    "missing-in-canonical (REAL)": "rdzen.color.nowy",
-    "missing-in-canonical (ARCHITECTURAL)": "rdzen.wewnetrzne.uklad — prefiks code-only",
-    "hardcoded-anti-pattern": "rdzen.semantic.akcja — kolekcja semantyczna z wartością surową",
-    "naming-mismatch": "rdzen.color.obwudka (kropki, niezmapowana) ↔ kanon rdzen.color.obwodka",
-    "layer-mismatch": "rdzen.komponent.przycisk-tlo — deklaracja component, wyprowadzenie semantic (z kanonu, bez udziału źródła)"
-  },
+  "comment": "Zasiane rozjazdy: zrzut źródła projektowego celowo rozjechany z kanonem zestawu. Bramka drift-gate wykrywa DOKŁADNIE 13 znalezisk (11 REAL / 1 ARCHITECTURAL / 1 ASSUMPTION) — pełna lista niżej, opisy w opis-rozjazdow.md. Typ missing-in-code wymaga artefaktu buildu i nie jest zasiany (jawna granica zestawu).",
+  "expected": [
+    {
+      "nr": 1,
+      "driftType": "value-mismatch",
+      "sciezka": "rdzen.color.podstawowy",
+      "kategoria": "REAL",
+      "severity": "P2"
+    },
+    {
+      "nr": 2,
+      "driftType": "type-mismatch",
+      "sciezka": "rdzen.rozmiar.odstep",
+      "kategoria": "REAL",
+      "severity": "P2"
+    },
+    {
+      "nr": 3,
+      "driftType": "alias-broken",
+      "sciezka": "rdzen.semantic.tlo",
+      "kategoria": "REAL",
+      "severity": "P2"
+    },
+    {
+      "nr": 4,
+      "driftType": "mode-incomplete",
+      "sciezka": "rdzen.color.tekst@Jasny↔Ciemny",
+      "kategoria": "REAL",
+      "severity": "P2",
+      "powod": "empty-mode"
+    },
+    {
+      "nr": 5,
+      "driftType": "mode-incomplete",
+      "sciezka": "rdzen.color.tekst@Jasny↔Okolicznosciowy",
+      "kategoria": "ASSUMPTION",
+      "severity": "P2",
+      "powod": "placeholder-value"
+    },
+    {
+      "nr": 6,
+      "driftType": "deprecated-still-used",
+      "sciezka": "rdzen.color.przestarzaly",
+      "kategoria": "REAL",
+      "severity": "P2"
+    },
+    {
+      "nr": 7,
+      "driftType": "metadata-drift",
+      "sciezka": "rdzen.color.tekst",
+      "kategoria": "REAL",
+      "severity": "P2",
+      "powod": "description-mismatch"
+    },
+    {
+      "nr": 8,
+      "driftType": "missing-in-figma",
+      "sciezka": "rdzen.color.zrodlowy",
+      "kategoria": "REAL",
+      "severity": "P1"
+    },
+    {
+      "nr": 9,
+      "driftType": "missing-in-canonical",
+      "sciezka": "rdzen.color.nowy",
+      "kategoria": "REAL",
+      "severity": "P2"
+    },
+    {
+      "nr": 10,
+      "driftType": "missing-in-canonical",
+      "sciezka": "rdzen.wewnetrzne.uklad",
+      "kategoria": "ARCHITECTURAL",
+      "severity": "P2"
+    },
+    {
+      "nr": 11,
+      "driftType": "hardcoded-anti-pattern",
+      "sciezka": "rdzen.semantic.akcja",
+      "kategoria": "REAL",
+      "severity": "P2"
+    },
+    {
+      "nr": 12,
+      "driftType": "naming-mismatch",
+      "sciezka": "rdzen.color.obwodka",
+      "kategoria": "REAL",
+      "severity": "P2"
+    },
+    {
+      "nr": 13,
+      "driftType": "layer-mismatch",
+      "sciezka": "rdzen.komponent.przycisk-tlo",
+      "kategoria": "REAL",
+      "severity": "P1"
+    }
+  ],
   "variables": [
     {
       "name": "rdzen/color/podstawowy",
       "collection": "Prymitywy",
       "type": "COLOR",
-      "valuesByMode": { "Jasny": "#1d4ed9", "Ciemny": "#3b82f6" }
+      "valuesByMode": {
+        "Jasny": "#1d4ed9",
+        "Ciemny": "#3b82f6"
+      }
     },
     {
       "name": "rdzen/color/tekst",
       "collection": "Prymitywy",
       "type": "COLOR",
-      "valuesByMode": { "Jasny": "#1e2229", "Ciemny": null, "Okolicznosciowy": "#000000" },
+      "valuesByMode": {
+        "Jasny": "#1e2229",
+        "Ciemny": null,
+        "Okolicznosciowy": "#000000"
+      },
       "description": "Tekst główny (opis rozjechany ze specyfikacją kanonu)"
     },
     {
       "name": "rdzen/color/tlo",
       "collection": "Prymitywy",
       "type": "COLOR",
-      "valuesByMode": { "Jasny": "#ffffff", "Ciemny": "#111827" }
+      "valuesByMode": {
+        "Jasny": "#ffffff",
+        "Ciemny": "#111827"
+      }
     },
     {
       "name": "rdzen/color/przestarzaly",
       "collection": "Prymitywy",
       "type": "COLOR",
-      "valuesByMode": { "Jasny": "#6b7280" }
+      "valuesByMode": {
+        "Jasny": "#6b7280"
+      }
     },
     {
       "name": "rdzen/rozmiar/odstep",
       "collection": "Prymitywy",
       "type": "COLOR",
-      "valuesByMode": { "Jasny": "#000001" }
+      "valuesByMode": {
+        "Jasny": "#000001"
+      }
     },
     {
       "name": "rdzen/semantic/tlo",
       "collection": "Semantyka",
       "type": "COLOR",
-      "valuesByMode": { "Jasny": { "aliasOf": "rdzen/color/nieistnieje" } }
+      "valuesByMode": {
+        "Jasny": {
+          "aliasOf": "rdzen/color/nieistnieje"
+        }
+      }
     },
     {
       "name": "rdzen/semantic/akcja",
       "collection": "Semantyka",
       "type": "COLOR",
-      "valuesByMode": { "Jasny": "#1d4ed8" }
+      "valuesByMode": {
+        "Jasny": "#1d4ed8"
+      }
     },
     {
       "name": "rdzen/color/nowy",
       "collection": "Prymitywy",
       "type": "COLOR",
-      "valuesByMode": { "Jasny": "#f59e0b" }
+      "valuesByMode": {
+        "Jasny": "#f59e0b"
+      }
     },
     {
       "name": "rdzen/wewnetrzne/uklad",
       "collection": "Prymitywy",
       "type": "COLOR",
-      "valuesByMode": { "Jasny": "#0000ff" }
+      "valuesByMode": {
+        "Jasny": "#0000ff"
+      }
     },
     {
       "name": "rdzen.color.obwudka",
       "collection": "Prymitywy",
       "type": "COLOR",
-      "valuesByMode": { "Jasny": "#d1d5db" }
+      "valuesByMode": {
+        "Jasny": "#d1d5db"
+      }
     }
   ]
 }
