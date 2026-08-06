@@ -1,0 +1,54 @@
+zrodlo/stany/2026-03/zrzut.json
+  s_b6de455feb33f6::t_824ea6eefecba0 1307-1310,1318-1321,1329-1332,1340-1343
+  s_b6de455feb33f6::t_2cc38fedd78403 1433-1434,1443-1444,1453-1454,1463-1464
+zrodlo/stany/2026-07/zrzut.json
+  s_b6de455feb33f6::t_2cc38fedd78403 1427-1428,1437-1438
+  s_b6de455feb33f6::t_824ea6eefecba0 1301-1304,1312-1315,1323-1326,1334-1337
+zrodlo/stany/2026-06/zrzut.json
+  s_b6de455feb33f6::t_824ea6eefecba0 1300-1303,1311-1314,1322-1325,1333-1336
+  s_b6de455feb33f6::t_2cc38fedd78403 1426-1427,1436-1437
+scripts/generuj.mjs
+  s_b6de455feb33f6::t_3dc1f7dc88bf83 144-145
+  s_b6de455feb33f6::t_3ace819113b4c0 956-964
+  s_b6de455feb33f6::t_2c3fca92c8eff4 671-681,683,688,690
+  s_b6de455feb33f6::t_307e49fbb03eb3 410-413
+zrodlo/stany/2026-08/zrzut.json
+  s_b6de455feb33f6::t_2cc38fedd78403 1419-1420
+  s_b6de455feb33f6::t_824ea6eefecba0 1301-1304,1312-1315,1323-1326,1334-1337
+marki/beta/2026-08.dtcg.json
+  s_b6de455feb33f6::t_824ea6eefecba0 1586-1589,1597-1600,1608-1611,1619-1622
+zrodlo/stany/2026-05/zrzut.json
+  s_b6de455feb33f6::t_2cc38fedd78403 1426-1427,1436-1437
+  s_b6de455feb33f6::t_824ea6eefecba0 1300-1303,1311-1314,1322-1325,1333-1336
+zrodlo/zrzut-alfa.json
+  s_b6de455feb33f6::t_824ea6eefecba0 1668-1671,1679-1682,1690-1693,1701-1704
+  s_b6de455feb33f6::t_2cc38fedd78403 1786-1787
+bramki/kontrast.json
+  s_b6de455feb33f6::t_2c3fca92c8eff4 12-15,18-21,24-27,30-33,36-39,42-45,48-51,54-57,60-63,66-69,72-75,78-81
+kanon/tokeny.dtcg.json
+  s_b6de455feb33f6::t_824ea6eefecba0 1367-1370,1379-1382,1391-1394,1403-1406
+zestaw.json
+  s_b6de455feb33f6::t_824ea6eefecba0 136-157
+zrodlo/stany/2026-04/zrzut.json
+  s_b6de455feb33f6::t_2cc38fedd78403 1434-1435,1444-1445,1454-1455,1464-1465
+  s_b6de455feb33f6::t_824ea6eefecba0 1308-1311,1319-1322,1330-1333,1341-1344
+zrodlo/stany/2026-03/zrzut-surowy.json
+  s_b6de455feb33f6::t_824ea6eefecba0 1496-1499,1508-1511,1520-1523,1532-1535
+  s_b6de455feb33f6::t_2cc38fedd78403 1636-1637,1647-1648,1658-1659,1669-1670
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "7407f59ad91287db45113a68f9b8742e8453e4c0",
+  "prompts": {},
+  "sessions": {
+    "s_b6de455feb33f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fb6d5a00-c432-4cd6-82db-b5f2ec824d8d",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Eryk Orłowski <eryk@talentcanvas.tech>"
+    }
+  }
+}
