@@ -1,0 +1,19 @@
+opis-rozjazdow.md
+  s_1f427c66c881a9::t_f4995f54d500a6 10-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "7a840efcc793119da984e05c0c6f53b0ed0ab958",
+  "prompts": {},
+  "sessions": {
+    "s_1f427c66c881a9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc5d8e3f-d636-44fe-a4a5-d856f9e0e11a",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Eryk Orłowski <eryk@talentcanvas.tech>"
+    }
+  }
+}
