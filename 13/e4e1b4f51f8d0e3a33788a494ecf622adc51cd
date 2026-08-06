@@ -1,0 +1,45 @@
+.gitignore
+  s_1f427c66c881a9::t_c473f5c7c85e0f 1-2
+bramki/rozjazd.json
+  s_1f427c66c881a9::t_fe7586fc7e0a0e 1-55
+kanon/tokeny.dtcg.json
+  s_1f427c66c881a9::t_5b130b63c8f601 1-114
+raport-pokrycia.sh
+  s_1f427c66c881a9::t_b76d720ddf012f 1-10
+raport-rozjazdu.sh
+  s_1f427c66c881a9::t_7353c7e2dfd2fe 1-13
+zestaw.json
+  s_1f427c66c881a9::t_0513b23a27d7a7 1-41
+zrodlo/zrzut-alfa.json
+  s_1f427c66c881a9::t_4f9c4ff70e4689 1-80
+README.md
+  s_1f427c66c881a9::t_d2889681d4a6c8 1-70
+bramki/pokrycie.json
+  s_1f427c66c881a9::t_b849b3b4fbb293 1-7
+kanon/marki.json
+  s_1f427c66c881a9::t_94997d070a48cb 1-17
+kanon/strony.json
+  s_1f427c66c881a9::t_d9431d3f369b89 1-25
+kanon/tryby.json
+  s_1f427c66c881a9::t_4d99bb35b07bf2 1-8
+opis-rozjazdow.md
+  s_1f427c66c881a9::t_d5c2ddc87f3718 1-54
+zrodlo/pokrycie.json
+  s_1f427c66c881a9::t_1fe0dcb424dad5 1-49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "13e4e1b4f51f8d0e3a33788a494ecf622adc51cd",
+  "prompts": {},
+  "sessions": {
+    "s_1f427c66c881a9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc5d8e3f-d636-44fe-a4a5-d856f9e0e11a",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Eryk Orłowski <eryk@talentcanvas.tech>"
+    }
+  }
+}
