@@ -6,7 +6,8 @@
         "$type": "color",
         "$value": "{rdzen.color.czerwien-600}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -14,7 +15,8 @@
         "$type": "color",
         "$value": "{rdzen.color.grafit-200}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -22,7 +24,8 @@
         "$type": "color",
         "$value": "{rdzen.color.blekit-700}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -30,7 +33,8 @@
         "$type": "color",
         "$value": "{rdzen.color.blekit-900}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -38,7 +42,8 @@
         "$type": "color",
         "$value": "{rdzen.color.blekit-800}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -46,7 +51,8 @@
         "$type": "color",
         "$value": "{rdzen.color.grafit-200}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -54,7 +60,8 @@
         "$type": "color",
         "$value": "{rdzen.color.czerwien-600}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -62,7 +69,8 @@
         "$type": "color",
         "$value": "{rdzen.color.blekit-500}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -70,7 +78,8 @@
         "$type": "color",
         "$value": "{rdzen.color.grafit-200}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -78,7 +87,8 @@
         "$type": "color",
         "$value": "{rdzen.color.grafit-400}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -86,7 +96,8 @@
         "$type": "space",
         "$value": "{rdzen.rozmiar.odstep-075}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -94,7 +105,8 @@
         "$type": "space",
         "$value": "{rdzen.rozmiar.odstep-300}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -102,7 +114,8 @@
         "$type": "space",
         "$value": "{rdzen.rozmiar.odstep-025}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -110,7 +123,8 @@
         "$type": "space",
         "$value": "{rdzen.rozmiar.odstep-500}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -118,7 +132,8 @@
         "$type": "space",
         "$value": "{rdzen.rozmiar.odstep-600}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -126,7 +141,8 @@
         "$type": "space",
         "$value": "{rdzen.rozmiar.odstep-150}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -134,7 +150,8 @@
         "$type": "radius",
         "$value": "{rdzen.rozmiar.promien-maly}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -142,7 +159,8 @@
         "$type": "radius",
         "$value": "{rdzen.rozmiar.promien-pelny}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -150,7 +168,8 @@
         "$type": "radius",
         "$value": "{rdzen.rozmiar.promien-sredni}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -158,7 +177,8 @@
         "$type": "duration",
         "$value": "{rdzen.czas.szybki}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -166,7 +186,8 @@
         "$type": "duration",
         "$value": "{rdzen.czas.blysk}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -174,7 +195,8 @@
         "$type": "color",
         "$value": "{rdzen.color.czerwien-050}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -182,7 +204,8 @@
         "$type": "color",
         "$value": "{rdzen.color.czerwien-800}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -190,7 +213,8 @@
         "$type": "color",
         "$value": "{rdzen.color.morski-050}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -198,7 +222,8 @@
         "$type": "color",
         "$value": "{rdzen.color.morski-800}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -206,7 +231,8 @@
         "$type": "color",
         "$value": "{rdzen.color.bursztyn-100}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -214,7 +240,8 @@
         "$type": "color",
         "$value": "{rdzen.color.bursztyn-800}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -222,7 +249,8 @@
         "$type": "color",
         "$value": "{rdzen.color.zielen-100}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -230,7 +258,8 @@
         "$type": "color",
         "$value": "{rdzen.color.zielen-800}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -238,7 +267,8 @@
         "$type": "color",
         "$value": "{rdzen.color.grafit-700}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -246,7 +276,8 @@
         "$type": "color",
         "$value": "{rdzen.color.blekit-700}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -254,7 +285,8 @@
         "$type": "color",
         "$value": "{rdzen.color.czerwien-700}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -262,7 +294,8 @@
         "$type": "color",
         "$value": "{rdzen.color.biel}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -270,7 +303,8 @@
         "$type": "color",
         "$value": "{rdzen.color.grafit-900}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -278,7 +312,8 @@
         "$type": "color",
         "$value": "{rdzen.color.grafit-400}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -286,7 +321,8 @@
         "$type": "color",
         "$value": "{rdzen.color.blekit-050}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -294,7 +330,8 @@
         "$type": "color",
         "$value": "{rdzen.color.grafit-900}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -302,7 +339,8 @@
         "$type": "color",
         "$value": "{rdzen.color.grafit-050}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -310,7 +348,8 @@
         "$type": "color",
         "$value": "{rdzen.color.biel}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -318,7 +357,8 @@
         "$type": "color",
         "$value": "{rdzen.color.grafit-100}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -326,7 +366,8 @@
         "$type": "color",
         "$value": "{rdzen.color.biel}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -334,7 +375,8 @@
         "$type": "fontSize",
         "$value": "{rdzen.typografia.rozmiar-naglowek-1}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -342,7 +384,8 @@
         "$type": "fontSize",
         "$value": "{rdzen.typografia.rozmiar-naglowek-2}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -350,7 +393,8 @@
         "$type": "fontSize",
         "$value": "{rdzen.typografia.rozmiar-naglowek-3}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -358,7 +402,8 @@
         "$type": "fontSize",
         "$value": "{rdzen.typografia.rozmiar-naglowek-4}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -366,7 +411,8 @@
         "$type": "fontSize",
         "$value": "{rdzen.typografia.rozmiar-podpis}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -374,7 +420,8 @@
         "$type": "fontSize",
         "$value": "{rdzen.typografia.rozmiar-tresc}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -382,7 +429,8 @@
         "$type": "fontSize",
         "$value": "{rdzen.typografia.rozmiar-tresc}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -390,7 +438,8 @@
         "$type": "fontSize",
         "$value": "{rdzen.typografia.rozmiar-tresc-duza}",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       }
@@ -400,7 +449,8 @@
         "$type": "color",
         "$value": "#ffffff",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -408,7 +458,8 @@
         "$type": "color",
         "$value": "#edf1fd",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -416,7 +467,8 @@
         "$type": "color",
         "$value": "#d2dcf9",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -424,7 +476,8 @@
         "$type": "color",
         "$value": "#aabdf3",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -432,7 +485,8 @@
         "$type": "color",
         "$value": "#7d9bed",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -440,7 +494,8 @@
         "$type": "color",
         "$value": "#5078e7",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -448,7 +503,8 @@
         "$type": "color",
         "$value": "#2f4bda",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -456,7 +512,8 @@
         "$type": "color",
         "$value": "#1f3ac1",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -464,7 +521,8 @@
         "$type": "color",
         "$value": "#153a9d",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -472,7 +530,8 @@
         "$type": "color",
         "$value": "#112c79",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -480,7 +539,8 @@
         "$type": "color",
         "$value": "#0c1f55",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -488,7 +548,8 @@
         "$type": "color",
         "$value": "#fef8ec",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -496,7 +557,8 @@
         "$type": "color",
         "$value": "#fceecf",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -504,7 +566,8 @@
         "$type": "color",
         "$value": "#f9e0a4",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -512,7 +575,8 @@
         "$type": "color",
         "$value": "#f6cf74",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -520,7 +584,8 @@
         "$type": "color",
         "$value": "#f3bf44",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -528,7 +593,8 @@
         "$type": "color",
         "$value": "#f0ae14",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -536,7 +602,8 @@
         "$type": "color",
         "$value": "#ce940d",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -544,7 +611,8 @@
         "$type": "color",
         "$value": "#a8790b",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -552,7 +620,8 @@
         "$type": "color",
         "$value": "#815d08",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -560,7 +629,8 @@
         "$type": "color",
         "$value": "#5b4206",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -568,7 +638,8 @@
         "$type": "color",
         "$value": "#101216",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -576,7 +647,8 @@
         "$type": "color",
         "$value": "#fcf0ed",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -584,7 +656,8 @@
         "$type": "color",
         "$value": "#f8d9d3",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -592,7 +665,8 @@
         "$type": "color",
         "$value": "#f1b7ac",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -600,7 +674,8 @@
         "$type": "color",
         "$value": "#ea9280",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -608,7 +683,8 @@
         "$type": "color",
         "$value": "#e36c54",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -616,7 +692,8 @@
         "$type": "color",
         "$value": "#dc4628",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -624,7 +701,8 @@
         "$type": "color",
         "$value": "#bd391f",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -632,7 +710,8 @@
         "$type": "color",
         "$value": "#9a2e19",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -640,7 +719,8 @@
         "$type": "color",
         "$value": "#762413",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -648,7 +728,8 @@
         "$type": "color",
         "$value": "#53190e",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -656,7 +737,8 @@
         "$type": "color",
         "$value": "#f4f4f6",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -664,7 +746,8 @@
         "$type": "color",
         "$value": "#e3e4e8",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -672,7 +755,8 @@
         "$type": "color",
         "$value": "#cacdd3",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -680,7 +764,8 @@
         "$type": "color",
         "$value": "#aeb2bc",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -688,7 +773,8 @@
         "$type": "color",
         "$value": "#9298a5",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -696,7 +782,8 @@
         "$type": "color",
         "$value": "#767d8f",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -704,7 +791,8 @@
         "$type": "color",
         "$value": "#636979",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -712,7 +800,8 @@
         "$type": "color",
         "$value": "#505662",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -720,7 +809,8 @@
         "$type": "color",
         "$value": "#3e424c",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -728,7 +818,8 @@
         "$type": "color",
         "$value": "#2c2f35",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -736,7 +827,8 @@
         "$type": "color",
         "$value": "#eef9fc",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -744,7 +836,8 @@
         "$type": "color",
         "$value": "#d4f0f7",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -752,7 +845,8 @@
         "$type": "color",
         "$value": "#aee2ef",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -760,7 +854,8 @@
         "$type": "color",
         "$value": "#83d3e7",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -768,7 +863,8 @@
         "$type": "color",
         "$value": "#58c4df",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -776,7 +872,8 @@
         "$type": "color",
         "$value": "#2db5d7",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -784,7 +881,8 @@
         "$type": "color",
         "$value": "#239ab8",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -792,7 +890,8 @@
         "$type": "color",
         "$value": "#1d7e96",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -800,7 +899,8 @@
         "$type": "color",
         "$value": "#166174",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -808,7 +908,17 @@
         "$type": "color",
         "$value": "#104451",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
+          "com.example.status": "active"
+        }
+      },
+      "odziedziczony": {
+        "$type": "color",
+        "$value": "#547a96",
+        "$extensions": {
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -816,7 +926,8 @@
         "$type": "color",
         "$value": "#f6faf0",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -824,7 +935,8 @@
         "$type": "color",
         "$value": "#e8f2d9",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -832,7 +944,8 @@
         "$type": "color",
         "$value": "#d3e6b7",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -840,7 +953,8 @@
         "$type": "color",
         "$value": "#bcd992",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -848,7 +962,8 @@
         "$type": "color",
         "$value": "#a5cb6c",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -856,7 +971,8 @@
         "$type": "color",
         "$value": "#8ebe46",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -864,7 +980,8 @@
         "$type": "color",
         "$value": "#78a239",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -872,7 +989,8 @@
         "$type": "color",
         "$value": "#62842e",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -880,7 +998,8 @@
         "$type": "color",
         "$value": "#4b6624",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -888,7 +1007,8 @@
         "$type": "color",
         "$value": "#354819",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -896,7 +1016,8 @@
         "$type": "color",
         "$value": "#f6effb",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -904,7 +1025,8 @@
         "$type": "color",
         "$value": "#e9d6f5",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -912,7 +1034,8 @@
         "$type": "color",
         "$value": "#d4b1ec",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -920,7 +1043,8 @@
         "$type": "color",
         "$value": "#be89e1",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -928,7 +1052,8 @@
         "$type": "color",
         "$value": "#a760d7",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -936,7 +1061,8 @@
         "$type": "color",
         "$value": "#9137cd",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -944,7 +1070,8 @@
         "$type": "color",
         "$value": "#7b2caf",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -952,7 +1079,8 @@
         "$type": "color",
         "$value": "#64248f",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -960,7 +1088,8 @@
         "$type": "color",
         "$value": "#4d1c6e",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -968,7 +1097,8 @@
         "$type": "color",
         "$value": "#36134e",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -976,7 +1106,8 @@
         "$type": "color",
         "$value": "#fbeef5",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -984,7 +1115,8 @@
         "$type": "color",
         "$value": "#f6d5e6",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -992,7 +1124,8 @@
         "$type": "color",
         "$value": "#eeb0cf",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1000,7 +1133,8 @@
         "$type": "color",
         "$value": "#e486b5",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1008,7 +1142,8 @@
         "$type": "color",
         "$value": "#db5c9c",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1016,7 +1151,8 @@
         "$type": "color",
         "$value": "#d23282",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1024,7 +1160,8 @@
         "$type": "color",
         "$value": "#b4276e",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1032,7 +1169,8 @@
         "$type": "color",
         "$value": "#922059",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1040,7 +1178,8 @@
         "$type": "color",
         "$value": "#711945",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1048,7 +1187,8 @@
         "$type": "color",
         "$value": "#4f1130",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1056,7 +1196,8 @@
         "$type": "color",
         "$value": "#effbf5",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1064,7 +1205,8 @@
         "$type": "color",
         "$value": "#d7f4e6",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1072,7 +1214,8 @@
         "$type": "color",
         "$value": "#b3ead0",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1080,7 +1223,8 @@
         "$type": "color",
         "$value": "#8cdeb8",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1088,7 +1232,8 @@
         "$type": "color",
         "$value": "#64d39f",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1096,7 +1241,8 @@
         "$type": "color",
         "$value": "#3cc887",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1104,7 +1250,8 @@
         "$type": "color",
         "$value": "#30ab72",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1112,7 +1259,8 @@
         "$type": "color",
         "$value": "#278b5d",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1120,7 +1268,8 @@
         "$type": "color",
         "$value": "#1e6b47",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1128,7 +1277,8 @@
         "$type": "color",
         "$value": "#154c32",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       }
@@ -1141,7 +1291,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1152,7 +1303,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1163,7 +1315,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1174,7 +1327,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1185,7 +1339,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1196,7 +1351,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1207,7 +1363,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1218,7 +1375,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1229,7 +1387,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1240,7 +1399,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1251,7 +1411,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1262,7 +1423,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1273,7 +1435,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1284,7 +1447,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1295,7 +1459,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1306,7 +1471,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1317,7 +1483,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1328,7 +1495,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1339,7 +1507,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1350,7 +1519,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1361,7 +1531,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1372,7 +1543,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1383,7 +1555,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1394,7 +1567,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       }
@@ -1404,7 +1578,8 @@
         "$type": "fontWeight",
         "$value": 700,
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1412,7 +1587,8 @@
         "$type": "fontWeight",
         "$value": 600,
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1420,7 +1596,8 @@
         "$type": "fontWeight",
         "$value": 500,
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1428,7 +1605,8 @@
         "$type": "fontWeight",
         "$value": 400,
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1436,7 +1614,8 @@
         "$type": "fontFamily",
         "$value": "ui-monospace, monospace",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1444,7 +1623,8 @@
         "$type": "fontFamily",
         "$value": "system-ui, sans-serif",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1455,7 +1635,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1466,7 +1647,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1477,7 +1659,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1488,7 +1671,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1499,7 +1683,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1510,7 +1695,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1521,7 +1707,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1532,7 +1719,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1543,7 +1731,8 @@
           "unit": "px"
         },
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1551,7 +1740,8 @@
         "$type": "lineHeight",
         "$value": 1.2,
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1559,7 +1749,8 @@
         "$type": "lineHeight",
         "$value": 1.7,
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1567,15 +1758,8 @@
         "$type": "lineHeight",
         "$value": 1.35,
         "$extensions": {
-          "com.example.provenance": "unknown",
-          "com.example.status": "active"
-        }
-      },
-      "wysokosc-zwykla": {
-        "$type": "lineHeight",
-        "$value": 1.5,
-        "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       }
@@ -1585,7 +1769,8 @@
         "$type": "color",
         "$value": "#f2690d",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1593,7 +1778,8 @@
         "$type": "color",
         "$value": "#3d668f",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       },
@@ -1601,7 +1787,8 @@
         "$type": "color",
         "$value": "#279b74",
         "$extensions": {
-          "com.example.provenance": "unknown",
+          "com.example.provenance": "code",
+          "com.example.provenance-detail": "repozytorium zespołu marki",
           "com.example.status": "active"
         }
       }

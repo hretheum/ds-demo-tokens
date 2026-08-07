@@ -854,6 +854,16 @@
           "com.example.deprecated-since": "2026-02-01",
           "com.example.deprecated-deadline": "2026-12-31"
         }
+      },
+      "odziedziczony": {
+        "$type": "color",
+        "$value": "#547a96",
+        "$description": "Token przeniesiony ze starszego systemu — pochodzenie nieustalone, do wyjaśnienia przy najbliższym przeglądzie",
+        "$extensions": {
+          "com.example.provenance": "unknown",
+          "com.example.status": "active",
+          "com.example.layer": "primitive"
+        }
       }
     },
     "rozmiar": {
@@ -1606,7 +1616,8 @@
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",
-          "com.example.layer": "semantic"
+          "com.example.layer": "semantic",
+          "com.example.curated": true
         }
       },
       "tekst-drugorzedny": {
@@ -1660,7 +1671,8 @@
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",
-          "com.example.layer": "semantic"
+          "com.example.layer": "semantic",
+          "com.example.curated": true
         }
       },
       "tlo-powierzchnia": {
@@ -1715,7 +1727,8 @@
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",
-          "com.example.layer": "semantic"
+          "com.example.layer": "semantic",
+          "com.example.curated": true
         }
       },
       "akcja-podstawowa-najechanie": {
@@ -1787,7 +1800,8 @@
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",
-          "com.example.layer": "semantic"
+          "com.example.layer": "semantic",
+          "com.example.curated": true
         }
       },
       "obwodka-blad": {
@@ -1841,7 +1855,8 @@
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",
-          "com.example.layer": "semantic"
+          "com.example.layer": "semantic",
+          "com.example.curated": true
         }
       },
       "stan-blad-tresc": {
@@ -1850,7 +1865,8 @@
         "$extensions": {
           "com.example.provenance": "code",
           "com.example.status": "active",
-          "com.example.layer": "semantic"
+          "com.example.layer": "semantic",
+          "com.example.curated": true
         }
       },
       "stan-informacja-tlo": {
@@ -2407,6 +2423,44 @@
           "com.example.provenance": "code",
           "com.example.status": "active",
           "com.example.layer": "component"
+        }
+      }
+    },
+    "propozycje": {
+      "akcent-promocyjny": {
+        "$type": "color",
+        "$value": "#db5c9c",
+        "$description": "Propozycja z piaskownicy Marki Beta — akcent kampanii sezonowych",
+        "$extensions": {
+          "com.example.provenance": "proposed",
+          "com.example.status": "draft"
+        }
+      },
+      "tlo-wyroznienia": {
+        "$type": "color",
+        "$value": "#fef8ec",
+        "$description": "Propozycja z piaskownicy Marki Beta — tło wyróżnionych kart",
+        "$extensions": {
+          "com.example.provenance": "proposed",
+          "com.example.status": "draft"
+        }
+      },
+      "obwodka-nowosci": {
+        "$type": "color",
+        "$value": "#64d39f",
+        "$description": "Propozycja z piaskownicy Marki Gamma — obwódka znacznika nowości",
+        "$extensions": {
+          "com.example.provenance": "proposed",
+          "com.example.status": "draft"
+        }
+      },
+      "tekst-promocyjny": {
+        "$type": "color",
+        "$value": "#64248f",
+        "$description": "Propozycja z piaskownicy Marki Gamma — tekst na tłach kampanii",
+        "$extensions": {
+          "com.example.provenance": "proposed",
+          "com.example.status": "draft"
         }
       }
     }

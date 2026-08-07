@@ -2736,6 +2736,15 @@
               "id": "zm-rdzen-funkcjonalne-komunikat-informacja-tresc"
             }
           }
+        },
+        "zm-rdzen-color-odziedziczony": {
+          "id": "zm-rdzen-color-odziedziczony",
+          "name": "rdzen/color/odziedziczony",
+          "variableCollectionId": "kol-prymitywy",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "tryb-jasny": "#547a96"
+          }
         }
       }
     }

@@ -2353,6 +2353,14 @@
           "aliasOf": "rdzen/funkcjonalne/komunikat-informacja-tresc"
         }
       }
+    },
+    {
+      "name": "rdzen/color/odziedziczony",
+      "collection": "Prymitywy",
+      "type": "COLOR",
+      "valuesByMode": {
+        "Jasny": "#547a96"
+      }
     }
   ]
 }

@@ -1,5 +1,217 @@
 {
-  "comment": "Inwentarz skanera komponentów rejestr-vs-stan: rodziny z wariantami + instancje. Zasiane rozjazdy komponentowe opisane w README.",
+  "comment": "Warstwa komponentów: rejestr produktowy (encje + statusy), inwentarz skanera rejestr-vs-stan (rodziny z wariantami + instancje z zasianymi rozbieżnościami obu rodzajów).",
+  "rejestr": [
+    {
+      "slug": "przycisk",
+      "name": "Przycisk",
+      "description": "Podstawowy element akcji; trzy odmiany i trzy rozmiary.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "przycisk-drugorzedny",
+      "name": "Przycisk drugorzędny",
+      "description": "Akcja towarzysząca; obwódka zamiast wypełnienia.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "przycisk-ikonowy",
+      "name": "Przycisk ikonowy",
+      "description": "Akcja wyrażona samą ikoną, z etykietą dla czytników.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "pole-tekstowe",
+      "name": "Pole tekstowe",
+      "description": "Wprowadzanie tekstu z etykietą, pomocą i stanem błędu.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "pole-liczbowe",
+      "name": "Pole liczbowe",
+      "description": "Wariant pola dla wartości liczbowych z krokiem.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "pole-wyboru",
+      "name": "Pole wyboru",
+      "description": "Pojedynczy wybór tak/nie w formularzach.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "pole-daty",
+      "name": "Pole daty",
+      "description": "Wybór daty z kalendarzem i walidacją zakresu.",
+      "status": "W przygotowaniu"
+    },
+    {
+      "slug": "lista-rozwijana",
+      "name": "Lista rozwijana",
+      "description": "Wybór jednej pozycji z listy; wyszukiwanie od ośmiu pozycji.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "przelacznik",
+      "name": "Przełącznik",
+      "description": "Natychmiastowa zmiana ustawienia; nie wymaga zapisu.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "suwak",
+      "name": "Suwak",
+      "description": "Wybór wartości z zakresu; obsługa klawiaturą strzałkami.",
+      "status": "W przygotowaniu"
+    },
+    {
+      "slug": "karta",
+      "name": "Karta",
+      "description": "Powierzchnia grupująca treść jednego tematu.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "karta-produktu",
+      "name": "Karta produktu",
+      "description": "Karta z obrazem, ceną i akcją; wariant siatki i listy.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "tabela",
+      "name": "Tabela",
+      "description": "Dane tabelaryczne z sortowaniem i wierszem naprzemiennym.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "wiersz-tabeli",
+      "name": "Wiersz tabeli",
+      "description": "Element pomocniczy tabeli; nie używać samodzielnie.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "znacznik",
+      "name": "Znacznik",
+      "description": "Krótka etykieta stanu lub kategorii.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "plakietka",
+      "name": "Plakietka",
+      "description": "Licznik lub wskaźnik nowości przy elemencie nawigacji.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "awatar",
+      "name": "Awatar",
+      "description": "Reprezentacja osoby lub zespołu; inicjały przy braku obrazu.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "okno-dialogowe",
+      "name": "Okno dialogowe",
+      "description": "Przerwanie przepływu wymagające decyzji; pułapka skupienia.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "panel-boczny",
+      "name": "Panel boczny",
+      "description": "Treść pomocnicza wsuwana z krawędzi ekranu.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "naglowek-strony",
+      "name": "Nagłówek strony",
+      "description": "Tytuł, okruszki i akcje kontekstowe strony.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "stopka",
+      "name": "Stopka",
+      "description": "Zamknięcie strony: nawigacja pomocnicza i informacje prawne.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "powiadomienie",
+      "name": "Powiadomienie",
+      "description": "Komunikat o wyniku operacji; cztery tony.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "pasek-postepu",
+      "name": "Pasek postępu",
+      "description": "Postęp operacji o znanym czasie trwania.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "wskaznik-ladowania",
+      "name": "Wskaźnik ładowania",
+      "description": "Operacja o nieznanym czasie; szanuje ograniczenie ruchu.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "zakladki",
+      "name": "Zakładki",
+      "description": "Przełączanie widoków tej samej treści.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "okruszki",
+      "name": "Okruszki",
+      "description": "Ścieżka położenia w hierarchii serwisu.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "stronicowanie",
+      "name": "Stronicowanie",
+      "description": "Nawigacja po stronach długich list.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "podpowiedz",
+      "name": "Podpowiedź",
+      "description": "Krótkie wyjaśnienie elementu po najechaniu lub skupieniu.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "dymek",
+      "name": "Dymek",
+      "description": "Rozbudowana treść kontekstowa zakotwiczona przy elemencie.",
+      "status": "W przygotowaniu"
+    },
+    {
+      "slug": "menu-kontekstowe",
+      "name": "Menu kontekstowe",
+      "description": "Lista akcji dla wskazanego elementu.",
+      "status": "W przygotowaniu"
+    },
+    {
+      "slug": "pusty-stan",
+      "name": "Pusty stan",
+      "description": "Widok bez danych: wyjaśnienie i pierwsza akcja.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "baner",
+      "name": "Baner",
+      "description": "Komunikat na poziomie całego serwisu.",
+      "status": "Wycofywany"
+    },
+    {
+      "slug": "sekcja-powitalna",
+      "name": "Sekcja powitalna",
+      "description": "Otwarcie strony startowej produktu.",
+      "status": "W przygotowaniu"
+    },
+    {
+      "slug": "separator",
+      "name": "Separator",
+      "description": "Wizualne rozdzielenie grup treści.",
+      "status": "Stabilny"
+    },
+    {
+      "slug": "ikona",
+      "name": "Ikona",
+      "description": "Osadzenie ikony z obowiązkową etykietą znaczeniową.",
+      "status": "Stabilny"
+    }
+  ],
   "inventory": {
     "families": [
       {
@@ -9,15 +221,79 @@
         ],
         "variants": [
           {
-            "name": "podstawowa",
+            "name": "odmiana=podstawowa",
             "axes": {
               "odmiana": "podstawowa"
             }
           },
           {
-            "name": "drugorzedna",
+            "name": "odmiana=drugorzedna",
             "axes": {
               "odmiana": "drugorzedna"
+            }
+          },
+          {
+            "name": "rozmiar=maly",
+            "axes": {
+              "rozmiar": "maly"
+            }
+          },
+          {
+            "name": "rozmiar=sredni",
+            "axes": {
+              "rozmiar": "sredni"
+            }
+          },
+          {
+            "name": "rozmiar=duzy",
+            "axes": {
+              "rozmiar": "duzy"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "przycisk-drugorzedny",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "rozmiar=maly",
+            "axes": {
+              "rozmiar": "maly"
+            }
+          },
+          {
+            "name": "rozmiar=sredni",
+            "axes": {
+              "rozmiar": "sredni"
+            }
+          },
+          {
+            "name": "rozmiar=duzy",
+            "axes": {
+              "rozmiar": "duzy"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "przycisk-ikonowy",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "rozmiar=maly",
+            "axes": {
+              "rozmiar": "maly"
+            }
+          },
+          {
+            "name": "rozmiar=sredni",
+            "axes": {
+              "rozmiar": "sredni"
             }
           }
         ]
@@ -30,19 +306,31 @@
         ],
         "variants": [
           {
-            "name": "zwykly",
+            "name": "stan=zwykly",
             "axes": {
               "stan": "zwykly"
             }
           },
           {
-            "name": "blad",
+            "name": "stan=skupienie",
+            "axes": {
+              "stan": "skupienie"
+            }
+          },
+          {
+            "name": "stan=blad",
             "axes": {
               "stan": "blad"
             }
           },
           {
-            "name": "eksperymentalny",
+            "name": "stan=wylaczony",
+            "axes": {
+              "stan": "wylaczony"
+            }
+          },
+          {
+            "name": "stan=eksperymentalny",
             "axes": {
               "stan": "eksperymentalny"
             }
@@ -50,75 +338,93 @@
         ]
       },
       {
-        "slug": "karta",
+        "slug": "pole-liczbowe",
         "platforms": [
           "www"
         ],
         "variants": [
           {
-            "name": "pionowy",
+            "name": "stan=zwykly",
             "axes": {
-              "uklad": "pionowy"
+              "stan": "zwykly"
             }
           },
           {
-            "name": "poziomy",
+            "name": "stan=blad",
             "axes": {
-              "uklad": "poziomy"
+              "stan": "blad"
             }
           }
         ]
       },
       {
-        "slug": "znacznik",
+        "slug": "pole-wyboru",
         "platforms": [
           "www"
         ],
         "variants": [
           {
-            "name": "neutralny",
+            "name": "stan=zaznaczone",
             "axes": {
-              "ton": "neutralny"
+              "stan": "zaznaczone"
             }
           },
           {
-            "name": "sukces",
+            "name": "stan=odznaczone",
             "axes": {
-              "ton": "sukces"
+              "stan": "odznaczone"
             }
           },
           {
-            "name": "blad",
+            "name": "stan=nieokreslone",
             "axes": {
-              "ton": "blad"
+              "stan": "nieokreslone"
             }
           }
         ]
       },
       {
-        "slug": "okno-dialogowe",
+        "slug": "pole-daty",
         "platforms": [
           "www"
         ],
         "variants": [
           {
-            "name": "srednie",
+            "name": "stan=zwykly",
             "axes": {
-              "rozmiar": "srednie"
+              "stan": "zwykly"
+            }
+          },
+          {
+            "name": "stan=blad",
+            "axes": {
+              "stan": "blad"
             }
           }
         ]
       },
       {
-        "slug": "powiadomienie",
+        "slug": "lista-rozwijana",
         "platforms": [
           "www"
         ],
         "variants": [
           {
-            "name": "informacja",
+            "name": "stan=zwykly",
             "axes": {
-              "ton": "informacja"
+              "stan": "zwykly"
+            }
+          },
+          {
+            "name": "stan=otwarta",
+            "axes": {
+              "stan": "otwarta"
+            }
+          },
+          {
+            "name": "stan=blad",
+            "axes": {
+              "stan": "blad"
             }
           }
         ]
@@ -131,13 +437,13 @@
         ],
         "variants": [
           {
-            "name": "wlaczony",
+            "name": "stan=wlaczony",
             "axes": {
               "stan": "wlaczony"
             }
           },
           {
-            "name": "wylaczony",
+            "name": "stan=wylaczony",
             "axes": {
               "stan": "wylaczony"
             }
@@ -145,15 +451,61 @@
         ]
       },
       {
-        "slug": "zakladki",
+        "slug": "suwak",
         "platforms": [
           "www"
         ],
         "variants": [
           {
-            "name": "poziomy",
+            "name": "stan=zwykly",
+            "axes": {
+              "stan": "zwykly"
+            }
+          },
+          {
+            "name": "stan=wylaczony",
+            "axes": {
+              "stan": "wylaczony"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "karta",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "uklad=pionowy",
+            "axes": {
+              "uklad": "pionowy"
+            }
+          },
+          {
+            "name": "uklad=poziomy",
             "axes": {
               "uklad": "poziomy"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "karta-produktu",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "uklad=siatka",
+            "axes": {
+              "uklad": "siatka"
+            }
+          },
+          {
+            "name": "uklad=lista",
+            "axes": {
+              "uklad": "lista"
             }
           }
         ]
@@ -165,7 +517,251 @@
         ],
         "variants": [
           {
-            "name": "zwykla",
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "wiersz-tabeli",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "znacznik",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "ton=neutralny",
+            "axes": {
+              "ton": "neutralny"
+            }
+          },
+          {
+            "name": "ton=sukces",
+            "axes": {
+              "ton": "sukces"
+            }
+          },
+          {
+            "name": "ton=ostrzezenie",
+            "axes": {
+              "ton": "ostrzezenie"
+            }
+          },
+          {
+            "name": "ton=blad",
+            "axes": {
+              "ton": "blad"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "plakietka",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "ton=neutralny",
+            "axes": {
+              "ton": "neutralny"
+            }
+          },
+          {
+            "name": "ton=akcent",
+            "axes": {
+              "ton": "akcent"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "awatar",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "rozmiar=maly",
+            "axes": {
+              "rozmiar": "maly"
+            }
+          },
+          {
+            "name": "rozmiar=sredni",
+            "axes": {
+              "rozmiar": "sredni"
+            }
+          },
+          {
+            "name": "rozmiar=duzy",
+            "axes": {
+              "rozmiar": "duzy"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "okno-dialogowe",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "rozmiar=male",
+            "axes": {
+              "rozmiar": "male"
+            }
+          },
+          {
+            "name": "rozmiar=srednie",
+            "axes": {
+              "rozmiar": "srednie"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "panel-boczny",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "strona=lewa",
+            "axes": {
+              "strona": "lewa"
+            }
+          },
+          {
+            "name": "strona=prawa",
+            "axes": {
+              "strona": "prawa"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "naglowek-strony",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "stopka",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "powiadomienie",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "ton=informacja",
+            "axes": {
+              "ton": "informacja"
+            }
+          },
+          {
+            "name": "ton=sukces",
+            "axes": {
+              "ton": "sukces"
+            }
+          },
+          {
+            "name": "ton=ostrzezenie",
+            "axes": {
+              "ton": "ostrzezenie"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "pasek-postepu",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "stan=w-toku",
+            "axes": {
+              "stan": "w-toku"
+            }
+          },
+          {
+            "name": "stan=ukonczony",
+            "axes": {
+              "stan": "ukonczony"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "wskaznik-ladowania",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "zakladki",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "uklad=poziomy",
+            "axes": {
+              "uklad": "poziomy"
+            }
+          },
+          {
+            "name": "uklad=pionowy",
+            "axes": {
+              "uklad": "pionowy"
+            }
+          }
+        ]
+      },
+      {
+        "slug": "okruszki",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
             "axes": {}
           }
         ]
@@ -177,7 +773,103 @@
         ],
         "variants": [
           {
-            "name": "zwykle",
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "podpowiedz",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "dymek",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "menu-kontekstowe",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "pusty-stan",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "baner",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "sekcja-powitalna",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "separator",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
+      },
+      {
+        "slug": "ikona",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
             "axes": {}
           }
         ]
@@ -193,6 +885,18 @@
             "axes": {}
           }
         ]
+      },
+      {
+        "slug": "kafelek-promocyjny",
+        "platforms": [
+          "www"
+        ],
+        "variants": [
+          {
+            "name": "domyslny",
+            "axes": {}
+          }
+        ]
       }
     ],
     "instances": [
@@ -205,14 +909,14 @@
       },
       {
         "id": "inst-002",
-        "familySlug": "przycisk",
+        "familySlug": "karta",
         "masterExists": true,
         "libraryRef": "bib-rdzen",
         "topLevel": true
       },
       {
         "id": "inst-003",
-        "familySlug": "karta",
+        "familySlug": "pole-tekstowe",
         "masterExists": true,
         "libraryRef": "bib-rdzen",
         "topLevel": true
@@ -226,27 +930,34 @@
       },
       {
         "id": "inst-005",
+        "familySlug": "okruszki",
+        "masterExists": false,
+        "libraryRef": null,
+        "topLevel": true
+      },
+      {
+        "id": "inst-006",
         "familySlug": "przycisk",
         "masterExists": true,
         "libraryRef": "bib-obca",
         "topLevel": true
       },
       {
-        "id": "inst-006",
+        "id": "inst-007",
         "familySlug": "eksperyment-zespolu",
         "masterExists": true,
         "libraryRef": "bib-rdzen",
         "topLevel": true
       },
       {
-        "id": "inst-007",
-        "familySlug": "pole-tekstowe",
+        "id": "inst-008",
+        "familySlug": "kafelek-promocyjny",
         "masterExists": true,
         "libraryRef": "bib-rdzen",
         "topLevel": true
       },
       {
-        "id": "inst-008",
+        "id": "inst-009",
         "familySlug": "tabela",
         "masterExists": true,
         "libraryRef": "bib-rdzen",

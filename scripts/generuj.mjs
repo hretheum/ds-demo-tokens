@@ -277,6 +277,40 @@ for (const [n, typ, cel, , opis] of KOMPONENTOWE) {
   dodaj({ path: `rdzen.komponent.${n}`, type: typ, value: alias(cel), layer: 'component', ...(opis ? { desc: opis } : {}) })
 }
 
+// --- propozycje z piaskownicy (4, pochodzenie proposed, status draft) --------
+// Kandydaci wyniesieni z piaskownicy zespołu marki — czekają na decyzję właściciela
+// rdzenia (bramka promocji). Status draft wyłącza je z rdzenia obowiązkowego.
+for (const [n, skala, i, opis] of [
+  ['akcent-promocyjny', 'roz', 4, 'Propozycja z piaskownicy Marki Beta — akcent kampanii sezonowych'],
+  ['tlo-wyroznienia', 'bursztyn', 0, 'Propozycja z piaskownicy Marki Beta — tło wyróżnionych kart'],
+  ['obwodka-nowosci', 'zielen', 4, 'Propozycja z piaskownicy Marki Gamma — obwódka znacznika nowości'],
+  ['tekst-promocyjny', 'purpura', 7, 'Propozycja z piaskownicy Marki Gamma — tekst na tłach kampanii'],
+]) {
+  // bez deklaracji warstwy: kandydat z piaskownicy dostaje warstwę dopiero przy
+  // przyjęciu do rdzenia (deklaracja semantic przy wartości wprost = rozjazd warstwy)
+  dodaj({
+    path: `rdzen.propozycje.${n}`, type: 'color', value: krokHex(skala, i),
+    layer: null, provenance: 'proposed', status: 'draft', desc: opis,
+  })
+}
+
+// --- token o nieustalonym pochodzeniu (1) — uczciwa informacja, nie brak danych
+dodaj({
+  path: 'rdzen.color.odziedziczony', type: 'color', value: hslHex(206, 28, 46),
+  layer: 'primitive', provenance: 'unknown',
+  desc: 'Token przeniesiony ze starszego systemu — pochodzenie nieustalone, do wyjaśnienia przy najbliższym przeglądzie',
+})
+
+// --- kuratela: sekcje utrzymywane ręcznie (ochrona protect_curated_node) -----
+const KURATOROWANE = new Set([
+  'rdzen.semantic.tekst-podstawowy', 'rdzen.semantic.akcja-podstawowa',
+  'rdzen.semantic.tlo-strona', 'rdzen.semantic.obwodka-skupienie',
+  'rdzen.semantic.stan-blad-tlo', 'rdzen.semantic.stan-blad-tresc',
+])
+for (const t of tokeny) {
+  if (KURATOROWANE.has(t.path)) t.extra = { ...t.extra, curated: true }
+}
+
 // --- kontrola wewnętrzna: aliasy kanonu muszą się rozwiązywać ----------------
 const wgSciezki = new Map(tokeny.map((t) => [t.path, t]))
 function rozwiaz(p, widziane = new Set()) {
@@ -399,6 +433,7 @@ function zbudujZrodlo(miesiac) {
   const vars = new Map()
   for (const t of tokeny) {
     if (t.path.startsWith('rdzen.wewnetrzne')) continue // modelowane wyłącznie w kodzie
+    if (t.path.startsWith('rdzen.propozycje')) continue // kandydaci z piaskownicy — nie ze źródła
     const name = t.path.replaceAll('.', '/')
     const valuesByMode = {}
     if (typeof t.value === 'string' && t.value.startsWith('{')) {
@@ -498,10 +533,21 @@ function zbudujMarke(przedrostek, pokrycie, odchylenia, dodatki, miesiac) {
   for (const sciezkaRdzenia of przejete) {
     const rdzenny = wgSciezki.get(sciezkaRdzenia)
     const wartosc = odchMapa.has(sciezkaRdzenia) ? odchMapa.get(sciezkaRdzenia) : rdzenny.value
-    wynik.push({ path: luster(przedrostek, sciezkaRdzenia), type: rdzenny.type, value: wartosc })
+    wynik.push({
+      path: luster(przedrostek, sciezkaRdzenia), type: rdzenny.type, value: wartosc,
+      // lustro utrzymuje zespół marki we własnym repozytorium — pochodzenie z kodu
+      provenance: 'code', detail: 'repozytorium zespołu marki',
+    })
   }
   for (const [koncowka, typ, wartosc] of dodatki) {
-    wynik.push({ path: `${przedrostek}.${koncowka}`, type: typ, value: wartosc })
+    // dodatki z dostawy zewnętrznej przyszły bez metadanych — pochodzenie nieustalone
+    // jest tu INFORMACJĄ (dostawca nie dostarczył rodowodu), nie brakiem danych
+    const zDostawy = koncowka.startsWith('wlasne.dostawa-')
+    wynik.push({
+      path: `${przedrostek}.${koncowka}`, type: typ, value: wartosc,
+      provenance: zDostawy ? 'unknown' : 'code',
+      detail: zDostawy ? 'dostawa zewnętrzna 2026-06 — metadane nieustalone' : 'repozytorium zespołu marki',
+    })
   }
   return wynik
 }
@@ -622,45 +668,145 @@ function zbudujPokrycie(miesiac) {
 // Skaner komponentów rejestr-vs-stan: oczekiwania + inwentarz (stan bieżący)
 // ---------------------------------------------------------------------------
 
+// Jeden wspólny model komponentów — z niego wynikają: rejestr oczekiwań skanera,
+// inwentarz stanu (z zasianymi rozbieżnościami), surowy zrzut komponentów (referencje
+// podglądu projektowego), rejestr produktowy i strony katalogu w treści.
+const STATUSY_KOMPONENTOW = { stabilny: 'Stabilny', przygotowanie: 'W przygotowaniu', wycofywany: 'Wycofywany' }
+/** @type {Array<{slug:string,nazwa:string,opis:string,status:string,osie?:Record<string,string[]>,platformy?:string[],jednaPlatformaCelowo?:boolean,wymagany?:boolean}>} */
+const KOMPONENTY = [
+  { slug: 'przycisk', nazwa: 'Przycisk', opis: 'Podstawowy element akcji; trzy odmiany i trzy rozmiary.', status: 'stabilny', osie: { odmiana: ['podstawowa', 'drugorzedna', 'destrukcyjna'], rozmiar: ['maly', 'sredni', 'duzy'] }, platformy: ['www', 'aplikacja'], wymagany: true },
+  { slug: 'przycisk-drugorzedny', nazwa: 'Przycisk drugorzędny', opis: 'Akcja towarzysząca; obwódka zamiast wypełnienia.', status: 'stabilny', osie: { rozmiar: ['maly', 'sredni', 'duzy'] } },
+  { slug: 'przycisk-ikonowy', nazwa: 'Przycisk ikonowy', opis: 'Akcja wyrażona samą ikoną, z etykietą dla czytników.', status: 'stabilny', osie: { rozmiar: ['maly', 'sredni'] } },
+  { slug: 'pole-tekstowe', nazwa: 'Pole tekstowe', opis: 'Wprowadzanie tekstu z etykietą, pomocą i stanem błędu.', status: 'stabilny', osie: { stan: ['zwykly', 'skupienie', 'blad', 'wylaczony'] }, platformy: ['www', 'aplikacja'], wymagany: true },
+  { slug: 'pole-liczbowe', nazwa: 'Pole liczbowe', opis: 'Wariant pola dla wartości liczbowych z krokiem.', status: 'stabilny', osie: { stan: ['zwykly', 'blad'] } },
+  { slug: 'pole-wyboru', nazwa: 'Pole wyboru', opis: 'Pojedynczy wybór tak/nie w formularzach.', status: 'stabilny', osie: { stan: ['zaznaczone', 'odznaczone', 'nieokreslone'] }, wymagany: true },
+  { slug: 'pole-daty', nazwa: 'Pole daty', opis: 'Wybór daty z kalendarzem i walidacją zakresu.', status: 'przygotowanie', osie: { stan: ['zwykly', 'blad'] } },
+  { slug: 'lista-rozwijana', nazwa: 'Lista rozwijana', opis: 'Wybór jednej pozycji z listy; wyszukiwanie od ośmiu pozycji.', status: 'stabilny', osie: { stan: ['zwykly', 'otwarta', 'blad'] }, wymagany: true },
+  { slug: 'przelacznik', nazwa: 'Przełącznik', opis: 'Natychmiastowa zmiana ustawienia; nie wymaga zapisu.', status: 'stabilny', osie: { stan: ['wlaczony', 'wylaczony'] }, platformy: ['www', 'aplikacja'], wymagany: true },
+  { slug: 'suwak', nazwa: 'Suwak', opis: 'Wybór wartości z zakresu; obsługa klawiaturą strzałkami.', status: 'przygotowanie', osie: { stan: ['zwykly', 'wylaczony'] } },
+  { slug: 'karta', nazwa: 'Karta', opis: 'Powierzchnia grupująca treść jednego tematu.', status: 'stabilny', osie: { uklad: ['pionowy', 'poziomy'] }, jednaPlatformaCelowo: true, wymagany: true },
+  { slug: 'karta-produktu', nazwa: 'Karta produktu', opis: 'Karta z obrazem, ceną i akcją; wariant siatki i listy.', status: 'stabilny', osie: { uklad: ['siatka', 'lista'] } },
+  { slug: 'tabela', nazwa: 'Tabela', opis: 'Dane tabelaryczne z sortowaniem i wierszem naprzemiennym.', status: 'stabilny' },
+  { slug: 'wiersz-tabeli', nazwa: 'Wiersz tabeli', opis: 'Element pomocniczy tabeli; nie używać samodzielnie.', status: 'stabilny' },
+  { slug: 'znacznik', nazwa: 'Znacznik', opis: 'Krótka etykieta stanu lub kategorii.', status: 'stabilny', osie: { ton: ['neutralny', 'sukces', 'ostrzezenie', 'blad'] }, wymagany: true },
+  { slug: 'plakietka', nazwa: 'Plakietka', opis: 'Licznik lub wskaźnik nowości przy elemencie nawigacji.', status: 'stabilny', osie: { ton: ['neutralny', 'akcent'] } },
+  { slug: 'awatar', nazwa: 'Awatar', opis: 'Reprezentacja osoby lub zespołu; inicjały przy braku obrazu.', status: 'stabilny', osie: { rozmiar: ['maly', 'sredni', 'duzy'] } },
+  { slug: 'okno-dialogowe', nazwa: 'Okno dialogowe', opis: 'Przerwanie przepływu wymagające decyzji; pułapka skupienia.', status: 'stabilny', osie: { rozmiar: ['male', 'srednie', 'duze'] }, platformy: ['www', 'aplikacja'], wymagany: true },
+  { slug: 'panel-boczny', nazwa: 'Panel boczny', opis: 'Treść pomocnicza wsuwana z krawędzi ekranu.', status: 'stabilny', osie: { strona: ['lewa', 'prawa'] } },
+  { slug: 'naglowek-strony', nazwa: 'Nagłówek strony', opis: 'Tytuł, okruszki i akcje kontekstowe strony.', status: 'stabilny' },
+  { slug: 'stopka', nazwa: 'Stopka', opis: 'Zamknięcie strony: nawigacja pomocnicza i informacje prawne.', status: 'stabilny' },
+  { slug: 'powiadomienie', nazwa: 'Powiadomienie', opis: 'Komunikat o wyniku operacji; cztery tony.', status: 'stabilny', osie: { ton: ['informacja', 'sukces', 'ostrzezenie', 'blad'] }, wymagany: true },
+  { slug: 'pasek-postepu', nazwa: 'Pasek postępu', opis: 'Postęp operacji o znanym czasie trwania.', status: 'stabilny', osie: { stan: ['w-toku', 'ukonczony'] } },
+  { slug: 'wskaznik-ladowania', nazwa: 'Wskaźnik ładowania', opis: 'Operacja o nieznanym czasie; szanuje ograniczenie ruchu.', status: 'stabilny' },
+  { slug: 'zakladki', nazwa: 'Zakładki', opis: 'Przełączanie widoków tej samej treści.', status: 'stabilny', osie: { uklad: ['poziomy', 'pionowy'] } },
+  { slug: 'okruszki', nazwa: 'Okruszki', opis: 'Ścieżka położenia w hierarchii serwisu.', status: 'stabilny' },
+  { slug: 'stronicowanie', nazwa: 'Stronicowanie', opis: 'Nawigacja po stronach długich list.', status: 'stabilny' },
+  { slug: 'podpowiedz', nazwa: 'Podpowiedź', opis: 'Krótkie wyjaśnienie elementu po najechaniu lub skupieniu.', status: 'stabilny' },
+  { slug: 'dymek', nazwa: 'Dymek', opis: 'Rozbudowana treść kontekstowa zakotwiczona przy elemencie.', status: 'przygotowanie' },
+  { slug: 'menu-kontekstowe', nazwa: 'Menu kontekstowe', opis: 'Lista akcji dla wskazanego elementu.', status: 'przygotowanie' },
+  { slug: 'pusty-stan', nazwa: 'Pusty stan', opis: 'Widok bez danych: wyjaśnienie i pierwsza akcja.', status: 'stabilny' },
+  { slug: 'baner', nazwa: 'Baner', opis: 'Komunikat na poziomie całego serwisu.', status: 'wycofywany' },
+  { slug: 'sekcja-powitalna', nazwa: 'Sekcja powitalna', opis: 'Otwarcie strony startowej produktu.', status: 'przygotowanie' },
+  { slug: 'separator', nazwa: 'Separator', opis: 'Wizualne rozdzielenie grup treści.', status: 'stabilny' },
+  { slug: 'ikona', nazwa: 'Ikona', opis: 'Osadzenie ikony z obowiązkową etykietą znaczeniową.', status: 'stabilny' },
+]
+
+// Rejestr oczekiwań: wszystkie komponenty modelu + dwa oczekiwania bez pokrycia w stanie
+// (jedno WYMAGANE → P0, jedno opcjonalne → P1) — luka rejestr-vs-stan w obu wagach.
 const OCZEKIWANIA = [
-  { slug: 'przycisk', required: true, requiredVariants: [{ odmiana: 'podstawowa' }, { odmiana: 'drugorzedna' }, { odmiana: 'destrukcyjna' }], platforms: ['www', 'aplikacja'], intentionalSinglePlatform: false, libraryRef: 'bib-rdzen', helper: false },
-  { slug: 'pole-tekstowe', required: true, requiredVariants: [{ stan: 'zwykly' }, { stan: 'blad' }], platforms: ['www', 'aplikacja'], intentionalSinglePlatform: false, libraryRef: 'bib-rdzen', helper: false },
-  { slug: 'karta', required: true, requiredVariants: [{ uklad: 'pionowy' }, { uklad: 'poziomy' }], platforms: ['www'], intentionalSinglePlatform: true, libraryRef: 'bib-rdzen', helper: false },
-  { slug: 'znacznik', required: true, requiredVariants: [{ ton: 'neutralny' }, { ton: 'sukces' }, { ton: 'blad' }], platforms: ['www'], intentionalSinglePlatform: true, libraryRef: 'bib-rdzen', helper: false },
-  { slug: 'okno-dialogowe', required: true, requiredVariants: [{ rozmiar: 'srednie' }], platforms: ['www', 'aplikacja'], intentionalSinglePlatform: false, libraryRef: 'bib-rdzen', helper: false },
-  { slug: 'powiadomienie', required: true, requiredVariants: [{ ton: 'informacja' }, { ton: 'blad' }], platforms: ['www'], intentionalSinglePlatform: true, libraryRef: 'bib-rdzen', helper: false },
-  { slug: 'przelacznik', required: true, requiredVariants: [{ stan: 'wlaczony' }, { stan: 'wylaczony' }], platforms: ['www', 'aplikacja'], intentionalSinglePlatform: false, libraryRef: 'bib-rdzen', helper: false },
-  { slug: 'zakladki', required: false, requiredVariants: [{ uklad: 'poziomy' }], platforms: ['www'], intentionalSinglePlatform: true, libraryRef: 'bib-rdzen', helper: false },
-  { slug: 'tabela', required: false, requiredVariants: [], platforms: ['www'], intentionalSinglePlatform: true, libraryRef: 'bib-rdzen', helper: false },
-  { slug: 'stronicowanie', required: false, requiredVariants: [], platforms: ['www'], intentionalSinglePlatform: true, libraryRef: 'bib-rdzen', helper: false },
-  // brak w stanie → MISSING_COMPONENT (nieobowiązkowy → P1)
+  ...KOMPONENTY.map((k) => ({
+    slug: k.slug,
+    required: k.wymagany ?? false,
+    requiredVariants: k.osie
+      ? Object.entries(k.osie).flatMap(([os, wartosci]) => wartosci.map((w) => ({ [os]: w })))
+      : [],
+    platforms: k.platformy ?? ['www'],
+    intentionalSinglePlatform: k.jednaPlatformaCelowo ?? !(k.platformy && k.platformy.length > 1),
+    libraryRef: 'bib-rdzen',
+    helper: k.slug === 'wiersz-tabeli' || k.slug === 'separator',
+  })),
+  { slug: 'pole-wyszukiwania', required: true, requiredVariants: [{ stan: 'zwykly' }], platforms: ['www'], intentionalSinglePlatform: true, libraryRef: 'bib-rdzen', helper: false },
   { slug: 'krokownica', required: false, requiredVariants: [{ krok: 'pierwszy' }], platforms: ['www'], intentionalSinglePlatform: true, libraryRef: 'bib-rdzen', helper: false },
 ]
 
+// Inwentarz stanu: rodziny wg modelu z celowo zasianymi rozbieżnościami.
+const BRAKUJACE_WARIANTY = {
+  przycisk: new Set(['odmiana=destrukcyjna']),        // MISSING_VARIANT
+  powiadomienie: new Set(['ton=blad']),               // MISSING_VARIANT
+  'okno-dialogowe': new Set(['rozmiar=duze']),        // MISSING_VARIANT
+}
+const BRAK_PLATFORMY = new Set(['przycisk', 'okno-dialogowe']) // PLATFORM_MISSING (kontrakt www+aplikacja, stan tylko www)
 const INWENTARZ = {
   families: [
-    { slug: 'przycisk', platforms: ['www'], variants: [{ name: 'podstawowa', axes: { odmiana: 'podstawowa' } }, { name: 'drugorzedna', axes: { odmiana: 'drugorzedna' } }] }, // brak destrukcyjnej → MISSING_VARIANT; brak platformy aplikacja → PLATFORM_MISSING
-    { slug: 'pole-tekstowe', platforms: ['www', 'aplikacja'], variants: [{ name: 'zwykly', axes: { stan: 'zwykly' } }, { name: 'blad', axes: { stan: 'blad' } }, { name: 'eksperymentalny', axes: { stan: 'eksperymentalny' } }] }, // nadmiarowy wariant → EXTRA_VARIANT
-    { slug: 'karta', platforms: ['www'], variants: [{ name: 'pionowy', axes: { uklad: 'pionowy' } }, { name: 'poziomy', axes: { uklad: 'poziomy' } }] },
-    { slug: 'znacznik', platforms: ['www'], variants: [{ name: 'neutralny', axes: { ton: 'neutralny' } }, { name: 'sukces', axes: { ton: 'sukces' } }, { name: 'blad', axes: { ton: 'blad' } }] },
-    { slug: 'okno-dialogowe', platforms: ['www'], variants: [{ name: 'srednie', axes: { rozmiar: 'srednie' } }] }, // brak platformy aplikacja → PLATFORM_MISSING
-    { slug: 'powiadomienie', platforms: ['www'], variants: [{ name: 'informacja', axes: { ton: 'informacja' } }] }, // brak tonu blad → MISSING_VARIANT
-    { slug: 'przelacznik', platforms: ['www', 'aplikacja'], variants: [{ name: 'wlaczony', axes: { stan: 'wlaczony' } }, { name: 'wylaczony', axes: { stan: 'wylaczony' } }] },
-    { slug: 'zakladki', platforms: ['www'], variants: [{ name: 'poziomy', axes: { uklad: 'poziomy' } }] },
-    { slug: 'tabela', platforms: ['www'], variants: [{ name: 'zwykla', axes: {} }] },
-    { slug: 'stronicowanie', platforms: ['www'], variants: [{ name: 'zwykle', axes: {} }] },
-    { slug: 'eksperyment-zespolu', platforms: ['www'], variants: [{ name: 'a', axes: {} }] }, // bez wpisu w rejestrze → EXTRA_COMPONENT
+    ...KOMPONENTY.map((k) => {
+      const osie = k.osie ?? {}
+      const brakujace = BRAKUJACE_WARIANTY[k.slug] ?? new Set()
+      const warianty = Object.entries(osie).flatMap(([os, wartosci]) =>
+        wartosci
+          .filter((w) => !brakujace.has(`${os}=${w}`))
+          .map((w) => ({ name: `${os}=${w}`, axes: { [os]: w } })),
+      )
+      // nadmiarowy wariant pola tekstowego → EXTRA_VARIANT
+      if (k.slug === 'pole-tekstowe') warianty.push({ name: 'stan=eksperymentalny', axes: { stan: 'eksperymentalny' } })
+      return {
+        slug: k.slug,
+        platforms: BRAK_PLATFORMY.has(k.slug) ? ['www'] : (k.platformy ?? ['www']),
+        variants: warianty.length ? warianty : [{ name: 'domyslny', axes: {} }],
+      }
+    }),
+    // rodziny bez wpisu w rejestrze → EXTRA_COMPONENT ×2
+    { slug: 'eksperyment-zespolu', platforms: ['www'], variants: [{ name: 'a', axes: {} }] },
+    { slug: 'kafelek-promocyjny', platforms: ['www'], variants: [{ name: 'domyslny', axes: {} }] },
   ],
   instances: [
     { id: 'inst-001', familySlug: 'przycisk', masterExists: true, libraryRef: 'bib-rdzen', topLevel: true },
-    { id: 'inst-002', familySlug: 'przycisk', masterExists: true, libraryRef: 'bib-rdzen', topLevel: true },
-    { id: 'inst-003', familySlug: 'karta', masterExists: true, libraryRef: 'bib-rdzen', topLevel: true },
-    { id: 'inst-004', familySlug: 'znacznik', masterExists: false, libraryRef: null, topLevel: true }, // odpięta instancja → DETACHED_INSTANCE (P0)
-    { id: 'inst-005', familySlug: 'przycisk', masterExists: true, libraryRef: 'bib-obca', topLevel: true }, // biblioteka spoza kontraktu → WRONG_LIBRARY
-    { id: 'inst-006', familySlug: 'eksperyment-zespolu', masterExists: true, libraryRef: 'bib-rdzen', topLevel: true }, // master jest, rejestru brak → INTERNAL_UNREGISTERED
-    { id: 'inst-007', familySlug: 'pole-tekstowe', masterExists: true, libraryRef: 'bib-rdzen', topLevel: true },
-    { id: 'inst-008', familySlug: 'tabela', masterExists: true, libraryRef: 'bib-rdzen', topLevel: false }, // nie top-level — nieliczona
+    { id: 'inst-002', familySlug: 'karta', masterExists: true, libraryRef: 'bib-rdzen', topLevel: true },
+    { id: 'inst-003', familySlug: 'pole-tekstowe', masterExists: true, libraryRef: 'bib-rdzen', topLevel: true },
+    { id: 'inst-004', familySlug: 'znacznik', masterExists: false, libraryRef: null, topLevel: true },   // odpięta instancja → DETACHED_INSTANCE (P0)
+    { id: 'inst-005', familySlug: 'okruszki', masterExists: false, libraryRef: null, topLevel: true },   // odpięta instancja → DETACHED_INSTANCE (P0)
+    { id: 'inst-006', familySlug: 'przycisk', masterExists: true, libraryRef: 'bib-obca', topLevel: true }, // biblioteka spoza kontraktu → WRONG_LIBRARY
+    { id: 'inst-007', familySlug: 'eksperyment-zespolu', masterExists: true, libraryRef: 'bib-rdzen', topLevel: true }, // master jest, rejestru brak → INTERNAL_UNREGISTERED
+    { id: 'inst-008', familySlug: 'kafelek-promocyjny', masterExists: true, libraryRef: 'bib-rdzen', topLevel: true },  // master jest, rejestru brak → INTERNAL_UNREGISTERED
+    { id: 'inst-009', familySlug: 'tabela', masterExists: true, libraryRef: 'bib-rdzen', topLevel: false }, // nie top-level — nieliczona
   ],
+}
+
+// Surowy zrzut komponentów (kształt odpowiedzi API narzędzia projektowego) — wejście
+// importu referencji podglądu projektowego (design_component_ref) realną trasą.
+function zbudujKomponentySurowe() {
+  const components = []
+  const componentSets = []
+  for (const k of KOMPONENTY) {
+    if (k.osie && Object.keys(k.osie).length) {
+      const setNode = `wezel-${k.slug}`
+      componentSets.push({
+        key: `kmp-${k.slug}`, node_id: setNode, name: k.nazwa,
+        description: k.opis, thumbnail_url: null,
+      })
+      for (const [os, wartosci] of Object.entries(k.osie)) {
+        for (const wartosc of wartosci) {
+          components.push({
+            key: `kmp-${k.slug}-${os}-${wartosc}`, node_id: `wezel-${k.slug}-${os}-${wartosc}`,
+            name: `${os}=${wartosc}`, description: '', thumbnail_url: null,
+            containing_frame: { containingStateGroup: { nodeId: setNode } },
+          })
+        }
+      }
+    } else {
+      components.push({
+        key: `kmp-${k.slug}`, node_id: `wezel-${k.slug}`, name: k.nazwa,
+        description: k.opis, thumbnail_url: null,
+      })
+    }
+  }
+  return {
+    comment: 'Surowy zrzut komponentów źródła projektowego (zestawy wariantów + komponenty samodzielne) — wejście importu referencji podglądu (kind=component_tree).',
+    kind: 'component_tree',
+    payload: {
+      components: { meta: { components } },
+      componentSets: { meta: { component_sets: componentSets } },
+    },
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -723,7 +869,7 @@ function emitujKanon() {
     const ext = {
       [`${NS}.provenance`]: t.provenance,
       [`${NS}.status`]: t.status,
-      [`${NS}.layer`]: t.layer,
+      ...(t.layer ? { [`${NS}.layer`]: t.layer } : {}),
     }
     for (const [k, v] of Object.entries(t.extra ?? {})) ext[`${NS}.${k}`] = v
     wezel[segmenty.at(-1)] = {
@@ -763,17 +909,461 @@ function emitujMarki() {
   })
 }
 
+// ---------------------------------------------------------------------------
+// Treść demonstracyjna: pełna witryna design systemu (42 strony w 6 sekcjach),
+// używająca KAŻDEGO typu bloku obsługiwanego przez renderer witryny.
+// ---------------------------------------------------------------------------
+
+// Pomocnicy ProseMirror (kształt, który rozumieją edytor i renderer witryny)
+const t = (tekst) => ({ type: 'text', text: tekst })
+const p = (...tresc) => ({ type: 'paragraph', content: tresc.map((x) => (typeof x === 'string' ? t(x) : x)) })
+const naglowekPM = (poziom, tekst) => ({ type: 'heading', attrs: { level: poziom }, content: [t(tekst)] })
+const lp = (...pozycje) => ({ type: 'bulletList', content: pozycje.map((x) => ({ type: 'listItem', content: [p(x)] })) })
+const cytatPM = (tekst) => ({ type: 'blockquote', content: [p(tekst)] })
+const komorka = (typ, tekst) => ({ type: typ, content: [p(tekst)] })
+const tabelaPM = (naglowki, wiersze) => ({
+  type: 'table',
+  content: [
+    { type: 'tableRow', content: naglowki.map((n) => komorka('tableHeader', n)) },
+    ...wiersze.map((w) => ({ type: 'tableRow', content: w.map((kom) => komorka('tableCell', kom)) })),
+  ],
+})
+const doc = (...wezly) => ({ type: 'doc', content: wezly })
+
+// Pomocnicy bloków (kształt: {kind, config?, contentRich?, header?})
+const tekstB = (...wezly) => ({ kind: 'text', contentRich: doc(...wezly.map((x) => (typeof x === 'string' ? p(x) : x))) })
+const naglowekB = (tekst, poziom = 2) => ({ kind: 'heading', contentRich: doc(naglowekPM(poziom, tekst)) })
+const listaB = (...pozycje) => ({ kind: 'list', contentRich: doc(lp(...pozycje)) })
+const cytatB = (tekst) => ({ kind: 'blockquote', contentRich: doc(cytatPM(tekst)) })
+const tabelaB = (naglowki, wiersze) => ({ kind: 'table', contentRich: doc(tabelaPM(naglowki, wiersze)) })
+const calloutB = (styl, tekst) => ({ kind: 'callout', config: { calloutStyle: styl }, contentRich: doc(p(tekst)) })
+const separatorB = () => ({ kind: 'divider' })
+const kodB = (jezyk, kod, podpis) => ({ kind: 'code_snippet', config: { language: jezyk, ...(podpis ? { caption: podpis } : {}) }, contentRich: doc(p(kod)) })
+const markdownB = (source) => ({ kind: 'markdown', config: { source } })
+const kafelkiB = (...tiles) => ({ kind: 'shortcut_tiles', config: { tiles } })
+const dodontB = (...pairs) => ({
+  kind: 'guidelines_dodont',
+  config: { pairs: pairs.map(([tak, nie, podpisTak, podpisNie]) => ({ do: doc(p(tak)), dont: doc(p(nie)), ...(podpisTak ? { doCaption: podpisTak } : {}), ...(podpisNie ? { dontCaption: podpisNie } : {}) })) },
+})
+const tokenyB = (groupPath, columns = ['name', 'value', 'description'], naglowek) => ({
+  kind: 'tokens',
+  config: { kolekcjaNazwa: 'rdzen', groupPath, columns },
+  ...(naglowek ? { header: { title: naglowek }, showHeader: true } : {}),
+})
+const statusyB = () => ({ kind: 'status_table', config: { scope: 'all' } })
+const notyB = () => ({ kind: 'release_notes', config: { versionScope: 'all' } })
+const storybookB = (storyId) => ({ kind: 'storybook_embed', config: { url: 'https://storybook.demo.example', storyId, height: 360 }, header: { title: 'Osadzenie Storybooka', description: 'Adres przykładowy — w instalacji klienta wskazuje jego opublikowanego Storybooka.' }, showHeader: true })
+const embedB = (url, provider, naglowek) => ({ kind: 'embed', config: { url, provider, aspectRatio: '16:9' }, ...(naglowek ? { header: { title: naglowek }, showHeader: true } : {}) })
+// bloki odroczone — konfigurację uzupełnia zasiew po utworzeniu źródła danych i zasobów
+const designB = (slug, pokazWarianty = true) => ({ kind: 'design', odroczony: { figmaNodeRef: `kmp-${slug}`, display: 'image', showVariants: pokazWarianty } })
+const galeriaB = (...items) => ({ kind: 'image_gallery', odroczony: { galeria: items.map(([zasob, alt, caption]) => ({ zasob, alt, ...(caption ? { caption } : {}) })) } })
+const zalacznikiB = (...items) => ({ kind: 'attachments', odroczony: { zalaczniki: items.map(([zasob, name]) => ({ zasob, name })) } })
+
+// Strona komponentu generowana z modelu (strony wzorcowe kind=pattern)
+function stronaKomponentu(k) {
+  const bloki = [
+    tekstB(k.opis),
+    designB(k.slug, Boolean(k.osie)),
+  ]
+  if (k.osie) {
+    bloki.push(tabelaB(
+      ['Właściwość', 'Wartości'],
+      Object.entries(k.osie).map(([os, wartosci]) => [os, wartosci.join(', ')]),
+    ))
+  }
+  bloki.push(
+    naglowekB('Zasady użycia', 2),
+    listaB(
+      `Używaj komponentu ${k.nazwa.toLowerCase()} wyłącznie przez bibliotekę — kopiowanie warstw odpina instancję od rejestru.`,
+      'Wszystkie barwy i odstępy pochodzą z tokenów warstwy komponentowej; wartości surowe wykryje skan rozjazdu.',
+      'Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu.',
+    ),
+  )
+  if (k.status === 'wycofywany') {
+    bloki.push(calloutB('warning', 'Komponent wycofywany: nie używaj go w nowych widokach. Następca wskazany w dzienniku zmian.'))
+  }
+  return {
+    uid: `k-${k.slug}`,
+    name: k.nazwa,
+    kind: 'pattern',
+    komponent: k.slug,
+    statusKomponentu: STATUSY_KOMPONENTOW[k.status],
+    introduction: k.opis,
+    bloki,
+  }
+}
+
+// Komponenty ze stronami wzorcowymi (bez elementów pomocniczych i strony wzorcowej przycisku)
+const KOMPONENTY_ZE_STRONAMI = KOMPONENTY.filter((k) => !['wiersz-tabeli', 'separator', 'przycisk'].includes(k.slug))
+
+const TRESC = {
+  sekcje: [
+    {
+      nazwa: 'Start',
+      strony: [
+        {
+          uid: 'wprowadzenie', name: 'Wprowadzenie',
+          introduction: 'Czym jest ten system i jak z niego korzystać.',
+          bloki: [
+            tekstB('Jeden rdzeń semantyczny, trzy marki różniące się wyłącznie wartościami prymitywów. Dokumentacja, którą czytasz, pochodzi w całości z danych zasiewowych i jest renderowana przez witrynę produktu.'),
+            kafelkiB(
+              { title: 'Podstawy', description: 'Barwa, typografia, odstępy, ruch', url: 'barwa' },
+              { title: 'Komponenty', description: 'Katalog ze statusami i wariantami', url: 'katalog-komponentow' },
+              { title: 'Wytyczne', description: 'Głos, treść, formularze, dostępność', url: 'glos-i-ton' },
+              { title: 'Pomiar', description: 'Skąd biorą się liczby na przeglądzie', url: 'pomiar-zamiast-opinii' },
+            ),
+            calloutB('info', 'System jest wielomarkowy: Marka Alfa jest wzorcem, Beta i Gamma utrzymują kolekcje lustrzane dopasowywane słownikiem nazw. Adopcję każdej marki mierzy platforma, nie deklaracje.'),
+          ],
+        },
+        {
+          uid: 'jak-korzystac', name: 'Jak korzystać z dokumentacji',
+          introduction: 'Mapa dokumentacji i zasady zgłaszania zmian.',
+          bloki: [
+            tekstB('Dokumentacja ma cztery warstwy: podstawy (tokeny), komponenty (rejestr z kontraktami), wytyczne (decyzje projektowe) i pomiar (stan faktyczny systemu). Każda strona komponentu pokazuje status z rejestru — ten sam, który sprawdza skan.'),
+            listaB(
+              'Szukasz wartości? Zacznij od strony podstaw z tabelą tokenów danej grupy.',
+              'Budujesz widok? Sprawdź stronę komponentu i jego status w katalogu.',
+              'Widzisz rozjazd między projektem a dokumentacją? Zgłoś go — skan i tak go wykryje, ale decyzja należy do człowieka.',
+              'Chcesz eksperymentować? Załóż piaskownicę: twoje zmiany będą kandydatami, nie alarmami.',
+            ),
+            separatorB(),
+            tekstB('Strony oznaczone kłódką są widoczne wyłącznie po zalogowaniu. Cała reszta jest publiczna i indeksowalna zgodnie z konfiguracją publikacji.'),
+          ],
+        },
+      ],
+    },
+    {
+      nazwa: 'Podstawy',
+      strony: [
+        {
+          uid: 'barwa', name: 'Barwa',
+          introduction: 'Skale prymitywów i role semantyczne barw.',
+          bloki: [
+            tekstB('Paleta składa się z dziewięciu skal po dziesięć kroków. Produkt nigdy nie używa skal wprost: widoki konsumują wyłącznie role semantyczne, które wskazują prymitywy aliasami. Dzięki temu marka może przemalować system bez dotykania komponentów.'),
+            tokenyB('rdzen.semantic', ['name', 'value', 'description'], 'Role semantyczne barw'),
+            dodontB(
+              ['Używaj ról semantycznych: tekst-podstawowy, tlo-strona, akcja-podstawowa.', 'Nie wskazuj skal wprost: blekit-600 w widoku to rozjazd warstwy.', 'Rola przeżyje zmianę palety.', 'Skan wykryje takie użycie jako layer-mismatch.'],
+            ),
+            calloutB('warning', 'Trzy tokeny warstwy komponentowej celowo aliasują prymityw z pominięciem roli — zobacz je w widoku tokenów jako rozbieżność warstwy deklarowanej i wyprowadzonej.'),
+          ],
+        },
+        {
+          uid: 'typografia', name: 'Typografia',
+          introduction: 'Rozmiary, wysokości wiersza i grubości pisma.',
+          bloki: [
+            tekstB('Skala typograficzna rośnie od 12 do 48 pikseli. Wysokości wiersza są bezjednostkowe, a grubości ograniczone do czterech, żeby uniknąć pseudopogrubień.'),
+            tokenyB('rdzen.typografia', ['name', 'value'], 'Prymitywy typografii'),
+            tabelaB(
+              ['Zastosowanie', 'Rozmiar', 'Wysokość wiersza', 'Grubość'],
+              [
+                ['Treść podstawowa', 'rozmiar-tresc', 'wysokosc-zwykla', 'grubosc-zwykla'],
+                ['Nagłówek sekcji', 'rozmiar-naglowek-2', 'wysokosc-zwarta', 'grubosc-pogrubiona'],
+                ['Podpis pod ilustracją', 'rozmiar-podpis', 'wysokosc-zwykla', 'grubosc-zwykla'],
+                ['Etykieta przycisku', 'rozmiar-tresc', 'wysokosc-ciasna', 'grubosc-srednia'],
+              ],
+            ),
+          ],
+        },
+        {
+          uid: 'odstepy-i-siatka', name: 'Odstępy i siatka',
+          introduction: 'Skala odstępów i progi przełamań układu.',
+          bloki: [
+            tekstB('Skala odstępów oparta jest na kroku 4 px z zagęszczeniem w dolnym zakresie. Odstępy semantyczne (przylegly, ciasny, zwykly, luzny, sekcja, strona) wskazują skalę aliasami i to ich używają komponenty.'),
+            tokenyB('rdzen.rozmiar', ['name', 'value'], 'Prymitywy wymiarów'),
+            kodB('css', '.karta {\n  padding: var(--rdzen-semantic-odstep-zwykly);\n  gap: var(--rdzen-semantic-odstep-ciasny);\n}', 'Konsumpcja odstępów semantycznych w kodzie produktu'),
+            calloutB('info', 'Progi przełamań układu żyją w grupie wewnetrzne i są konsumowane wyłącznie przez kod. Ich pojawienie się w pliku projektowym skan klasyfikuje jako rozjazd architektoniczny, nie błąd wartości.'),
+          ],
+        },
+        {
+          uid: 'promienie-i-obwodki', name: 'Promienie i obwódki',
+          introduction: 'Zaokrąglenia narożników i grubości obwódek.',
+          bloki: [
+            tekstB('Trzy promienie semantyczne pokrywają wszystkie przypadki: interakcja (przyciski, pola), powierzchnia (karty, okna) i pełny (znaczniki, awatary). Obwódki mają trzy grubości; skupienie klawiatury używa zawsze obwódki wyraźnej w kolorze obwodka-skupienie.'),
+            markdownB('## Zasady\n\n- Promień **interakcji** jest mniejszy niż promień **powierzchni** — element klikalny nie może wyglądać jak karta.\n- Obwódka `cienka` służy separacji, `srednia` — polom formularzy, `gruba` — wyłącznie stanom skupienia.\n- Zaokrąglenie `pelny` tworzy pigułkę; używaj go tylko dla elementów o stałej, niskiej wysokości.'),
+          ],
+        },
+        {
+          uid: 'ruch', name: 'Ruch',
+          introduction: 'Czasy przejść i zasady ograniczania animacji.',
+          bloki: [
+            tekstB('Cztery czasy pokrywają wszystkie przejścia: blysk dla mikrointerakcji, szybki dla wejść elementów, zwykly dla paneli, wolny dla przejść całych widoków. Krzywa przejścia jest jedna dla całego systemu.'),
+            tokenyB('rdzen.czas', ['name', 'value'], 'Czasy przejść'),
+            calloutB('danger', 'Preferencja ograniczonego ruchu jest wiążąca: przy prefers-reduced-motion wszystkie przejścia dekoracyjne są wyłączone, a wskaźnik ładowania zmienia animację na pulsowanie kryciem.'),
+          ],
+        },
+        {
+          uid: 'tryby', name: 'Tryby jasny i ciemny',
+          introduction: 'Jak działa przełączanie trybów barwnych.',
+          bloki: [
+            tekstB('Tryb Jasny jest referencyjny. Tryb Ciemny podmienia wartości prymitywów barw na kroki lustrzane tej samej skali; role semantyczne i komponenty nie wiedzą o istnieniu trybów.'),
+            tabelaB(
+              ['Prymityw', 'Jasny', 'Ciemny'],
+              [
+                ['grafit-900', 'krok 900 (ciemny)', 'krok 050 (jasny)'],
+                ['blekit-600', 'krok 600', 'krok 300'],
+                ['biel', 'powierzchnia strony', 'ciemna powierzchnia zastępcza'],
+              ],
+            ),
+            cytatB('Tryb to nie druga paleta do utrzymania, tylko drugi zestaw wartości tych samych tokenów. Jeśli musisz dodać token „na ciemny", role są źle pocięte.'),
+          ],
+        },
+        {
+          uid: 'ikony', name: 'Ikony',
+          introduction: 'Rozmiary ikon i zasady osadzania.',
+          bloki: [
+            tekstB('Ikony występują w czterech rozmiarach zgodnych z siatką 4 px. Każda ikona funkcjonalna ma etykietę znaczeniową; ikony dekoracyjne są ukrywane przed czytnikami.'),
+            galeriaB(
+              ['siatka-ikon', 'Cztery rozmiary ikon na siatce czterech pikseli', 'Rozmiary: mały 16, średni 20, duży 24, wielki 32'],
+              ['piramida-tokenow', 'Piramida tokenów: prymitywy, role semantyczne, warstwa funkcjonalna i komponentowa', 'Warstwy piramidy tokenów'],
+            ),
+            listaB(
+              'Ikona w przycisku dziedziczy kolor treści przycisku — nigdy nie ma własnego.',
+              'Ikona samodzielna klikalna to przycisk ikonowy, z etykietą dla czytników.',
+              'Nie skaluj ikon poza cztery rozmiary; pośrednie wartości łamią siatkę.',
+            ),
+          ],
+        },
+        {
+          uid: 'dostepnosc', name: 'Dostępność',
+          introduction: 'Wymagania WCAG 2.2 AA egzekwowane przez system.',
+          bloki: [
+            tekstB('Dostępność nie jest wytyczną, tylko bramką: pary kontrastu są zapisane w systemie i sprawdzane silnikiem przy każdym przebiegu. Para poniżej progu zatrzymuje potok publikacji.'),
+            listaB(
+              'Kontrast tekstu zwykłego co najmniej 4,5:1, dużego i elementów graficznych co najmniej 3:1.',
+              'Każdy element interaktywny ma widoczny stan skupienia na obwódce obwodka-skupienie.',
+              'Kolor nigdy nie jest jedynym nośnikiem informacji — stanom towarzyszy forma i tekst.',
+              'Cele dotyku w aplikacji mają co najmniej 44 na 44 punkty.',
+            ),
+            cytatB('Jedna para kontrastu w tym zestawie jest celowo poniżej progu — zobacz czerwoną bramkę na ekranie przeglądu. Tak wygląda werdykt, którego dokumentacja sama z siebie nie wyda.'),
+          ],
+        },
+      ],
+    },
+    {
+      nazwa: 'Komponenty',
+      strony: [
+        {
+          uid: 'katalog-komponentow', name: 'Katalog komponentów',
+          introduction: 'Wszystkie wzorce ze statusami z rejestru.',
+          bloki: [
+            tekstB('Statusy w tej tabeli pochodzą z rejestru komponentów — tego samego, wobec którego skan porównuje stan pliku projektowego. Rozbieżności między rejestrem a stanem trafiają do kolejki decyzji.'),
+            statusyB(),
+          ],
+        },
+        {
+          uid: 'k-przycisk', name: 'Przycisk', kind: 'pattern', komponent: 'przycisk',
+          statusKomponentu: 'Stabilny',
+          introduction: 'Podstawowy element akcji; strona wzorcowa katalogu.',
+          bloki: [
+            tekstB('Przycisk wywołuje akcję nazwaną czasownikiem. Trzy odmiany porządkują hierarchię: podstawowa dla akcji głównej (najwyżej jedna na widok), drugorzędna dla towarzyszących, destrukcyjna dla operacji nieodwracalnych.'),
+            designB('przycisk'),
+            naglowekB('Tokeny komponentu', 2),
+            tokenyB('rdzen.komponent', ['name', 'value', 'description'], 'Warstwa komponentowa'),
+            naglowekB('Właściwości', 2),
+            tabelaB(
+              ['Właściwość', 'Typ', 'Domyślna', 'Uwagi'],
+              [
+                ['odmiana', 'podstawowa · drugorzedna · destrukcyjna', 'podstawowa', 'kontrakt komponentu 1.0.0'],
+                ['rozmiar', 'maly · sredni · duzy', 'sredni', 'wysokości 32, 40, 48 px'],
+                ['wylaczony', 'logiczna', 'fałsz', 'blokuje akcję, zachowuje etykietę dla czytników'],
+              ],
+            ),
+            kodB('tsx', '<Przycisk odmiana="podstawowa" rozmiar="sredni">\n  Zapisz zmiany\n</Przycisk>', 'Użycie w kodzie produktu'),
+            storybookB('komponenty-przycisk--podstawowa'),
+            naglowekB('Tak i nie', 2),
+            dodontB(
+              ['Jedna akcja podstawowa na widok; pozostałe drugorzędne.', 'Dwa przyciski podstawowe obok siebie — hierarchia znika.'],
+              ['Etykieta czasownikiem: „Zapisz zmiany", „Usuń konto".', 'Etykieta „OK" albo „Tak" — nie mówi, co się stanie.'],
+            ),
+            calloutB('info', 'Skan rejestr-vs-stan pilnuje tego komponentu w obu platformach; w danych demonstracyjnych brakuje odmiany destrukcyjnej i platformy aplikacji — oba braki widać w widoku komponentów.'),
+          ],
+        },
+        ...KOMPONENTY_ZE_STRONAMI.map(stronaKomponentu),
+      ],
+    },
+    {
+      nazwa: 'Wytyczne',
+      strony: [
+        {
+          uid: 'glos-i-ton', name: 'Głos i ton',
+          introduction: 'Jak system mówi do ludzi.',
+          bloki: [
+            tekstB('Piszemy wprost, po polsku, do jednej osoby. System informuje o stanie faktycznym i nigdy nie obwinia: komunikat błędu mówi, co się stało i co można zrobić, a nie kto zawinił.'),
+            cytatB('Głos mamy jeden; ton dobieramy do sytuacji. Potwierdzenie może być swobodne, komunikat o utracie danych — nigdy.'),
+            dodontB(
+              ['„Nie udało się zapisać zmian. Spróbuj ponownie albo wróć później."', '„Wystąpił nieoczekiwany błąd aplikacji nr 500."'],
+              ['„Zapisano. Możesz zamknąć to okno."', '„Operacja zakończona sukcesem!!!"'],
+            ),
+          ],
+        },
+        {
+          uid: 'pisanie-tresci', name: 'Pisanie treści',
+          introduction: 'Reguły językowe treści interfejsu.',
+          bloki: [
+            listaB(
+              'Zdania krótkie, strona czynna, czasownik na początku etykiet akcji.',
+              'Liczby zapisujemy cyframi; jednostki po odstępie niełamliwym.',
+              'Wielka litera tylko na początku etykiety — bez kapitalizacji każdego słowa.',
+              'Skróty rozwijamy przy pierwszym użyciu na stronie.',
+            ),
+            tabelaB(
+              ['Kontekst', 'Piszemy', 'Nie piszemy'],
+              [
+                ['Przycisk zapisu', 'Zapisz zmiany', 'ZAPISZ / Wykonaj'],
+                ['Pusty stan listy', 'Nie masz jeszcze projektów', 'Brak danych'],
+                ['Potwierdzenie usunięcia', 'Usuń projekt? Tej operacji nie można cofnąć.', 'Czy na pewno? Tak/Nie'],
+              ],
+            ),
+          ],
+        },
+        {
+          uid: 'wzorce-formularzy', name: 'Wzorce formularzy',
+          introduction: 'Budowa formularzy z komponentów systemu.',
+          bloki: [
+            tekstB('Formularz składa się wyłącznie z komponentów warstwy formularza: etykieta nad polem, pomoc pod polem, błąd zamiast pomocy. Walidacja uruchamia się przy opuszczeniu pola, nigdy przy każdym znaku.'),
+            kodB('tsx', '<PoleTekstowe\n  etykieta="Adres dostawy"\n  pomoc="Ulica, numer, kod pocztowy"\n  blad={bledy.adres}\n/>', 'Pole z pomocą i miejscem na błąd'),
+            calloutB('warning', 'Przycisk wysyłki formularza pozostaje aktywny także przy błędach — blokada przycisku ukrywa problem przed czytnikami ekranu. Błędy pokazujemy przy polach i w podsumowaniu.'),
+          ],
+        },
+        {
+          uid: 'dostepnosc-tresci', name: 'Dostępność treści',
+          introduction: 'Teksty alternatywne, nagłówki, struktura.',
+          bloki: [
+            listaB(
+              'Tekst alternatywny opisuje funkcję obrazu, nie jego wygląd.',
+              'Hierarchia nagłówków bez przeskoków: po h2 nie następuje h4.',
+              'Linki mówią, dokąd prowadzą — nigdy „kliknij tutaj".',
+              'Materiał wideo ma napisy i transkrypcję.',
+            ),
+            embedB('https://nagrania.demo.example/wprowadzenie-do-dostepnosci', 'generic_iframe', 'Nagranie szkoleniowe (adres przykładowy)'),
+          ],
+        },
+      ],
+    },
+    {
+      nazwa: 'Pomiar i źródło prawdy',
+      strony: [
+        {
+          uid: 'pomiar-zamiast-opinii', name: 'Pomiar zamiast opinii',
+          introduction: 'Skąd biorą się liczby na ekranie przeglądu.',
+          bloki: [
+            tekstB('Pokrycie, wierność i dodatki własne liczy kalkulator miar na kolekcjach lustrzanych marek. Rozjazd wykrywa skan zrzutu źródła wobec kanonu. Sześć kolejnych pomiarów układa się w historię: jedna marka rośnie, jedna stoi, jedna spada po dostawie z zewnątrz.'),
+            markdownB('## Trzy miary, zawsze razem\n\n| Miara | Pytanie | Niska wartość znaczy |\n|---|---|---|\n| Pokrycie | ile obowiązkowego rdzenia marka ma | lukę do zasypania, nie błąd |\n| Wierność | czy wspólne wartości się zgadzają | odstępstwo do rozstrzygnięcia |\n| Dodatki własne | ile marka wnosi ponad rdzeń | mało: młody rynek; dużo: dojrzały |\n\nWskaźnik zbiorczy jest zabroniony: trzy liczby odpowiadają na trzy różne pytania.'),
+            calloutB('info', 'Każdą liczbę z przeglądu można odtworzyć ręcznym przebiegiem silnika na tych samych danych. Liczba, której nie da się odtworzyć, nie ma prawa być na ekranie.'),
+          ],
+        },
+        {
+          uid: 'pochodzenie-i-ochrona', name: 'Pochodzenie i ochrona tokenów',
+          introduction: 'Rodowód każdego tokenu i co z niego wynika.',
+          bloki: [
+            tekstB('Każdy token niesie pochodzenie: z kodu, ze źródła projektowego, z propozycji piaskownicy albo nieustalone. Pochodzenie z kodu daje ochronę bezwarunkową — import nie nadpisze takiego tokenu bez decyzji człowieka; próba ląduje w kolejce jako konflikt chroniony.'),
+            tabelaB(
+              ['Pochodzenie', 'Znaczenie', 'Ochrona przy imporcie'],
+              [
+                ['code', 'utrzymywany w repozytorium zespołu', 'bezwarunkowa — konflikt wymaga decyzji'],
+                ['figma', 'przyjęty z pliku projektowego', 'polityka scalania pole po polu'],
+                ['proposed', 'kandydat z piaskownicy lub ekstrakcji', 'czeka na przyjęcie do rdzenia'],
+                ['unknown', 'rodowód nieustalony — do wyjaśnienia', 'jak figma; sam wpis jest informacją'],
+              ],
+            ),
+            kodB('json', '"$extensions": {\n  "com.example.provenance": "code",\n  "com.example.layer": "semantic",\n  "com.example.curated": true\n}', 'Metadane pochodzenia w pliku DTCG'),
+            calloutB('warning', 'Warstwa deklarowana i wyprowadzona to dwie różne rzeczy: deklarację pisze człowiek, wyprowadzenie liczy graf aliasów. Rozbieżność jest typem rozjazdu — trzy takie tokeny są celowo zasiane w tym zestawie.'),
+          ],
+        },
+        {
+          uid: 'rozjazd-i-kolejka', name: 'Rozjazd i kolejka decyzji',
+          introduction: 'Co się dzieje, gdy źródło odjeżdża od kanonu.',
+          bloki: [
+            tekstB('Skan porównuje zrzut zmiennych źródła z kanonem i klasyfikuje każde znalezisko: do naprawy, architektoniczne albo założenie. Silnik niczego nie rozstrzyga sam — każde znalezisko czeka w kolejce na decyzję z kierunkiem prawdy.'),
+            listaB(
+              'REAL: wartość faktycznie się rozjechała; ktoś musi wskazać, czy prawdą jest kanon, czy źródło.',
+              'ARCHITECTURAL: obszar modelowany wyłącznie w kodzie pojawił się w pliku projektowym.',
+              'ASSUMPTION: założenie niedomknięte, na przykład tryb-zaślepka; to pytanie, nie błąd.',
+            ),
+            calloutB('danger', 'Dwanaście typów rozjazdu wartości plus dziewięć typów rozjazdu komponentów — każdy z własnym priorytetem i trasą. „Wszystko leci jako błąd" to antywzorzec, który ten routing eliminuje.'),
+          ],
+        },
+        {
+          uid: 'zasilanie-agentow', name: 'Zasilanie agentów',
+          introduction: 'Serwer MCP: system czytelny dla maszyn.',
+          bloki: [
+            tekstB('Platforma wystawia serwer MCP, przez który agent programistyczny czyta system: tokeny z metadanymi, strony, komponenty ze statusami. Uprawnienia egzekwuje serwer: szkice i strony zablokowane nie wychodzą nigdy, niezależnie od tego, kto pyta.'),
+            kodB('json', '{\n  "mcpServers": {\n    "design-system": {\n      "url": "https://twoja-instalacja.example/mcp"\n    }\n  }\n}', 'Konfiguracja klienta MCP'),
+            zalacznikiB(['piramida-tokenow', 'piramida-tokenow.svg']),
+            calloutB('info', 'Sekcja Agent w studiu pokazuje adres tej instalacji, listę narzędzi i gotowy fragment konfiguracji do skopiowania.'),
+          ],
+        },
+      ],
+    },
+    {
+      nazwa: 'Wydania',
+      strony: [
+        {
+          uid: 'dziennik-zmian', name: 'Dziennik zmian',
+          introduction: 'Historia wydań systemu.',
+          bloki: [
+            tekstB('Każde wydanie zamyka sekcję zmian nieopublikowanych i tworzy niezmienny snapshot wersji. Wpisy poniżej pochodzą z rejestru wydań, nie z ręcznie pisanej listy.'),
+            notyB(),
+          ],
+        },
+        {
+          uid: 'zasady-wersjonowania', name: 'Zasady wersjonowania',
+          introduction: 'Jak numerujemy wydania i co łamie zgodność.',
+          bloki: [
+            tekstB('Wydania numerujemy semantycznie na podstawie agregatu zmian: usunięcie tokenu lub zmiana typu podnosi wersję główną, nowe tokeny — wersję drugą, zmiany wartości — trzecią. Wpływ liczy silnik z rejestru zmian, nie autor wydania.'),
+            listaB(
+              'Zmiana łamiąca w komponencie wymaga nowej wersji głównej kontraktu.',
+              'Token wycofywany dostaje datę wycofania, następcę i okno migracji.',
+              'Usunięcie przed końcem okna migracji blokuje bramka lintu metadanych.',
+            ),
+            kodB('text', '2.0.0  usunięto: rdzen.color.sygnalowy-stary (koniec okna migracji)\n1.3.0  dodano: grupa rdzen.propozycje (kandydaci z piaskownic)\n1.2.1  zmieniono: rdzen.krycie.mocne 0,86 → 0,84', 'Przykładowy wypis wpływu zmian'),
+          ],
+        },
+      ],
+    },
+    {
+      nazwa: 'Zespół',
+      strony: [
+        {
+          uid: 'notatki-wewnetrzne', name: 'Notatki wewnętrzne', locked: true,
+          introduction: 'Strona zablokowana — widoczna wyłącznie po zalogowaniu.',
+          bloki: [
+            tekstB('Treść dla zespołu: ustalenia robocze, których nie publikujemy publicznie. Ta strona istnieje także po to, żeby pokazać, że serwer MCP nigdy jej nie zwróci bez uprawnień.'),
+          ],
+        },
+      ],
+    },
+  ],
+}
+
 function emitujStrony() {
+  const liczbaStron = TRESC.sekcje.reduce((s, sek) => s + sek.strony.length, 0)
   zapisz('kanon/strony.json', {
-    comment: 'Treść witryny zasiewu: sekcja nawigacji + strony (trzy publiczne, jedna zablokowana).',
-    sekcja: 'Dokumentacja',
-    strony: [
-      { uid: 'aa11bb22', name: 'Wprowadzenie', introduction: 'Czym jest ten system i jak z niego korzystać.', text: 'Jeden rdzeń semantyczny, trzy marki różniące się wyłącznie wartościami prymitywów. Ta strona pochodzi z danych zasiewowych.' },
-      { uid: 'cc33dd44', name: 'Zasady marki', introduction: 'Reguły użycia tokenów i komponentów w produktach.', text: 'Kolory, typografia i odstępy pochodzą z tokenów; wartości surowe w kodzie produktu są rozjazdem do wykrycia.' },
-      { uid: 'gg77hh88', name: 'Pomiar zamiast opinii', introduction: 'Skąd biorą się liczby na ekranie przeglądu.', text: 'Pokrycie, wierność i dodatki własne liczy kalkulator miar na kolekcjach lustrzanych marek. Rozjazd wykrywa skan zrzutu źródła wobec kanonu. Sześć kolejnych pomiarów układa się w historię: jedna marka rośnie, jedna stoi, jedna spada po dostawie z zewnątrz.' },
-      { uid: 'ee55ff66', name: 'Notatki wewnętrzne', locked: true, introduction: 'Strona zablokowana — widoczna wyłącznie po zalogowaniu.', text: 'Treść dla zespołu: ustalenia robocze, których nie publikujemy publicznie.' },
-    ],
+    comment: `Treść witryny zasiewu: ${TRESC.sekcje.length} sekcji, ${liczbaStron} stron. Bloki w kształcie edytora treści (kind + config + contentRich); bloki odroczone (design, galeria, załączniki) uzupełnia zasiew po utworzeniu źródła danych i wgraniu zasobów. Plik wygenerowany: scripts/generuj.mjs.`,
+    sekcje: TRESC.sekcje,
   })
+  return liczbaStron
+}
+
+// Zasoby graficzne (SVG wyliczane — żaden piksel nie pochodzi z realnego wdrożenia)
+function emitujZasoby() {
+  const svgSiatkaIkon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-label="Cztery rozmiary ikon">
+  <rect width="320" height="120" fill="${krokHex('grafit', 0)}"/>
+  ${[16, 20, 24, 32].map((r, i) => `<rect x="${28 + i * 76}" y="${(120 - r * 2) / 2}" width="${r * 2}" height="${r * 2}" rx="6" fill="${krokHex('blekit', 5)}"/>`).join('\n  ')}
+</svg>
+`
+  const warstwy = [['prymitywy', 8, 200], ['role semantyczne', 6, 150], ['warstwa funkcjonalna', 4, 100], ['warstwa komponentowa', 2, 50]]
+  const svgPiramida = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Piramida tokenów">
+  <rect width="320" height="200" fill="${krokHex('grafit', 0)}"/>
+  ${warstwy.map(([nazwa, krok, szer], i) => `<rect x="${160 - szer * 0.7}" y="${150 - i * 40}" width="${szer * 1.4}" height="32" rx="4" fill="${krokHex('blekit', krok)}"/><text x="160" y="${170 - i * 40}" text-anchor="middle" font-family="sans-serif" font-size="12" fill="${i > 1 ? krokHex('grafit', 0) : krokHex('grafit', 9)}">${nazwa}</text>`).join('\n  ')}
+</svg>
+`
+  const pelnaSiatka = path.join(KATALOG, 'zasoby')
+  mkdirSync(pelnaSiatka, { recursive: true })
+  writeFileSync(path.join(pelnaSiatka, 'siatka-ikon.svg'), svgSiatkaIkon)
+  writeFileSync(path.join(pelnaSiatka, 'piramida-tokenow.svg'), svgPiramida)
+  console.log('  zasoby/siatka-ikon.svg')
+  console.log('  zasoby/piramida-tokenow.svg')
 }
 
 function emitujZrodla() {
@@ -813,10 +1403,12 @@ function emitujZrodla() {
   })
   zapisz('zrodlo/pokrycie.json', zbudujPokrycie(6))
   zapisz('zrodlo/komponenty.json', {
-    comment: 'Inwentarz skanera komponentów rejestr-vs-stan: rodziny z wariantami + instancje. Zasiane rozjazdy komponentowe opisane w README.',
+    comment: 'Warstwa komponentów: rejestr produktowy (encje + statusy), inwentarz skanera rejestr-vs-stan (rodziny z wariantami + instancje z zasianymi rozbieżnościami obu rodzajów).',
+    rejestr: KOMPONENTY.map((k) => ({ slug: k.slug, name: k.nazwa, description: k.opis, status: STATUSY_KOMPONENTOW[k.status] })),
     inventory: INWENTARZ,
     registeredLibraries: ['bib-rdzen'],
   })
+  zapisz('zrodlo/komponenty-surowe.json', zbudujKomponentySurowe())
   zapisz('zrodlo/oczekiwania-komponentow.json', {
     comment: 'Rejestr oczekiwań komponentów (ComponentExpectation) — jeden rejestr dla skanera.',
     oczekiwania: OCZEKIWANIA,
@@ -839,7 +1431,11 @@ function emitujMarkiStany() {
         }
         wezel[segmenty.at(-1)] = {
           $type: t.type, $value: t.value,
-          $extensions: { [`${NS}.provenance`]: 'unknown', [`${NS}.status`]: 'active' },
+          $extensions: {
+            [`${NS}.provenance`]: t.provenance ?? 'unknown',
+            ...(t.detail ? { [`${NS}.provenance-detail`]: t.detail } : {}),
+            [`${NS}.status`]: 'active',
+          },
         }
       }
       zapisz(`marki/${marka}/${OKRESY[m - 1]}.dtcg.json`, korzen)
@@ -937,6 +1533,8 @@ function emitujManifest() {
       zrzutZrodla: 'zrodlo/zrzut-alfa.json',
       pokrycie: 'zrodlo/pokrycie.json',
       komponenty: 'zrodlo/komponenty.json',
+      komponentySurowe: 'zrodlo/komponenty-surowe.json',
+      zasoby: { 'siatka-ikon': 'zasoby/siatka-ikon.svg', 'piramida-tokenow': 'zasoby/piramida-tokenow.svg' },
       oczekiwaniaKomponentow: 'zrodlo/oczekiwania-komponentow.json',
       kontrast: 'bramki/kontrast.json',
       dostawca: 'dostawcy/wykonawca.json',
@@ -989,7 +1587,8 @@ zapisz('kanon/rdzen-obowiazkowy.json', {
   sciezki: rdzenObowiazkowy,
 })
 emitujMarki()
-emitujStrony()
+const liczbaStron = emitujStrony()
+emitujZasoby()
 const oczekiwane = emitujZrodla()
 emitujMarkiStany()
 emitujBramki(oczekiwane.length)
@@ -1013,3 +1612,5 @@ console.log(`  typy: ${Object.entries(wgTypu).map(([k, v]) => `${k} ${v}`).join(
 console.log(`  pokrycie Bety (z ${rdzenObowiazkowy.length}): ${BETA_POKRYCIE.map((n) => (n / rdzenObowiazkowy.length * 100).toFixed(1)).join(' → ')}`)
 console.log(`  pokrycie Gammy: ${(GAMMA_POKRYCIE / rdzenObowiazkowy.length * 100).toFixed(1)} (stałe) · odchylenia ${GAMMA_ODCH_ILE.join(' → ')} · dodatki ${GAMMA_DODATKI_ILE.join(' → ')}`)
 console.log(`  definicje pokrycia komponentów: ${DEFINICJE.length}`)
+console.log(`  komponenty modelu: ${KOMPONENTY.length} · oczekiwania skanera: ${OCZEKIWANIA.length} · rodziny w stanie: ${INWENTARZ.families.length}`)
+console.log(`  strony treści: ${liczbaStron} w ${TRESC.sekcje.length} sekcjach`)

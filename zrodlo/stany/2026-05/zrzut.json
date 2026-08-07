@@ -2327,6 +2327,14 @@
       }
     },
     {
+      "name": "rdzen/color/odziedziczony",
+      "collection": "Prymitywy",
+      "type": "COLOR",
+      "valuesByMode": {
+        "Jasny": "#547a96"
+      }
+    },
+    {
       "name": "rdzen.typografia.rodzina-podstawowej",
       "collection": "Prymitywy",
       "type": "STRING",

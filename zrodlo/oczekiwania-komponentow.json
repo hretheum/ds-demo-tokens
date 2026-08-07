@@ -13,6 +13,15 @@
         },
         {
           "odmiana": "destrukcyjna"
+        },
+        {
+          "rozmiar": "maly"
+        },
+        {
+          "rozmiar": "sredni"
+        },
+        {
+          "rozmiar": "duzy"
         }
       ],
       "platforms": [
@@ -20,6 +29,45 @@
         "aplikacja"
       ],
       "intentionalSinglePlatform": false,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "przycisk-drugorzedny",
+      "required": false,
+      "requiredVariants": [
+        {
+          "rozmiar": "maly"
+        },
+        {
+          "rozmiar": "sredni"
+        },
+        {
+          "rozmiar": "duzy"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "przycisk-ikonowy",
+      "required": false,
+      "requiredVariants": [
+        {
+          "rozmiar": "maly"
+        },
+        {
+          "rozmiar": "sredni"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
       "libraryRef": "bib-rdzen",
       "helper": false
     },
@@ -31,26 +79,53 @@
           "stan": "zwykly"
         },
         {
+          "stan": "skupienie"
+        },
+        {
+          "stan": "blad"
+        },
+        {
+          "stan": "wylaczony"
+        }
+      ],
+      "platforms": [
+        "www",
+        "aplikacja"
+      ],
+      "intentionalSinglePlatform": false,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "pole-liczbowe",
+      "required": false,
+      "requiredVariants": [
+        {
+          "stan": "zwykly"
+        },
+        {
           "stan": "blad"
         }
       ],
       "platforms": [
-        "www",
-        "aplikacja"
+        "www"
       ],
-      "intentionalSinglePlatform": false,
+      "intentionalSinglePlatform": true,
       "libraryRef": "bib-rdzen",
       "helper": false
     },
     {
-      "slug": "karta",
+      "slug": "pole-wyboru",
       "required": true,
       "requiredVariants": [
         {
-          "uklad": "pionowy"
+          "stan": "zaznaczone"
         },
         {
-          "uklad": "poziomy"
+          "stan": "odznaczone"
+        },
+        {
+          "stan": "nieokreslone"
         }
       ],
       "platforms": [
@@ -61,17 +136,14 @@
       "helper": false
     },
     {
-      "slug": "znacznik",
-      "required": true,
+      "slug": "pole-daty",
+      "required": false,
       "requiredVariants": [
         {
-          "ton": "neutralny"
+          "stan": "zwykly"
         },
         {
-          "ton": "sukces"
-        },
-        {
-          "ton": "blad"
+          "stan": "blad"
         }
       ],
       "platforms": [
@@ -82,30 +154,17 @@
       "helper": false
     },
     {
-      "slug": "okno-dialogowe",
+      "slug": "lista-rozwijana",
       "required": true,
       "requiredVariants": [
         {
-          "rozmiar": "srednie"
-        }
-      ],
-      "platforms": [
-        "www",
-        "aplikacja"
-      ],
-      "intentionalSinglePlatform": false,
-      "libraryRef": "bib-rdzen",
-      "helper": false
-    },
-    {
-      "slug": "powiadomienie",
-      "required": true,
-      "requiredVariants": [
-        {
-          "ton": "informacja"
+          "stan": "zwykly"
         },
         {
-          "ton": "blad"
+          "stan": "otwarta"
+        },
+        {
+          "stan": "blad"
         }
       ],
       "platforms": [
@@ -135,11 +194,50 @@
       "helper": false
     },
     {
-      "slug": "zakladki",
+      "slug": "suwak",
       "required": false,
       "requiredVariants": [
         {
+          "stan": "zwykly"
+        },
+        {
+          "stan": "wylaczony"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "karta",
+      "required": true,
+      "requiredVariants": [
+        {
+          "uklad": "pionowy"
+        },
+        {
           "uklad": "poziomy"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "karta-produktu",
+      "required": false,
+      "requiredVariants": [
+        {
+          "uklad": "siatka"
+        },
+        {
+          "uklad": "lista"
         }
       ],
       "platforms": [
@@ -161,9 +259,330 @@
       "helper": false
     },
     {
+      "slug": "wiersz-tabeli",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": true
+    },
+    {
+      "slug": "znacznik",
+      "required": true,
+      "requiredVariants": [
+        {
+          "ton": "neutralny"
+        },
+        {
+          "ton": "sukces"
+        },
+        {
+          "ton": "ostrzezenie"
+        },
+        {
+          "ton": "blad"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "plakietka",
+      "required": false,
+      "requiredVariants": [
+        {
+          "ton": "neutralny"
+        },
+        {
+          "ton": "akcent"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "awatar",
+      "required": false,
+      "requiredVariants": [
+        {
+          "rozmiar": "maly"
+        },
+        {
+          "rozmiar": "sredni"
+        },
+        {
+          "rozmiar": "duzy"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "okno-dialogowe",
+      "required": true,
+      "requiredVariants": [
+        {
+          "rozmiar": "male"
+        },
+        {
+          "rozmiar": "srednie"
+        },
+        {
+          "rozmiar": "duze"
+        }
+      ],
+      "platforms": [
+        "www",
+        "aplikacja"
+      ],
+      "intentionalSinglePlatform": false,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "panel-boczny",
+      "required": false,
+      "requiredVariants": [
+        {
+          "strona": "lewa"
+        },
+        {
+          "strona": "prawa"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "naglowek-strony",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "stopka",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "powiadomienie",
+      "required": true,
+      "requiredVariants": [
+        {
+          "ton": "informacja"
+        },
+        {
+          "ton": "sukces"
+        },
+        {
+          "ton": "ostrzezenie"
+        },
+        {
+          "ton": "blad"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "pasek-postepu",
+      "required": false,
+      "requiredVariants": [
+        {
+          "stan": "w-toku"
+        },
+        {
+          "stan": "ukonczony"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "wskaznik-ladowania",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "zakladki",
+      "required": false,
+      "requiredVariants": [
+        {
+          "uklad": "poziomy"
+        },
+        {
+          "uklad": "pionowy"
+        }
+      ],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "okruszki",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
       "slug": "stronicowanie",
       "required": false,
       "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "podpowiedz",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "dymek",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "menu-kontekstowe",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "pusty-stan",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "baner",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "sekcja-powitalna",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "separator",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": true
+    },
+    {
+      "slug": "ikona",
+      "required": false,
+      "requiredVariants": [],
+      "platforms": [
+        "www"
+      ],
+      "intentionalSinglePlatform": true,
+      "libraryRef": "bib-rdzen",
+      "helper": false
+    },
+    {
+      "slug": "pole-wyszukiwania",
+      "required": true,
+      "requiredVariants": [
+        {
+          "stan": "zwykly"
+        }
+      ],
       "platforms": [
         "www"
       ],
