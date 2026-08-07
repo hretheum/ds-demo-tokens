@@ -5,7 +5,7 @@
       "nazwa": "Start",
       "strony": [
         {
-          "uid": "wprowadzenie",
+          "uid": "p1fi0fio",
           "name": "Wprowadzenie",
           "introduction": "Czym jest ten system i jak z niego korzystać.",
           "bloki": [
@@ -33,22 +33,22 @@
                   {
                     "title": "Podstawy",
                     "description": "Barwa, typografia, odstępy, ruch",
-                    "url": "barwa"
+                    "url": "/system-demonstracyjny/v/latest/p/p02wlxqa-barwa"
                   },
                   {
                     "title": "Komponenty",
                     "description": "Katalog ze statusami i wariantami",
-                    "url": "katalog-komponentow"
+                    "url": "/system-demonstracyjny/v/latest/p/p1p3f1os-katalog-komponentow"
                   },
                   {
                     "title": "Wytyczne",
                     "description": "Głos, treść, formularze, dostępność",
-                    "url": "glos-i-ton"
+                    "url": "/system-demonstracyjny/v/latest/p/p1y7on5a-glos-i-ton"
                   },
                   {
                     "title": "Pomiar",
                     "description": "Skąd biorą się liczby na przeglądzie",
-                    "url": "pomiar-zamiast-opinii"
+                    "url": "/system-demonstracyjny/v/latest/p/p1xbt19o-pomiar-zamiast-opinii"
                   }
                 ]
               }
@@ -66,7 +66,7 @@
                     "content": [
                       {
                         "type": "text",
-                        "text": "System jest wielomarkowy: Marka Alfa jest wzorcem, Beta i Gamma utrzymują kolekcje lustrzane dopasowywane słownikiem nazw. Adopcję każdej marki mierzy platforma, nie deklaracje."
+                        "text": "System jest wielomarkowy: Marka Alfa jest wzorcem, Beta i Gamma utrzymują kolekcje lustrzane dopasowywane słownikiem nazw. Adopcję każdej marki mierzy platforma na jej kolekcji lustrzanej."
                       }
                     ]
                   }
@@ -76,7 +76,7 @@
           ]
         },
         {
-          "uid": "jak-korzystac",
+          "uid": "p064znp4",
           "name": "Jak korzystać z dokumentacji",
           "introduction": "Mapa dokumentacji i zasady zgłaszania zmian.",
           "bloki": [
@@ -155,7 +155,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Chcesz eksperymentować? Załóż piaskownicę: twoje zmiany będą kandydatami, nie alarmami."
+                                "text": "Chcesz eksperymentować? Załóż piaskownicę: platforma potraktuje twoje zmiany jako kandydatów do rdzenia."
                               }
                             ]
                           }
@@ -194,7 +194,7 @@
       "nazwa": "Podstawy",
       "strony": [
         {
-          "uid": "barwa",
+          "uid": "p02wlxqa",
           "name": "Barwa",
           "introduction": "Skale prymitywów i role semantyczne barw.",
           "bloki": [
@@ -293,7 +293,7 @@
           ]
         },
         {
-          "uid": "typografia",
+          "uid": "p0sva7hp",
           "name": "Typografia",
           "introduction": "Rozmiary, wysokości wiersza i grubości pisma.",
           "bloki": [
@@ -650,7 +650,7 @@
           ]
         },
         {
-          "uid": "odstepy-i-siatka",
+          "uid": "p1efl9vt",
           "name": "Odstępy i siatka",
           "introduction": "Skala odstępów i progi przełamań układu.",
           "bloki": [
@@ -720,7 +720,7 @@
                     "content": [
                       {
                         "type": "text",
-                        "text": "Progi przełamań układu żyją w grupie wewnetrzne i są konsumowane wyłącznie przez kod. Ich pojawienie się w pliku projektowym skan klasyfikuje jako rozjazd architektoniczny, nie błąd wartości."
+                        "text": "Progi przełamań układu żyją w grupie wewnetrzne i są konsumowane wyłącznie przez kod. Ich pojawienie się w pliku projektowym skan klasyfikuje jako rozjazd architektoniczny (obszar modelowania wypłynął poza kod)."
                       }
                     ]
                   }
@@ -730,7 +730,7 @@
           ]
         },
         {
-          "uid": "promienie-i-obwodki",
+          "uid": "p1xhglpt",
           "name": "Promienie i obwódki",
           "introduction": "Zaokrąglenia narożników i grubości obwódek.",
           "bloki": [
@@ -760,7 +760,7 @@
           ]
         },
         {
-          "uid": "ruch",
+          "uid": "p0yjb7jd",
           "name": "Ruch",
           "introduction": "Czasy przejść i zasady ograniczania animacji.",
           "bloki": [
@@ -819,7 +819,7 @@
           ]
         },
         {
-          "uid": "tryby",
+          "uid": "p030jav5",
           "name": "Tryby jasny i ciemny",
           "introduction": "Jak działa przełączanie trybów barwnych.",
           "bloki": [
@@ -1066,7 +1066,7 @@
           ]
         },
         {
-          "uid": "ikony",
+          "uid": "p02yoczj",
           "name": "Ikony",
           "introduction": "Rozmiary ikon i zasady osadzania.",
           "bloki": [
@@ -1162,7 +1162,7 @@
           ]
         },
         {
-          "uid": "dostepnosc",
+          "uid": "p0lwhppp",
           "name": "Dostępność",
           "introduction": "Wymagania WCAG 2.2 AA egzekwowane przez system.",
           "bloki": [
@@ -1282,7 +1282,7 @@
       "nazwa": "Komponenty",
       "strony": [
         {
-          "uid": "katalog-komponentow",
+          "uid": "p1p3f1os",
           "name": "Katalog komponentów",
           "introduction": "Wszystkie wzorce ze statusami z rejestru.",
           "bloki": [
@@ -1312,7 +1312,7 @@
           ]
         },
         {
-          "uid": "k-przycisk",
+          "uid": "p1e3v4fk",
           "name": "Przycisk",
           "kind": "pattern",
           "komponent": "przycisk",
@@ -1801,7 +1801,7 @@
           ]
         },
         {
-          "uid": "k-przycisk-drugorzedny",
+          "uid": "p1h7g8so",
           "name": "Przycisk drugorzędny",
           "kind": "pattern",
           "komponent": "przycisk-drugorzedny",
@@ -1976,7 +1976,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -1990,7 +1990,7 @@
           ]
         },
         {
-          "uid": "k-przycisk-ikonowy",
+          "uid": "p19wt0db",
           "name": "Przycisk ikonowy",
           "kind": "pattern",
           "komponent": "przycisk-ikonowy",
@@ -2165,7 +2165,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -2179,7 +2179,7 @@
           ]
         },
         {
-          "uid": "k-pole-tekstowe",
+          "uid": "p1wymfeg",
           "name": "Pole tekstowe",
           "kind": "pattern",
           "komponent": "pole-tekstowe",
@@ -2354,7 +2354,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -2368,7 +2368,7 @@
           ]
         },
         {
-          "uid": "k-pole-liczbowe",
+          "uid": "p01qfxq3",
           "name": "Pole liczbowe",
           "kind": "pattern",
           "komponent": "pole-liczbowe",
@@ -2543,7 +2543,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -2557,7 +2557,7 @@
           ]
         },
         {
-          "uid": "k-pole-wyboru",
+          "uid": "p1p6afto",
           "name": "Pole wyboru",
           "kind": "pattern",
           "komponent": "pole-wyboru",
@@ -2732,7 +2732,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -2746,7 +2746,7 @@
           ]
         },
         {
-          "uid": "k-pole-daty",
+          "uid": "p08qq2uo",
           "name": "Pole daty",
           "kind": "pattern",
           "komponent": "pole-daty",
@@ -2921,7 +2921,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -2935,7 +2935,7 @@
           ]
         },
         {
-          "uid": "k-lista-rozwijana",
+          "uid": "p0mx0zow",
           "name": "Lista rozwijana",
           "kind": "pattern",
           "komponent": "lista-rozwijana",
@@ -3110,7 +3110,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -3124,7 +3124,7 @@
           ]
         },
         {
-          "uid": "k-przelacznik",
+          "uid": "p0gjeo5i",
           "name": "Przełącznik",
           "kind": "pattern",
           "komponent": "przelacznik",
@@ -3299,7 +3299,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -3313,7 +3313,7 @@
           ]
         },
         {
-          "uid": "k-suwak",
+          "uid": "p1419sxk",
           "name": "Suwak",
           "kind": "pattern",
           "komponent": "suwak",
@@ -3488,7 +3488,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -3502,7 +3502,7 @@
           ]
         },
         {
-          "uid": "k-karta",
+          "uid": "p13vvrgu",
           "name": "Karta",
           "kind": "pattern",
           "komponent": "karta",
@@ -3677,7 +3677,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -3691,7 +3691,7 @@
           ]
         },
         {
-          "uid": "k-karta-produktu",
+          "uid": "p0bnq039",
           "name": "Karta produktu",
           "kind": "pattern",
           "komponent": "karta-produktu",
@@ -3866,7 +3866,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -3880,7 +3880,7 @@
           ]
         },
         {
-          "uid": "k-tabela",
+          "uid": "p1ci9058",
           "name": "Tabela",
           "kind": "pattern",
           "komponent": "tabela",
@@ -3976,7 +3976,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -3990,7 +3990,7 @@
           ]
         },
         {
-          "uid": "k-znacznik",
+          "uid": "p0hrkzc3",
           "name": "Znacznik",
           "kind": "pattern",
           "komponent": "znacznik",
@@ -4165,7 +4165,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -4179,7 +4179,7 @@
           ]
         },
         {
-          "uid": "k-plakietka",
+          "uid": "p1pk1dmv",
           "name": "Plakietka",
           "kind": "pattern",
           "komponent": "plakietka",
@@ -4354,7 +4354,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -4368,7 +4368,7 @@
           ]
         },
         {
-          "uid": "k-awatar",
+          "uid": "p10k9fbn",
           "name": "Awatar",
           "kind": "pattern",
           "komponent": "awatar",
@@ -4543,7 +4543,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -4557,7 +4557,7 @@
           ]
         },
         {
-          "uid": "k-okno-dialogowe",
+          "uid": "p01zyu3i",
           "name": "Okno dialogowe",
           "kind": "pattern",
           "komponent": "okno-dialogowe",
@@ -4732,7 +4732,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -4746,7 +4746,7 @@
           ]
         },
         {
-          "uid": "k-panel-boczny",
+          "uid": "p1yvxjmj",
           "name": "Panel boczny",
           "kind": "pattern",
           "komponent": "panel-boczny",
@@ -4921,7 +4921,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -4935,7 +4935,7 @@
           ]
         },
         {
-          "uid": "k-naglowek-strony",
+          "uid": "p0xmhpyp",
           "name": "Nagłówek strony",
           "kind": "pattern",
           "komponent": "naglowek-strony",
@@ -5031,7 +5031,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -5045,7 +5045,7 @@
           ]
         },
         {
-          "uid": "k-stopka",
+          "uid": "p16mf89d",
           "name": "Stopka",
           "kind": "pattern",
           "komponent": "stopka",
@@ -5141,7 +5141,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -5155,7 +5155,7 @@
           ]
         },
         {
-          "uid": "k-powiadomienie",
+          "uid": "p1contfv",
           "name": "Powiadomienie",
           "kind": "pattern",
           "komponent": "powiadomienie",
@@ -5330,7 +5330,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -5344,7 +5344,7 @@
           ]
         },
         {
-          "uid": "k-pasek-postepu",
+          "uid": "p0ueht16",
           "name": "Pasek postępu",
           "kind": "pattern",
           "komponent": "pasek-postepu",
@@ -5519,7 +5519,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -5533,7 +5533,7 @@
           ]
         },
         {
-          "uid": "k-wskaznik-ladowania",
+          "uid": "p06cfhpc",
           "name": "Wskaźnik ładowania",
           "kind": "pattern",
           "komponent": "wskaznik-ladowania",
@@ -5629,7 +5629,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -5643,7 +5643,7 @@
           ]
         },
         {
-          "uid": "k-zakladki",
+          "uid": "p1ubp7fc",
           "name": "Zakładki",
           "kind": "pattern",
           "komponent": "zakladki",
@@ -5818,7 +5818,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -5832,7 +5832,7 @@
           ]
         },
         {
-          "uid": "k-okruszki",
+          "uid": "p0e8qukr",
           "name": "Okruszki",
           "kind": "pattern",
           "komponent": "okruszki",
@@ -5928,7 +5928,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -5942,7 +5942,7 @@
           ]
         },
         {
-          "uid": "k-stronicowanie",
+          "uid": "p180q8li",
           "name": "Stronicowanie",
           "kind": "pattern",
           "komponent": "stronicowanie",
@@ -6038,7 +6038,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -6052,7 +6052,7 @@
           ]
         },
         {
-          "uid": "k-podpowiedz",
+          "uid": "p096mjky",
           "name": "Podpowiedź",
           "kind": "pattern",
           "komponent": "podpowiedz",
@@ -6148,7 +6148,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -6162,7 +6162,7 @@
           ]
         },
         {
-          "uid": "k-dymek",
+          "uid": "p13wwu9p",
           "name": "Dymek",
           "kind": "pattern",
           "komponent": "dymek",
@@ -6258,7 +6258,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -6272,7 +6272,7 @@
           ]
         },
         {
-          "uid": "k-menu-kontekstowe",
+          "uid": "p1oass0n",
           "name": "Menu kontekstowe",
           "kind": "pattern",
           "komponent": "menu-kontekstowe",
@@ -6368,7 +6368,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -6382,7 +6382,7 @@
           ]
         },
         {
-          "uid": "k-pusty-stan",
+          "uid": "p17phhml",
           "name": "Pusty stan",
           "kind": "pattern",
           "komponent": "pusty-stan",
@@ -6478,7 +6478,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -6492,7 +6492,7 @@
           ]
         },
         {
-          "uid": "k-baner",
+          "uid": "p13ux2bd",
           "name": "Baner",
           "kind": "pattern",
           "komponent": "baner",
@@ -6588,7 +6588,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -6622,7 +6622,7 @@
           ]
         },
         {
-          "uid": "k-sekcja-powitalna",
+          "uid": "p0u71vfw",
           "name": "Sekcja powitalna",
           "kind": "pattern",
           "komponent": "sekcja-powitalna",
@@ -6718,7 +6718,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -6732,7 +6732,7 @@
           ]
         },
         {
-          "uid": "k-ikona",
+          "uid": "p13zqc75",
           "name": "Ikona",
           "kind": "pattern",
           "komponent": "ikona",
@@ -6828,7 +6828,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu."
+                                "text": "Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja."
                               }
                             ]
                           }
@@ -6847,7 +6847,7 @@
       "nazwa": "Wytyczne",
       "strony": [
         {
-          "uid": "glos-i-ton",
+          "uid": "p1y7on5a",
           "name": "Głos i ton",
           "introduction": "Jak system mówi do ludzi.",
           "bloki": [
@@ -6861,7 +6861,7 @@
                     "content": [
                       {
                         "type": "text",
-                        "text": "Piszemy wprost, po polsku, do jednej osoby. System informuje o stanie faktycznym i nigdy nie obwinia: komunikat błędu mówi, co się stało i co można zrobić, a nie kto zawinił."
+                        "text": "Piszemy wprost, po polsku, do jednej osoby. System informuje o stanie faktycznym i nigdy nie obwinia: komunikat błędu mówi, co się stało i co można zrobić dalej."
                       }
                     ]
                   }
@@ -6960,7 +6960,7 @@
           ]
         },
         {
-          "uid": "pisanie-tresci",
+          "uid": "p02b9cnv",
           "name": "Pisanie treści",
           "introduction": "Reguły językowe treści interfejsu.",
           "bloki": [
@@ -7237,7 +7237,7 @@
           ]
         },
         {
-          "uid": "wzorce-formularzy",
+          "uid": "p0tpumxt",
           "name": "Wzorce formularzy",
           "introduction": "Budowa formularzy z komponentów systemu.",
           "bloki": [
@@ -7302,7 +7302,7 @@
           ]
         },
         {
-          "uid": "dostepnosc-tresci",
+          "uid": "p0h0560q",
           "name": "Dostępność treści",
           "introduction": "Teksty alternatywne, nagłówki, struktura.",
           "bloki": [
@@ -7322,7 +7322,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Tekst alternatywny opisuje funkcję obrazu, nie jego wygląd."
+                                "text": "Tekst alternatywny opisuje funkcję obrazu; wyglądu nie streszcza."
                               }
                             ]
                           }
@@ -7336,7 +7336,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Hierarchia nagłówków bez przeskoków: po h2 nie następuje h4."
+                                "text": "Hierarchia nagłówków bez przeskoków: po h2 przychodzi h3."
                               }
                             ]
                           }
@@ -7350,7 +7350,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "Linki mówią, dokąd prowadzą — nigdy „kliknij tutaj\"."
+                                "text": "Link mówi, dokąd prowadzi; „kliknij tutaj\" niczego nie mówi."
                               }
                             ]
                           }
@@ -7395,7 +7395,7 @@
       "nazwa": "Pomiar i źródło prawdy",
       "strony": [
         {
-          "uid": "pomiar-zamiast-opinii",
+          "uid": "p1xbt19o",
           "name": "Pomiar zamiast opinii",
           "introduction": "Skąd biorą się liczby na ekranie przeglądu.",
           "bloki": [
@@ -7419,7 +7419,7 @@
             {
               "kind": "markdown",
               "config": {
-                "source": "## Trzy miary, zawsze razem\n\n| Miara | Pytanie | Niska wartość znaczy |\n|---|---|---|\n| Pokrycie | ile obowiązkowego rdzenia marka ma | lukę do zasypania, nie błąd |\n| Wierność | czy wspólne wartości się zgadzają | odstępstwo do rozstrzygnięcia |\n| Dodatki własne | ile marka wnosi ponad rdzeń | mało: młody rynek; dużo: dojrzały |\n\nWskaźnik zbiorczy jest zabroniony: trzy liczby odpowiadają na trzy różne pytania."
+                "source": "## Trzy miary, zawsze razem\n\n| Miara | Pytanie | Niska wartość znaczy |\n|---|---|---|\n| Pokrycie | ile obowiązkowego rdzenia marka ma | lukę do zasypania |\n| Wierność | czy wspólne wartości się zgadzają | odstępstwo do rozstrzygnięcia |\n| Dodatki własne | ile marka wnosi ponad rdzeń | mało: młody rynek; dużo: dojrzały |\n\nWskaźnik zbiorczy jest zabroniony: trzy liczby odpowiadają na trzy różne pytania."
               }
             },
             {
@@ -7445,7 +7445,7 @@
           ]
         },
         {
-          "uid": "pochodzenie-i-ochrona",
+          "uid": "p013owuw",
           "name": "Pochodzenie i ochrona tokenów",
           "introduction": "Rodowód każdego tokenu i co z niego wynika.",
           "bloki": [
@@ -7758,7 +7758,7 @@
           ]
         },
         {
-          "uid": "rozjazd-i-kolejka",
+          "uid": "p16khx1v",
           "name": "Rozjazd i kolejka decyzji",
           "introduction": "Co się dzieje, gdy źródło odjeżdża od kanonu.",
           "bloki": [
@@ -7823,7 +7823,7 @@
                             "content": [
                               {
                                 "type": "text",
-                                "text": "ASSUMPTION: założenie niedomknięte, na przykład tryb-zaślepka; to pytanie, nie błąd."
+                                "text": "ASSUMPTION: założenie niedomknięte, na przykład tryb-zaślepka; kubełek pytań do rozstrzygnięcia."
                               }
                             ]
                           }
@@ -7857,7 +7857,7 @@
           ]
         },
         {
-          "uid": "zasilanie-agentow",
+          "uid": "p1wf4i1z",
           "name": "Zasilanie agentów",
           "introduction": "Serwer MCP: system czytelny dla maszyn.",
           "bloki": [
@@ -7938,7 +7938,7 @@
       "nazwa": "Wydania",
       "strony": [
         {
-          "uid": "dziennik-zmian",
+          "uid": "p083mqax",
           "name": "Dziennik zmian",
           "introduction": "Historia wydań systemu.",
           "bloki": [
@@ -7968,7 +7968,7 @@
           ]
         },
         {
-          "uid": "zasady-wersjonowania",
+          "uid": "p105ifq3",
           "name": "Zasady wersjonowania",
           "introduction": "Jak numerujemy wydania i co łamie zgodność.",
           "bloki": [
@@ -7982,7 +7982,7 @@
                     "content": [
                       {
                         "type": "text",
-                        "text": "Wydania numerujemy semantycznie na podstawie agregatu zmian: usunięcie tokenu lub zmiana typu podnosi wersję główną, nowe tokeny — wersję drugą, zmiany wartości — trzecią. Wpływ liczy silnik z rejestru zmian, nie autor wydania."
+                        "text": "Wydania numerujemy semantycznie na podstawie agregatu zmian: usunięcie tokenu lub zmiana typu podnosi wersję główną, nowe tokeny — wersję drugą, zmiany wartości — trzecią. Wpływ liczy silnik z rejestru zmian; autor wydania niczego nie wpisuje ręcznie."
                       }
                     ]
                   }
@@ -8073,7 +8073,7 @@
       "nazwa": "Zespół",
       "strony": [
         {
-          "uid": "notatki-wewnetrzne",
+          "uid": "p0bs3e1f",
           "name": "Notatki wewnętrzne",
           "locked": true,
           "introduction": "Strona zablokowana — widoczna wyłącznie po zalogowaniu.",

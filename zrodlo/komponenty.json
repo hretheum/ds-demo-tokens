@@ -1,5 +1,19 @@
 {
   "comment": "Warstwa komponentów: rejestr produktowy (encje + statusy), inwentarz skanera rejestr-vs-stan (rodziny z wariantami + instancje z zasianymi rozbieżnościami obu rodzajów).",
+  "statusy": [
+    {
+      "name": "Stabilny",
+      "color": "#30ab72"
+    },
+    {
+      "name": "W przygotowaniu",
+      "color": "#ce940d"
+    },
+    {
+      "name": "Wycofywany",
+      "color": "#bd391f"
+    }
+  ],
   "rejestr": [
     {
       "slug": "przycisk",

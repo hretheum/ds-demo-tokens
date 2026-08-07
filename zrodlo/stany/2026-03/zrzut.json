@@ -2359,7 +2359,8 @@
       "type": "COLOR",
       "valuesByMode": {
         "Jasny": "#547a96"
-      }
+      },
+      "description": "Token przeniesiony ze starszego systemu — pochodzenie nieustalone, do wyjaśnienia przy najbliższym przeglądzie"
     }
   ]
 }

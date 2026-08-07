@@ -31,9 +31,12 @@ Druga bramka — pomiar pokrycia komponentów:
 
 | Co | Ile |
 |---|---|
-| Tokeny kanonu | **249** (160 prymitywów · 49 semantycznych · 20 funkcjonalnych · 20 komponentowych) |
-| Rdzeń obowiązkowy (mianownik pokrycia marek) | 202 ścieżki (`kanon/rdzen-obowiazkowy.json`) |
+| Tokeny kanonu | **254** (161 prymitywów · 49 semantycznych · 20 funkcjonalnych · 20 komponentowych · 4 propozycje z piaskownic) |
+| Rdzeń obowiązkowy (mianownik pokrycia marek) | 203 ścieżki (`kanon/rdzen-obowiazkowy.json`) |
 | Definicje komponentów w pomiarze pokrycia | 38 (w tym 2 odcięte heurystyką LEGACY) |
+| Model komponentów (rejestr, oczekiwania, inwentarz) | **35 komponentów**, 37 oczekiwań, 15 zasianych rozbieżności w 9 typach |
+| Strony treści dokumentacyjnej | **55** w 7 sekcjach — wszystkie 19 typów bloków renderera |
+| Pochodzenie tokenów | code 609 · figma 4 · proposed 4 · unknown 10 (każde `unknown` uzasadnione treścią) |
 | Zasiane rozjazdy (stan bieżący) | **44**, w trzech kategoriach |
 | Stany źródła (miesiące) | 6 (`zrodlo/stany/2026-03` … `2026-08`) |
 | Pary kontrastu WCAG | 12 (jedna celowo poniżej progu AA) |
@@ -49,9 +52,9 @@ pokrycie → trzy miary) i zapisuje migawki z datą wsteczną — liczby są pol
 przez silniki produktu, nie wpisane do bazy.
 
 - **Marka Alfa** (rdzeń, wzorzec) — stoi: 100 / 100 / 0 z definicji.
-- **Marka Beta** — rośnie równo: pokrycie 55,4 → 96,0; wierność ~97 → 99;
+- **Marka Beta** — rośnie równo: pokrycie 55,2 → 95,6; wierność ~97 → 99;
   dodatki 1 → 3.
-- **Marka Gamma** — stała na 80,2 pokrycia, do **dostawy z zewnątrz w 2026-06**,
+- **Marka Gamma** — stała na 79,8 pokrycia, do **dostawy z zewnątrz w 2026-06**,
   po której wierność spada z ~97,5 do ~71 i nie wraca, a dodatki skaczą z 4 na 13.
 
 Rozjazd źródło↔kanon narasta w tym samym czasie: **6 → 10 → 17 → 27 → 39 → 44**

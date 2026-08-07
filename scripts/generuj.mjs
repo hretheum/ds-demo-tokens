@@ -442,9 +442,9 @@ function zbudujZrodlo(miesiac) {
       valuesByMode.Jasny = t.value
     }
     if (t.dark !== undefined) valuesByMode.Ciemny = t.dark
-    // tokeny o pochodzeniu figma niosą opis zgodny z kanonem — import przez bramkę
+    // tokeny spoza ochrony code niosą opis zgodny z kanonem — import przez bramkę
     // scalania ma dać pełne `unchanged` (opis wchodzi do porównania poza ochroną code)
-    const opis = t.provenance === 'figma' ? t.desc : undefined
+    const opis = t.provenance !== 'code' ? t.desc : undefined
     vars.set(name, wariant(name, kolekcjaDla(t), typZrodla(t), valuesByMode, opis))
   }
   for (const z of ZABURZENIA.filter((z) => z.od <= miesiac)) z.zastosuj(vars)
@@ -914,6 +914,18 @@ function emitujMarki() {
 // używająca KAŻDEGO typu bloku obsługiwanego przez renderer witryny.
 // ---------------------------------------------------------------------------
 
+// Identyfikator URL strony: kontrakt witryny czyta uid jako część PRZED pierwszym
+// myślnikiem ([02 §5.1.1]), więc uid musi być bez myślników — deterministyczny hasz sluga.
+function uidDla(slug) {
+  let h = 5381
+  for (const ch of slug) h = ((h * 33) ^ ch.codePointAt(0)) >>> 0
+  return 'p' + h.toString(36).padStart(7, '0')
+}
+const slugifyNazwa = (nazwa) => nazwa.toLowerCase().replaceAll(/[^a-z0-9ąćęłńóśźż]+/g, '-').replaceAll(/^-+|-+$/g, '')
+  .replaceAll('ą','a').replaceAll('ć','c').replaceAll('ę','e').replaceAll('ł','l').replaceAll('ń','n')
+  .replaceAll('ó','o').replaceAll('ś','s').replaceAll('ź','z').replaceAll('ż','z')
+const adresStrony = (slug, nazwa) => `/system-demonstracyjny/v/latest/p/${uidDla(slug)}-${slugifyNazwa(nazwa)}`
+
 // Pomocnicy ProseMirror (kształt, który rozumieją edytor i renderer witryny)
 const t = (tekst) => ({ type: 'text', text: tekst })
 const p = (...tresc) => ({ type: 'paragraph', content: tresc.map((x) => (typeof x === 'string' ? t(x) : x)) })
@@ -976,14 +988,14 @@ function stronaKomponentu(k) {
     listaB(
       `Używaj komponentu ${k.nazwa.toLowerCase()} wyłącznie przez bibliotekę — kopiowanie warstw odpina instancję od rejestru.`,
       'Wszystkie barwy i odstępy pochodzą z tokenów warstwy komponentowej; wartości surowe wykryje skan rozjazdu.',
-      'Stany interakcji (najechanie, skupienie, wyłączenie) są częścią komponentu, nie nakładką produktu.',
+      'Stany interakcji (najechanie, skupienie, wyłączenie) należą do komponentu; produkt ich nie dokleja.',
     ),
   )
   if (k.status === 'wycofywany') {
     bloki.push(calloutB('warning', 'Komponent wycofywany: nie używaj go w nowych widokach. Następca wskazany w dzienniku zmian.'))
   }
   return {
-    uid: `k-${k.slug}`,
+    uid: uidDla(`k-${k.slug}`),
     name: k.nazwa,
     kind: 'pattern',
     komponent: k.slug,
@@ -1007,12 +1019,12 @@ const TRESC = {
           bloki: [
             tekstB('Jeden rdzeń semantyczny, trzy marki różniące się wyłącznie wartościami prymitywów. Dokumentacja, którą czytasz, pochodzi w całości z danych zasiewowych i jest renderowana przez witrynę produktu.'),
             kafelkiB(
-              { title: 'Podstawy', description: 'Barwa, typografia, odstępy, ruch', url: 'barwa' },
-              { title: 'Komponenty', description: 'Katalog ze statusami i wariantami', url: 'katalog-komponentow' },
-              { title: 'Wytyczne', description: 'Głos, treść, formularze, dostępność', url: 'glos-i-ton' },
-              { title: 'Pomiar', description: 'Skąd biorą się liczby na przeglądzie', url: 'pomiar-zamiast-opinii' },
+              { title: 'Podstawy', description: 'Barwa, typografia, odstępy, ruch', url: adresStrony('barwa', 'Barwa') },
+              { title: 'Komponenty', description: 'Katalog ze statusami i wariantami', url: adresStrony('katalog-komponentow', 'Katalog komponentów') },
+              { title: 'Wytyczne', description: 'Głos, treść, formularze, dostępność', url: adresStrony('glos-i-ton', 'Głos i ton') },
+              { title: 'Pomiar', description: 'Skąd biorą się liczby na przeglądzie', url: adresStrony('pomiar-zamiast-opinii', 'Pomiar zamiast opinii') },
             ),
-            calloutB('info', 'System jest wielomarkowy: Marka Alfa jest wzorcem, Beta i Gamma utrzymują kolekcje lustrzane dopasowywane słownikiem nazw. Adopcję każdej marki mierzy platforma, nie deklaracje.'),
+            calloutB('info', 'System jest wielomarkowy: Marka Alfa jest wzorcem, Beta i Gamma utrzymują kolekcje lustrzane dopasowywane słownikiem nazw. Adopcję każdej marki mierzy platforma na jej kolekcji lustrzanej.'),
           ],
         },
         {
@@ -1024,7 +1036,7 @@ const TRESC = {
               'Szukasz wartości? Zacznij od strony podstaw z tabelą tokenów danej grupy.',
               'Budujesz widok? Sprawdź stronę komponentu i jego status w katalogu.',
               'Widzisz rozjazd między projektem a dokumentacją? Zgłoś go — skan i tak go wykryje, ale decyzja należy do człowieka.',
-              'Chcesz eksperymentować? Załóż piaskownicę: twoje zmiany będą kandydatami, nie alarmami.',
+              'Chcesz eksperymentować? Załóż piaskownicę: platforma potraktuje twoje zmiany jako kandydatów do rdzenia.',
             ),
             separatorB(),
             tekstB('Strony oznaczone kłódką są widoczne wyłącznie po zalogowaniu. Cała reszta jest publiczna i indeksowalna zgodnie z konfiguracją publikacji.'),
@@ -1071,7 +1083,7 @@ const TRESC = {
             tekstB('Skala odstępów oparta jest na kroku 4 px z zagęszczeniem w dolnym zakresie. Odstępy semantyczne (przylegly, ciasny, zwykly, luzny, sekcja, strona) wskazują skalę aliasami i to ich używają komponenty.'),
             tokenyB('rdzen.rozmiar', ['name', 'value'], 'Prymitywy wymiarów'),
             kodB('css', '.karta {\n  padding: var(--rdzen-semantic-odstep-zwykly);\n  gap: var(--rdzen-semantic-odstep-ciasny);\n}', 'Konsumpcja odstępów semantycznych w kodzie produktu'),
-            calloutB('info', 'Progi przełamań układu żyją w grupie wewnetrzne i są konsumowane wyłącznie przez kod. Ich pojawienie się w pliku projektowym skan klasyfikuje jako rozjazd architektoniczny, nie błąd wartości.'),
+            calloutB('info', 'Progi przełamań układu żyją w grupie wewnetrzne i są konsumowane wyłącznie przez kod. Ich pojawienie się w pliku projektowym skan klasyfikuje jako rozjazd architektoniczny (obszar modelowania wypłynął poza kod).'),
           ],
         },
         {
@@ -1188,7 +1200,7 @@ const TRESC = {
           uid: 'glos-i-ton', name: 'Głos i ton',
           introduction: 'Jak system mówi do ludzi.',
           bloki: [
-            tekstB('Piszemy wprost, po polsku, do jednej osoby. System informuje o stanie faktycznym i nigdy nie obwinia: komunikat błędu mówi, co się stało i co można zrobić, a nie kto zawinił.'),
+            tekstB('Piszemy wprost, po polsku, do jednej osoby. System informuje o stanie faktycznym i nigdy nie obwinia: komunikat błędu mówi, co się stało i co można zrobić dalej.'),
             cytatB('Głos mamy jeden; ton dobieramy do sytuacji. Potwierdzenie może być swobodne, komunikat o utracie danych — nigdy.'),
             dodontB(
               ['„Nie udało się zapisać zmian. Spróbuj ponownie albo wróć później."', '„Wystąpił nieoczekiwany błąd aplikacji nr 500."'],
@@ -1230,9 +1242,9 @@ const TRESC = {
           introduction: 'Teksty alternatywne, nagłówki, struktura.',
           bloki: [
             listaB(
-              'Tekst alternatywny opisuje funkcję obrazu, nie jego wygląd.',
-              'Hierarchia nagłówków bez przeskoków: po h2 nie następuje h4.',
-              'Linki mówią, dokąd prowadzą — nigdy „kliknij tutaj".',
+              'Tekst alternatywny opisuje funkcję obrazu; wyglądu nie streszcza.',
+              'Hierarchia nagłówków bez przeskoków: po h2 przychodzi h3.',
+              'Link mówi, dokąd prowadzi; „kliknij tutaj" niczego nie mówi.',
               'Materiał wideo ma napisy i transkrypcję.',
             ),
             embedB('https://nagrania.demo.example/wprowadzenie-do-dostepnosci', 'generic_iframe', 'Nagranie szkoleniowe (adres przykładowy)'),
@@ -1248,7 +1260,7 @@ const TRESC = {
           introduction: 'Skąd biorą się liczby na ekranie przeglądu.',
           bloki: [
             tekstB('Pokrycie, wierność i dodatki własne liczy kalkulator miar na kolekcjach lustrzanych marek. Rozjazd wykrywa skan zrzutu źródła wobec kanonu. Sześć kolejnych pomiarów układa się w historię: jedna marka rośnie, jedna stoi, jedna spada po dostawie z zewnątrz.'),
-            markdownB('## Trzy miary, zawsze razem\n\n| Miara | Pytanie | Niska wartość znaczy |\n|---|---|---|\n| Pokrycie | ile obowiązkowego rdzenia marka ma | lukę do zasypania, nie błąd |\n| Wierność | czy wspólne wartości się zgadzają | odstępstwo do rozstrzygnięcia |\n| Dodatki własne | ile marka wnosi ponad rdzeń | mało: młody rynek; dużo: dojrzały |\n\nWskaźnik zbiorczy jest zabroniony: trzy liczby odpowiadają na trzy różne pytania.'),
+            markdownB('## Trzy miary, zawsze razem\n\n| Miara | Pytanie | Niska wartość znaczy |\n|---|---|---|\n| Pokrycie | ile obowiązkowego rdzenia marka ma | lukę do zasypania |\n| Wierność | czy wspólne wartości się zgadzają | odstępstwo do rozstrzygnięcia |\n| Dodatki własne | ile marka wnosi ponad rdzeń | mało: młody rynek; dużo: dojrzały |\n\nWskaźnik zbiorczy jest zabroniony: trzy liczby odpowiadają na trzy różne pytania.'),
             calloutB('info', 'Każdą liczbę z przeglądu można odtworzyć ręcznym przebiegiem silnika na tych samych danych. Liczba, której nie da się odtworzyć, nie ma prawa być na ekranie.'),
           ],
         },
@@ -1278,7 +1290,7 @@ const TRESC = {
             listaB(
               'REAL: wartość faktycznie się rozjechała; ktoś musi wskazać, czy prawdą jest kanon, czy źródło.',
               'ARCHITECTURAL: obszar modelowany wyłącznie w kodzie pojawił się w pliku projektowym.',
-              'ASSUMPTION: założenie niedomknięte, na przykład tryb-zaślepka; to pytanie, nie błąd.',
+              'ASSUMPTION: założenie niedomknięte, na przykład tryb-zaślepka; kubełek pytań do rozstrzygnięcia.',
             ),
             calloutB('danger', 'Dwanaście typów rozjazdu wartości plus dziewięć typów rozjazdu komponentów — każdy z własnym priorytetem i trasą. „Wszystko leci jako błąd" to antywzorzec, który ten routing eliminuje.'),
           ],
@@ -1310,7 +1322,7 @@ const TRESC = {
           uid: 'zasady-wersjonowania', name: 'Zasady wersjonowania',
           introduction: 'Jak numerujemy wydania i co łamie zgodność.',
           bloki: [
-            tekstB('Wydania numerujemy semantycznie na podstawie agregatu zmian: usunięcie tokenu lub zmiana typu podnosi wersję główną, nowe tokeny — wersję drugą, zmiany wartości — trzecią. Wpływ liczy silnik z rejestru zmian, nie autor wydania.'),
+            tekstB('Wydania numerujemy semantycznie na podstawie agregatu zmian: usunięcie tokenu lub zmiana typu podnosi wersję główną, nowe tokeny — wersję drugą, zmiany wartości — trzecią. Wpływ liczy silnik z rejestru zmian; autor wydania niczego nie wpisuje ręcznie.'),
             listaB(
               'Zmiana łamiąca w komponencie wymaga nowej wersji głównej kontraktu.',
               'Token wycofywany dostaje datę wycofania, następcę i okno migracji.',
@@ -1337,6 +1349,12 @@ const TRESC = {
 }
 
 function emitujStrony() {
+  // uid-y bez myślników (kontrakt URL) — hasz sluga zadeklarowanego w treści
+  for (const sekcja of TRESC.sekcje) {
+    for (const strona of sekcja.strony) {
+      if (!/^p[0-9a-z]{7}$/.test(strona.uid)) strona.uid = uidDla(strona.uid)
+    }
+  }
   const liczbaStron = TRESC.sekcje.reduce((s, sek) => s + sek.strony.length, 0)
   zapisz('kanon/strony.json', {
     comment: `Treść witryny zasiewu: ${TRESC.sekcje.length} sekcji, ${liczbaStron} stron. Bloki w kształcie edytora treści (kind + config + contentRich); bloki odroczone (design, galeria, załączniki) uzupełnia zasiew po utworzeniu źródła danych i wgraniu zasobów. Plik wygenerowany: scripts/generuj.mjs.`,
@@ -1404,6 +1422,11 @@ function emitujZrodla() {
   zapisz('zrodlo/pokrycie.json', zbudujPokrycie(6))
   zapisz('zrodlo/komponenty.json', {
     comment: 'Warstwa komponentów: rejestr produktowy (encje + statusy), inwentarz skanera rejestr-vs-stan (rodziny z wariantami + instancje z zasianymi rozbieżnościami obu rodzajów).',
+    statusy: [
+      { name: 'Stabilny', color: krokHex('zielen', 6) },
+      { name: 'W przygotowaniu', color: krokHex('bursztyn', 6) },
+      { name: 'Wycofywany', color: krokHex('czerwien', 6) },
+    ],
     rejestr: KOMPONENTY.map((k) => ({ slug: k.slug, name: k.nazwa, description: k.opis, status: STATUSY_KOMPONENTOW[k.status] })),
     inventory: INWENTARZ,
     registeredLibraries: ['bib-rdzen'],
