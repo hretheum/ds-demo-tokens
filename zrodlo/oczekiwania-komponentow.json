@@ -250,7 +250,14 @@
     {
       "slug": "tabela",
       "required": false,
-      "requiredVariants": [],
+      "requiredVariants": [
+        {
+          "gestosc": "zwykla"
+        },
+        {
+          "gestosc": "zwarta"
+        }
+      ],
       "platforms": [
         "www"
       ],
@@ -261,7 +268,14 @@
     {
       "slug": "wiersz-tabeli",
       "required": false,
-      "requiredVariants": [],
+      "requiredVariants": [
+        {
+          "tlo": "zwykle"
+        },
+        {
+          "tlo": "naprzemienne"
+        }
+      ],
       "platforms": [
         "www"
       ],
@@ -375,7 +389,14 @@
     {
       "slug": "naglowek-strony",
       "required": false,
-      "requiredVariants": [],
+      "requiredVariants": [
+        {
+          "uklad": "pelny"
+        },
+        {
+          "uklad": "zwarty"
+        }
+      ],
       "platforms": [
         "www"
       ],
@@ -386,7 +407,14 @@
     {
       "slug": "stopka",
       "required": false,
-      "requiredVariants": [],
+      "requiredVariants": [
+        {
+          "ton": "zwykly"
+        },
+        {
+          "ton": "odwrocony"
+        }
+      ],
       "platforms": [
         "www"
       ],
@@ -439,7 +467,17 @@
     {
       "slug": "wskaznik-ladowania",
       "required": false,
-      "requiredVariants": [],
+      "requiredVariants": [
+        {
+          "rozmiar": "maly"
+        },
+        {
+          "rozmiar": "sredni"
+        },
+        {
+          "rozmiar": "duzy"
+        }
+      ],
       "platforms": [
         "www"
       ],
@@ -479,7 +517,14 @@
     {
       "slug": "stronicowanie",
       "required": false,
-      "requiredVariants": [],
+      "requiredVariants": [
+        {
+          "uklad": "zwiezly"
+        },
+        {
+          "uklad": "pelny"
+        }
+      ],
       "platforms": [
         "www"
       ],
@@ -490,7 +535,14 @@
     {
       "slug": "podpowiedz",
       "required": false,
-      "requiredVariants": [],
+      "requiredVariants": [
+        {
+          "pozycja": "gora"
+        },
+        {
+          "pozycja": "dol"
+        }
+      ],
       "platforms": [
         "www"
       ],
@@ -501,7 +553,14 @@
     {
       "slug": "dymek",
       "required": false,
-      "requiredVariants": [],
+      "requiredVariants": [
+        {
+          "rozmiar": "sredni"
+        },
+        {
+          "rozmiar": "duzy"
+        }
+      ],
       "platforms": [
         "www"
       ],
@@ -512,7 +571,14 @@
     {
       "slug": "menu-kontekstowe",
       "required": false,
-      "requiredVariants": [],
+      "requiredVariants": [
+        {
+          "gestosc": "zwykla"
+        },
+        {
+          "gestosc": "zwarta"
+        }
+      ],
       "platforms": [
         "www"
       ],
@@ -523,7 +589,17 @@
     {
       "slug": "pusty-stan",
       "required": false,
-      "requiredVariants": [],
+      "requiredVariants": [
+        {
+          "powod": "brak-danych"
+        },
+        {
+          "powod": "brak-wynikow"
+        },
+        {
+          "powod": "blad-pobierania"
+        }
+      ],
       "platforms": [
         "www"
       ],
@@ -534,7 +610,14 @@
     {
       "slug": "baner",
       "required": false,
-      "requiredVariants": [],
+      "requiredVariants": [
+        {
+          "ton": "ostrzezenie"
+        },
+        {
+          "ton": "informacja"
+        }
+      ],
       "platforms": [
         "www"
       ],
@@ -545,7 +628,17 @@
     {
       "slug": "sekcja-powitalna",
       "required": false,
-      "requiredVariants": [],
+      "requiredVariants": [
+        {
+          "tlo": "powierzchnia"
+        },
+        {
+          "tlo": "akcent"
+        },
+        {
+          "tlo": "odwrocone"
+        }
+      ],
       "platforms": [
         "www"
       ],
@@ -567,7 +660,20 @@
     {
       "slug": "ikona",
       "required": false,
-      "requiredVariants": [],
+      "requiredVariants": [
+        {
+          "rozmiar": "maly"
+        },
+        {
+          "rozmiar": "sredni"
+        },
+        {
+          "rozmiar": "duzy"
+        },
+        {
+          "rozmiar": "wielki"
+        }
+      ],
       "platforms": [
         "www"
       ],

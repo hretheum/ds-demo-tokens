@@ -1,5 +1,5 @@
 {
-  "comment": "Dostawca zewnętrzny odpowiedzialny za dostawę do Marki Gamma (miesiąc 2026-06). Karta wyników liczona silnikiem platformy (scorecard adopcyjny 0–100) na pomiarach zebranych z instancji.",
+  "comment": "Dostawca zewnętrzny odpowiedzialny za dostawę do Marki Gamma (miesiąc 2026-06). Karta wyników liczona silnikiem platformy (scorecard adopcyjny 0–100) na pomiarach zebranych z instancji. Kontrakty niosą przepisy renderowania — deklarację zużycia tokenów w postaci wykonywalnej.",
   "dostawca": {
     "name": "Wykonawca zewnętrzny",
     "marki": [
@@ -19,7 +19,9 @@
             "drugorzedna",
             "destrukcyjna"
           ],
-          "required": true
+          "required": true,
+          "default": "podstawowa",
+          "description": "Waga akcji w układzie: podstawowa to jedyna akcja domyślna na widoku, drugorzędna towarzyszy jej bez wypełnienia, destrukcyjna otwiera potwierdzenie usunięcia."
         },
         {
           "name": "rozmiar",
@@ -29,19 +31,230 @@
             "sredni",
             "duzy"
           ],
-          "default": "sredni"
+          "required": false,
+          "default": "sredni",
+          "description": "Wysokość i dopełnienie poziome; mały służy paskom narzędzi w tabeli, duży pojedynczej akcji w sekcji powitalnej."
+        },
+        {
+          "name": "etykieta",
+          "type": "string",
+          "required": true,
+          "default": "Zapisz zmiany",
+          "description": "Tekst akcji zapisany czasownikiem w trybie rozkazującym lub w bezokoliczniku; próbka renderu bierze wartość domyślną."
         },
         {
           "name": "wylaczony",
           "type": "boolean",
-          "default": false
+          "required": false,
+          "default": false,
+          "description": "Blokuje wywołanie akcji, ale nie usuwa przycisku z kolejności odczytu — powód blokady podaje tekst pomocniczy obok."
+        },
+        {
+          "name": "pelnaSzerokosc",
+          "type": "boolean",
+          "required": false,
+          "default": false,
+          "description": "Rozciąga przycisk do szerokości rodzica; używane w oknie dialogowym na wąskim ekranie i w formularzu logowania."
         }
       ],
+      "states": {
+        "spoczynek": "W odmianie podstawowej: pełne tło akcji, etykieta w kolorze odwróconym, bez obwódki. Wysokość jest stała dla danego rozmiaru, więc rząd przycisków w pasku akcji trzyma równą linię.",
+        "najechanie": "Kursor nad prostokątem przycisku; tło schodzi o jeden krok skali w ciemniejszą stronę, a wymiary i grubość obwódki nie zmieniają się, żeby sąsiednie elementy nie przesuwały się w układzie.",
+        "wcisniety": "Trwa wciśnięcie wskaźnika lub przytrzymanie spacji; tło przechodzi w odcień aktywny i utrzymuje się do zwolnienia klawisza albo przycisku myszy.",
+        "skupienie": "Przycisk wskazany klawiaturą; obrys w kolorze skupienia rysuje się na zewnątrz obwódki, więc nie zabiera miejsca etykiecie i nie zmienia wysokości przycisku.",
+        "wylaczony": "Tło wyciszone, etykieta w kolorze tekstu wyłączonego; kliknięcie i klawisze nie wywołują akcji, ale element zostaje w kolejności Tab i jest odczytywany przez czytnik ekranu."
+      },
+      "behavior": {
+        "obszarKlikalny": "Cały prostokąt przycisku wraz z dopełnieniem. Przy rozmiarze małym widoczna wysokość wynosi 32 piksele i jest uzupełniana przezroczystym marginesem do 44 pikseli pola dotykowego.",
+        "ochronaPrzedPodwojnymWyslaniem": "Pierwsze kliknięcie wywołuje akcję i przełącza przycisk w stan wyłączony do czasu odpowiedzi; kliknięcia w tym oknie są odrzucane bez ponownego żądania.",
+        "odmianaDestrukcyjna": "Odmiana destrukcyjna nigdy nie usuwa danych od razu — wywołuje okno dialogowe z potwierdzeniem, a właściwe usunięcie następuje dopiero z tamtego okna.",
+        "pelnaSzerokosc": "Przy włączonej pełnej szerokości przycisk rozciąga się do rodzica, dopełnienie poziome zostaje bez zmian, a etykieta zostaje wyśrodkowana w nowej szerokości.",
+        "lamanieEtykiety": "Etykieta nie łamie się na dwa wiersze. Gdy przycisk ma narzuconą szerokość — pełną szerokość rodzica albo stałą szerokość kolumny — tekst dłuższy niż dostępne miejsce jest przycinany wielokropkiem; to sygnał do skrócenia treści, a nie do poszerzenia przycisku."
+      },
+      "a11y": {
+        "rola": "button; przy akcji nawigującej do innego adresu komponent renderuje się jako odnośnik i traci obsługę spacji.",
+        "klawiatura": "Enter i spacja wyzwalają akcję, spacja dopiero po zwolnieniu klawisza. Tab wprowadza i wyprowadza skupienie, Escape nie ma tu znaczenia.",
+        "czytnikEkranu": "Nazwa pochodzi z widocznej etykiety, więc pokrywa się z komendą, którą wypowiada użytkownik sterowania głosem. Blokada jest ogłaszana przez aria-disabled, dzięki czemu przycisk zostaje w kolejności Tab.",
+        "stanZadania": "Na czas żądania przycisk dostaje aria-busy, a etykieta pozostaje niezmieniona — zmiana tekstu w trakcie żądania gubiłaby punkt odniesienia dla czytnika.",
+        "kontrast": "Para tła akcji podstawowej i treści odwróconej trzyma kontrast co najmniej 4,5 do 1. Obrys skupienia trzyma co najmniej 3 do 1 wobec tła strony, bo leży poza obwódką i to z tłem strony sąsiaduje."
+      },
       "tokenConsumption": [
         "rdzen.komponent.przycisk-tlo",
         "rdzen.komponent.przycisk-tresc",
-        "rdzen.semantic.promien-interakcja"
-      ]
+        "rdzen.komponent.przycisk-tresc-odwrocona",
+        "rdzen.komponent.przycisk-obwodka",
+        "rdzen.komponent.przycisk-tlo-najechanie",
+        "rdzen.komponent.przycisk-tlo-wylaczone",
+        "rdzen.semantic.akcja-podstawowa-aktywna",
+        "rdzen.semantic.akcja-destrukcyjna",
+        "rdzen.semantic.tlo-powierzchnia",
+        "rdzen.semantic.obwodka-skupienie",
+        "rdzen.semantic.tekst-wylaczony",
+        "rdzen.semantic.promien-interakcja",
+        "rdzen.semantic.odstep-ciasny",
+        "rdzen.semantic.odstep-zwykly",
+        "rdzen.semantic.odstep-luzny",
+        "rdzen.semantic.typografia-przycisk",
+        "rdzen.semantic.typografia-podpis",
+        "rdzen.semantic.typografia-tresc-duza",
+        "rdzen.rozmiar.odstep-400",
+        "rdzen.rozmiar.odstep-500",
+        "rdzen.rozmiar.odstep-600",
+        "rdzen.rozmiar.obwodka-cienka",
+        "rdzen.rozmiar.obwodka-srednia",
+        "rdzen.typografia.grubosc-srednia",
+        "rdzen.typografia.wysokosc-ciasna",
+        "rdzen.typografia.rodzina-podstawowa"
+      ],
+      "renderRecipe": {
+        "parts": [
+          {
+            "id": "root",
+            "element": "box",
+            "children": [
+              "etykieta"
+            ],
+            "bind": {
+              "background": {
+                "token": "rdzen.komponent.przycisk-tlo"
+              },
+              "height": {
+                "token": "rdzen.rozmiar.odstep-500"
+              },
+              "paddingX": {
+                "token": "rdzen.semantic.odstep-zwykly"
+              },
+              "paddingY": {
+                "token": "rdzen.semantic.odstep-ciasny"
+              },
+              "radius": {
+                "token": "rdzen.semantic.promien-interakcja"
+              }
+            }
+          },
+          {
+            "id": "etykieta",
+            "element": "text",
+            "textFrom": "props.etykieta.default",
+            "bind": {
+              "color": {
+                "token": "rdzen.komponent.przycisk-tresc-odwrocona"
+              },
+              "fontSize": {
+                "token": "rdzen.semantic.typografia-przycisk"
+              },
+              "fontWeight": {
+                "token": "rdzen.typografia.grubosc-srednia"
+              },
+              "lineHeight": {
+                "token": "rdzen.typografia.wysokosc-ciasna"
+              },
+              "fontFamily": {
+                "token": "rdzen.typografia.rodzina-podstawowa"
+              }
+            }
+          }
+        ],
+        "variants": {
+          "odmiana": {
+            "drugorzedna": {
+              "root": {
+                "background": {
+                  "token": "rdzen.semantic.tlo-powierzchnia"
+                },
+                "borderWidth": {
+                  "token": "rdzen.rozmiar.obwodka-cienka"
+                },
+                "borderColor": {
+                  "token": "rdzen.komponent.przycisk-obwodka"
+                }
+              },
+              "etykieta": {
+                "color": {
+                  "token": "rdzen.komponent.przycisk-tresc"
+                }
+              }
+            },
+            "destrukcyjna": {
+              "root": {
+                "background": {
+                  "token": "rdzen.semantic.akcja-destrukcyjna"
+                }
+              }
+            }
+          },
+          "rozmiar": {
+            "maly": {
+              "root": {
+                "height": {
+                  "token": "rdzen.rozmiar.odstep-400"
+                },
+                "paddingX": {
+                  "token": "rdzen.semantic.odstep-ciasny"
+                }
+              },
+              "etykieta": {
+                "fontSize": {
+                  "token": "rdzen.semantic.typografia-podpis"
+                }
+              }
+            },
+            "duzy": {
+              "root": {
+                "height": {
+                  "token": "rdzen.rozmiar.odstep-600"
+                },
+                "paddingX": {
+                  "token": "rdzen.semantic.odstep-luzny"
+                }
+              },
+              "etykieta": {
+                "fontSize": {
+                  "token": "rdzen.semantic.typografia-tresc-duza"
+                }
+              }
+            }
+          }
+        },
+        "states": {
+          "najechanie": {
+            "root": {
+              "background": {
+                "token": "rdzen.komponent.przycisk-tlo-najechanie"
+              }
+            }
+          },
+          "wcisniety": {
+            "root": {
+              "background": {
+                "token": "rdzen.semantic.akcja-podstawowa-aktywna"
+              }
+            }
+          },
+          "skupienie": {
+            "root": {
+              "outlineColor": {
+                "token": "rdzen.semantic.obwodka-skupienie"
+              },
+              "outlineWidth": {
+                "token": "rdzen.rozmiar.obwodka-srednia"
+              }
+            }
+          },
+          "wylaczony": {
+            "root": {
+              "background": {
+                "token": "rdzen.komponent.przycisk-tlo-wylaczone"
+              }
+            },
+            "etykieta": {
+              "color": {
+                "token": "rdzen.semantic.tekst-wylaczony"
+              }
+            }
+          }
+        }
+      }
     },
     {
       "komponent": "karta",
@@ -54,19 +267,246 @@
             "pionowy",
             "poziomy"
           ],
-          "default": "pionowy"
+          "required": true,
+          "default": "pionowy",
+          "description": "Kierunek osi głównej: pionowy stawia miniaturę nad treścią, poziomy obok treści."
         },
         {
-          "name": "obwodka",
+          "name": "naglowek",
+          "type": "string",
+          "required": true,
+          "default": "Raport miesięczny",
+          "description": "Tytuł tematu, który karta grupuje; jedyne miejsce, po którym karta jest identyfikowana, i jedyny odsyłacz w jej wnętrzu."
+        },
+        {
+          "name": "opis",
+          "type": "string",
+          "required": false,
+          "default": "Zużycie i koszty za bieżący okres rozliczeniowy.",
+          "description": "Zdanie doprecyzowujące nagłówek; pominięcie skraca kartę, nie zostawiając pustego wiersza po opisie."
+        },
+        {
+          "name": "interaktywna",
           "type": "boolean",
-          "default": true
+          "required": false,
+          "default": false,
+          "description": "Gdy prawda, odsyłacz nagłówka rozciąga pole kliknięcia na całą kartę, a karta zyskuje stany najechania i skupienia."
+        },
+        {
+          "name": "zMiniatura",
+          "type": "boolean",
+          "required": false,
+          "default": true,
+          "description": "Obecność pola miniatury; przy fałszu nagłówek przesuwa się do górnej krawędzi dopełnienia, a odstęp po miniaturze znika."
         }
       ],
+      "states": {
+        "spoczynek": "Karta leży na powierzchni z cienką obwódką i promieniem powierzchni; przy interaktywna=false to jedyny stan, jaki komponent osiąga.",
+        "najechanie": "Wyłącznie przy interaktywna=true: tło przechodzi z powierzchni karty na wyniesione, obwódka z domyślnej na wyraźną, a treść nie zmienia położenia ani rozmiaru, żeby rząd kart nie drgał.",
+        "skupienie": "Wyłącznie przy interaktywna=true: obrys skupienia obejmuje całą powierzchnię razem z miniaturą, mimo że skupienie ma odsyłacz w nagłówku; sam nagłówek nie dostaje drugiego obrysu."
+      },
+      "behavior": {
+        "calaPowierzchniaJakoCel": "Przy interaktywna=true odsyłacz nagłówka rozciąga pole kliknięcia na całą kartę warstwą nakładaną, więc kliknięcie w miniaturę albo opis prowadzi do tego samego celu; zagnieżdżone przyciski leżą nad tą warstwą i zachowują własne cele.",
+        "lamanieTekstu": "Nagłówek łamie się najwyżej do dwóch wierszy, opis do trzech; nadmiar ucina wielokropek, dzięki czemu karty w jednym rzędzie siatki mają równą wysokość.",
+        "ukladPoziomy": "Przy uklad=poziomy miniatura staje się kwadratem i stoi przed treścią; kolejność w kodzie się nie zmienia, więc czytnik ekranu dostaje tę samą sekwencję w obu układach.",
+        "brakZagniezdzania": "Karta nie zagnieżdża drugiej karty; powierzchnia wstawiona do jej wnętrza traci obwódkę i własne tło, żeby nie powstała podwójna ramka."
+      },
+      "a11y": {
+        "rola": "Element article; jedyny odsyłacz karty siedzi w nagłówku i to on niesie cel — karta nigdy nie jest odsyłaczem opakowującym całą treść, bo odsyłacz nie może zawierać zagnieżdżonych przycisków.",
+        "klawiatura": "Karta nieinteraktywna nie zbiera skupienia. Interaktywna daje jeden przystanek Tab na odsyłaczu nagłówka, Enter otwiera cel, a zagnieżdżone akcje są kolejnymi przystankami po nim.",
+        "czytnikEkranu": "aria-labelledby wskazuje nagłówek, aria-describedby opis; miniatura jest ozdobna i ma pusty tekst alternatywny, więc czytnik nie zapowiada jej przed nagłówkiem."
+      },
       "tokenConsumption": [
         "rdzen.komponent.karta-tlo",
         "rdzen.komponent.karta-obwodka",
-        "rdzen.semantic.promien-powierzchnia"
-      ]
+        "rdzen.komponent.karta-naglowek",
+        "rdzen.komponent.karta-opis",
+        "rdzen.semantic.promien-powierzchnia",
+        "rdzen.semantic.promien-interakcja",
+        "rdzen.semantic.odstep-zwykly",
+        "rdzen.semantic.odstep-ciasny",
+        "rdzen.semantic.odstep-przylegly",
+        "rdzen.semantic.tlo-wyciszone",
+        "rdzen.semantic.tlo-wyniesione",
+        "rdzen.semantic.tekst-drugorzedny",
+        "rdzen.semantic.obwodka-wyrazna",
+        "rdzen.semantic.obwodka-skupienie",
+        "rdzen.semantic.typografia-naglowek-4",
+        "rdzen.semantic.typografia-podpis",
+        "rdzen.typografia.grubosc-pogrubiona",
+        "rdzen.typografia.wysokosc-zwarta",
+        "rdzen.typografia.wysokosc-zwykla",
+        "rdzen.rozmiar.obwodka-cienka",
+        "rdzen.rozmiar.obwodka-srednia",
+        "rdzen.rozmiar.odstep-400",
+        "rdzen.rozmiar.odstep-500",
+        "rdzen.rozmiar.odstep-600",
+        "rdzen.rozmiar.ikona-sredni"
+      ],
+      "renderRecipe": {
+        "parts": [
+          {
+            "id": "root",
+            "element": "stack",
+            "children": [
+              "miniatura",
+              "tresc"
+            ],
+            "bind": {
+              "background": {
+                "token": "rdzen.komponent.karta-tlo"
+              },
+              "borderColor": {
+                "token": "rdzen.komponent.karta-obwodka"
+              },
+              "borderWidth": {
+                "token": "rdzen.rozmiar.obwodka-cienka"
+              },
+              "radius": {
+                "token": "rdzen.semantic.promien-powierzchnia"
+              },
+              "paddingX": {
+                "token": "rdzen.semantic.odstep-zwykly"
+              },
+              "paddingY": {
+                "token": "rdzen.semantic.odstep-zwykly"
+              },
+              "gap": {
+                "token": "rdzen.semantic.odstep-ciasny"
+              },
+              "width": {
+                "token": "rdzen.rozmiar.odstep-600"
+              }
+            }
+          },
+          {
+            "id": "miniatura",
+            "element": "box",
+            "children": [
+              "znakMiniatury"
+            ],
+            "bind": {
+              "background": {
+                "token": "rdzen.semantic.tlo-wyciszone"
+              },
+              "radius": {
+                "token": "rdzen.semantic.promien-interakcja"
+              },
+              "width": {
+                "token": "rdzen.rozmiar.odstep-500"
+              },
+              "height": {
+                "token": "rdzen.rozmiar.odstep-400"
+              }
+            }
+          },
+          {
+            "id": "znakMiniatury",
+            "element": "icon",
+            "iconName": "informacja",
+            "bind": {
+              "color": {
+                "token": "rdzen.semantic.tekst-drugorzedny"
+              },
+              "width": {
+                "token": "rdzen.rozmiar.ikona-sredni"
+              },
+              "height": {
+                "token": "rdzen.rozmiar.ikona-sredni"
+              }
+            }
+          },
+          {
+            "id": "tresc",
+            "element": "stack",
+            "children": [
+              "naglowek",
+              "opis"
+            ],
+            "bind": {
+              "gap": {
+                "token": "rdzen.semantic.odstep-przylegly"
+              }
+            }
+          },
+          {
+            "id": "naglowek",
+            "element": "text",
+            "textFrom": "props.naglowek.default",
+            "bind": {
+              "color": {
+                "token": "rdzen.komponent.karta-naglowek"
+              },
+              "fontSize": {
+                "token": "rdzen.semantic.typografia-naglowek-4"
+              },
+              "fontWeight": {
+                "token": "rdzen.typografia.grubosc-pogrubiona"
+              },
+              "lineHeight": {
+                "token": "rdzen.typografia.wysokosc-zwarta"
+              }
+            }
+          },
+          {
+            "id": "opis",
+            "element": "text",
+            "textFrom": "props.opis.default",
+            "bind": {
+              "color": {
+                "token": "rdzen.komponent.karta-opis"
+              },
+              "fontSize": {
+                "token": "rdzen.semantic.typografia-podpis"
+              },
+              "lineHeight": {
+                "token": "rdzen.typografia.wysokosc-zwykla"
+              }
+            }
+          }
+        ],
+        "variants": {
+          "uklad": {
+            "poziomy": {
+              "root": {
+                "gap": {
+                  "token": "rdzen.semantic.odstep-zwykly"
+                },
+                "paddingY": {
+                  "token": "rdzen.semantic.odstep-ciasny"
+                }
+              },
+              "miniatura": {
+                "width": {
+                  "token": "rdzen.rozmiar.odstep-400"
+                }
+              }
+            }
+          }
+        },
+        "states": {
+          "najechanie": {
+            "root": {
+              "background": {
+                "token": "rdzen.semantic.tlo-wyniesione"
+              },
+              "borderColor": {
+                "token": "rdzen.semantic.obwodka-wyrazna"
+              }
+            }
+          },
+          "skupienie": {
+            "root": {
+              "outlineColor": {
+                "token": "rdzen.semantic.obwodka-skupienie"
+              },
+              "outlineWidth": {
+                "token": "rdzen.rozmiar.obwodka-srednia"
+              }
+            }
+          }
+        }
+      }
     }
   ]
 }

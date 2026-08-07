@@ -216,6 +216,84 @@
               }
             },
             {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Skale prymitywów"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "color_scale",
+              "config": {
+                "groupPath": "rdzen.color"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Mapa ról semantycznych"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "token_architecture",
+              "config": {
+                "groupPath": "rdzen.semantic"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Barwa akcji w zastosowaniu"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "brand_color_usage",
+              "config": {
+                "tokenPath": "rdzen.semantic.akcja-podstawowa"
+              }
+            },
+            {
               "kind": "tokens",
               "config": {
                 "kolekcjaNazwa": "rdzen",
@@ -312,6 +390,32 @@
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Kroje i skala rozmiarów"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "typography_scale",
+              "config": {
+                "groupPath": "rdzen.typografia"
               }
             },
             {
@@ -672,6 +776,36 @@
               }
             },
             {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Odstępy i rozmiary w skali"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "dimension_scale",
+              "config": {
+                "groupPath": "rdzen.rozmiar",
+                "tokenTypes": [
+                  "space",
+                  "size"
+                ]
+              }
+            },
+            {
               "kind": "tokens",
               "config": {
                 "kolekcjaNazwa": "rdzen",
@@ -748,6 +882,36 @@
                       }
                     ]
                   }
+                ]
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Promienie i grubości obwódek"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "dimension_scale",
+              "config": {
+                "groupPath": "rdzen.rozmiar",
+                "tokenTypes": [
+                  "radius",
+                  "borderWidth"
                 ]
               }
             },
@@ -1086,6 +1250,30 @@
                   }
                 ]
               }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zbiór ikon systemu"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "icon_grid",
+              "config": {}
             },
             {
               "kind": "image_gallery",
@@ -1809,107 +1997,89 @@
           "introduction": "Akcja towarzysząca; obwódka zamiast wypełnienia.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Akcja towarzysząca; obwódka zamiast wypełnienia."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-przycisk-drugorzedny",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "rozmiar"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "maly, sredni, duzy"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Przycisk drugorzędny"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Przycisk drugorzędny"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Przycisk drugorzędny"
               }
             },
             {
@@ -1998,107 +2168,89 @@
           "introduction": "Akcja wyrażona samą ikoną, z etykietą dla czytników.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Akcja wyrażona samą ikoną, z etykietą dla czytników."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-przycisk-ikonowy",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "rozmiar"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "maly, sredni"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Przycisk ikonowy"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Przycisk ikonowy"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Przycisk ikonowy"
               }
             },
             {
@@ -2187,107 +2339,89 @@
           "introduction": "Wprowadzanie tekstu z etykietą, pomocą i stanem błędu.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Wprowadzanie tekstu z etykietą, pomocą i stanem błędu."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-pole-tekstowe",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "stan"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "zwykly, skupienie, blad, wylaczony"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Pole tekstowe"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Pole tekstowe"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Pole tekstowe"
               }
             },
             {
@@ -2376,107 +2510,89 @@
           "introduction": "Wariant pola dla wartości liczbowych z krokiem.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Wariant pola dla wartości liczbowych z krokiem."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-pole-liczbowe",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "stan"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "zwykly, blad"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Pole liczbowe"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Pole liczbowe"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Pole liczbowe"
               }
             },
             {
@@ -2565,107 +2681,89 @@
           "introduction": "Pojedynczy wybór tak/nie w formularzach.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Pojedynczy wybór tak/nie w formularzach."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-pole-wyboru",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "stan"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "zaznaczone, odznaczone, nieokreslone"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Pole wyboru"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Pole wyboru"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Pole wyboru"
               }
             },
             {
@@ -2754,107 +2852,89 @@
           "introduction": "Wybór daty z kalendarzem i walidacją zakresu.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Wybór daty z kalendarzem i walidacją zakresu."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-pole-daty",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "stan"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "zwykly, blad"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Pole daty"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Pole daty"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Pole daty"
               }
             },
             {
@@ -2943,107 +3023,89 @@
           "introduction": "Wybór jednej pozycji z listy; wyszukiwanie od ośmiu pozycji.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Wybór jednej pozycji z listy; wyszukiwanie od ośmiu pozycji."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-lista-rozwijana",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "stan"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "zwykly, otwarta, blad"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Lista rozwijana"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Lista rozwijana"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Lista rozwijana"
               }
             },
             {
@@ -3132,107 +3194,89 @@
           "introduction": "Natychmiastowa zmiana ustawienia; nie wymaga zapisu.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Natychmiastowa zmiana ustawienia; nie wymaga zapisu."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-przelacznik",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "stan"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "wlaczony, wylaczony"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Przełącznik"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Przełącznik"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Przełącznik"
               }
             },
             {
@@ -3321,107 +3365,89 @@
           "introduction": "Wybór wartości z zakresu; obsługa klawiaturą strzałkami.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Wybór wartości z zakresu; obsługa klawiaturą strzałkami."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-suwak",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "stan"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "zwykly, wylaczony"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Suwak"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Suwak"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Suwak"
               }
             },
             {
@@ -3510,107 +3536,89 @@
           "introduction": "Powierzchnia grupująca treść jednego tematu.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Powierzchnia grupująca treść jednego tematu."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-karta",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "uklad"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "pionowy, poziomy"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Karta"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Karta"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Karta"
               }
             },
             {
@@ -3699,107 +3707,89 @@
           "introduction": "Karta z obrazem, ceną i akcją; wariant siatki i listy.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Karta z obrazem, ceną i akcją; wariant siatki i listy."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-karta-produktu",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "uklad"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "siatka, lista"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Karta produktu"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Karta produktu"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Karta produktu"
               }
             },
             {
@@ -3888,16 +3878,27 @@
           "introduction": "Dane tabelaryczne z sortowaniem i wierszem naprzemiennym.",
           "bloki": [
             {
-              "kind": "text",
+              "kind": "design",
+              "odroczony": {
+                "figmaNodeRef": "kmp-tabela",
+                "display": "image",
+                "showVariants": false
+              }
+            },
+            {
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "paragraph",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
                         "type": "text",
-                        "text": "Dane tabelaryczne z sortowaniem i wierszem naprzemiennym."
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
@@ -3905,11 +3906,61 @@
               }
             },
             {
-              "kind": "design",
-              "odroczony": {
-                "figmaNodeRef": "kmp-tabela",
-                "display": "image",
-                "showVariants": false
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Tabela"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Tabela"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Tabela"
               }
             },
             {
@@ -3998,107 +4049,89 @@
           "introduction": "Krótka etykieta stanu lub kategorii.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Krótka etykieta stanu lub kategorii."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-znacznik",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "ton"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "neutralny, sukces, ostrzezenie, blad"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Znacznik"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Znacznik"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Znacznik"
               }
             },
             {
@@ -4187,107 +4220,89 @@
           "introduction": "Licznik lub wskaźnik nowości przy elemencie nawigacji.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Licznik lub wskaźnik nowości przy elemencie nawigacji."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-plakietka",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "ton"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "neutralny, akcent"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Plakietka"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Plakietka"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Plakietka"
               }
             },
             {
@@ -4376,107 +4391,89 @@
           "introduction": "Reprezentacja osoby lub zespołu; inicjały przy braku obrazu.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Reprezentacja osoby lub zespołu; inicjały przy braku obrazu."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-awatar",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "rozmiar"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "maly, sredni, duzy"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Awatar"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Awatar"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Awatar"
               }
             },
             {
@@ -4565,107 +4562,89 @@
           "introduction": "Przerwanie przepływu wymagające decyzji; pułapka skupienia.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Przerwanie przepływu wymagające decyzji; pułapka skupienia."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-okno-dialogowe",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "rozmiar"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "male, srednie, duze"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Okno dialogowe"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Okno dialogowe"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Okno dialogowe"
               }
             },
             {
@@ -4754,107 +4733,89 @@
           "introduction": "Treść pomocnicza wsuwana z krawędzi ekranu.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Treść pomocnicza wsuwana z krawędzi ekranu."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-panel-boczny",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "strona"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "lewa, prawa"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Panel boczny"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Panel boczny"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Panel boczny"
               }
             },
             {
@@ -4943,16 +4904,27 @@
           "introduction": "Tytuł, okruszki i akcje kontekstowe strony.",
           "bloki": [
             {
-              "kind": "text",
+              "kind": "design",
+              "odroczony": {
+                "figmaNodeRef": "kmp-naglowek-strony",
+                "display": "image",
+                "showVariants": false
+              }
+            },
+            {
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "paragraph",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
                         "type": "text",
-                        "text": "Tytuł, okruszki i akcje kontekstowe strony."
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
@@ -4960,11 +4932,61 @@
               }
             },
             {
-              "kind": "design",
-              "odroczony": {
-                "figmaNodeRef": "kmp-naglowek-strony",
-                "display": "image",
-                "showVariants": false
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Nagłówek strony"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Nagłówek strony"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Nagłówek strony"
               }
             },
             {
@@ -5053,16 +5075,27 @@
           "introduction": "Zamknięcie strony: nawigacja pomocnicza i informacje prawne.",
           "bloki": [
             {
-              "kind": "text",
+              "kind": "design",
+              "odroczony": {
+                "figmaNodeRef": "kmp-stopka",
+                "display": "image",
+                "showVariants": false
+              }
+            },
+            {
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "paragraph",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
                         "type": "text",
-                        "text": "Zamknięcie strony: nawigacja pomocnicza i informacje prawne."
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
@@ -5070,11 +5103,61 @@
               }
             },
             {
-              "kind": "design",
-              "odroczony": {
-                "figmaNodeRef": "kmp-stopka",
-                "display": "image",
-                "showVariants": false
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Stopka"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Stopka"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Stopka"
               }
             },
             {
@@ -5163,107 +5246,89 @@
           "introduction": "Komunikat o wyniku operacji; cztery tony.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Komunikat o wyniku operacji; cztery tony."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-powiadomienie",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "ton"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "informacja, sukces, ostrzezenie, blad"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Powiadomienie"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Powiadomienie"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Powiadomienie"
               }
             },
             {
@@ -5352,107 +5417,89 @@
           "introduction": "Postęp operacji o znanym czasie trwania.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Postęp operacji o znanym czasie trwania."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-pasek-postepu",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "stan"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "w-toku, ukonczony"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Pasek postępu"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Pasek postępu"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Pasek postępu"
               }
             },
             {
@@ -5541,16 +5588,27 @@
           "introduction": "Operacja o nieznanym czasie; szanuje ograniczenie ruchu.",
           "bloki": [
             {
-              "kind": "text",
+              "kind": "design",
+              "odroczony": {
+                "figmaNodeRef": "kmp-wskaznik-ladowania",
+                "display": "image",
+                "showVariants": false
+              }
+            },
+            {
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "paragraph",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
                         "type": "text",
-                        "text": "Operacja o nieznanym czasie; szanuje ograniczenie ruchu."
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
@@ -5558,11 +5616,61 @@
               }
             },
             {
-              "kind": "design",
-              "odroczony": {
-                "figmaNodeRef": "kmp-wskaznik-ladowania",
-                "display": "image",
-                "showVariants": false
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Wskaźnik ładowania"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Wskaźnik ładowania"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Wskaźnik ładowania"
               }
             },
             {
@@ -5651,107 +5759,89 @@
           "introduction": "Przełączanie widoków tej samej treści.",
           "bloki": [
             {
-              "kind": "text",
-              "contentRich": {
-                "type": "doc",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "content": [
-                      {
-                        "type": "text",
-                        "text": "Przełączanie widoków tej samej treści."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
               "kind": "design",
               "odroczony": {
                 "figmaNodeRef": "kmp-zakladki",
                 "display": "image",
-                "showVariants": true
+                "showVariants": false
               }
             },
             {
-              "kind": "table",
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "table",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Właściwość"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableHeader",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "Wartości"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "type": "tableRow",
-                        "content": [
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "uklad"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "tableCell",
-                            "content": [
-                              {
-                                "type": "paragraph",
-                                "content": [
-                                  {
-                                    "type": "text",
-                                    "text": "poziomy, pionowy"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
                 ]
+              }
+            },
+            {
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Zakładki"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Zakładki"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Zakładki"
               }
             },
             {
@@ -5840,16 +5930,27 @@
           "introduction": "Ścieżka położenia w hierarchii serwisu.",
           "bloki": [
             {
-              "kind": "text",
+              "kind": "design",
+              "odroczony": {
+                "figmaNodeRef": "kmp-okruszki",
+                "display": "image",
+                "showVariants": false
+              }
+            },
+            {
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "paragraph",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
                         "type": "text",
-                        "text": "Ścieżka położenia w hierarchii serwisu."
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
@@ -5857,11 +5958,61 @@
               }
             },
             {
-              "kind": "design",
-              "odroczony": {
-                "figmaNodeRef": "kmp-okruszki",
-                "display": "image",
-                "showVariants": false
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Okruszki"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Okruszki"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Okruszki"
               }
             },
             {
@@ -5950,16 +6101,27 @@
           "introduction": "Nawigacja po stronach długich list.",
           "bloki": [
             {
-              "kind": "text",
+              "kind": "design",
+              "odroczony": {
+                "figmaNodeRef": "kmp-stronicowanie",
+                "display": "image",
+                "showVariants": false
+              }
+            },
+            {
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "paragraph",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
                         "type": "text",
-                        "text": "Nawigacja po stronach długich list."
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
@@ -5967,11 +6129,61 @@
               }
             },
             {
-              "kind": "design",
-              "odroczony": {
-                "figmaNodeRef": "kmp-stronicowanie",
-                "display": "image",
-                "showVariants": false
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Stronicowanie"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Stronicowanie"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Stronicowanie"
               }
             },
             {
@@ -6060,16 +6272,27 @@
           "introduction": "Krótkie wyjaśnienie elementu po najechaniu lub skupieniu.",
           "bloki": [
             {
-              "kind": "text",
+              "kind": "design",
+              "odroczony": {
+                "figmaNodeRef": "kmp-podpowiedz",
+                "display": "image",
+                "showVariants": false
+              }
+            },
+            {
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "paragraph",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
                         "type": "text",
-                        "text": "Krótkie wyjaśnienie elementu po najechaniu lub skupieniu."
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
@@ -6077,11 +6300,61 @@
               }
             },
             {
-              "kind": "design",
-              "odroczony": {
-                "figmaNodeRef": "kmp-podpowiedz",
-                "display": "image",
-                "showVariants": false
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Podpowiedź"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Podpowiedź"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Podpowiedź"
               }
             },
             {
@@ -6170,16 +6443,27 @@
           "introduction": "Rozbudowana treść kontekstowa zakotwiczona przy elemencie.",
           "bloki": [
             {
-              "kind": "text",
+              "kind": "design",
+              "odroczony": {
+                "figmaNodeRef": "kmp-dymek",
+                "display": "image",
+                "showVariants": false
+              }
+            },
+            {
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "paragraph",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
                         "type": "text",
-                        "text": "Rozbudowana treść kontekstowa zakotwiczona przy elemencie."
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
@@ -6187,11 +6471,61 @@
               }
             },
             {
-              "kind": "design",
-              "odroczony": {
-                "figmaNodeRef": "kmp-dymek",
-                "display": "image",
-                "showVariants": false
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Dymek"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Dymek"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Dymek"
               }
             },
             {
@@ -6280,16 +6614,27 @@
           "introduction": "Lista akcji dla wskazanego elementu.",
           "bloki": [
             {
-              "kind": "text",
+              "kind": "design",
+              "odroczony": {
+                "figmaNodeRef": "kmp-menu-kontekstowe",
+                "display": "image",
+                "showVariants": false
+              }
+            },
+            {
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "paragraph",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
                         "type": "text",
-                        "text": "Lista akcji dla wskazanego elementu."
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
@@ -6297,11 +6642,61 @@
               }
             },
             {
-              "kind": "design",
-              "odroczony": {
-                "figmaNodeRef": "kmp-menu-kontekstowe",
-                "display": "image",
-                "showVariants": false
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Menu kontekstowe"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Menu kontekstowe"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Menu kontekstowe"
               }
             },
             {
@@ -6390,16 +6785,27 @@
           "introduction": "Widok bez danych: wyjaśnienie i pierwsza akcja.",
           "bloki": [
             {
-              "kind": "text",
+              "kind": "design",
+              "odroczony": {
+                "figmaNodeRef": "kmp-pusty-stan",
+                "display": "image",
+                "showVariants": false
+              }
+            },
+            {
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "paragraph",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
                         "type": "text",
-                        "text": "Widok bez danych: wyjaśnienie i pierwsza akcja."
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
@@ -6407,11 +6813,61 @@
               }
             },
             {
-              "kind": "design",
-              "odroczony": {
-                "figmaNodeRef": "kmp-pusty-stan",
-                "display": "image",
-                "showVariants": false
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Pusty stan"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Pusty stan"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Pusty stan"
               }
             },
             {
@@ -6500,16 +6956,27 @@
           "introduction": "Komunikat na poziomie całego serwisu.",
           "bloki": [
             {
-              "kind": "text",
+              "kind": "design",
+              "odroczony": {
+                "figmaNodeRef": "kmp-baner",
+                "display": "image",
+                "showVariants": false
+              }
+            },
+            {
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "paragraph",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
                         "type": "text",
-                        "text": "Komunikat na poziomie całego serwisu."
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
@@ -6517,11 +6984,61 @@
               }
             },
             {
-              "kind": "design",
-              "odroczony": {
-                "figmaNodeRef": "kmp-baner",
-                "display": "image",
-                "showVariants": false
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Baner"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Baner"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Baner"
               }
             },
             {
@@ -6630,16 +7147,27 @@
           "introduction": "Otwarcie strony startowej produktu.",
           "bloki": [
             {
-              "kind": "text",
+              "kind": "design",
+              "odroczony": {
+                "figmaNodeRef": "kmp-sekcja-powitalna",
+                "display": "image",
+                "showVariants": false
+              }
+            },
+            {
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "paragraph",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
                         "type": "text",
-                        "text": "Otwarcie strony startowej produktu."
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
@@ -6647,11 +7175,61 @@
               }
             },
             {
-              "kind": "design",
-              "odroczony": {
-                "figmaNodeRef": "kmp-sekcja-powitalna",
-                "display": "image",
-                "showVariants": false
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Sekcja powitalna"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Sekcja powitalna"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Sekcja powitalna"
               }
             },
             {
@@ -6740,16 +7318,27 @@
           "introduction": "Osadzenie ikony z obowiązkową etykietą znaczeniową.",
           "bloki": [
             {
-              "kind": "text",
+              "kind": "design",
+              "odroczony": {
+                "figmaNodeRef": "kmp-ikona",
+                "display": "image",
+                "showVariants": false
+              }
+            },
+            {
+              "kind": "heading",
               "contentRich": {
                 "type": "doc",
                 "content": [
                   {
-                    "type": "paragraph",
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
                     "content": [
                       {
                         "type": "text",
-                        "text": "Osadzenie ikony z obowiązkową etykietą znaczeniową."
+                        "text": "Warianty i stany"
                       }
                     ]
                   }
@@ -6757,11 +7346,61 @@
               }
             },
             {
-              "kind": "design",
-              "odroczony": {
-                "figmaNodeRef": "kmp-ikona",
-                "display": "image",
-                "showVariants": false
+              "kind": "component_matrix",
+              "config": {
+                "componentName": "Ikona"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Budowa"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_anatomy",
+              "config": {
+                "componentName": "Ikona"
+              }
+            },
+            {
+              "kind": "heading",
+              "contentRich": {
+                "type": "doc",
+                "content": [
+                  {
+                    "type": "heading",
+                    "attrs": {
+                      "level": 2
+                    },
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Zachowanie"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "component_behavior",
+              "config": {
+                "componentName": "Ikona"
               }
             },
             {

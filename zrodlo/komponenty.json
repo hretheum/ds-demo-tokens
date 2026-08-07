@@ -531,8 +531,16 @@
         ],
         "variants": [
           {
-            "name": "domyslny",
-            "axes": {}
+            "name": "gestosc=zwykla",
+            "axes": {
+              "gestosc": "zwykla"
+            }
+          },
+          {
+            "name": "gestosc=zwarta",
+            "axes": {
+              "gestosc": "zwarta"
+            }
           }
         ]
       },
@@ -543,8 +551,16 @@
         ],
         "variants": [
           {
-            "name": "domyslny",
-            "axes": {}
+            "name": "tlo=zwykle",
+            "axes": {
+              "tlo": "zwykle"
+            }
+          },
+          {
+            "name": "tlo=naprzemienne",
+            "axes": {
+              "tlo": "naprzemienne"
+            }
           }
         ]
       },
@@ -673,8 +689,16 @@
         ],
         "variants": [
           {
-            "name": "domyslny",
-            "axes": {}
+            "name": "uklad=pelny",
+            "axes": {
+              "uklad": "pelny"
+            }
+          },
+          {
+            "name": "uklad=zwarty",
+            "axes": {
+              "uklad": "zwarty"
+            }
           }
         ]
       },
@@ -685,8 +709,16 @@
         ],
         "variants": [
           {
-            "name": "domyslny",
-            "axes": {}
+            "name": "ton=zwykly",
+            "axes": {
+              "ton": "zwykly"
+            }
+          },
+          {
+            "name": "ton=odwrocony",
+            "axes": {
+              "ton": "odwrocony"
+            }
           }
         ]
       },
@@ -743,8 +775,22 @@
         ],
         "variants": [
           {
-            "name": "domyslny",
-            "axes": {}
+            "name": "rozmiar=maly",
+            "axes": {
+              "rozmiar": "maly"
+            }
+          },
+          {
+            "name": "rozmiar=sredni",
+            "axes": {
+              "rozmiar": "sredni"
+            }
+          },
+          {
+            "name": "rozmiar=duzy",
+            "axes": {
+              "rozmiar": "duzy"
+            }
           }
         ]
       },
@@ -787,8 +833,16 @@
         ],
         "variants": [
           {
-            "name": "domyslny",
-            "axes": {}
+            "name": "uklad=zwiezly",
+            "axes": {
+              "uklad": "zwiezly"
+            }
+          },
+          {
+            "name": "uklad=pelny",
+            "axes": {
+              "uklad": "pelny"
+            }
           }
         ]
       },
@@ -799,8 +853,16 @@
         ],
         "variants": [
           {
-            "name": "domyslny",
-            "axes": {}
+            "name": "pozycja=gora",
+            "axes": {
+              "pozycja": "gora"
+            }
+          },
+          {
+            "name": "pozycja=dol",
+            "axes": {
+              "pozycja": "dol"
+            }
           }
         ]
       },
@@ -811,8 +873,16 @@
         ],
         "variants": [
           {
-            "name": "domyslny",
-            "axes": {}
+            "name": "rozmiar=sredni",
+            "axes": {
+              "rozmiar": "sredni"
+            }
+          },
+          {
+            "name": "rozmiar=duzy",
+            "axes": {
+              "rozmiar": "duzy"
+            }
           }
         ]
       },
@@ -823,8 +893,16 @@
         ],
         "variants": [
           {
-            "name": "domyslny",
-            "axes": {}
+            "name": "gestosc=zwykla",
+            "axes": {
+              "gestosc": "zwykla"
+            }
+          },
+          {
+            "name": "gestosc=zwarta",
+            "axes": {
+              "gestosc": "zwarta"
+            }
           }
         ]
       },
@@ -835,8 +913,22 @@
         ],
         "variants": [
           {
-            "name": "domyslny",
-            "axes": {}
+            "name": "powod=brak-danych",
+            "axes": {
+              "powod": "brak-danych"
+            }
+          },
+          {
+            "name": "powod=brak-wynikow",
+            "axes": {
+              "powod": "brak-wynikow"
+            }
+          },
+          {
+            "name": "powod=blad-pobierania",
+            "axes": {
+              "powod": "blad-pobierania"
+            }
           }
         ]
       },
@@ -847,8 +939,16 @@
         ],
         "variants": [
           {
-            "name": "domyslny",
-            "axes": {}
+            "name": "ton=ostrzezenie",
+            "axes": {
+              "ton": "ostrzezenie"
+            }
+          },
+          {
+            "name": "ton=informacja",
+            "axes": {
+              "ton": "informacja"
+            }
           }
         ]
       },
@@ -859,8 +959,22 @@
         ],
         "variants": [
           {
-            "name": "domyslny",
-            "axes": {}
+            "name": "tlo=powierzchnia",
+            "axes": {
+              "tlo": "powierzchnia"
+            }
+          },
+          {
+            "name": "tlo=akcent",
+            "axes": {
+              "tlo": "akcent"
+            }
+          },
+          {
+            "name": "tlo=odwrocone",
+            "axes": {
+              "tlo": "odwrocone"
+            }
           }
         ]
       },
@@ -883,8 +997,28 @@
         ],
         "variants": [
           {
-            "name": "domyslny",
-            "axes": {}
+            "name": "rozmiar=maly",
+            "axes": {
+              "rozmiar": "maly"
+            }
+          },
+          {
+            "name": "rozmiar=sredni",
+            "axes": {
+              "rozmiar": "sredni"
+            }
+          },
+          {
+            "name": "rozmiar=duzy",
+            "axes": {
+              "rozmiar": "duzy"
+            }
+          },
+          {
+            "name": "rozmiar=wielki",
+            "axes": {
+              "rozmiar": "wielki"
+            }
           }
         ]
       },

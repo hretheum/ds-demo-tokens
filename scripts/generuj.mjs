@@ -15,6 +15,9 @@
 import { mkdirSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+// Kontrakty pozycji katalogu wraz z przepisami renderowania — osobny moduł, bo to osobny
+// materiał objętościowo (opis zachowania i przepis per pozycja) [widoki generowane §2a].
+import { KONTRAKTY } from './kontrakty-komponentow.mjs'
 
 const KATALOG = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const NS = 'com.example'
@@ -709,7 +712,14 @@ const KOMPONENTY = [
   { slug: 'sekcja-powitalna', nazwa: 'Sekcja powitalna', opis: 'Otwarcie strony startowej produktu.', status: 'przygotowanie' },
   { slug: 'separator', nazwa: 'Separator', opis: 'Wizualne rozdzielenie grup treści.', status: 'stabilny' },
   { slug: 'ikona', nazwa: 'Ikona', opis: 'Osadzenie ikony z obowiązkową etykietą znaczeniową.', status: 'stabilny' },
-]
+].map((k) => {
+  // Osie wariantów pozycji, które ich wcześniej nie miały, dokłada moduł kontraktów:
+  // rejestr, źródło projektowe i przepis renderowania mają widzieć TE SAME osie
+  // (macierz komponentu bierze wiersze z rejestru, a nadpisania z przepisu).
+  const osieZKontraktu = KONTRAKTY[k.slug]?.osie
+  if (!k.osie && osieZKontraktu && Object.keys(osieZKontraktu).length) return { ...k, osie: osieZKontraktu }
+  return k
+})
 
 // Rejestr oczekiwań: wszystkie komponenty modelu + dwa oczekiwania bez pokrycia w stanie
 // (jedno WYMAGANE → P0, jedno opcjonalne → P1) — luka rejestr-vs-stan w obu wagach.
@@ -967,22 +977,39 @@ const notyB = () => ({ kind: 'release_notes', config: { versionScope: 'all' } })
 const storybookB = (storyId) => ({ kind: 'storybook_embed', config: { url: 'https://storybook.demo.example', storyId, height: 360 }, header: { title: 'Osadzenie Storybooka', description: 'Adres przykładowy — w instalacji klienta wskazuje jego opublikowanego Storybooka.' }, showHeader: true })
 const embedB = (url, provider, naglowek) => ({ kind: 'embed', config: { url, provider, aspectRatio: '16:9' }, ...(naglowek ? { header: { title: naglowek }, showHeader: true } : {}) })
 // bloki odroczone — konfigurację uzupełnia zasiew po utworzeniu źródła danych i zasobów
+// Widoki generowane [widoki generowane §2]: konfiguracja wskazuje ŹRÓDŁO DANYCH
+// (grupa tokenów albo nazwa pozycji rejestru), a treść powstaje przy każdym wyświetleniu.
+// Nagłówek sekcji jest OSOBNYM blokiem strony (h2), a nie nagłówkiem bloku (h3):
+// widoki niosą własne nagłówki wewnętrzne h3, więc bez sekcji powstawał przeskok
+// poziomów h1 → h3, który zatrzymuje bramkę dostępności.
+const skalaBarwB = (groupPath) => ({ kind: 'color_scale', config: { groupPath } })
+const architekturaB = (groupPath) => ({ kind: 'token_architecture', config: { groupPath } })
+const barwaUzycieB = (tokenPath) => ({ kind: 'brand_color_usage', config: { tokenPath } })
+const typografiaB = (groupPath) => ({ kind: 'typography_scale', config: { groupPath } })
+const wymiaryB = (groupPath, tokenTypes) => ({ kind: 'dimension_scale', config: { groupPath, ...(tokenTypes ? { tokenTypes } : {}) } })
+const macierzB = (componentName, os) => ({ kind: 'component_matrix', config: { componentName, ...(os ? { axis: os } : {}) } })
+const budowaB = (componentName) => ({ kind: 'component_anatomy', config: { componentName } })
+const zachowanieB = (componentName) => ({ kind: 'component_behavior', config: { componentName } })
+const ikonyB = () => ({ kind: 'icon_grid', config: {} })
+
 const designB = (slug, pokazWarianty = true) => ({ kind: 'design', odroczony: { figmaNodeRef: `kmp-${slug}`, display: 'image', showVariants: pokazWarianty } })
 const galeriaB = (...items) => ({ kind: 'image_gallery', odroczony: { galeria: items.map(([zasob, alt, caption]) => ({ zasob, alt, ...(caption ? { caption } : {}) })) } })
 const zalacznikiB = (...items) => ({ kind: 'attachments', odroczony: { zalaczniki: items.map(([zasob, name]) => ({ zasob, name })) } })
 
 // Strona komponentu generowana z modelu (strony wzorcowe kind=pattern)
 function stronaKomponentu(k) {
+  // Strona komponentu bez podwojeń [widoki generowane §5.2, §5.3]: wstęp strony niesie
+  // opis raz (nie powtarza go pierwszy blok tekstu), a warianty pokazuje macierz
+  // generowana z rejestru i kontraktu — ręczna tabela tych samych danych odpadła.
   const bloki = [
-    tekstB(k.opis),
-    designB(k.slug, Boolean(k.osie)),
+    designB(k.slug, false),
+    naglowekB('Warianty i stany', 2),
+    macierzB(k.nazwa),
+    naglowekB('Budowa', 2),
+    budowaB(k.nazwa),
+    naglowekB('Zachowanie', 2),
+    zachowanieB(k.nazwa),
   ]
-  if (k.osie) {
-    bloki.push(tabelaB(
-      ['Właściwość', 'Wartości'],
-      Object.entries(k.osie).map(([os, wartosci]) => [os, wartosci.join(', ')]),
-    ))
-  }
   bloki.push(
     naglowekB('Zasady użycia', 2),
     listaB(
@@ -1052,6 +1079,12 @@ const TRESC = {
           introduction: 'Skale prymitywów i role semantyczne barw.',
           bloki: [
             tekstB('Paleta składa się z dziewięciu skal po dziesięć kroków. Produkt nigdy nie używa skal wprost: widoki konsumują wyłącznie role semantyczne, które wskazują prymitywy aliasami. Dzięki temu marka może przemalować system bez dotykania komponentów.'),
+            naglowekB('Skale prymitywów', 2),
+            skalaBarwB('rdzen.color'),
+            naglowekB('Mapa ról semantycznych', 2),
+            architekturaB('rdzen.semantic'),
+            naglowekB('Barwa akcji w zastosowaniu', 2),
+            barwaUzycieB('rdzen.semantic.akcja-podstawowa'),
             tokenyB('rdzen.semantic', ['name', 'value', 'description'], 'Role semantyczne barw'),
             dodontB(
               ['Używaj ról semantycznych: tekst-podstawowy, tlo-strona, akcja-podstawowa.', 'Nie wskazuj skal wprost: blekit-600 w widoku to rozjazd warstwy.', 'Rola przeżyje zmianę palety.', 'Skan wykryje takie użycie jako layer-mismatch.'],
@@ -1064,6 +1097,8 @@ const TRESC = {
           introduction: 'Rozmiary, wysokości wiersza i grubości pisma.',
           bloki: [
             tekstB('Skala typograficzna rośnie od 12 do 48 pikseli. Wysokości wiersza są bezjednostkowe, a grubości ograniczone do czterech, żeby uniknąć pseudopogrubień.'),
+            naglowekB('Kroje i skala rozmiarów', 2),
+            typografiaB('rdzen.typografia'),
             tokenyB('rdzen.typografia', ['name', 'value'], 'Prymitywy typografii'),
             tabelaB(
               ['Zastosowanie', 'Rozmiar', 'Wysokość wiersza', 'Grubość'],
@@ -1081,6 +1116,8 @@ const TRESC = {
           introduction: 'Skala odstępów i progi przełamań układu.',
           bloki: [
             tekstB('Skala odstępów oparta jest na kroku 4 px z zagęszczeniem w dolnym zakresie. Odstępy semantyczne (przylegly, ciasny, zwykly, luzny, sekcja, strona) wskazują skalę aliasami i to ich używają komponenty.'),
+            naglowekB('Odstępy i rozmiary w skali', 2),
+            wymiaryB('rdzen.rozmiar', ['space', 'size']),
             tokenyB('rdzen.rozmiar', ['name', 'value'], 'Prymitywy wymiarów'),
             kodB('css', '.karta {\n  padding: var(--rdzen-semantic-odstep-zwykly);\n  gap: var(--rdzen-semantic-odstep-ciasny);\n}', 'Konsumpcja odstępów semantycznych w kodzie produktu'),
             calloutB('info', 'Progi przełamań układu żyją w grupie wewnetrzne i są konsumowane wyłącznie przez kod. Ich pojawienie się w pliku projektowym skan klasyfikuje jako rozjazd architektoniczny (obszar modelowania wypłynął poza kod).'),
@@ -1091,6 +1128,8 @@ const TRESC = {
           introduction: 'Zaokrąglenia narożników i grubości obwódek.',
           bloki: [
             tekstB('Trzy promienie semantyczne pokrywają wszystkie przypadki: interakcja (przyciski, pola), powierzchnia (karty, okna) i pełny (znaczniki, awatary). Obwódki mają trzy grubości; skupienie klawiatury używa zawsze obwódki wyraźnej w kolorze obwodka-skupienie.'),
+            naglowekB('Promienie i grubości obwódek', 2),
+            wymiaryB('rdzen.rozmiar', ['radius', 'borderWidth']),
             markdownB('## Zasady\n\n- Promień **interakcji** jest mniejszy niż promień **powierzchni** — element klikalny nie może wyglądać jak karta.\n- Obwódka `cienka` służy separacji, `srednia` — polom formularzy, `gruba` — wyłącznie stanom skupienia.\n- Zaokrąglenie `pelny` tworzy pigułkę; używaj go tylko dla elementów o stałej, niskiej wysokości.'),
           ],
         },
@@ -1124,6 +1163,8 @@ const TRESC = {
           introduction: 'Rozmiary ikon i zasady osadzania.',
           bloki: [
             tekstB('Ikony występują w czterech rozmiarach zgodnych z siatką 4 px. Każda ikona funkcjonalna ma etykietę znaczeniową; ikony dekoracyjne są ukrywane przed czytnikami.'),
+            naglowekB('Zbiór ikon systemu', 2),
+            ikonyB(),
             galeriaB(
               ['siatka-ikon', 'Cztery rozmiary ikon na siatce czterech pikseli', 'Rozmiary: mały 16, średni 20, duży 24, wielki 32'],
               ['piramida-tokenow', 'Piramida tokenów: prymitywy, role semantyczne, warstwa funkcjonalna i komponentowa', 'Warstwy piramidy tokenów'],
@@ -1382,6 +1423,67 @@ function emitujZasoby() {
   writeFileSync(path.join(pelnaSiatka, 'piramida-tokenow.svg'), svgPiramida)
   console.log('  zasoby/siatka-ikon.svg')
   console.log('  zasoby/piramida-tokenow.svg')
+  emitujIkony(pelnaSiatka)
+}
+
+// Własny zbiór ikon: kształty geometryczne rysowane kreską, bez zależności licencyjnych.
+// Rysunek jest czarny, bo silnik renderu używa ikony jako MASKI — barwę nadaje token,
+// więc ikona w komponencie zmienia kolor razem z marką (nie jest obrazkiem zaszytym).
+const IKONY = {
+  'strzalka-prawo': 'M4 12h15M13 6l6 6-6 6',
+  'strzalka-lewo': 'M20 12H5M11 18l-6-6 6-6',
+  'strzalka-dol': 'M12 4v15M6 13l6 6 6-6',
+  'strzalka-gora': 'M12 20V5M6 11l6-6 6 6',
+  ptaszek: 'M4 13l5 5L20 6',
+  krzyzyk: 'M6 6l12 12M18 6L6 18',
+  plus: 'M12 5v14M5 12h14',
+  minus: 'M5 12h14',
+  lupa: 'M16.5 16.5L21 21M18 11a7 7 0 11-14 0 7 7 0 0114 0z',
+  dzwonek: 'M6 10a6 6 0 1112 0c0 4.5 2 6 2 6H4s2-1.5 2-6zM10 20a2 2 0 004 0',
+  kosz: 'M4 7h16M9 7V4h6v3M6 7l1.2 13h9.6L18 7',
+  olowek: 'M4 20l4.5-1L20 7.5 16.5 4 5 15.5 4 20z',
+  informacja: 'M12 21a9 9 0 110-18 9 9 0 010 18zM12 11v6M12 7.5v.01',
+  ostrzezenie: 'M12 3L2 21h20L12 3zM12 10v5M12 18v.01',
+  kalendarz: 'M4 6h16v15H4V6zM4 11h16M8 3v5M16 3v5',
+  menu: 'M4 7h16M4 12h16M4 17h16',
+}
+
+function emitujIkony(katalogZasobow) {
+  for (const [nazwa, sciezka] of Object.entries(IKONY)) {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="${sciezka}"/></svg>\n`
+    writeFileSync(path.join(katalogZasobow, `ikona-${nazwa}.svg`), svg)
+  }
+  console.log(`  zasoby/ikona-*.svg (${Object.keys(IKONY).length} ikon)`)
+}
+
+// Tryb ciemny marki Beta: marka utrzymuje własną kolekcję, więc własne wartości trybu.
+// Wartości biorą się z rdzenia (marka przejęła je razem ze ścieżką); dla ścieżek, na
+// których marka ma odstępstwo, tryb ciemny liczy się z odstępstwa — inaczej przełączenie
+// trybu cofałoby markę do rdzenia.
+function emitujTrybyMarkiBeta() {
+  const stan = stanBety(6)
+  const odchylenia = new Map(BETA_ODCHYLENIA.slice(0, BETA_ODCH_ILE[5]).map(([p, w]) => [luster('marka-beta', p), w]))
+  const ciemny = {}
+  for (const t of stan) {
+    const sciezkaRdzenia = 'rdzen' + t.path.slice('marka-beta'.length)
+    const rdzenny = wgSciezki.get(sciezkaRdzenia)
+    if (!rdzenny || rdzenny.dark === undefined) continue
+    if (odchylenia.has(t.path)) {
+      // odstępstwo marki przyciemnione o tyle samo, o ile rdzeń przyciemnia swoją wartość
+      const jasnyRdzen = rdzenny.value
+      const ciemnyRdzen = rdzenny.dark
+      ciemny[t.path] = typeof jasnyRdzen === 'string' && typeof ciemnyRdzen === 'string' && jasnyRdzen !== ciemnyRdzen
+        ? ciemnyRdzen
+        : t.value
+      continue
+    }
+    ciemny[t.path] = rdzenny.dark
+  }
+  zapisz('marki/beta/tryby.json', {
+    comment: 'Tryb Ciemny kolekcji marki Beta (druga marka z pełnym zestawem trybów). Struktura: nazwa trybu → ścieżka → wartość. Zasiew zakłada tryb w kolekcji marki i ustawia wartości trasą produktu. Plik wygenerowany.',
+    Ciemny: ciemny,
+  })
+  return Object.keys(ciemny).length
 }
 
 function emitujZrodla() {
@@ -1509,29 +1611,52 @@ const DRIFT_KONFIG = {
   ],
 }
 
+// Kontrakty katalogu wraz z przepisami renderowania [widoki generowane §2a]. Dane żyją
+// w osobnym module (scripts/kontrakty-komponentow.mjs), bo są objętościowo osobnym
+// materiałem: opis zachowania i przepis per pozycja katalogu. Przycisk i Karta mają
+// kontrakty od dostawcy zewnętrznego (dostawcy/wykonawca.json) — tu ich nie ma.
+function emitujKontraktyKatalogu() {
+  const kontrakty = Object.entries(KONTRAKTY)
+    .filter(([slug]) => !SLUGI_DOSTAWCY.has(slug))
+    .map(([slug, k]) => ({
+      komponent: slug,
+      wersja: '1.0.0',
+      props: k.kontrakt.props,
+      states: k.kontrakt.states,
+      behavior: k.kontrakt.behavior,
+      a11y: k.kontrakt.a11y,
+      tokenConsumption: k.kontrakt.tokenConsumption,
+      renderRecipe: k.przepis,
+    }))
+  zapisz('zrodlo/kontrakty.json', {
+    comment: 'Kontrakty pozycji katalogu wraz z przepisami renderowania. Przepis deklaruje, z jakich elementów składa się komponent i który token steruje którą właściwością — silnik widoków maluje z niego macierz wariantów, budowę i zachowanie. Kontrakty Przycisku i Karty przychodzą od dostawcy zewnętrznego (dostawcy/wykonawca.json). Plik wygenerowany.',
+    kontrakty,
+  })
+  return kontrakty.length
+}
+
+// Dostawca zewnętrzny dostarcza kontrakty dwóch pozycji — wraz z przepisami renderowania,
+// bo przepis jest częścią kontraktu, a nie osobnym artefaktem [widoki generowane §2a].
+const SLUGI_DOSTAWCY = new Set(['przycisk', 'karta'])
+
 function emitujDostawce() {
   zapisz('dostawcy/wykonawca.json', {
-    comment: 'Dostawca zewnętrzny odpowiedzialny za dostawę do Marki Gamma (miesiąc 2026-06). Karta wyników liczona silnikiem platformy (scorecard adopcyjny 0–100) na pomiarach zebranych z instancji.',
+    comment: 'Dostawca zewnętrzny odpowiedzialny za dostawę do Marki Gamma (miesiąc 2026-06). Karta wyników liczona silnikiem platformy (scorecard adopcyjny 0–100) na pomiarach zebranych z instancji. Kontrakty niosą przepisy renderowania — deklarację zużycia tokenów w postaci wykonywalnej.',
     dostawca: { name: 'Wykonawca zewnętrzny', marki: ['Marka Gamma'] },
-    kontrakty: [
-      {
-        komponent: 'przycisk', wersja: '1.0.0',
-        props: [
-          { name: 'odmiana', type: 'enum', enum: ['podstawowa', 'drugorzedna', 'destrukcyjna'], required: true },
-          { name: 'rozmiar', type: 'enum', enum: ['maly', 'sredni', 'duzy'], default: 'sredni' },
-          { name: 'wylaczony', type: 'boolean', default: false },
-        ],
-        tokenConsumption: ['rdzen.komponent.przycisk-tlo', 'rdzen.komponent.przycisk-tresc', 'rdzen.semantic.promien-interakcja'],
-      },
-      {
-        komponent: 'karta', wersja: '1.0.0',
-        props: [
-          { name: 'uklad', type: 'enum', enum: ['pionowy', 'poziomy'], default: 'pionowy' },
-          { name: 'obwodka', type: 'boolean', default: true },
-        ],
-        tokenConsumption: ['rdzen.komponent.karta-tlo', 'rdzen.komponent.karta-obwodka', 'rdzen.semantic.promien-powierzchnia'],
-      },
-    ],
+    kontrakty: [...SLUGI_DOSTAWCY].map((slug) => {
+      const k = KONTRAKTY[slug]
+      if (!k) throw new Error(`Brak kontraktu dostawcy dla pozycji ${slug} w scripts/kontrakty-komponentow.mjs`)
+      return {
+        komponent: slug,
+        wersja: '1.0.0',
+        props: k.kontrakt.props,
+        states: k.kontrakt.states,
+        behavior: k.kontrakt.behavior,
+        a11y: k.kontrakt.a11y,
+        tokenConsumption: k.kontrakt.tokenConsumption,
+        renderRecipe: k.przepis,
+      }
+    }),
   })
 }
 
@@ -1557,11 +1682,20 @@ function emitujManifest() {
       pokrycie: 'zrodlo/pokrycie.json',
       komponenty: 'zrodlo/komponenty.json',
       komponentySurowe: 'zrodlo/komponenty-surowe.json',
-      zasoby: { 'siatka-ikon': 'zasoby/siatka-ikon.svg', 'piramida-tokenow': 'zasoby/piramida-tokenow.svg' },
+      zasoby: {
+        'siatka-ikon': 'zasoby/siatka-ikon.svg',
+        'piramida-tokenow': 'zasoby/piramida-tokenow.svg',
+        // zbiór ikon zestawu: nazwa pliku `ikona-<nazwa>.svg` jest kontraktem widoku
+        // siatki ikon i elementu `icon` w przepisach renderowania
+        ...Object.fromEntries(Object.keys(IKONY).map((n) => [`ikona-${n}`, `zasoby/ikona-${n}.svg`])),
+      },
       oczekiwaniaKomponentow: 'zrodlo/oczekiwania-komponentow.json',
       kontrast: 'bramki/kontrast.json',
       dostawca: 'dostawcy/wykonawca.json',
+      kontraktyKatalogu: 'zrodlo/kontrakty.json',
     },
+    // tryby kolekcji marek (marka Beta prowadzi własny tryb ciemny)
+    trybyMarek: { 'Marka Beta': 'marki/beta/tryby.json' },
     // sześć następujących po sobie stanów źródła — zasiew przepuszcza każdy przez
     // ten sam potok pomiarowy i zapisuje migawkę z datą wsteczną (tylko znacznik czasu)
     stany: OKRESY.map((okres, i) => ({
@@ -1614,8 +1748,10 @@ const liczbaStron = emitujStrony()
 emitujZasoby()
 const oczekiwane = emitujZrodla()
 emitujMarkiStany()
+const trybowBety = emitujTrybyMarkiBeta()
 emitujBramki(oczekiwane.length)
 emitujDostawce()
+const liczbaKontraktow = emitujKontraktyKatalogu()
 emitujManifest()
 
 // Podsumowanie kontrolne (do README i opisu rozjazdów)
@@ -1637,3 +1773,5 @@ console.log(`  pokrycie Gammy: ${(GAMMA_POKRYCIE / rdzenObowiazkowy.length * 100
 console.log(`  definicje pokrycia komponentów: ${DEFINICJE.length}`)
 console.log(`  komponenty modelu: ${KOMPONENTY.length} · oczekiwania skanera: ${OCZEKIWANIA.length} · rodziny w stanie: ${INWENTARZ.families.length}`)
 console.log(`  strony treści: ${liczbaStron} w ${TRESC.sekcje.length} sekcjach`)
+console.log(`  ikony zestawu: ${Object.keys(IKONY).length} · tryb ciemny marki Beta: ${trybowBety} wartości`)
+console.log(`  kontrakty katalogu z przepisem renderowania: ${liczbaKontraktow} (+2 od dostawcy = ${liczbaKontraktow + 2} z ${KOMPONENTY.length})`)

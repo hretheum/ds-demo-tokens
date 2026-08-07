@@ -75,11 +75,31 @@
     "komponentySurowe": "zrodlo/komponenty-surowe.json",
     "zasoby": {
       "siatka-ikon": "zasoby/siatka-ikon.svg",
-      "piramida-tokenow": "zasoby/piramida-tokenow.svg"
+      "piramida-tokenow": "zasoby/piramida-tokenow.svg",
+      "ikona-strzalka-prawo": "zasoby/ikona-strzalka-prawo.svg",
+      "ikona-strzalka-lewo": "zasoby/ikona-strzalka-lewo.svg",
+      "ikona-strzalka-dol": "zasoby/ikona-strzalka-dol.svg",
+      "ikona-strzalka-gora": "zasoby/ikona-strzalka-gora.svg",
+      "ikona-ptaszek": "zasoby/ikona-ptaszek.svg",
+      "ikona-krzyzyk": "zasoby/ikona-krzyzyk.svg",
+      "ikona-plus": "zasoby/ikona-plus.svg",
+      "ikona-minus": "zasoby/ikona-minus.svg",
+      "ikona-lupa": "zasoby/ikona-lupa.svg",
+      "ikona-dzwonek": "zasoby/ikona-dzwonek.svg",
+      "ikona-kosz": "zasoby/ikona-kosz.svg",
+      "ikona-olowek": "zasoby/ikona-olowek.svg",
+      "ikona-informacja": "zasoby/ikona-informacja.svg",
+      "ikona-ostrzezenie": "zasoby/ikona-ostrzezenie.svg",
+      "ikona-kalendarz": "zasoby/ikona-kalendarz.svg",
+      "ikona-menu": "zasoby/ikona-menu.svg"
     },
     "oczekiwaniaKomponentow": "zrodlo/oczekiwania-komponentow.json",
     "kontrast": "bramki/kontrast.json",
-    "dostawca": "dostawcy/wykonawca.json"
+    "dostawca": "dostawcy/wykonawca.json",
+    "kontraktyKatalogu": "zrodlo/kontrakty.json"
+  },
+  "trybyMarek": {
+    "Marka Beta": "marki/beta/tryby.json"
   },
   "stany": [
     {

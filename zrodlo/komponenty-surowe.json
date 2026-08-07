@@ -402,18 +402,52 @@
             }
           },
           {
-            "key": "kmp-tabela",
-            "node_id": "wezel-tabela",
-            "name": "Tabela",
-            "description": "Dane tabelaryczne z sortowaniem i wierszem naprzemiennym.",
-            "thumbnail_url": null
+            "key": "kmp-tabela-gestosc-zwykla",
+            "node_id": "wezel-tabela-gestosc-zwykla",
+            "name": "gestosc=zwykla",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-tabela"
+              }
+            }
           },
           {
-            "key": "kmp-wiersz-tabeli",
-            "node_id": "wezel-wiersz-tabeli",
-            "name": "Wiersz tabeli",
-            "description": "Element pomocniczy tabeli; nie używać samodzielnie.",
-            "thumbnail_url": null
+            "key": "kmp-tabela-gestosc-zwarta",
+            "node_id": "wezel-tabela-gestosc-zwarta",
+            "name": "gestosc=zwarta",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-tabela"
+              }
+            }
+          },
+          {
+            "key": "kmp-wiersz-tabeli-tlo-zwykle",
+            "node_id": "wezel-wiersz-tabeli-tlo-zwykle",
+            "name": "tlo=zwykle",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-wiersz-tabeli"
+              }
+            }
+          },
+          {
+            "key": "kmp-wiersz-tabeli-tlo-naprzemienne",
+            "node_id": "wezel-wiersz-tabeli-tlo-naprzemienne",
+            "name": "tlo=naprzemienne",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-wiersz-tabeli"
+              }
+            }
           },
           {
             "key": "kmp-znacznik-ton-neutralny",
@@ -584,18 +618,52 @@
             }
           },
           {
-            "key": "kmp-naglowek-strony",
-            "node_id": "wezel-naglowek-strony",
-            "name": "Nagłówek strony",
-            "description": "Tytuł, okruszki i akcje kontekstowe strony.",
-            "thumbnail_url": null
+            "key": "kmp-naglowek-strony-uklad-pelny",
+            "node_id": "wezel-naglowek-strony-uklad-pelny",
+            "name": "uklad=pelny",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-naglowek-strony"
+              }
+            }
           },
           {
-            "key": "kmp-stopka",
-            "node_id": "wezel-stopka",
-            "name": "Stopka",
-            "description": "Zamknięcie strony: nawigacja pomocnicza i informacje prawne.",
-            "thumbnail_url": null
+            "key": "kmp-naglowek-strony-uklad-zwarty",
+            "node_id": "wezel-naglowek-strony-uklad-zwarty",
+            "name": "uklad=zwarty",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-naglowek-strony"
+              }
+            }
+          },
+          {
+            "key": "kmp-stopka-ton-zwykly",
+            "node_id": "wezel-stopka-ton-zwykly",
+            "name": "ton=zwykly",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-stopka"
+              }
+            }
+          },
+          {
+            "key": "kmp-stopka-ton-odwrocony",
+            "node_id": "wezel-stopka-ton-odwrocony",
+            "name": "ton=odwrocony",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-stopka"
+              }
+            }
           },
           {
             "key": "kmp-powiadomienie-ton-informacja",
@@ -670,11 +738,40 @@
             }
           },
           {
-            "key": "kmp-wskaznik-ladowania",
-            "node_id": "wezel-wskaznik-ladowania",
-            "name": "Wskaźnik ładowania",
-            "description": "Operacja o nieznanym czasie; szanuje ograniczenie ruchu.",
-            "thumbnail_url": null
+            "key": "kmp-wskaznik-ladowania-rozmiar-maly",
+            "node_id": "wezel-wskaznik-ladowania-rozmiar-maly",
+            "name": "rozmiar=maly",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-wskaznik-ladowania"
+              }
+            }
+          },
+          {
+            "key": "kmp-wskaznik-ladowania-rozmiar-sredni",
+            "node_id": "wezel-wskaznik-ladowania-rozmiar-sredni",
+            "name": "rozmiar=sredni",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-wskaznik-ladowania"
+              }
+            }
+          },
+          {
+            "key": "kmp-wskaznik-ladowania-rozmiar-duzy",
+            "node_id": "wezel-wskaznik-ladowania-rozmiar-duzy",
+            "name": "rozmiar=duzy",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-wskaznik-ladowania"
+              }
+            }
           },
           {
             "key": "kmp-zakladki-uklad-poziomy",
@@ -708,53 +805,196 @@
             "thumbnail_url": null
           },
           {
-            "key": "kmp-stronicowanie",
-            "node_id": "wezel-stronicowanie",
-            "name": "Stronicowanie",
-            "description": "Nawigacja po stronach długich list.",
-            "thumbnail_url": null
+            "key": "kmp-stronicowanie-uklad-zwiezly",
+            "node_id": "wezel-stronicowanie-uklad-zwiezly",
+            "name": "uklad=zwiezly",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-stronicowanie"
+              }
+            }
           },
           {
-            "key": "kmp-podpowiedz",
-            "node_id": "wezel-podpowiedz",
-            "name": "Podpowiedź",
-            "description": "Krótkie wyjaśnienie elementu po najechaniu lub skupieniu.",
-            "thumbnail_url": null
+            "key": "kmp-stronicowanie-uklad-pelny",
+            "node_id": "wezel-stronicowanie-uklad-pelny",
+            "name": "uklad=pelny",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-stronicowanie"
+              }
+            }
           },
           {
-            "key": "kmp-dymek",
-            "node_id": "wezel-dymek",
-            "name": "Dymek",
-            "description": "Rozbudowana treść kontekstowa zakotwiczona przy elemencie.",
-            "thumbnail_url": null
+            "key": "kmp-podpowiedz-pozycja-gora",
+            "node_id": "wezel-podpowiedz-pozycja-gora",
+            "name": "pozycja=gora",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-podpowiedz"
+              }
+            }
           },
           {
-            "key": "kmp-menu-kontekstowe",
-            "node_id": "wezel-menu-kontekstowe",
-            "name": "Menu kontekstowe",
-            "description": "Lista akcji dla wskazanego elementu.",
-            "thumbnail_url": null
+            "key": "kmp-podpowiedz-pozycja-dol",
+            "node_id": "wezel-podpowiedz-pozycja-dol",
+            "name": "pozycja=dol",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-podpowiedz"
+              }
+            }
           },
           {
-            "key": "kmp-pusty-stan",
-            "node_id": "wezel-pusty-stan",
-            "name": "Pusty stan",
-            "description": "Widok bez danych: wyjaśnienie i pierwsza akcja.",
-            "thumbnail_url": null
+            "key": "kmp-dymek-rozmiar-sredni",
+            "node_id": "wezel-dymek-rozmiar-sredni",
+            "name": "rozmiar=sredni",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-dymek"
+              }
+            }
           },
           {
-            "key": "kmp-baner",
-            "node_id": "wezel-baner",
-            "name": "Baner",
-            "description": "Komunikat na poziomie całego serwisu.",
-            "thumbnail_url": null
+            "key": "kmp-dymek-rozmiar-duzy",
+            "node_id": "wezel-dymek-rozmiar-duzy",
+            "name": "rozmiar=duzy",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-dymek"
+              }
+            }
           },
           {
-            "key": "kmp-sekcja-powitalna",
-            "node_id": "wezel-sekcja-powitalna",
-            "name": "Sekcja powitalna",
-            "description": "Otwarcie strony startowej produktu.",
-            "thumbnail_url": null
+            "key": "kmp-menu-kontekstowe-gestosc-zwykla",
+            "node_id": "wezel-menu-kontekstowe-gestosc-zwykla",
+            "name": "gestosc=zwykla",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-menu-kontekstowe"
+              }
+            }
+          },
+          {
+            "key": "kmp-menu-kontekstowe-gestosc-zwarta",
+            "node_id": "wezel-menu-kontekstowe-gestosc-zwarta",
+            "name": "gestosc=zwarta",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-menu-kontekstowe"
+              }
+            }
+          },
+          {
+            "key": "kmp-pusty-stan-powod-brak-danych",
+            "node_id": "wezel-pusty-stan-powod-brak-danych",
+            "name": "powod=brak-danych",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-pusty-stan"
+              }
+            }
+          },
+          {
+            "key": "kmp-pusty-stan-powod-brak-wynikow",
+            "node_id": "wezel-pusty-stan-powod-brak-wynikow",
+            "name": "powod=brak-wynikow",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-pusty-stan"
+              }
+            }
+          },
+          {
+            "key": "kmp-pusty-stan-powod-blad-pobierania",
+            "node_id": "wezel-pusty-stan-powod-blad-pobierania",
+            "name": "powod=blad-pobierania",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-pusty-stan"
+              }
+            }
+          },
+          {
+            "key": "kmp-baner-ton-ostrzezenie",
+            "node_id": "wezel-baner-ton-ostrzezenie",
+            "name": "ton=ostrzezenie",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-baner"
+              }
+            }
+          },
+          {
+            "key": "kmp-baner-ton-informacja",
+            "node_id": "wezel-baner-ton-informacja",
+            "name": "ton=informacja",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-baner"
+              }
+            }
+          },
+          {
+            "key": "kmp-sekcja-powitalna-tlo-powierzchnia",
+            "node_id": "wezel-sekcja-powitalna-tlo-powierzchnia",
+            "name": "tlo=powierzchnia",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-sekcja-powitalna"
+              }
+            }
+          },
+          {
+            "key": "kmp-sekcja-powitalna-tlo-akcent",
+            "node_id": "wezel-sekcja-powitalna-tlo-akcent",
+            "name": "tlo=akcent",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-sekcja-powitalna"
+              }
+            }
+          },
+          {
+            "key": "kmp-sekcja-powitalna-tlo-odwrocone",
+            "node_id": "wezel-sekcja-powitalna-tlo-odwrocone",
+            "name": "tlo=odwrocone",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-sekcja-powitalna"
+              }
+            }
           },
           {
             "key": "kmp-separator",
@@ -764,11 +1004,52 @@
             "thumbnail_url": null
           },
           {
-            "key": "kmp-ikona",
-            "node_id": "wezel-ikona",
-            "name": "Ikona",
-            "description": "Osadzenie ikony z obowiązkową etykietą znaczeniową.",
-            "thumbnail_url": null
+            "key": "kmp-ikona-rozmiar-maly",
+            "node_id": "wezel-ikona-rozmiar-maly",
+            "name": "rozmiar=maly",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-ikona"
+              }
+            }
+          },
+          {
+            "key": "kmp-ikona-rozmiar-sredni",
+            "node_id": "wezel-ikona-rozmiar-sredni",
+            "name": "rozmiar=sredni",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-ikona"
+              }
+            }
+          },
+          {
+            "key": "kmp-ikona-rozmiar-duzy",
+            "node_id": "wezel-ikona-rozmiar-duzy",
+            "name": "rozmiar=duzy",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-ikona"
+              }
+            }
+          },
+          {
+            "key": "kmp-ikona-rozmiar-wielki",
+            "node_id": "wezel-ikona-rozmiar-wielki",
+            "name": "rozmiar=wielki",
+            "description": "",
+            "thumbnail_url": null,
+            "containing_frame": {
+              "containingStateGroup": {
+                "nodeId": "wezel-ikona"
+              }
+            }
           }
         ]
       }
@@ -861,6 +1142,20 @@
             "thumbnail_url": null
           },
           {
+            "key": "kmp-tabela",
+            "node_id": "wezel-tabela",
+            "name": "Tabela",
+            "description": "Dane tabelaryczne z sortowaniem i wierszem naprzemiennym.",
+            "thumbnail_url": null
+          },
+          {
+            "key": "kmp-wiersz-tabeli",
+            "node_id": "wezel-wiersz-tabeli",
+            "name": "Wiersz tabeli",
+            "description": "Element pomocniczy tabeli; nie używać samodzielnie.",
+            "thumbnail_url": null
+          },
+          {
             "key": "kmp-znacznik",
             "node_id": "wezel-znacznik",
             "name": "Znacznik",
@@ -896,6 +1191,20 @@
             "thumbnail_url": null
           },
           {
+            "key": "kmp-naglowek-strony",
+            "node_id": "wezel-naglowek-strony",
+            "name": "Nagłówek strony",
+            "description": "Tytuł, okruszki i akcje kontekstowe strony.",
+            "thumbnail_url": null
+          },
+          {
+            "key": "kmp-stopka",
+            "node_id": "wezel-stopka",
+            "name": "Stopka",
+            "description": "Zamknięcie strony: nawigacja pomocnicza i informacje prawne.",
+            "thumbnail_url": null
+          },
+          {
             "key": "kmp-powiadomienie",
             "node_id": "wezel-powiadomienie",
             "name": "Powiadomienie",
@@ -910,10 +1219,73 @@
             "thumbnail_url": null
           },
           {
+            "key": "kmp-wskaznik-ladowania",
+            "node_id": "wezel-wskaznik-ladowania",
+            "name": "Wskaźnik ładowania",
+            "description": "Operacja o nieznanym czasie; szanuje ograniczenie ruchu.",
+            "thumbnail_url": null
+          },
+          {
             "key": "kmp-zakladki",
             "node_id": "wezel-zakladki",
             "name": "Zakładki",
             "description": "Przełączanie widoków tej samej treści.",
+            "thumbnail_url": null
+          },
+          {
+            "key": "kmp-stronicowanie",
+            "node_id": "wezel-stronicowanie",
+            "name": "Stronicowanie",
+            "description": "Nawigacja po stronach długich list.",
+            "thumbnail_url": null
+          },
+          {
+            "key": "kmp-podpowiedz",
+            "node_id": "wezel-podpowiedz",
+            "name": "Podpowiedź",
+            "description": "Krótkie wyjaśnienie elementu po najechaniu lub skupieniu.",
+            "thumbnail_url": null
+          },
+          {
+            "key": "kmp-dymek",
+            "node_id": "wezel-dymek",
+            "name": "Dymek",
+            "description": "Rozbudowana treść kontekstowa zakotwiczona przy elemencie.",
+            "thumbnail_url": null
+          },
+          {
+            "key": "kmp-menu-kontekstowe",
+            "node_id": "wezel-menu-kontekstowe",
+            "name": "Menu kontekstowe",
+            "description": "Lista akcji dla wskazanego elementu.",
+            "thumbnail_url": null
+          },
+          {
+            "key": "kmp-pusty-stan",
+            "node_id": "wezel-pusty-stan",
+            "name": "Pusty stan",
+            "description": "Widok bez danych: wyjaśnienie i pierwsza akcja.",
+            "thumbnail_url": null
+          },
+          {
+            "key": "kmp-baner",
+            "node_id": "wezel-baner",
+            "name": "Baner",
+            "description": "Komunikat na poziomie całego serwisu.",
+            "thumbnail_url": null
+          },
+          {
+            "key": "kmp-sekcja-powitalna",
+            "node_id": "wezel-sekcja-powitalna",
+            "name": "Sekcja powitalna",
+            "description": "Otwarcie strony startowej produktu.",
+            "thumbnail_url": null
+          },
+          {
+            "key": "kmp-ikona",
+            "node_id": "wezel-ikona",
+            "name": "Ikona",
+            "description": "Osadzenie ikony z obowiązkową etykietą znaczeniową.",
             "thumbnail_url": null
           }
         ]
