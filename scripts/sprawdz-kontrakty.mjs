@@ -81,25 +81,28 @@ function sprawdzBinding(slug, gdzie, wlasciwosc, binding, uzyte, literaly) {
     zgloszenie(slug, `${gdzie}: nieznana właściwość „${wlasciwosc}"`)
     return
   }
-  const maToken = typeof binding?.token === 'string' && binding.token.length > 0
-  const maLiteral = typeof binding?.literal === 'string' && binding.literal.length > 0
-  if (maToken === maLiteral) {
-    zgloszenie(slug, `${gdzie}.${wlasciwosc}: binding wymaga dokładnie jednego z pól token albo literal`)
+  // format v2 [domknięcie §2]: unia znakowana — dokładnie jeden rodzaj bindingu
+  if (binding?.kind === 'literal') {
+    if (typeof binding.value !== 'string' || !binding.value.length) {
+      zgloszenie(slug, `${gdzie}.${wlasciwosc}: binding zaszyty bez niepustej wartości`)
+      return
+    }
+    literaly.push(`${gdzie}.${wlasciwosc}=${binding.value}`)
     return
   }
-  if (maLiteral) {
-    literaly.push(`${gdzie}.${wlasciwosc}=${binding.literal}`)
+  if (binding?.kind !== 'token' || typeof binding.path !== 'string' || !binding.path.length) {
+    zgloszenie(slug, `${gdzie}.${wlasciwosc}: binding wymaga {kind:'token',path} albo {kind:'literal',value}`)
     return
   }
-  uzyte.add(binding.token)
-  const typ = typWgSciezki.get(binding.token)
+  uzyte.add(binding.path)
+  const typ = typWgSciezki.get(binding.path)
   if (!typ) {
-    zgloszenie(slug, `${gdzie}.${wlasciwosc}: ścieżka spoza kanonu → ${binding.token}`)
+    zgloszenie(slug, `${gdzie}.${wlasciwosc}: ścieżka spoza kanonu → ${binding.path}`)
     return
   }
   const dozwolone = TYPY_WLASCIWOSCI[wlasciwosc]
   if (dozwolone && !dozwolone.includes(typ)) {
-    zgloszenie(slug, `${gdzie}.${wlasciwosc}: token typu ${typ} (${binding.token}), oczekiwano ${dozwolone.join('/')}`)
+    zgloszenie(slug, `${gdzie}.${wlasciwosc}: token typu ${typ} (${binding.path}), oczekiwano ${dozwolone.join('/')}`)
   }
 }
 
@@ -109,6 +112,7 @@ for (const [slug, dane] of Object.entries(KONTRAKTY)) {
     zgloszenie(slug, 'brak kontraktu albo przepisu')
     continue
   }
+  if (przepis.version !== 2) zgloszenie(slug, `przepis bez pola version: 2 (jest: ${przepis.version})`)
 
   // --- przepis: struktura ---
   const czesci = new Map((przepis.parts ?? []).map((p) => [p.id, p]))

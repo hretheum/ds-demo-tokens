@@ -42,8 +42,8 @@ const wiersze = rejestr.map((k) => {
   const literaly = []
   const zbierz = (bind, gdzie) => {
     for (const [wl, b] of Object.entries(bind ?? {})) {
-      if (b?.token) uzyte.add(b.token)
-      if (b?.literal) literaly.push(`${gdzie}.${wl}`)
+      if (b?.kind === 'token') uzyte.add(b.path)
+      if (b?.kind === 'literal') literaly.push(`${gdzie}.${wl}`)
     }
   }
   for (const cz of przepis?.parts ?? []) zbierz(cz.bind, cz.id)

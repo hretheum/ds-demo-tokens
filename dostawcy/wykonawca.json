@@ -116,19 +116,24 @@
             ],
             "bind": {
               "background": {
-                "token": "rdzen.komponent.przycisk-tlo"
+                "kind": "token",
+                "path": "rdzen.komponent.przycisk-tlo"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-500"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-500"
               },
               "paddingX": {
-                "token": "rdzen.semantic.odstep-zwykly"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-zwykly"
               },
               "paddingY": {
-                "token": "rdzen.semantic.odstep-ciasny"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-ciasny"
               },
               "radius": {
-                "token": "rdzen.semantic.promien-interakcja"
+                "kind": "token",
+                "path": "rdzen.semantic.promien-interakcja"
               }
             }
           },
@@ -138,19 +143,24 @@
             "textFrom": "props.etykieta.default",
             "bind": {
               "color": {
-                "token": "rdzen.komponent.przycisk-tresc-odwrocona"
+                "kind": "token",
+                "path": "rdzen.komponent.przycisk-tresc-odwrocona"
               },
               "fontSize": {
-                "token": "rdzen.semantic.typografia-przycisk"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-przycisk"
               },
               "fontWeight": {
-                "token": "rdzen.typografia.grubosc-srednia"
+                "kind": "token",
+                "path": "rdzen.typografia.grubosc-srednia"
               },
               "lineHeight": {
-                "token": "rdzen.typografia.wysokosc-ciasna"
+                "kind": "token",
+                "path": "rdzen.typografia.wysokosc-ciasna"
               },
               "fontFamily": {
-                "token": "rdzen.typografia.rodzina-podstawowa"
+                "kind": "token",
+                "path": "rdzen.typografia.rodzina-podstawowa"
               }
             }
           }
@@ -160,25 +170,30 @@
             "drugorzedna": {
               "root": {
                 "background": {
-                  "token": "rdzen.semantic.tlo-powierzchnia"
+                  "kind": "token",
+                  "path": "rdzen.semantic.tlo-powierzchnia"
                 },
                 "borderWidth": {
-                  "token": "rdzen.rozmiar.obwodka-cienka"
+                  "kind": "token",
+                  "path": "rdzen.rozmiar.obwodka-cienka"
                 },
                 "borderColor": {
-                  "token": "rdzen.komponent.przycisk-obwodka"
+                  "kind": "token",
+                  "path": "rdzen.komponent.przycisk-obwodka"
                 }
               },
               "etykieta": {
                 "color": {
-                  "token": "rdzen.komponent.przycisk-tresc"
+                  "kind": "token",
+                  "path": "rdzen.komponent.przycisk-tresc"
                 }
               }
             },
             "destrukcyjna": {
               "root": {
                 "background": {
-                  "token": "rdzen.semantic.akcja-destrukcyjna"
+                  "kind": "token",
+                  "path": "rdzen.semantic.akcja-destrukcyjna"
                 }
               }
             }
@@ -187,30 +202,36 @@
             "maly": {
               "root": {
                 "height": {
-                  "token": "rdzen.rozmiar.odstep-400"
+                  "kind": "token",
+                  "path": "rdzen.rozmiar.odstep-400"
                 },
                 "paddingX": {
-                  "token": "rdzen.semantic.odstep-ciasny"
+                  "kind": "token",
+                  "path": "rdzen.semantic.odstep-ciasny"
                 }
               },
               "etykieta": {
                 "fontSize": {
-                  "token": "rdzen.semantic.typografia-podpis"
+                  "kind": "token",
+                  "path": "rdzen.semantic.typografia-podpis"
                 }
               }
             },
             "duzy": {
               "root": {
                 "height": {
-                  "token": "rdzen.rozmiar.odstep-600"
+                  "kind": "token",
+                  "path": "rdzen.rozmiar.odstep-600"
                 },
                 "paddingX": {
-                  "token": "rdzen.semantic.odstep-luzny"
+                  "kind": "token",
+                  "path": "rdzen.semantic.odstep-luzny"
                 }
               },
               "etykieta": {
                 "fontSize": {
-                  "token": "rdzen.semantic.typografia-tresc-duza"
+                  "kind": "token",
+                  "path": "rdzen.semantic.typografia-tresc-duza"
                 }
               }
             }
@@ -220,40 +241,47 @@
           "najechanie": {
             "root": {
               "background": {
-                "token": "rdzen.komponent.przycisk-tlo-najechanie"
+                "kind": "token",
+                "path": "rdzen.komponent.przycisk-tlo-najechanie"
               }
             }
           },
           "wcisniety": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.akcja-podstawowa-aktywna"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-podstawowa-aktywna"
               }
             }
           },
           "skupienie": {
             "root": {
               "outlineColor": {
-                "token": "rdzen.semantic.obwodka-skupienie"
+                "kind": "token",
+                "path": "rdzen.semantic.obwodka-skupienie"
               },
               "outlineWidth": {
-                "token": "rdzen.rozmiar.obwodka-srednia"
+                "kind": "token",
+                "path": "rdzen.rozmiar.obwodka-srednia"
               }
             }
           },
           "wylaczony": {
             "root": {
               "background": {
-                "token": "rdzen.komponent.przycisk-tlo-wylaczone"
+                "kind": "token",
+                "path": "rdzen.komponent.przycisk-tlo-wylaczone"
               }
             },
             "etykieta": {
               "color": {
-                "token": "rdzen.semantic.tekst-wylaczony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-wylaczony"
               }
             }
           }
-        }
+        },
+        "version": 2
       }
     },
     {
@@ -354,28 +382,36 @@
             ],
             "bind": {
               "background": {
-                "token": "rdzen.komponent.karta-tlo"
+                "kind": "token",
+                "path": "rdzen.komponent.karta-tlo"
               },
               "borderColor": {
-                "token": "rdzen.komponent.karta-obwodka"
+                "kind": "token",
+                "path": "rdzen.komponent.karta-obwodka"
               },
               "borderWidth": {
-                "token": "rdzen.rozmiar.obwodka-cienka"
+                "kind": "token",
+                "path": "rdzen.rozmiar.obwodka-cienka"
               },
               "radius": {
-                "token": "rdzen.semantic.promien-powierzchnia"
+                "kind": "token",
+                "path": "rdzen.semantic.promien-powierzchnia"
               },
               "paddingX": {
-                "token": "rdzen.semantic.odstep-zwykly"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-zwykly"
               },
               "paddingY": {
-                "token": "rdzen.semantic.odstep-zwykly"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-zwykly"
               },
               "gap": {
-                "token": "rdzen.semantic.odstep-ciasny"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-ciasny"
               },
               "width": {
-                "token": "rdzen.rozmiar.odstep-600"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-600"
               }
             }
           },
@@ -387,16 +423,20 @@
             ],
             "bind": {
               "background": {
-                "token": "rdzen.semantic.tlo-wyciszone"
+                "kind": "token",
+                "path": "rdzen.semantic.tlo-wyciszone"
               },
               "radius": {
-                "token": "rdzen.semantic.promien-interakcja"
+                "kind": "token",
+                "path": "rdzen.semantic.promien-interakcja"
               },
               "width": {
-                "token": "rdzen.rozmiar.odstep-500"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-500"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-400"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-400"
               }
             }
           },
@@ -406,13 +446,16 @@
             "iconName": "informacja",
             "bind": {
               "color": {
-                "token": "rdzen.semantic.tekst-drugorzedny"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-drugorzedny"
               },
               "width": {
-                "token": "rdzen.rozmiar.ikona-sredni"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-sredni"
               },
               "height": {
-                "token": "rdzen.rozmiar.ikona-sredni"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-sredni"
               }
             }
           },
@@ -425,7 +468,8 @@
             ],
             "bind": {
               "gap": {
-                "token": "rdzen.semantic.odstep-przylegly"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-przylegly"
               }
             }
           },
@@ -435,16 +479,20 @@
             "textFrom": "props.naglowek.default",
             "bind": {
               "color": {
-                "token": "rdzen.komponent.karta-naglowek"
+                "kind": "token",
+                "path": "rdzen.komponent.karta-naglowek"
               },
               "fontSize": {
-                "token": "rdzen.semantic.typografia-naglowek-4"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-naglowek-4"
               },
               "fontWeight": {
-                "token": "rdzen.typografia.grubosc-pogrubiona"
+                "kind": "token",
+                "path": "rdzen.typografia.grubosc-pogrubiona"
               },
               "lineHeight": {
-                "token": "rdzen.typografia.wysokosc-zwarta"
+                "kind": "token",
+                "path": "rdzen.typografia.wysokosc-zwarta"
               }
             }
           },
@@ -454,13 +502,16 @@
             "textFrom": "props.opis.default",
             "bind": {
               "color": {
-                "token": "rdzen.komponent.karta-opis"
+                "kind": "token",
+                "path": "rdzen.komponent.karta-opis"
               },
               "fontSize": {
-                "token": "rdzen.semantic.typografia-podpis"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-podpis"
               },
               "lineHeight": {
-                "token": "rdzen.typografia.wysokosc-zwykla"
+                "kind": "token",
+                "path": "rdzen.typografia.wysokosc-zwykla"
               }
             }
           }
@@ -470,15 +521,18 @@
             "poziomy": {
               "root": {
                 "gap": {
-                  "token": "rdzen.semantic.odstep-zwykly"
+                  "kind": "token",
+                  "path": "rdzen.semantic.odstep-zwykly"
                 },
                 "paddingY": {
-                  "token": "rdzen.semantic.odstep-ciasny"
+                  "kind": "token",
+                  "path": "rdzen.semantic.odstep-ciasny"
                 }
               },
               "miniatura": {
                 "width": {
-                  "token": "rdzen.rozmiar.odstep-400"
+                  "kind": "token",
+                  "path": "rdzen.rozmiar.odstep-400"
                 }
               }
             }
@@ -488,24 +542,29 @@
           "najechanie": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.tlo-wyniesione"
+                "kind": "token",
+                "path": "rdzen.semantic.tlo-wyniesione"
               },
               "borderColor": {
-                "token": "rdzen.semantic.obwodka-wyrazna"
+                "kind": "token",
+                "path": "rdzen.semantic.obwodka-wyrazna"
               }
             }
           },
           "skupienie": {
             "root": {
               "outlineColor": {
-                "token": "rdzen.semantic.obwodka-skupienie"
+                "kind": "token",
+                "path": "rdzen.semantic.obwodka-skupienie"
               },
               "outlineWidth": {
-                "token": "rdzen.rozmiar.obwodka-srednia"
+                "kind": "token",
+                "path": "rdzen.rozmiar.obwodka-srednia"
               }
             }
           }
-        }
+        },
+        "version": 2
       }
     }
   ]

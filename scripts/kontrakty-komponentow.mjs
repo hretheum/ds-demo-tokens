@@ -12,6 +12,8 @@
 //
 // Kontrola spójności: scripts/sprawdz-kontrakty.mjs (ścieżki wobec kanonu, zgodność
 // deklaracji zużycia z przepisem, osie wobec rejestru, brak wypełniacza w opisach).
+// FORMAT v2 [domknięcie odbiorcze §2]: binding jest unią znakowaną
+// ({kind:'token',path} | {kind:'literal',value}), przepis niesie pole `version: 2`.
 // Plik generowany maszynowo z materiału projektowego; poprawki nanoś tutaj.
 // =============================================================================
 
@@ -137,19 +139,24 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.przycisk-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tlo"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             }
           }
         },
@@ -159,19 +166,24 @@ export const KONTRAKTY = {
           "textFrom": "props.etykieta.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.przycisk-tresc-odwrocona"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tresc-odwrocona"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-przycisk"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-przycisk"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         }
@@ -181,25 +193,30 @@ export const KONTRAKTY = {
           "drugorzedna": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.tlo-powierzchnia"
+                "kind": "token",
+                "path": "rdzen.semantic.tlo-powierzchnia"
               },
               "borderWidth": {
-                "token": "rdzen.rozmiar.obwodka-cienka"
+                "kind": "token",
+                "path": "rdzen.rozmiar.obwodka-cienka"
               },
               "borderColor": {
-                "token": "rdzen.komponent.przycisk-obwodka"
+                "kind": "token",
+                "path": "rdzen.komponent.przycisk-obwodka"
               }
             },
             "etykieta": {
               "color": {
-                "token": "rdzen.komponent.przycisk-tresc"
+                "kind": "token",
+                "path": "rdzen.komponent.przycisk-tresc"
               }
             }
           },
           "destrukcyjna": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.akcja-destrukcyjna"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-destrukcyjna"
               }
             }
           }
@@ -208,30 +225,36 @@ export const KONTRAKTY = {
           "maly": {
             "root": {
               "height": {
-                "token": "rdzen.rozmiar.odstep-400"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-400"
               },
               "paddingX": {
-                "token": "rdzen.semantic.odstep-ciasny"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-ciasny"
               }
             },
             "etykieta": {
               "fontSize": {
-                "token": "rdzen.semantic.typografia-podpis"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-podpis"
               }
             }
           },
           "duzy": {
             "root": {
               "height": {
-                "token": "rdzen.rozmiar.odstep-600"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-600"
               },
               "paddingX": {
-                "token": "rdzen.semantic.odstep-luzny"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-luzny"
               }
             },
             "etykieta": {
               "fontSize": {
-                "token": "rdzen.semantic.typografia-tresc-duza"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-tresc-duza"
               }
             }
           }
@@ -241,40 +264,47 @@ export const KONTRAKTY = {
         "najechanie": {
           "root": {
             "background": {
-              "token": "rdzen.komponent.przycisk-tlo-najechanie"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tlo-najechanie"
             }
           }
         },
         "wcisniety": {
           "root": {
             "background": {
-              "token": "rdzen.semantic.akcja-podstawowa-aktywna"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa-aktywna"
             }
           }
         },
         "skupienie": {
           "root": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           }
         },
         "wylaczony": {
           "root": {
             "background": {
-              "token": "rdzen.komponent.przycisk-tlo-wylaczone"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tlo-wylaczone"
             }
           },
           "etykieta": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "przycisk-drugorzedny": {
@@ -368,25 +398,32 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-powierzchnia"
             },
             "borderColor": {
-              "token": "rdzen.komponent.przycisk-obwodka"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-obwodka"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             }
           }
         },
@@ -396,19 +433,24 @@ export const KONTRAKTY = {
           "textFrom": "props.etykieta.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.przycisk-tresc"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tresc"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-przycisk"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-przycisk"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         }
@@ -418,30 +460,36 @@ export const KONTRAKTY = {
           "maly": {
             "root": {
               "height": {
-                "token": "rdzen.rozmiar.odstep-400"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-400"
               },
               "paddingX": {
-                "token": "rdzen.semantic.odstep-ciasny"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-ciasny"
               }
             },
             "etykieta": {
               "fontSize": {
-                "token": "rdzen.semantic.typografia-podpis"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-podpis"
               }
             }
           },
           "duzy": {
             "root": {
               "height": {
-                "token": "rdzen.rozmiar.odstep-600"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-600"
               },
               "paddingX": {
-                "token": "rdzen.semantic.odstep-luzny"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-luzny"
               }
             },
             "etykieta": {
               "fontSize": {
-                "token": "rdzen.semantic.typografia-tresc-duza"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-tresc-duza"
               }
             }
           }
@@ -451,36 +499,43 @@ export const KONTRAKTY = {
         "najechanie": {
           "root": {
             "background": {
-              "token": "rdzen.semantic.tlo-akcent-subtelne"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-akcent-subtelne"
             },
             "borderColor": {
-              "token": "rdzen.semantic.akcja-podstawowa-najechanie"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa-najechanie"
             }
           }
         },
         "skupienie": {
           "root": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           }
         },
         "wylaczony": {
           "root": {
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             }
           },
           "etykieta": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "przycisk-ikonowy": {
@@ -580,22 +635,28 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             }
           }
         },
@@ -605,13 +666,16 @@ export const KONTRAKTY = {
           "iconName": "olowek",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.przycisk-tresc"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tresc"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             }
           }
         }
@@ -621,24 +685,30 @@ export const KONTRAKTY = {
           "maly": {
             "root": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-400"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-400"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-400"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-400"
               },
               "paddingX": {
-                "token": "rdzen.semantic.odstep-przylegly"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-przylegly"
               },
               "paddingY": {
-                "token": "rdzen.semantic.odstep-przylegly"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-przylegly"
               }
             },
             "ikona": {
               "width": {
-                "token": "rdzen.rozmiar.ikona-maly"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-maly"
               },
               "height": {
-                "token": "rdzen.rozmiar.ikona-maly"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-maly"
               }
             }
           }
@@ -648,33 +718,39 @@ export const KONTRAKTY = {
         "najechanie": {
           "root": {
             "background": {
-              "token": "rdzen.semantic.tlo-akcent-subtelne"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-akcent-subtelne"
             }
           }
         },
         "skupienie": {
           "root": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           }
         },
         "wylaczony": {
           "root": {
             "background": {
-              "token": "rdzen.komponent.przycisk-tlo-wylaczone"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tlo-wylaczone"
             }
           },
           "ikona": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "pole-tekstowe": {
@@ -835,7 +911,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -845,16 +922,20 @@ export const KONTRAKTY = {
           "textFrom": "props.etykieta.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-etykieta"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-etykieta"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             }
           }
         },
@@ -866,28 +947,36 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.pole-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-tlo"
             },
             "borderColor": {
-              "token": "rdzen.komponent.pole-obwodka"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-obwodka"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -897,16 +986,20 @@ export const KONTRAKTY = {
           "textFrom": "props.wartosc.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.pole-tresc"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-tresc"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             }
           }
         },
@@ -916,13 +1009,16 @@ export const KONTRAKTY = {
           "textFrom": "props.tekstPomocy.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-pomoc"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-pomoc"
             },
             "fontSize": {
-              "token": "rdzen.typografia.rozmiar-drobny"
+              "kind": "token",
+              "path": "rdzen.typografia.rozmiar-drobny"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             }
           }
         }
@@ -932,56 +1028,68 @@ export const KONTRAKTY = {
           "skupienie": {
             "ramka": {
               "borderColor": {
-                "token": "rdzen.komponent.pole-obwodka-skupienie"
+                "kind": "token",
+                "path": "rdzen.komponent.pole-obwodka-skupienie"
               },
               "borderWidth": {
-                "token": "rdzen.rozmiar.obwodka-srednia"
+                "kind": "token",
+                "path": "rdzen.rozmiar.obwodka-srednia"
               },
               "outlineColor": {
-                "token": "rdzen.semantic.obwodka-skupienie"
+                "kind": "token",
+                "path": "rdzen.semantic.obwodka-skupienie"
               },
               "outlineWidth": {
-                "token": "rdzen.rozmiar.obwodka-srednia"
+                "kind": "token",
+                "path": "rdzen.rozmiar.obwodka-srednia"
               }
             }
           },
           "blad": {
             "ramka": {
               "borderColor": {
-                "token": "rdzen.semantic.obwodka-blad"
+                "kind": "token",
+                "path": "rdzen.semantic.obwodka-blad"
               },
               "borderWidth": {
-                "token": "rdzen.rozmiar.obwodka-srednia"
+                "kind": "token",
+                "path": "rdzen.rozmiar.obwodka-srednia"
               }
             },
             "pomoc": {
               "color": {
-                "token": "rdzen.funkcjonalne.formularz-blad"
+                "kind": "token",
+                "path": "rdzen.funkcjonalne.formularz-blad"
               }
             }
           },
           "wylaczony": {
             "ramka": {
               "background": {
-                "token": "rdzen.semantic.tlo-wyciszone"
+                "kind": "token",
+                "path": "rdzen.semantic.tlo-wyciszone"
               },
               "borderColor": {
-                "token": "rdzen.semantic.obwodka-subtelna"
+                "kind": "token",
+                "path": "rdzen.semantic.obwodka-subtelna"
               }
             },
             "wartosc": {
               "color": {
-                "token": "rdzen.semantic.tekst-wylaczony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-wylaczony"
               }
             },
             "etykieta": {
               "color": {
-                "token": "rdzen.semantic.tekst-wylaczony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-wylaczony"
               }
             },
             "pomoc": {
               "color": {
-                "token": "rdzen.semantic.tekst-wylaczony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-wylaczony"
               }
             }
           }
@@ -991,82 +1099,99 @@ export const KONTRAKTY = {
         "najechanie": {
           "ramka": {
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-wyrazna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-wyrazna"
             }
           }
         },
         "skupienie": {
           "ramka": {
             "borderColor": {
-              "token": "rdzen.komponent.pole-obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-obwodka-skupienie"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             },
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           }
         },
         "blad": {
           "ramka": {
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-blad"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-blad"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           },
           "pomoc": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-blad"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-blad"
             }
           }
         },
         "wylaczony": {
           "ramka": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             }
           },
           "wartosc": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "etykieta": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "pomoc": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           }
         },
         "tylko-do-odczytu": {
           "ramka": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             }
           },
           "wartosc": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "pole-liczbowe": {
@@ -1212,7 +1337,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -1222,16 +1348,20 @@ export const KONTRAKTY = {
           "textFrom": "props.etykieta.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-etykieta"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-etykieta"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             }
           }
         },
@@ -1245,28 +1375,36 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.pole-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-tlo"
             },
             "borderColor": {
-              "token": "rdzen.komponent.pole-obwodka"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-obwodka"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-przylegly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-przylegly"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -1276,16 +1414,20 @@ export const KONTRAKTY = {
           "textFrom": "props.wartosc.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.pole-tresc"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-tresc"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-o-stalej-szerokosci"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-o-stalej-szerokosci"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             }
           }
         },
@@ -1297,16 +1439,20 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "radius": {
-              "token": "rdzen.rozmiar.promien-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.promien-maly"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-duzy"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-duzy"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-duzy"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-duzy"
             }
           }
         },
@@ -1316,13 +1462,16 @@ export const KONTRAKTY = {
           "iconName": "minus",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         },
@@ -1334,16 +1483,20 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "radius": {
-              "token": "rdzen.rozmiar.promien-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.promien-maly"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-duzy"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-duzy"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-duzy"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-duzy"
             }
           }
         },
@@ -1353,13 +1506,16 @@ export const KONTRAKTY = {
           "iconName": "plus",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         },
@@ -1369,13 +1525,16 @@ export const KONTRAKTY = {
           "textFrom": "props.tekstPomocy.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-pomoc"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-pomoc"
             },
             "fontSize": {
-              "token": "rdzen.typografia.rozmiar-drobny"
+              "kind": "token",
+              "path": "rdzen.typografia.rozmiar-drobny"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             }
           }
         }
@@ -1385,15 +1544,18 @@ export const KONTRAKTY = {
           "blad": {
             "ramka": {
               "borderColor": {
-                "token": "rdzen.semantic.obwodka-blad"
+                "kind": "token",
+                "path": "rdzen.semantic.obwodka-blad"
               },
               "borderWidth": {
-                "token": "rdzen.rozmiar.obwodka-srednia"
+                "kind": "token",
+                "path": "rdzen.rozmiar.obwodka-srednia"
               }
             },
             "pomoc": {
               "color": {
-                "token": "rdzen.funkcjonalne.formularz-blad"
+                "kind": "token",
+                "path": "rdzen.funkcjonalne.formularz-blad"
               }
             }
           }
@@ -1403,77 +1565,93 @@ export const KONTRAKTY = {
         "skupienie": {
           "ramka": {
             "borderColor": {
-              "token": "rdzen.komponent.pole-obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-obwodka-skupienie"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             },
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           }
         },
         "granica-zakresu": {
           "krokMinus": {
             "opacity": {
-              "token": "rdzen.krycie.polowa"
+              "kind": "token",
+              "path": "rdzen.krycie.polowa"
             }
           }
         },
         "blad": {
           "ramka": {
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-blad"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-blad"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           },
           "pomoc": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-blad"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-blad"
             }
           }
         },
         "wylaczony": {
           "ramka": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             }
           },
           "etykieta": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "wartosc": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "ikonaMinus": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "ikonaPlus": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "pomoc": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "pole-wyboru": {
@@ -1594,7 +1772,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -1607,22 +1786,28 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             },
             "background": {
-              "token": "rdzen.komponent.pole-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-tlo"
             },
             "borderColor": {
-              "token": "rdzen.komponent.pole-obwodka"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-obwodka"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             },
             "radius": {
-              "token": "rdzen.rozmiar.promien-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.promien-maly"
             }
           }
         },
@@ -1632,16 +1817,20 @@ export const KONTRAKTY = {
           "iconName": "ptaszek",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-odwrocony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-odwrocony"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-000"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-000"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "opacity": {
-              "token": "rdzen.krycie.przezroczyste"
+              "kind": "token",
+              "path": "rdzen.krycie.przezroczyste"
             }
           }
         },
@@ -1651,16 +1840,20 @@ export const KONTRAKTY = {
           "iconName": "minus",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-odwrocony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-odwrocony"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-000"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-000"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "opacity": {
-              "token": "rdzen.krycie.przezroczyste"
+              "kind": "token",
+              "path": "rdzen.krycie.przezroczyste"
             }
           }
         },
@@ -1673,7 +1866,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-przylegly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-przylegly"
             }
           }
         },
@@ -1683,13 +1877,16 @@ export const KONTRAKTY = {
           "textFrom": "props.etykieta.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-etykieta"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-etykieta"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             }
           }
         },
@@ -1699,13 +1896,16 @@ export const KONTRAKTY = {
           "textFrom": "props.tekstPomocy.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-pomoc"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-pomoc"
             },
             "fontSize": {
-              "token": "rdzen.typografia.rozmiar-drobny"
+              "kind": "token",
+              "path": "rdzen.typografia.rozmiar-drobny"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             }
           }
         }
@@ -1715,36 +1915,44 @@ export const KONTRAKTY = {
           "zaznaczone": {
             "kwadrat": {
               "background": {
-                "token": "rdzen.semantic.akcja-podstawowa"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-podstawowa"
               },
               "borderColor": {
-                "token": "rdzen.semantic.akcja-podstawowa"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-podstawowa"
               }
             },
             "ptaszek": {
               "width": {
-                "token": "rdzen.rozmiar.ikona-maly"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-maly"
               },
               "opacity": {
-                "token": "rdzen.krycie.pelne"
+                "kind": "token",
+                "path": "rdzen.krycie.pelne"
               }
             }
           },
           "nieokreslone": {
             "kwadrat": {
               "background": {
-                "token": "rdzen.semantic.akcja-podstawowa"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-podstawowa"
               },
               "borderColor": {
-                "token": "rdzen.semantic.akcja-podstawowa"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-podstawowa"
               }
             },
             "kreska": {
               "width": {
-                "token": "rdzen.rozmiar.ikona-maly"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-maly"
               },
               "opacity": {
-                "token": "rdzen.krycie.pelne"
+                "kind": "token",
+                "path": "rdzen.krycie.pelne"
               }
             }
           }
@@ -1754,63 +1962,75 @@ export const KONTRAKTY = {
         "najechanie": {
           "kwadrat": {
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-wyrazna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-wyrazna"
             }
           }
         },
         "skupienie": {
           "kwadrat": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           }
         },
         "blad": {
           "kwadrat": {
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-blad"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-blad"
             }
           },
           "pomoc": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-blad"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-blad"
             }
           }
         },
         "wylaczony": {
           "kwadrat": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             }
           },
           "ptaszek": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "kreska": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "etykieta": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "pomoc": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "pole-daty": {
@@ -1953,7 +2173,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -1963,16 +2184,20 @@ export const KONTRAKTY = {
           "textFrom": "props.etykieta.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-etykieta"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-etykieta"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             }
           }
         },
@@ -1985,28 +2210,36 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.pole-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-tlo"
             },
             "borderColor": {
-              "token": "rdzen.komponent.pole-obwodka"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-obwodka"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -2016,16 +2249,20 @@ export const KONTRAKTY = {
           "textFrom": "props.wartosc.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.pole-tresc"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-tresc"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-o-stalej-szerokosci"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-o-stalej-szerokosci"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             }
           }
         },
@@ -2035,13 +2272,16 @@ export const KONTRAKTY = {
           "iconName": "kalendarz",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             }
           }
         },
@@ -2051,13 +2291,16 @@ export const KONTRAKTY = {
           "textFrom": "props.tekstPomocy.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-pomoc"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-pomoc"
             },
             "fontSize": {
-              "token": "rdzen.typografia.rozmiar-drobny"
+              "kind": "token",
+              "path": "rdzen.typografia.rozmiar-drobny"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             }
           }
         }
@@ -2067,20 +2310,24 @@ export const KONTRAKTY = {
           "blad": {
             "ramka": {
               "borderColor": {
-                "token": "rdzen.semantic.obwodka-blad"
+                "kind": "token",
+                "path": "rdzen.semantic.obwodka-blad"
               },
               "borderWidth": {
-                "token": "rdzen.rozmiar.obwodka-srednia"
+                "kind": "token",
+                "path": "rdzen.rozmiar.obwodka-srednia"
               }
             },
             "ikonaKalendarz": {
               "color": {
-                "token": "rdzen.semantic.tekst-negatywny"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-negatywny"
               }
             },
             "pomoc": {
               "color": {
-                "token": "rdzen.funkcjonalne.formularz-blad"
+                "kind": "token",
+                "path": "rdzen.funkcjonalne.formularz-blad"
               }
             }
           }
@@ -2090,85 +2337,103 @@ export const KONTRAKTY = {
         "skupienie": {
           "ramka": {
             "borderColor": {
-              "token": "rdzen.komponent.pole-obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-obwodka-skupienie"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             },
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           }
         },
         "otwarty-kalendarz": {
           "ramka": {
             "borderColor": {
-              "token": "rdzen.komponent.pole-obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-obwodka-skupienie"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           },
           "ikonaKalendarz": {
             "color": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             }
           }
         },
         "blad": {
           "ramka": {
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-blad"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-blad"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           },
           "ikonaKalendarz": {
             "color": {
-              "token": "rdzen.semantic.tekst-negatywny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-negatywny"
             }
           },
           "pomoc": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-blad"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-blad"
             }
           }
         },
         "wylaczony": {
           "ramka": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             }
           },
           "etykieta": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "wartosc": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "ikonaKalendarz": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "pomoc": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "lista-rozwijana": {
@@ -2306,7 +2571,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -2316,16 +2582,20 @@ export const KONTRAKTY = {
           "textFrom": "props.etykieta.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-etykieta"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-etykieta"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             }
           }
         },
@@ -2339,28 +2609,36 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.pole-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-tlo"
             },
             "borderColor": {
-              "token": "rdzen.komponent.pole-obwodka"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-obwodka"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -2370,16 +2648,20 @@ export const KONTRAKTY = {
           "textFrom": "props.wybranaWartosc.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.pole-tresc"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-tresc"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             }
           }
         },
@@ -2389,16 +2671,20 @@ export const KONTRAKTY = {
           "iconName": "strzalka-dol",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             },
             "opacity": {
-              "token": "rdzen.krycie.pelne"
+              "kind": "token",
+              "path": "rdzen.krycie.pelne"
             }
           }
         },
@@ -2408,16 +2694,20 @@ export const KONTRAKTY = {
           "iconName": "strzalka-gora",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-000"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-000"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             },
             "opacity": {
-              "token": "rdzen.krycie.przezroczyste"
+              "kind": "token",
+              "path": "rdzen.krycie.przezroczyste"
             }
           }
         },
@@ -2427,13 +2717,16 @@ export const KONTRAKTY = {
           "textFrom": "props.tekstPomocy.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-pomoc"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-pomoc"
             },
             "fontSize": {
-              "token": "rdzen.typografia.rozmiar-drobny"
+              "kind": "token",
+              "path": "rdzen.typografia.rozmiar-drobny"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             }
           }
         }
@@ -2443,41 +2736,50 @@ export const KONTRAKTY = {
           "otwarta": {
             "ramka": {
               "borderColor": {
-                "token": "rdzen.komponent.pole-obwodka-skupienie"
+                "kind": "token",
+                "path": "rdzen.komponent.pole-obwodka-skupienie"
               },
               "borderWidth": {
-                "token": "rdzen.rozmiar.obwodka-srednia"
+                "kind": "token",
+                "path": "rdzen.rozmiar.obwodka-srednia"
               }
             },
             "strzalkaDol": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-000"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-000"
               },
               "opacity": {
-                "token": "rdzen.krycie.przezroczyste"
+                "kind": "token",
+                "path": "rdzen.krycie.przezroczyste"
               }
             },
             "strzalkaGora": {
               "width": {
-                "token": "rdzen.rozmiar.ikona-sredni"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-sredni"
               },
               "opacity": {
-                "token": "rdzen.krycie.pelne"
+                "kind": "token",
+                "path": "rdzen.krycie.pelne"
               }
             }
           },
           "blad": {
             "ramka": {
               "borderColor": {
-                "token": "rdzen.semantic.obwodka-blad"
+                "kind": "token",
+                "path": "rdzen.semantic.obwodka-blad"
               },
               "borderWidth": {
-                "token": "rdzen.rozmiar.obwodka-srednia"
+                "kind": "token",
+                "path": "rdzen.rozmiar.obwodka-srednia"
               }
             },
             "pomoc": {
               "color": {
-                "token": "rdzen.funkcjonalne.formularz-blad"
+                "kind": "token",
+                "path": "rdzen.funkcjonalne.formularz-blad"
               }
             }
           }
@@ -2487,95 +2789,115 @@ export const KONTRAKTY = {
         "najechanie": {
           "ramka": {
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-wyrazna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-wyrazna"
             }
           }
         },
         "skupienie": {
           "ramka": {
             "borderColor": {
-              "token": "rdzen.komponent.pole-obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-obwodka-skupienie"
             },
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           }
         },
         "otwarta": {
           "ramka": {
             "borderColor": {
-              "token": "rdzen.komponent.pole-obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.komponent.pole-obwodka-skupienie"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           },
           "strzalkaDol": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-000"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-000"
             },
             "opacity": {
-              "token": "rdzen.krycie.przezroczyste"
+              "kind": "token",
+              "path": "rdzen.krycie.przezroczyste"
             }
           },
           "strzalkaGora": {
             "width": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             },
             "opacity": {
-              "token": "rdzen.krycie.pelne"
+              "kind": "token",
+              "path": "rdzen.krycie.pelne"
             }
           }
         },
         "blad": {
           "ramka": {
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-blad"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-blad"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           },
           "pomoc": {
             "color": {
-              "token": "rdzen.funkcjonalne.formularz-blad"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.formularz-blad"
             }
           }
         },
         "wylaczony": {
           "ramka": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             }
           },
           "etykieta": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "wartosc": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "strzalkaDol": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "pomoc": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "przelacznik": {
@@ -2675,7 +2997,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             }
           }
         },
@@ -2688,28 +3011,36 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-300"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-300"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             },
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-wyrazna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-wyrazna"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "paddingX": {
-              "token": "rdzen.rozmiar.odstep-025"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-025"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-025"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-025"
             }
           }
         },
@@ -2718,7 +3049,8 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-000"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-000"
             }
           }
         },
@@ -2727,22 +3059,28 @@ export const KONTRAKTY = {
           "element": "box",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-250"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-250"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-250"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-250"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             },
             "background": {
-              "token": "rdzen.semantic.tlo-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-powierzchnia"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             }
           }
         },
@@ -2752,16 +3090,20 @@ export const KONTRAKTY = {
           "textFrom": "props.etykieta.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         }
@@ -2771,30 +3113,36 @@ export const KONTRAKTY = {
           "wlaczony": {
             "tor": {
               "background": {
-                "token": "rdzen.semantic.akcja-podstawowa"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-podstawowa"
               },
               "borderColor": {
-                "token": "rdzen.semantic.akcja-podstawowa"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-podstawowa"
               }
             },
             "przesuniecie": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-200"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-200"
               }
             }
           },
           "wylaczony": {
             "tor": {
               "background": {
-                "token": "rdzen.semantic.tlo-wyciszone"
+                "kind": "token",
+                "path": "rdzen.semantic.tlo-wyciszone"
               },
               "borderColor": {
-                "token": "rdzen.semantic.obwodka-wyrazna"
+                "kind": "token",
+                "path": "rdzen.semantic.obwodka-wyrazna"
               }
             },
             "przesuniecie": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-000"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-000"
               }
             }
           }
@@ -2804,41 +3152,49 @@ export const KONTRAKTY = {
         "najechanie": {
           "uchwyt": {
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-wyrazna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-wyrazna"
             }
           }
         },
         "skupienie": {
           "tor": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-gruba"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-gruba"
             }
           }
         },
         "niedostepny": {
           "tor": {
             "background": {
-              "token": "rdzen.semantic.akcja-wylaczona"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-wylaczona"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             }
           },
           "uchwyt": {
             "opacity": {
-              "token": "rdzen.krycie.mocne"
+              "kind": "token",
+              "path": "rdzen.krycie.mocne"
             }
           },
           "etykieta": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "suwak": {
@@ -2954,7 +3310,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -2968,7 +3325,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.rozmiar.odstep-000"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-000"
             }
           }
         },
@@ -2977,16 +3335,20 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-600"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-600"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "background": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             }
           }
         },
@@ -2995,22 +3357,28 @@ export const KONTRAKTY = {
           "element": "box",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-200"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-200"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-200"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-200"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             },
             "background": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             },
             "borderColor": {
-              "token": "rdzen.semantic.tlo-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-powierzchnia"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           }
         },
@@ -3019,16 +3387,20 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-400"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-400"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             }
           }
         },
@@ -3038,16 +3410,20 @@ export const KONTRAKTY = {
           "textFrom": "props.wartosc.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-o-stalej-szerokosci"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-o-stalej-szerokosci"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         }
@@ -3057,34 +3433,40 @@ export const KONTRAKTY = {
           "zwykly": {
             "wypelnienie": {
               "background": {
-                "token": "rdzen.semantic.akcja-podstawowa"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-podstawowa"
               }
             },
             "uchwyt": {
               "background": {
-                "token": "rdzen.semantic.akcja-podstawowa"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-podstawowa"
               }
             },
             "wartosc": {
               "color": {
-                "token": "rdzen.semantic.tekst-drugorzedny"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-drugorzedny"
               }
             }
           },
           "wylaczony": {
             "wypelnienie": {
               "background": {
-                "token": "rdzen.semantic.akcja-wylaczona"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-wylaczona"
               }
             },
             "uchwyt": {
               "background": {
-                "token": "rdzen.semantic.akcja-wylaczona"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-wylaczona"
               }
             },
             "wartosc": {
               "color": {
-                "token": "rdzen.semantic.tekst-wylaczony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-wylaczony"
               }
             }
           }
@@ -3094,46 +3476,55 @@ export const KONTRAKTY = {
         "najechanie": {
           "wypelnienie": {
             "background": {
-              "token": "rdzen.semantic.akcja-podstawowa-najechanie"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa-najechanie"
             }
           },
           "uchwyt": {
             "background": {
-              "token": "rdzen.semantic.akcja-podstawowa-najechanie"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa-najechanie"
             }
           }
         },
         "skupienie": {
           "uchwyt": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-gruba"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-gruba"
             }
           }
         },
         "przeciaganie": {
           "wypelnienie": {
             "background": {
-              "token": "rdzen.semantic.akcja-podstawowa-aktywna"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa-aktywna"
             }
           },
           "uchwyt": {
             "background": {
-              "token": "rdzen.semantic.akcja-podstawowa-aktywna"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa-aktywna"
             }
           },
           "wartosc": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-pogrubiona"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-pogrubiona"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "karta": {
@@ -3240,28 +3631,36 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.karta-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.karta-tlo"
             },
             "borderColor": {
-              "token": "rdzen.komponent.karta-obwodka"
+              "kind": "token",
+              "path": "rdzen.komponent.karta-obwodka"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-powierzchnia"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-600"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-600"
             }
           }
         },
@@ -3273,16 +3672,20 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-400"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-400"
             }
           }
         },
@@ -3292,13 +3695,16 @@ export const KONTRAKTY = {
           "iconName": "informacja",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             }
           }
         },
@@ -3311,7 +3717,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-przylegly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-przylegly"
             }
           }
         },
@@ -3321,16 +3728,20 @@ export const KONTRAKTY = {
           "textFrom": "props.naglowek.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.karta-naglowek"
+              "kind": "token",
+              "path": "rdzen.komponent.karta-naglowek"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-naglowek-4"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-naglowek-4"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-pogrubiona"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-pogrubiona"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             }
           }
         },
@@ -3340,13 +3751,16 @@ export const KONTRAKTY = {
           "textFrom": "props.opis.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.karta-opis"
+              "kind": "token",
+              "path": "rdzen.komponent.karta-opis"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             }
           }
         }
@@ -3356,15 +3770,18 @@ export const KONTRAKTY = {
           "poziomy": {
             "root": {
               "gap": {
-                "token": "rdzen.semantic.odstep-zwykly"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-zwykly"
               },
               "paddingY": {
-                "token": "rdzen.semantic.odstep-ciasny"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-ciasny"
               }
             },
             "miniatura": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-400"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-400"
               }
             }
           }
@@ -3374,24 +3791,29 @@ export const KONTRAKTY = {
         "najechanie": {
           "root": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyniesione"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyniesione"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-wyrazna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-wyrazna"
             }
           }
         },
         "skupienie": {
           "root": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "karta-produktu": {
@@ -3514,28 +3936,36 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.karta-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.karta-tlo"
             },
             "borderColor": {
-              "token": "rdzen.komponent.karta-obwodka"
+              "kind": "token",
+              "path": "rdzen.komponent.karta-obwodka"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-powierzchnia"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-600"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-600"
             }
           }
         },
@@ -3547,16 +3977,20 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             }
           }
         },
@@ -3566,13 +4000,16 @@ export const KONTRAKTY = {
           "iconName": "lupa",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-duzy"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-duzy"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-duzy"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-duzy"
             }
           }
         },
@@ -3582,16 +4019,20 @@ export const KONTRAKTY = {
           "textFrom": "props.nazwa.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             }
           }
         },
@@ -3604,7 +4045,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-przylegly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-przylegly"
             }
           }
         },
@@ -3614,13 +4056,16 @@ export const KONTRAKTY = {
           "textFrom": "props.cena.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc-duza"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc-duza"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-pogrubiona"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-pogrubiona"
             }
           }
         },
@@ -3630,10 +4075,12 @@ export const KONTRAKTY = {
           "textFrom": "props.cenaPoprzednia.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             }
           }
         },
@@ -3645,16 +4092,20 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.przycisk-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tlo"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-przylegly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-przylegly"
             }
           }
         },
@@ -3664,13 +4115,16 @@ export const KONTRAKTY = {
           "textFrom": "props.etykietaAkcji.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.przycisk-tresc-odwrocona"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tresc-odwrocona"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-przycisk"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-przycisk"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             }
           }
         }
@@ -3680,23 +4134,28 @@ export const KONTRAKTY = {
           "lista": {
             "root": {
               "gap": {
-                "token": "rdzen.semantic.odstep-zwykly"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-zwykly"
               },
               "paddingX": {
-                "token": "rdzen.semantic.odstep-zwykly"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-zwykly"
               }
             },
             "obraz": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-400"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-400"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-400"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-400"
               }
             },
             "nazwa": {
               "fontSize": {
-                "token": "rdzen.semantic.typografia-podpis"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-podpis"
               }
             }
           }
@@ -3706,43 +4165,51 @@ export const KONTRAKTY = {
         "najechanie": {
           "root": {
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-wyrazna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-wyrazna"
             }
           },
           "przycisk": {
             "background": {
-              "token": "rdzen.komponent.przycisk-tlo-najechanie"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tlo-najechanie"
             }
           }
         },
         "skupienie": {
           "root": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           }
         },
         "niedostepny": {
           "obraz": {
             "opacity": {
-              "token": "rdzen.krycie.polowa"
+              "kind": "token",
+              "path": "rdzen.krycie.polowa"
             }
           },
           "cena": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           },
           "przycisk": {
             "background": {
-              "token": "rdzen.semantic.akcja-wylaczona"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-wylaczona"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "tabela": {
@@ -3911,22 +4378,28 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-powierzchnia"
             },
             "borderColor": {
-              "token": "rdzen.funkcjonalne.tabela-obwodka"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.tabela-obwodka"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-powierzchnia"
             },
             "gap": {
-              "token": "rdzen.rozmiar.odstep-000"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-000"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         },
@@ -3940,25 +4413,32 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.funkcjonalne.tabela-naglowek-tlo"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.tabela-naglowek-tlo"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "gap": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-400"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-400"
             },
             "borderColor": {
-              "token": "rdzen.funkcjonalne.tabela-obwodka"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.tabela-obwodka"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             }
           }
         },
@@ -3968,16 +4448,20 @@ export const KONTRAKTY = {
           "textFrom": "props.naglowekKlucza.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-pogrubiona"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-pogrubiona"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         },
@@ -3987,16 +4471,20 @@ export const KONTRAKTY = {
           "iconName": "strzalka-gora",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "opacity": {
-              "token": "rdzen.krycie.mocne"
+              "kind": "token",
+              "path": "rdzen.krycie.mocne"
             }
           }
         },
@@ -4006,16 +4494,20 @@ export const KONTRAKTY = {
           "textFrom": "props.naglowekWartosci.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         },
@@ -4028,25 +4520,32 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.funkcjonalne.tabela-wiersz-tlo"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.tabela-wiersz-tlo"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-400"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-400"
             },
             "borderColor": {
-              "token": "rdzen.funkcjonalne.tabela-obwodka"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.tabela-obwodka"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             }
           }
         },
@@ -4056,10 +4555,12 @@ export const KONTRAKTY = {
           "textFrom": "props.przykladKlucza.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             }
           }
         },
@@ -4069,10 +4570,12 @@ export const KONTRAKTY = {
           "textFrom": "props.przykladWartosci.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             }
           }
         },
@@ -4085,25 +4588,32 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.funkcjonalne.tabela-wiersz-naprzemienny"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.tabela-wiersz-naprzemienny"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-400"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-400"
             },
             "borderColor": {
-              "token": "rdzen.funkcjonalne.tabela-obwodka"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.tabela-obwodka"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             }
           }
         },
@@ -4113,10 +4623,12 @@ export const KONTRAKTY = {
           "textFrom": "props.przykladKluczaDrugiego.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             }
           }
         },
@@ -4126,10 +4638,12 @@ export const KONTRAKTY = {
           "textFrom": "props.przykladWartosciDrugiej.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             }
           }
         }
@@ -4139,26 +4653,32 @@ export const KONTRAKTY = {
           "zwarta": {
             "naglowek": {
               "paddingY": {
-                "token": "rdzen.rozmiar.odstep-050"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-050"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-300"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-300"
               }
             },
             "wiersz-pierwszy": {
               "paddingY": {
-                "token": "rdzen.rozmiar.odstep-050"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-050"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-300"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-300"
               }
             },
             "wiersz-drugi": {
               "paddingY": {
-                "token": "rdzen.rozmiar.odstep-050"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-050"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-300"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-300"
               }
             }
           }
@@ -4168,56 +4688,67 @@ export const KONTRAKTY = {
         "sortowanie": {
           "naglowek-klucz": {
             "color": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-mocna"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-mocna"
             }
           },
           "strzalka-porzadku": {
             "color": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             },
             "opacity": {
-              "token": "rdzen.krycie.pelne"
+              "kind": "token",
+              "path": "rdzen.krycie.pelne"
             }
           }
         },
         "ladowanie": {
           "wiersz-pierwszy": {
             "opacity": {
-              "token": "rdzen.krycie.polowa"
+              "kind": "token",
+              "path": "rdzen.krycie.polowa"
             }
           },
           "wiersz-drugi": {
             "opacity": {
-              "token": "rdzen.krycie.polowa"
+              "kind": "token",
+              "path": "rdzen.krycie.polowa"
             }
           }
         },
         "pusta": {
           "wiersz-pierwszy": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             }
           },
           "wiersz-drugi": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             }
           },
           "komorka-klucz-1": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             }
           },
           "komorka-klucz-2": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "wiersz-tabeli": {
@@ -4326,25 +4857,32 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.funkcjonalne.tabela-wiersz-tlo"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.tabela-wiersz-tlo"
             },
             "borderColor": {
-              "token": "rdzen.funkcjonalne.tabela-obwodka"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.tabela-obwodka"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "height": {
-              "literal": "44px"
+              "kind": "literal",
+              "value": "44px"
             },
             "paddingX": {
-              "literal": "12px"
+              "kind": "literal",
+              "value": "12px"
             },
             "borderWidth": {
-              "literal": "1px"
+              "kind": "literal",
+              "value": "1px"
             }
           }
         },
@@ -4354,13 +4892,16 @@ export const KONTRAKTY = {
           "textFrom": "props.numer.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.typografia.rozmiar-drobny"
+              "kind": "token",
+              "path": "rdzen.typografia.rozmiar-drobny"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-o-stalej-szerokosci"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-o-stalej-szerokosci"
             }
           }
         },
@@ -4370,13 +4911,16 @@ export const KONTRAKTY = {
           "textFrom": "props.nazwa.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             }
           }
         },
@@ -4386,10 +4930,12 @@ export const KONTRAKTY = {
           "textFrom": "props.stan.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             }
           }
         },
@@ -4399,13 +4945,16 @@ export const KONTRAKTY = {
           "iconName": "strzalka-prawo",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         }
@@ -4415,7 +4964,8 @@ export const KONTRAKTY = {
           "naprzemienne": {
             "root": {
               "background": {
-                "token": "rdzen.funkcjonalne.tabela-wiersz-naprzemienny"
+                "kind": "token",
+                "path": "rdzen.funkcjonalne.tabela-wiersz-naprzemienny"
               }
             }
           }
@@ -4425,31 +4975,37 @@ export const KONTRAKTY = {
         "najechanie": {
           "root": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             }
           }
         },
         "zaznaczony": {
           "root": {
             "background": {
-              "token": "rdzen.semantic.tlo-akcent-subtelne"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-akcent-subtelne"
             },
             "borderColor": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             }
           }
         },
         "skupienie": {
           "root": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "znacznik": {
@@ -4540,28 +5096,36 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.znacznik-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.znacznik-tlo"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-300"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-300"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-przylegly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-przylegly"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-przylegly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-przylegly"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             }
           }
         },
@@ -4570,16 +5134,20 @@ export const KONTRAKTY = {
           "element": "box",
           "bind": {
             "background": {
-              "token": "rdzen.komponent.znacznik-tresc"
+              "kind": "token",
+              "path": "rdzen.komponent.znacznik-tresc"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-100"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-100"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-100"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-100"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             }
           }
         },
@@ -4589,19 +5157,24 @@ export const KONTRAKTY = {
           "textFrom": "props.etykieta.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.znacznik-tresc"
+              "kind": "token",
+              "path": "rdzen.komponent.znacznik-tresc"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         }
@@ -4611,56 +5184,66 @@ export const KONTRAKTY = {
           "sukces": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.stan-sukces-tlo"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-sukces-tlo"
               }
             },
             "kropka": {
               "background": {
-                "token": "rdzen.semantic.stan-sukces-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-sukces-tresc"
               }
             },
             "etykieta": {
               "color": {
-                "token": "rdzen.semantic.stan-sukces-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-sukces-tresc"
               }
             }
           },
           "ostrzezenie": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.stan-ostrzezenie-tlo"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-ostrzezenie-tlo"
               }
             },
             "kropka": {
               "background": {
-                "token": "rdzen.semantic.stan-ostrzezenie-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-ostrzezenie-tresc"
               }
             },
             "etykieta": {
               "color": {
-                "token": "rdzen.semantic.stan-ostrzezenie-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-ostrzezenie-tresc"
               }
             }
           },
           "blad": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.stan-blad-tlo"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-blad-tlo"
               }
             },
             "kropka": {
               "background": {
-                "token": "rdzen.semantic.stan-blad-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-blad-tresc"
               }
             },
             "etykieta": {
               "color": {
-                "token": "rdzen.semantic.stan-blad-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-blad-tresc"
               }
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "plakietka": {
@@ -4744,25 +5327,32 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "borderColor": {
-              "token": "rdzen.semantic.tlo-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-powierzchnia"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-250"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-250"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-przylegly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-przylegly"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             }
           }
         },
@@ -4772,19 +5362,24 @@ export const KONTRAKTY = {
           "textFrom": "props.liczba.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.typografia.rozmiar-drobny"
+              "kind": "token",
+              "path": "rdzen.typografia.rozmiar-drobny"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-pogrubiona"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-pogrubiona"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         }
@@ -4794,12 +5389,14 @@ export const KONTRAKTY = {
           "akcent": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.akcja-podstawowa"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-podstawowa"
               }
             },
             "liczba": {
               "color": {
-                "token": "rdzen.semantic.tekst-odwrocony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-odwrocony"
               }
             }
           }
@@ -4809,11 +5406,13 @@ export const KONTRAKTY = {
         "ukryta": {
           "root": {
             "opacity": {
-              "token": "rdzen.krycie.przezroczyste"
+              "kind": "token",
+              "path": "rdzen.krycie.przezroczyste"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "awatar": {
@@ -4900,22 +5499,28 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             },
             "background": {
-              "token": "rdzen.semantic.tlo-akcent-subtelne"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-akcent-subtelne"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             }
           }
         },
@@ -4925,19 +5530,24 @@ export const KONTRAKTY = {
           "textFrom": "props.inicjaly.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         }
@@ -4947,50 +5557,60 @@ export const KONTRAKTY = {
           "maly": {
             "root": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-300"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-300"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-300"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-300"
               }
             },
             "inicjaly": {
               "fontSize": {
-                "token": "rdzen.typografia.rozmiar-drobny"
+                "kind": "token",
+                "path": "rdzen.typografia.rozmiar-drobny"
               }
             }
           },
           "sredni": {
             "root": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-500"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-500"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-500"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-500"
               }
             },
             "inicjaly": {
               "fontSize": {
-                "token": "rdzen.semantic.typografia-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-tresc"
               }
             }
           },
           "duzy": {
             "root": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-600"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-600"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-600"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-600"
               }
             },
             "inicjaly": {
               "fontSize": {
-                "token": "rdzen.semantic.typografia-tresc-duza"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-tresc-duza"
               }
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "okno-dialogowe": {
@@ -5116,19 +5736,24 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-odwrocone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-odwrocone"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-powierzchnia"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-600"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-600"
             }
           }
         },
@@ -5142,28 +5767,36 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.okno-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.okno-tlo"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-powierzchnia"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-400"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-400"
             }
           }
         },
@@ -5176,7 +5809,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             }
           }
         },
@@ -5186,16 +5820,20 @@ export const KONTRAKTY = {
           "textFrom": "props.tytul.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.okno-naglowek"
+              "kind": "token",
+              "path": "rdzen.komponent.okno-naglowek"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-naglowek-4"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-naglowek-4"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-pogrubiona"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-pogrubiona"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             }
           }
         },
@@ -5205,13 +5843,16 @@ export const KONTRAKTY = {
           "iconName": "krzyzyk",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         },
@@ -5221,13 +5862,16 @@ export const KONTRAKTY = {
           "textFrom": "props.tresc.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             }
           }
         },
@@ -5240,7 +5884,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -5252,22 +5897,28 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-powierzchnia"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-wyrazna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-wyrazna"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-przylegly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-przylegly"
             }
           }
         },
@@ -5277,10 +5928,12 @@ export const KONTRAKTY = {
           "textFrom": "props.etykietaAnulowania.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.przycisk-tresc"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tresc"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-przycisk"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-przycisk"
             }
           }
         },
@@ -5292,16 +5945,20 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.przycisk-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tlo"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-przylegly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-przylegly"
             }
           }
         },
@@ -5311,13 +5968,16 @@ export const KONTRAKTY = {
           "textFrom": "props.etykietaPotwierdzenia.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.przycisk-tresc-odwrocona"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tresc-odwrocona"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-przycisk"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-przycisk"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             }
           }
         }
@@ -5327,23 +5987,28 @@ export const KONTRAKTY = {
           "male": {
             "okno": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-300"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-300"
               },
               "paddingX": {
-                "token": "rdzen.semantic.odstep-ciasny"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-ciasny"
               },
               "paddingY": {
-                "token": "rdzen.semantic.odstep-ciasny"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-ciasny"
               }
             }
           },
           "duze": {
             "okno": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-500"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-500"
               },
               "gap": {
-                "token": "rdzen.semantic.odstep-zwykly"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-zwykly"
               }
             }
           }
@@ -5353,11 +6018,13 @@ export const KONTRAKTY = {
         "przetwarzanie": {
           "potwierdz": {
             "background": {
-              "token": "rdzen.semantic.akcja-wylaczona"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-wylaczona"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "panel-boczny": {
@@ -5459,16 +6126,20 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-strona"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-strona"
             },
             "gap": {
-              "token": "rdzen.rozmiar.odstep-000"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-000"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-600"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-600"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-600"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-600"
             }
           }
         },
@@ -5477,16 +6148,20 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-strona"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-strona"
             },
             "opacity": {
-              "token": "rdzen.krycie.polowa"
+              "kind": "token",
+              "path": "rdzen.krycie.polowa"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-000"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-000"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-600"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-600"
             }
           }
         },
@@ -5499,28 +6174,36 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-powierzchnia"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-400"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-400"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-600"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-600"
             }
           }
         },
@@ -5533,7 +6216,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -5543,13 +6227,16 @@ export const KONTRAKTY = {
           "textFrom": "props.tytul.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-naglowek-4"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-naglowek-4"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-pogrubiona"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-pogrubiona"
             }
           }
         },
@@ -5559,13 +6246,16 @@ export const KONTRAKTY = {
           "iconName": "krzyzyk",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         },
@@ -5575,13 +6265,16 @@ export const KONTRAKTY = {
           "textFrom": "props.tresc.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             }
           }
         },
@@ -5590,16 +6283,20 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-odwrocone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-odwrocone"
             },
             "opacity": {
-              "token": "rdzen.krycie.polowa"
+              "kind": "token",
+              "path": "rdzen.krycie.polowa"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-200"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-200"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-600"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-600"
             }
           }
         }
@@ -5609,18 +6306,22 @@ export const KONTRAKTY = {
           "prawa": {
             "przyciemnienieLewe": {
               "background": {
-                "token": "rdzen.semantic.tlo-odwrocone"
+                "kind": "token",
+                "path": "rdzen.semantic.tlo-odwrocone"
               },
               "width": {
-                "token": "rdzen.rozmiar.odstep-200"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-200"
               }
             },
             "przyciemnieniePrawe": {
               "background": {
-                "token": "rdzen.semantic.tlo-strona"
+                "kind": "token",
+                "path": "rdzen.semantic.tlo-strona"
               },
               "width": {
-                "token": "rdzen.rozmiar.odstep-000"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-000"
               }
             }
           }
@@ -5630,21 +6331,25 @@ export const KONTRAKTY = {
         "zamkniety": {
           "panel": {
             "opacity": {
-              "token": "rdzen.krycie.przezroczyste"
+              "kind": "token",
+              "path": "rdzen.krycie.przezroczyste"
             }
           },
           "przyciemnienieLewe": {
             "background": {
-              "token": "rdzen.semantic.tlo-strona"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-strona"
             }
           },
           "przyciemnieniePrawe": {
             "background": {
-              "token": "rdzen.semantic.tlo-strona"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-strona"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "naglowek-strony": {
@@ -5760,25 +6465,32 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-powierzchnia"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "gap": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "radius": {
-              "token": "rdzen.rozmiar.promien-zaden"
+              "kind": "token",
+              "path": "rdzen.rozmiar.promien-zaden"
             }
           }
         },
@@ -5788,13 +6500,16 @@ export const KONTRAKTY = {
           "textFrom": "props.sciezka.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
             },
             "fontSize": {
-              "token": "rdzen.typografia.rozmiar-drobny"
+              "kind": "token",
+              "path": "rdzen.typografia.rozmiar-drobny"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         },
@@ -5807,7 +6522,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             }
           }
         },
@@ -5817,19 +6533,24 @@ export const KONTRAKTY = {
           "textFrom": "props.tytul.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-naglowek-3"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-naglowek-3"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-pogrubiona"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-pogrubiona"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         },
@@ -5841,19 +6562,24 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.przycisk-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tlo"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-400"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-400"
             }
           }
         },
@@ -5863,13 +6589,16 @@ export const KONTRAKTY = {
           "textFrom": "props.akcjaGlowna.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.przycisk-tresc-odwrocona"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tresc-odwrocona"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-przycisk"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-przycisk"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             }
           }
         },
@@ -5879,13 +6608,16 @@ export const KONTRAKTY = {
           "textFrom": "props.opis.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             }
           }
         }
@@ -5895,25 +6627,30 @@ export const KONTRAKTY = {
           "zwarty": {
             "root": {
               "paddingY": {
-                "token": "rdzen.rozmiar.odstep-050"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-050"
               },
               "gap": {
-                "token": "rdzen.rozmiar.odstep-025"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-025"
               }
             },
             "tytul": {
               "fontSize": {
-                "token": "rdzen.semantic.typografia-naglowek-4"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-naglowek-4"
               }
             },
             "sciezka": {
               "opacity": {
-                "token": "rdzen.krycie.przezroczyste"
+                "kind": "token",
+                "path": "rdzen.krycie.przezroczyste"
               }
             },
             "opis": {
               "opacity": {
-                "token": "rdzen.krycie.przezroczyste"
+                "kind": "token",
+                "path": "rdzen.krycie.przezroczyste"
               }
             }
           }
@@ -5923,17 +6660,21 @@ export const KONTRAKTY = {
         "przypiety": {
           "root": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyniesione"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyniesione"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-wyrazna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-wyrazna"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "stopka": {
@@ -6040,25 +6781,32 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         },
@@ -6072,7 +6820,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             }
           }
         },
@@ -6082,10 +6831,12 @@ export const KONTRAKTY = {
           "textFrom": "props.linkPomoc.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-link"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-link"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             }
           }
         },
@@ -6095,10 +6846,12 @@ export const KONTRAKTY = {
           "textFrom": "props.linkKontakt.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-link"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-link"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             }
           }
         },
@@ -6108,10 +6861,12 @@ export const KONTRAKTY = {
           "textFrom": "props.linkPrywatnosci.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-link"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-link"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             }
           }
         },
@@ -6120,10 +6875,12 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "height": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "background": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             }
           }
         },
@@ -6133,13 +6890,16 @@ export const KONTRAKTY = {
           "textFrom": "props.notaPrawna.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.typografia.rozmiar-drobny"
+              "kind": "token",
+              "path": "rdzen.typografia.rozmiar-drobny"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             }
           }
         }
@@ -6149,38 +6909,46 @@ export const KONTRAKTY = {
           "odwrocony": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.tlo-odwrocone"
+                "kind": "token",
+                "path": "rdzen.semantic.tlo-odwrocone"
               },
               "borderColor": {
-                "token": "rdzen.semantic.obwodka-wyrazna"
+                "kind": "token",
+                "path": "rdzen.semantic.obwodka-wyrazna"
               }
             },
             "link-pomoc": {
               "color": {
-                "token": "rdzen.semantic.tekst-odwrocony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-odwrocony"
               }
             },
             "link-kontakt": {
               "color": {
-                "token": "rdzen.semantic.tekst-odwrocony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-odwrocony"
               }
             },
             "link-prywatnosci": {
               "color": {
-                "token": "rdzen.semantic.tekst-odwrocony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-odwrocony"
               }
             },
             "kreska": {
               "background": {
-                "token": "rdzen.semantic.obwodka-wyrazna"
+                "kind": "token",
+                "path": "rdzen.semantic.obwodka-wyrazna"
               }
             },
             "nota": {
               "color": {
-                "token": "rdzen.semantic.tekst-odwrocony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-odwrocony"
               },
               "opacity": {
-                "token": "rdzen.krycie.mocne"
+                "kind": "token",
+                "path": "rdzen.krycie.mocne"
               }
             }
           }
@@ -6190,56 +6958,69 @@ export const KONTRAKTY = {
         "najechanie": {
           "link-pomoc": {
             "color": {
-              "token": "rdzen.semantic.akcja-podstawowa-najechanie"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa-najechanie"
             }
           },
           "link-kontakt": {
             "color": {
-              "token": "rdzen.semantic.akcja-podstawowa-najechanie"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa-najechanie"
             }
           },
           "link-prywatnosci": {
             "color": {
-              "token": "rdzen.semantic.akcja-podstawowa-najechanie"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa-najechanie"
             }
           }
         },
         "skupienie": {
           "link-pomoc": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             },
             "radius": {
-              "token": "rdzen.rozmiar.promien-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.promien-maly"
             }
           },
           "link-kontakt": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             },
             "radius": {
-              "token": "rdzen.rozmiar.promien-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.promien-maly"
             }
           },
           "link-prywatnosci": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             },
             "radius": {
-              "token": "rdzen.rozmiar.promien-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.promien-maly"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "powiadomienie": {
@@ -6352,25 +7133,32 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.powiadomienie-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.powiadomienie-tlo"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-powierzchnia"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             }
           }
         },
@@ -6380,13 +7168,16 @@ export const KONTRAKTY = {
           "iconName": "informacja",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.stan-informacja-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.stan-informacja-tresc"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             }
           }
         },
@@ -6399,7 +7190,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.rozmiar.odstep-025"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-025"
             }
           }
         },
@@ -6409,16 +7201,20 @@ export const KONTRAKTY = {
           "textFrom": "props.tytul.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.powiadomienie-tresc"
+              "kind": "token",
+              "path": "rdzen.komponent.powiadomienie-tresc"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         },
@@ -6428,13 +7224,16 @@ export const KONTRAKTY = {
           "textFrom": "props.opis.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             }
           }
         },
@@ -6444,13 +7243,16 @@ export const KONTRAKTY = {
           "iconName": "krzyzyk",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         }
@@ -6460,51 +7262,60 @@ export const KONTRAKTY = {
           "sukces": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.stan-sukces-tlo"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-sukces-tlo"
               }
             },
             "ikona": {
               "color": {
-                "token": "rdzen.semantic.stan-sukces-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-sukces-tresc"
               }
             },
             "tytul": {
               "color": {
-                "token": "rdzen.semantic.stan-sukces-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-sukces-tresc"
               }
             }
           },
           "ostrzezenie": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.stan-ostrzezenie-tlo"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-ostrzezenie-tlo"
               }
             },
             "ikona": {
               "color": {
-                "token": "rdzen.semantic.stan-ostrzezenie-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-ostrzezenie-tresc"
               }
             },
             "tytul": {
               "color": {
-                "token": "rdzen.semantic.stan-ostrzezenie-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-ostrzezenie-tresc"
               }
             }
           },
           "blad": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.stan-blad-tlo"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-blad-tlo"
               }
             },
             "ikona": {
               "color": {
-                "token": "rdzen.semantic.stan-blad-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-blad-tresc"
               }
             },
             "tytul": {
               "color": {
-                "token": "rdzen.semantic.stan-blad-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-blad-tresc"
               }
             }
           }
@@ -6514,11 +7325,13 @@ export const KONTRAKTY = {
         "wygaszanie": {
           "root": {
             "opacity": {
-              "token": "rdzen.krycie.ledwie"
+              "kind": "token",
+              "path": "rdzen.krycie.ledwie"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "pasek-postepu": {
@@ -6606,7 +7419,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             }
           }
         },
@@ -6619,13 +7433,16 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.rozmiar.odstep-000"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-000"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             },
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             }
           }
         },
@@ -6634,16 +7451,20 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-600"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-600"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-075"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-075"
             },
             "background": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             }
           }
         },
@@ -6652,16 +7473,20 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-400"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-400"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-075"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-075"
             },
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             }
           }
         },
@@ -6671,13 +7496,16 @@ export const KONTRAKTY = {
           "textFrom": "props.etykieta.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         }
@@ -6687,22 +7515,26 @@ export const KONTRAKTY = {
           "ukonczony": {
             "wypelnienie": {
               "background": {
-                "token": "rdzen.semantic.stan-sukces-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-sukces-tresc"
               }
             },
             "pozostalosc": {
               "background": {
-                "token": "rdzen.semantic.stan-sukces-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-sukces-tresc"
               }
             },
             "etykieta": {
               "color": {
-                "token": "rdzen.semantic.stan-sukces-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-sukces-tresc"
               }
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "wskaznik-ladowania": {
@@ -6799,10 +7631,12 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-025"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-025"
             }
           }
         },
@@ -6816,7 +7650,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             }
           }
         },
@@ -6825,19 +7660,24 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-100"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-100"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-100"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-100"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             },
             "background": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             },
             "opacity": {
-              "token": "rdzen.krycie.pelne"
+              "kind": "token",
+              "path": "rdzen.krycie.pelne"
             }
           }
         },
@@ -6846,19 +7686,24 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-100"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-100"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-100"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-100"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             },
             "background": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             },
             "opacity": {
-              "token": "rdzen.krycie.mocne"
+              "kind": "token",
+              "path": "rdzen.krycie.mocne"
             }
           }
         },
@@ -6867,19 +7712,24 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-100"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-100"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-100"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-100"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             },
             "background": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             },
             "opacity": {
-              "token": "rdzen.krycie.polowa"
+              "kind": "token",
+              "path": "rdzen.krycie.polowa"
             }
           }
         },
@@ -6889,13 +7739,16 @@ export const KONTRAKTY = {
           "textFrom": "props.komunikat.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         }
@@ -6905,72 +7758,88 @@ export const KONTRAKTY = {
           "maly": {
             "root": {
               "gap": {
-                "token": "rdzen.semantic.odstep-przylegly"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-przylegly"
               }
             },
             "kropka-1": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-075"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-075"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-075"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-075"
               }
             },
             "kropka-2": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-075"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-075"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-075"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-075"
               }
             },
             "kropka-3": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-075"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-075"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-075"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-075"
               }
             },
             "podpis": {
               "fontSize": {
-                "token": "rdzen.typografia.rozmiar-drobny"
+                "kind": "token",
+                "path": "rdzen.typografia.rozmiar-drobny"
               }
             }
           },
           "duzy": {
             "root": {
               "gap": {
-                "token": "rdzen.semantic.odstep-zwykly"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-zwykly"
               }
             },
             "kropka-1": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-150"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-150"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-150"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-150"
               }
             },
             "kropka-2": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-150"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-150"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-150"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-150"
               }
             },
             "kropka-3": {
               "width": {
-                "token": "rdzen.rozmiar.odstep-150"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-150"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-150"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-150"
               }
             },
             "podpis": {
               "fontSize": {
-                "token": "rdzen.semantic.typografia-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-tresc"
               }
             }
           }
@@ -6980,21 +7849,25 @@ export const KONTRAKTY = {
         "ruch-ograniczony": {
           "kropka-1": {
             "opacity": {
-              "token": "rdzen.krycie.mocne"
+              "kind": "token",
+              "path": "rdzen.krycie.mocne"
             }
           },
           "kropka-2": {
             "opacity": {
-              "token": "rdzen.krycie.mocne"
+              "kind": "token",
+              "path": "rdzen.krycie.mocne"
             }
           },
           "kropka-3": {
             "opacity": {
-              "token": "rdzen.krycie.mocne"
+              "kind": "token",
+              "path": "rdzen.krycie.mocne"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "zakladki": {
@@ -7123,10 +7996,12 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-025"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-025"
             }
           }
         },
@@ -7139,10 +8014,12 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "paddingX": {
-              "token": "rdzen.rozmiar.odstep-025"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-025"
             }
           }
         },
@@ -7152,16 +8029,20 @@ export const KONTRAKTY = {
           "textFrom": "props.etykietaAktywnej.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.nawigacja-pozycja-aktywna"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-pozycja-aktywna"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         },
@@ -7170,16 +8051,20 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "height": {
-              "token": "rdzen.rozmiar.obwodka-gruba"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-gruba"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-500"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-500"
             },
             "background": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-pelny"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-pelny"
             }
           }
         },
@@ -7191,7 +8076,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "paddingX": {
-              "token": "rdzen.rozmiar.odstep-025"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-025"
             }
           }
         },
@@ -7201,16 +8087,20 @@ export const KONTRAKTY = {
           "textFrom": "props.etykietaDruga.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-zwykla"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         },
@@ -7222,7 +8112,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "paddingX": {
-              "token": "rdzen.rozmiar.odstep-025"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-025"
             }
           }
         },
@@ -7232,16 +8123,20 @@ export const KONTRAKTY = {
           "textFrom": "props.etykietaTrzecia.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-zwykla"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         }
@@ -7251,15 +8146,18 @@ export const KONTRAKTY = {
           "pionowy": {
             "root": {
               "gap": {
-                "token": "rdzen.semantic.odstep-ciasny"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-ciasny"
               }
             },
             "z-aktywna-wskaznik": {
               "width": {
-                "token": "rdzen.rozmiar.obwodka-gruba"
+                "kind": "token",
+                "path": "rdzen.rozmiar.obwodka-gruba"
               },
               "height": {
-                "token": "rdzen.rozmiar.odstep-200"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-200"
               }
             }
           }
@@ -7269,24 +8167,29 @@ export const KONTRAKTY = {
         "najechanie": {
           "z-druga-tekst": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             }
           }
         },
         "skupienie": {
           "z-druga": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "okruszki": {
@@ -7376,19 +8279,24 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.funkcjonalne.nawigacja-tlo"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-tlo"
             },
             "gap": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         },
@@ -7398,13 +8306,16 @@ export const KONTRAKTY = {
           "textFrom": "props.korzen.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-link"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-link"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         },
@@ -7414,13 +8325,16 @@ export const KONTRAKTY = {
           "iconName": "strzalka-prawo",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.nawigacja-separator"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-separator"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         },
@@ -7430,13 +8344,16 @@ export const KONTRAKTY = {
           "textFrom": "props.dzial.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-link"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-link"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         },
@@ -7446,13 +8363,16 @@ export const KONTRAKTY = {
           "iconName": "strzalka-prawo",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.nawigacja-separator"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-separator"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         },
@@ -7462,16 +8382,20 @@ export const KONTRAKTY = {
           "textFrom": "props.biezacy.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.nawigacja-pozycja-aktywna"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-pozycja-aktywna"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         }
@@ -7480,40 +8404,49 @@ export const KONTRAKTY = {
         "najechanie": {
           "ogniwo-korzen": {
             "color": {
-              "token": "rdzen.semantic.akcja-podstawowa-najechanie"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa-najechanie"
             }
           },
           "ogniwo-dzial": {
             "color": {
-              "token": "rdzen.semantic.akcja-podstawowa-najechanie"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa-najechanie"
             }
           }
         },
         "skupienie": {
           "ogniwo-korzen": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             },
             "radius": {
-              "token": "rdzen.rozmiar.promien-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.promien-maly"
             }
           },
           "ogniwo-dzial": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             },
             "radius": {
-              "token": "rdzen.rozmiar.promien-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.promien-maly"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "stronicowanie": {
@@ -7621,10 +8554,12 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.rozmiar.odstep-075"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-075"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-025"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-025"
             }
           }
         },
@@ -7636,22 +8571,28 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "background": {
-              "token": "rdzen.semantic.tlo-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-powierzchnia"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             }
           }
         },
@@ -7661,13 +8602,16 @@ export const KONTRAKTY = {
           "iconName": "strzalka-lewo",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         },
@@ -7681,10 +8625,12 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "paddingX": {
-              "token": "rdzen.rozmiar.odstep-025"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-025"
             }
           }
         },
@@ -7696,16 +8642,20 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-025"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-025"
             }
           }
         },
@@ -7715,16 +8665,20 @@ export const KONTRAKTY = {
           "textFrom": "props.stronaBiezaca.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-odwrocony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-odwrocony"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         },
@@ -7734,13 +8688,16 @@ export const KONTRAKTY = {
           "textFrom": "props.lacznik.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         },
@@ -7750,13 +8707,16 @@ export const KONTRAKTY = {
           "textFrom": "props.liczbaStron.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         },
@@ -7768,22 +8728,28 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "background": {
-              "token": "rdzen.semantic.tlo-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-powierzchnia"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             }
           }
         },
@@ -7793,13 +8759,16 @@ export const KONTRAKTY = {
           "iconName": "strzalka-prawo",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         }
@@ -7809,17 +8778,20 @@ export const KONTRAKTY = {
           "pelny": {
             "root": {
               "gap": {
-                "token": "rdzen.rozmiar.odstep-050"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-050"
               }
             },
             "wstecz": {
               "paddingX": {
-                "token": "rdzen.rozmiar.odstep-050"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-050"
               }
             },
             "dalej": {
               "paddingX": {
-                "token": "rdzen.rozmiar.odstep-050"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-050"
               }
             }
           }
@@ -7829,36 +8801,43 @@ export const KONTRAKTY = {
         "najechanie": {
           "dalej": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-wyrazna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-wyrazna"
             }
           }
         },
         "skupienie": {
           "dalej": {
             "outlineColor": {
-              "token": "rdzen.semantic.obwodka-skupienie"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-skupienie"
             },
             "outlineWidth": {
-              "token": "rdzen.rozmiar.obwodka-srednia"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-srednia"
             }
           }
         },
         "wylaczony": {
           "wstecz": {
             "background": {
-              "token": "rdzen.semantic.tlo-wyciszone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-wyciszone"
             }
           },
           "wstecz-ikona": {
             "color": {
-              "token": "rdzen.semantic.tekst-wylaczony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-wylaczony"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "podpowiedz": {
@@ -7947,10 +8926,12 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.rozmiar.odstep-000"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-000"
             },
             "opacity": {
-              "token": "rdzen.krycie.pelne"
+              "kind": "token",
+              "path": "rdzen.krycie.pelne"
             }
           }
         },
@@ -7959,16 +8940,20 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-100"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-100"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "background": {
-              "token": "rdzen.semantic.tlo-odwrocone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-odwrocone"
             },
             "opacity": {
-              "token": "rdzen.krycie.przezroczyste"
+              "kind": "token",
+              "path": "rdzen.krycie.przezroczyste"
             }
           }
         },
@@ -7980,16 +8965,20 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-odwrocone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-odwrocone"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             }
           }
         },
@@ -7999,16 +8988,20 @@ export const KONTRAKTY = {
           "textFrom": "props.tresc.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-odwrocony"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-odwrocony"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         },
@@ -8017,16 +9010,20 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-100"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-100"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "background": {
-              "token": "rdzen.semantic.tlo-odwrocone"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-odwrocone"
             },
             "opacity": {
-              "token": "rdzen.krycie.pelne"
+              "kind": "token",
+              "path": "rdzen.krycie.pelne"
             }
           }
         }
@@ -8036,12 +9033,14 @@ export const KONTRAKTY = {
           "dol": {
             "ogonek-gora": {
               "opacity": {
-                "token": "rdzen.krycie.pelne"
+                "kind": "token",
+                "path": "rdzen.krycie.pelne"
               }
             },
             "ogonek-dol": {
               "opacity": {
-                "token": "rdzen.krycie.przezroczyste"
+                "kind": "token",
+                "path": "rdzen.krycie.przezroczyste"
               }
             }
           }
@@ -8051,11 +9050,13 @@ export const KONTRAKTY = {
         "ukryta": {
           "root": {
             "opacity": {
-              "token": "rdzen.krycie.przezroczyste"
+              "kind": "token",
+              "path": "rdzen.krycie.przezroczyste"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "dymek": {
@@ -8161,28 +9162,36 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.okno-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.okno-tlo"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-powierzchnia"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "opacity": {
-              "token": "rdzen.krycie.pelne"
+              "kind": "token",
+              "path": "rdzen.krycie.pelne"
             }
           }
         },
@@ -8195,7 +9204,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -8205,16 +9215,20 @@ export const KONTRAKTY = {
           "textFrom": "props.tytul.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.okno-naglowek"
+              "kind": "token",
+              "path": "rdzen.komponent.okno-naglowek"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-naglowek-4"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-naglowek-4"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-pogrubiona"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-pogrubiona"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         },
@@ -8224,13 +9238,16 @@ export const KONTRAKTY = {
           "iconName": "krzyzyk",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         },
@@ -8240,16 +9257,20 @@ export const KONTRAKTY = {
           "textFrom": "props.tresc.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         },
@@ -8259,16 +9280,20 @@ export const KONTRAKTY = {
           "textFrom": "props.etykietaOdnosnika.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-link"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-link"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-pogrubiona"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-pogrubiona"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         }
@@ -8278,23 +9303,28 @@ export const KONTRAKTY = {
           "duzy": {
             "root": {
               "paddingX": {
-                "token": "rdzen.semantic.odstep-luzny"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-luzny"
               },
               "paddingY": {
-                "token": "rdzen.semantic.odstep-luzny"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-luzny"
               },
               "gap": {
-                "token": "rdzen.semantic.odstep-zwykly"
+                "kind": "token",
+                "path": "rdzen.semantic.odstep-zwykly"
               }
             },
             "tytul": {
               "fontSize": {
-                "token": "rdzen.semantic.typografia-naglowek-3"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-naglowek-3"
               }
             },
             "tresc": {
               "fontSize": {
-                "token": "rdzen.semantic.typografia-tresc-duza"
+                "kind": "token",
+                "path": "rdzen.semantic.typografia-tresc-duza"
               }
             }
           }
@@ -8304,11 +9334,13 @@ export const KONTRAKTY = {
         "zamkniety": {
           "root": {
             "opacity": {
-              "token": "rdzen.krycie.przezroczyste"
+              "kind": "token",
+              "path": "rdzen.krycie.przezroczyste"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "menu-kontekstowe": {
@@ -8420,25 +9452,32 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.funkcjonalne.nawigacja-tlo"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-tlo"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "gap": {
-              "token": "rdzen.rozmiar.odstep-000"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-000"
             },
             "opacity": {
-              "token": "rdzen.krycie.pelne"
+              "kind": "token",
+              "path": "rdzen.krycie.pelne"
             }
           }
         },
@@ -8451,13 +9490,16 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             }
           }
         },
@@ -8467,13 +9509,16 @@ export const KONTRAKTY = {
           "iconName": "olowek",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         },
@@ -8483,13 +9528,16 @@ export const KONTRAKTY = {
           "textFrom": "props.akcjaPodstawowa.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         },
@@ -8502,13 +9550,16 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             }
           }
         },
@@ -8518,13 +9569,16 @@ export const KONTRAKTY = {
           "iconName": "plus",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         },
@@ -8534,13 +9588,16 @@ export const KONTRAKTY = {
           "textFrom": "props.akcjaWtorna.default",
           "bind": {
             "color": {
-              "token": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-pozycja-tekst"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         },
@@ -8549,10 +9606,12 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "height": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "background": {
-              "token": "rdzen.funkcjonalne.nawigacja-separator"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-separator"
             }
           }
         },
@@ -8565,13 +9624,16 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             }
           }
         },
@@ -8581,13 +9643,16 @@ export const KONTRAKTY = {
           "iconName": "kosz",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.akcja-destrukcyjna"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-destrukcyjna"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-maly"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-maly"
             }
           }
         },
@@ -8597,13 +9662,16 @@ export const KONTRAKTY = {
           "textFrom": "props.akcjaDestrukcyjna.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.akcja-destrukcyjna"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-destrukcyjna"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         }
@@ -8613,22 +9681,26 @@ export const KONTRAKTY = {
           "zwarta": {
             "root": {
               "paddingY": {
-                "token": "rdzen.rozmiar.odstep-025"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-025"
               }
             },
             "pozycja-1": {
               "paddingY": {
-                "token": "rdzen.rozmiar.odstep-025"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-025"
               }
             },
             "pozycja-2": {
               "paddingY": {
-                "token": "rdzen.rozmiar.odstep-025"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-025"
               }
             },
             "pozycja-3": {
               "paddingY": {
-                "token": "rdzen.rozmiar.odstep-025"
+                "kind": "token",
+                "path": "rdzen.rozmiar.odstep-025"
               }
             }
           }
@@ -8638,28 +9710,33 @@ export const KONTRAKTY = {
         "wskazanie": {
           "pozycja-1": {
             "background": {
-              "token": "rdzen.semantic.tlo-akcent-subtelne"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-akcent-subtelne"
             }
           },
           "ikona-1": {
             "color": {
-              "token": "rdzen.funkcjonalne.nawigacja-pozycja-aktywna"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-pozycja-aktywna"
             }
           },
           "etykieta-1": {
             "color": {
-              "token": "rdzen.funkcjonalne.nawigacja-pozycja-aktywna"
+              "kind": "token",
+              "path": "rdzen.funkcjonalne.nawigacja-pozycja-aktywna"
             }
           }
         },
         "zamkniete": {
           "root": {
             "opacity": {
-              "token": "rdzen.krycie.przezroczyste"
+              "kind": "token",
+              "path": "rdzen.krycie.przezroczyste"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "pusty-stan": {
@@ -8772,25 +9849,32 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-powierzchnia"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-powierzchnia"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-luzny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-luzny"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -8800,13 +9884,16 @@ export const KONTRAKTY = {
           "iconName": "informacja",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "width": {
-              "token": "rdzen.rozmiar.ikona-wielki"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-wielki"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-wielki"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-wielki"
             }
           }
         },
@@ -8816,19 +9903,24 @@ export const KONTRAKTY = {
           "textFrom": "props.tytul.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-naglowek-4"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-naglowek-4"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-pogrubiona"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-pogrubiona"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwarta"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwarta"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         },
@@ -8838,16 +9930,20 @@ export const KONTRAKTY = {
           "textFrom": "props.opis.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         },
@@ -8859,16 +9955,20 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.przycisk-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tlo"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-050"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-050"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             }
           }
         },
@@ -8878,16 +9978,20 @@ export const KONTRAKTY = {
           "textFrom": "props.etykietaAkcji.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.przycisk-tresc-odwrocona"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tresc-odwrocona"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-przycisk"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-przycisk"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-pogrubiona"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-pogrubiona"
             },
             "fontFamily": {
-              "token": "rdzen.typografia.rodzina-podstawowa"
+              "kind": "token",
+              "path": "rdzen.typografia.rodzina-podstawowa"
             }
           }
         }
@@ -8897,37 +10001,44 @@ export const KONTRAKTY = {
           "brak-wynikow": {
             "ikona": {
               "color": {
-                "token": "rdzen.semantic.tekst-wylaczony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-wylaczony"
               }
             },
             "akcja": {
               "background": {
-                "token": "rdzen.semantic.akcja-drugorzedna"
+                "kind": "token",
+                "path": "rdzen.semantic.akcja-drugorzedna"
               }
             }
           },
           "blad-pobierania": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.stan-blad-tlo"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-blad-tlo"
               },
               "borderColor": {
-                "token": "rdzen.semantic.obwodka-blad"
+                "kind": "token",
+                "path": "rdzen.semantic.obwodka-blad"
               }
             },
             "ikona": {
               "color": {
-                "token": "rdzen.semantic.stan-blad-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-blad-tresc"
               }
             },
             "tytul": {
               "color": {
-                "token": "rdzen.semantic.stan-blad-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-blad-tresc"
               }
             },
             "opis": {
               "color": {
-                "token": "rdzen.semantic.stan-blad-tresc"
+                "kind": "token",
+                "path": "rdzen.semantic.stan-blad-tresc"
               }
             }
           }
@@ -8937,11 +10048,13 @@ export const KONTRAKTY = {
         "bezAkcji": {
           "akcja": {
             "opacity": {
-              "token": "rdzen.krycie.przezroczyste"
+              "kind": "token",
+              "path": "rdzen.krycie.przezroczyste"
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "baner": {
@@ -9022,16 +10135,20 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.color.sygnalowy-stary"
+              "kind": "token",
+              "path": "rdzen.color.sygnalowy-stary"
             },
             "paddingX": {
-              "token": "rdzen.rozmiar.odstep-stary"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-stary"
             },
             "paddingY": {
-              "token": "rdzen.rozmiar.odstep-stary"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-stary"
             },
             "gap": {
-              "token": "rdzen.rozmiar.odstep-stary"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-stary"
             }
           }
         },
@@ -9041,7 +10158,8 @@ export const KONTRAKTY = {
           "iconName": "ostrzezenie",
           "bind": {
             "color": {
-              "token": "rdzen.color.akcent-stary"
+              "kind": "token",
+              "path": "rdzen.color.akcent-stary"
             }
           }
         },
@@ -9051,7 +10169,8 @@ export const KONTRAKTY = {
           "textFrom": "props.tresc.default",
           "bind": {
             "color": {
-              "token": "rdzen.color.akcent-stary"
+              "kind": "token",
+              "path": "rdzen.color.akcent-stary"
             }
           }
         },
@@ -9061,7 +10180,8 @@ export const KONTRAKTY = {
           "textFrom": "props.etykietaAkcji.default",
           "bind": {
             "color": {
-              "token": "rdzen.color.akcent-stary"
+              "kind": "token",
+              "path": "rdzen.color.akcent-stary"
             }
           }
         },
@@ -9071,7 +10191,8 @@ export const KONTRAKTY = {
           "iconName": "krzyzyk",
           "bind": {
             "color": {
-              "token": "rdzen.color.akcent-stary"
+              "kind": "token",
+              "path": "rdzen.color.akcent-stary"
             }
           }
         }
@@ -9081,32 +10202,38 @@ export const KONTRAKTY = {
           "informacja": {
             "root": {
               "background": {
-                "token": "rdzen.color.akcent-stary"
+                "kind": "token",
+                "path": "rdzen.color.akcent-stary"
               }
             },
             "ikona": {
               "color": {
-                "token": "rdzen.color.sygnalowy-stary"
+                "kind": "token",
+                "path": "rdzen.color.sygnalowy-stary"
               }
             },
             "tresc": {
               "color": {
-                "token": "rdzen.color.sygnalowy-stary"
+                "kind": "token",
+                "path": "rdzen.color.sygnalowy-stary"
               }
             },
             "akcja": {
               "color": {
-                "token": "rdzen.color.sygnalowy-stary"
+                "kind": "token",
+                "path": "rdzen.color.sygnalowy-stary"
               }
             },
             "zamknij": {
               "color": {
-                "token": "rdzen.color.sygnalowy-stary"
+                "kind": "token",
+                "path": "rdzen.color.sygnalowy-stary"
               }
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   },
   "sekcja-powitalna": {
@@ -9225,22 +10352,28 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-powierzchnia"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-powierzchnia"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-luzny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-luzny"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-sekcja"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-sekcja"
             },
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             },
             "width": {
-              "token": "rdzen.rozmiar.odstep-600"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-600"
             }
           }
         },
@@ -9250,13 +10383,16 @@ export const KONTRAKTY = {
           "textFrom": "props.nadtytul.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.akcja-podstawowa"
+              "kind": "token",
+              "path": "rdzen.semantic.akcja-podstawowa"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-podpis"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-podpis"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             }
           }
         },
@@ -9266,16 +10402,20 @@ export const KONTRAKTY = {
           "textFrom": "props.naglowek.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-naglowek-2"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-naglowek-2"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-mocna"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-mocna"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-ciasna"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-ciasna"
             }
           }
         },
@@ -9285,13 +10425,16 @@ export const KONTRAKTY = {
           "textFrom": "props.podtytul.default",
           "bind": {
             "color": {
-              "token": "rdzen.semantic.tekst-drugorzedny"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-drugorzedny"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-tresc"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-tresc"
             },
             "lineHeight": {
-              "token": "rdzen.typografia.wysokosc-zwykla"
+              "kind": "token",
+              "path": "rdzen.typografia.wysokosc-zwykla"
             }
           }
         },
@@ -9304,7 +10447,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "gap": {
-              "token": "rdzen.semantic.odstep-ciasny"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-ciasny"
             }
           }
         },
@@ -9316,16 +10460,20 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.komponent.przycisk-tlo"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tlo"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-przylegly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-przylegly"
             }
           }
         },
@@ -9335,13 +10483,16 @@ export const KONTRAKTY = {
           "textFrom": "props.etykietaAkcji.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.przycisk-tresc-odwrocona"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tresc-odwrocona"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-przycisk"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-przycisk"
             },
             "fontWeight": {
-              "token": "rdzen.typografia.grubosc-srednia"
+              "kind": "token",
+              "path": "rdzen.typografia.grubosc-srednia"
             }
           }
         },
@@ -9353,22 +10504,28 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "background": {
-              "token": "rdzen.semantic.tlo-powierzchnia"
+              "kind": "token",
+              "path": "rdzen.semantic.tlo-powierzchnia"
             },
             "borderColor": {
-              "token": "rdzen.semantic.obwodka-wyrazna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-wyrazna"
             },
             "borderWidth": {
-              "token": "rdzen.rozmiar.obwodka-cienka"
+              "kind": "token",
+              "path": "rdzen.rozmiar.obwodka-cienka"
             },
             "radius": {
-              "token": "rdzen.semantic.promien-interakcja"
+              "kind": "token",
+              "path": "rdzen.semantic.promien-interakcja"
             },
             "paddingX": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             },
             "paddingY": {
-              "token": "rdzen.semantic.odstep-przylegly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-przylegly"
             }
           }
         },
@@ -9378,10 +10535,12 @@ export const KONTRAKTY = {
           "textFrom": "props.etykietaAkcjiDrugorzednej.default",
           "bind": {
             "color": {
-              "token": "rdzen.komponent.przycisk-tresc"
+              "kind": "token",
+              "path": "rdzen.komponent.przycisk-tresc"
             },
             "fontSize": {
-              "token": "rdzen.semantic.typografia-przycisk"
+              "kind": "token",
+              "path": "rdzen.semantic.typografia-przycisk"
             }
           }
         }
@@ -9391,53 +10550,63 @@ export const KONTRAKTY = {
           "akcent": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.tlo-akcent-subtelne"
+                "kind": "token",
+                "path": "rdzen.semantic.tlo-akcent-subtelne"
               }
             },
             "wezwanieDrugorzedne": {
               "background": {
-                "token": "rdzen.semantic.tlo-akcent-subtelne"
+                "kind": "token",
+                "path": "rdzen.semantic.tlo-akcent-subtelne"
               }
             }
           },
           "odwrocone": {
             "root": {
               "background": {
-                "token": "rdzen.semantic.tlo-odwrocone"
+                "kind": "token",
+                "path": "rdzen.semantic.tlo-odwrocone"
               }
             },
             "nadtytul": {
               "color": {
-                "token": "rdzen.semantic.tekst-odwrocony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-odwrocony"
               }
             },
             "naglowek": {
               "color": {
-                "token": "rdzen.semantic.tekst-odwrocony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-odwrocony"
               }
             },
             "podtytul": {
               "color": {
-                "token": "rdzen.semantic.tekst-odwrocony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-odwrocony"
               }
             },
             "wezwanieDrugorzedne": {
               "background": {
-                "token": "rdzen.semantic.tlo-odwrocone"
+                "kind": "token",
+                "path": "rdzen.semantic.tlo-odwrocone"
               },
               "borderColor": {
-                "token": "rdzen.semantic.tekst-odwrocony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-odwrocony"
               }
             },
             "tekstWezwaniaDrugorzednego": {
               "color": {
-                "token": "rdzen.semantic.tekst-odwrocony"
+                "kind": "token",
+                "path": "rdzen.semantic.tekst-odwrocony"
               }
             }
           }
         }
       },
-      "states": {}
+      "states": {},
+      "version": 2
     }
   },
   "separator": {
@@ -9484,7 +10653,8 @@ export const KONTRAKTY = {
           ],
           "bind": {
             "paddingY": {
-              "token": "rdzen.semantic.odstep-zwykly"
+              "kind": "token",
+              "path": "rdzen.semantic.odstep-zwykly"
             }
           }
         },
@@ -9493,17 +10663,21 @@ export const KONTRAKTY = {
           "element": "spacer",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.odstep-600"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-600"
             },
             "height": {
-              "token": "rdzen.rozmiar.odstep-025"
+              "kind": "token",
+              "path": "rdzen.rozmiar.odstep-025"
             },
             "background": {
-              "token": "rdzen.semantic.obwodka-subtelna"
+              "kind": "token",
+              "path": "rdzen.semantic.obwodka-subtelna"
             }
           }
         }
-      ]
+      ],
+      "version": 2
     }
   },
   "ikona": {
@@ -9600,13 +10774,16 @@ export const KONTRAKTY = {
           "iconName": "informacja",
           "bind": {
             "width": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             },
             "height": {
-              "token": "rdzen.rozmiar.ikona-sredni"
+              "kind": "token",
+              "path": "rdzen.rozmiar.ikona-sredni"
             },
             "color": {
-              "token": "rdzen.semantic.tekst-podstawowy"
+              "kind": "token",
+              "path": "rdzen.semantic.tekst-podstawowy"
             }
           }
         }
@@ -9616,45 +10793,54 @@ export const KONTRAKTY = {
           "maly": {
             "root": {
               "width": {
-                "token": "rdzen.rozmiar.ikona-maly"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-maly"
               },
               "height": {
-                "token": "rdzen.rozmiar.ikona-maly"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-maly"
               }
             }
           },
           "sredni": {
             "root": {
               "width": {
-                "token": "rdzen.rozmiar.ikona-sredni"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-sredni"
               },
               "height": {
-                "token": "rdzen.rozmiar.ikona-sredni"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-sredni"
               }
             }
           },
           "duzy": {
             "root": {
               "width": {
-                "token": "rdzen.rozmiar.ikona-duzy"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-duzy"
               },
               "height": {
-                "token": "rdzen.rozmiar.ikona-duzy"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-duzy"
               }
             }
           },
           "wielki": {
             "root": {
               "width": {
-                "token": "rdzen.rozmiar.ikona-wielki"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-wielki"
               },
               "height": {
-                "token": "rdzen.rozmiar.ikona-wielki"
+                "kind": "token",
+                "path": "rdzen.rozmiar.ikona-wielki"
               }
             }
           }
         }
-      }
+      },
+      "version": 2
     }
   }
 }
